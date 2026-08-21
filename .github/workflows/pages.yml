@@ -55,7 +55,6 @@ jobs:
         if: github.event_name != 'push'
         run: pnpm run digest:curate
         env:
-          COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_GITHUB_TOKEN || github.token }}
           GITHUB_TOKEN: ${{ github.token }}
 
       - name: Validate and archive digest
