@@ -1,0 +1,96 @@
+name: Frontend Radar
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  copilot-requests: write
+
+concurrency:
+  group: frontend-radar-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v5
+        with:
+          version: 11.19.0
+          run_install: false
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Collect fresh candidates
+        if: github.event_name != 'push'
+        run: pnpm run digest:collect
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
+      - name: Install Copilot CLI
+        if: github.event_name != 'push'
+        run: npm install --global @github/copilot
+
+      - name: Create Russian digest
+        if: github.event_name != 'push'
+        run: pnpm run digest:curate
+        env:
+          COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_GITHUB_TOKEN || github.token }}
+          GITHUB_TOKEN: ${{ github.token }}
+
+      - name: Validate and archive digest
+        if: github.event_name != 'push'
+        run: pnpm run digest:finalize
+
+      - name: Build site
+        run: pnpm run build
+        env:
+          SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+
+      - name: Export static site
+        run: pnpm run pages:export
+        env:
+          PAGES_BASE_PATH: /${{ github.event.repository.name }}
+          PAGES_ORIGIN: https://${{ github.repository_owner }}.github.io
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: pages-dist
+
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Save daily issue
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- data/digest.json data/archive
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Update frontend digest"
+          git push
