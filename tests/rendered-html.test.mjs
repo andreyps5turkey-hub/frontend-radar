@@ -44,8 +44,33 @@ test("server-renders the frontend radar", async () => {
     assert.ok(html.includes(item.title), `missing digest title: ${item.title}`);
   }
   assert.match(html, /Читать оригинал/);
+  assert.match(html, /Неделя в одном экране/);
+  assert.match(html, /frontend-radar-hero-v2\.jpg/);
   assert.match(html, /og\.jpg/);
+  assert.doesNotMatch(html, /Исходный код на GitHub|github\.com\/andreyps5turkey-hub\/frontend-radar/);
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|react-loading-skeleton/i);
+});
+
+test("server-renders an automatically ranked weekly digest", async () => {
+  const catalog = JSON.parse(await readFile(new URL("../data/archive/catalog.json", import.meta.url), "utf8"));
+  const response = await render("/weekly");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /Неделя во фронтенде/);
+  assert.match(html, /Что не стоит пропустить/);
+  assert.match(html, /Пульс приоритетов/);
+  assert.match(html, /Как развивалась неделя/);
+
+  const latest = Date.parse(`${catalog.issues[0].date}T12:00:00Z`);
+  const issues = catalog.issues.filter(({ date }) => Date.parse(`${date}T12:00:00Z`) >= latest - 6 * 86400000);
+  const seen = new Set();
+  const priorityRank = { P0: 0, P1: 1, P2: 2, P3: 3 };
+  const highlights = issues.flatMap((issue) => [...issue.items, ...issue.readLater]
+    .filter((item) => !seen.has(item.url) && seen.add(item.url)))
+    .sort((left, right) => priorityRank[left.priority] - priorityRank[right.priority]
+      || Date.parse(right.publishedAt) - Date.parse(left.publishedAt))
+    .slice(0, 7);
+  for (const item of highlights) assert.ok(html.includes(item.title));
 });
 
 test("server-renders archive search and permanent issue pages", async () => {

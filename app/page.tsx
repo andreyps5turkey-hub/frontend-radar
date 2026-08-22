@@ -1,10 +1,13 @@
 import digestData from "@/data/digest.json";
-import { Archive, Rss } from "lucide-react";
+import catalogData from "@/data/archive/catalog.json";
+import { ArrowRight, CalendarRange, Rss } from "lucide-react";
 import { DigestCard } from "./digest-card";
+import { ReadingSummary } from "./reading-summary";
 import { SourceHealthPanel } from "./source-health";
-import type { Digest, Priority } from "@/lib/digest";
-import { formatIssueDate } from "@/lib/digest";
-import { archivePath, sitePath } from "@/lib/site";
+import type { ArchiveCatalog, Digest, Priority } from "@/lib/digest";
+import { formatIssueDate, itemAnchor } from "@/lib/digest";
+import { archivePath, sitePath, weeklyPath } from "@/lib/site";
+import { buildWeeklyDigest, formatWeeklyRange } from "@/lib/weekly";
 
 type SourceGroup = {
   priority: Priority;
@@ -13,6 +16,10 @@ type SourceGroup = {
 };
 
 const digest = digestData as Digest;
+const catalog = catalogData as ArchiveCatalog;
+const weekly = buildWeeklyDigest(catalog);
+const knownUrls = [...new Set(catalog.issues.flatMap((issue) => [...issue.items, ...issue.readLater].map(({ url }) => url)))];
+const weeklyUrls = weekly.materials.map(({ item }) => item.url);
 
 const sourceGroups: SourceGroup[] = [
   {
@@ -45,7 +52,12 @@ export default function Home() {
 
   return (
     <main id="top">
-      <header className="hero">
+      <header
+        className="hero"
+        style={{
+          backgroundImage: `linear-gradient(102deg, rgba(8, 18, 17, 0.98) 0%, rgba(8, 40, 37, 0.9) 48%, rgba(8, 20, 19, 0.46) 100%), url("${sitePath("/frontend-radar-hero-v2.jpg")}")`,
+        }}
+      >
         <div className="hero__inner">
           <nav className="topbar" aria-label="Основная навигация">
             <a className="brand" href="#top" aria-label="Frontend Radar, наверх">
@@ -54,7 +66,7 @@ export default function Home() {
             </a>
             <div className="topbar__links">
               <a href="#today">Сегодня</a>
-              <a href="#read-later">На потом</a>
+              <a href={weeklyPath()}>Неделя</a>
               <a href={archivePath()}>Архив</a>
               <a href="#sources">Источники</a>
             </div>
@@ -70,7 +82,7 @@ export default function Home() {
               </p>
               <div className="hero__actions">
                 <a className="button button--primary" href="#today">Читать выпуск</a>
-                <a className="button" href={archivePath()}><Archive aria-hidden="true" size={18} /> Архив выпусков</a>
+                <a className="button" href={weeklyPath()}><CalendarRange aria-hidden="true" size={18} /> Итоги недели</a>
               </div>
             </div>
 
@@ -120,6 +132,10 @@ export default function Home() {
         <SourceHealthPanel digest={digest} />
       </div>
 
+      <div className="section section--reading">
+        <ReadingSummary knownUrls={knownUrls} weeklyUrls={weeklyUrls} />
+      </div>
+
       <section className="section" id="today">
         <div className="section__head section__head--row">
           <div>
@@ -144,6 +160,31 @@ export default function Home() {
         )}
       </section>
 
+      <section className="weekly-preview">
+        <div className="section weekly-preview__inner">
+          <div className="weekly-preview__intro">
+            <p className="eyebrow">{formatWeeklyRange(weekly.startDate, weekly.endDate)}</p>
+            <h2>Неделя в одном экране</h2>
+            <p>Главные события без повторов, пульс приоритетов и темы, которые чаще всего появлялись в выпусках.</p>
+            <dl className="weekly-preview__stats">
+              <div><dt>Материалов</dt><dd>{weekly.materials.length}</dd></div>
+              <div><dt>P0–P1</dt><dd>{weekly.importantCount}</dd></div>
+              <div><dt>Активных дней</dt><dd>{weekly.activeDays}</dd></div>
+            </dl>
+            <a className="button button--ink" href={weeklyPath()}>Открыть итоги недели <ArrowRight aria-hidden="true" size={18} /></a>
+          </div>
+          <div className="weekly-preview__list">
+            {weekly.highlights.slice(0, 3).map(({ item, issueDate }, index) => (
+              <a href={`${archivePath(issueDate)}#${itemAnchor(item.url)}`} key={item.url}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <div><small>{item.priority} · {item.source}</small><strong>{item.title}</strong></div>
+                <ArrowRight aria-hidden="true" size={18} />
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="section read-later-section" id="read-later">
         <div className="section__head">
           <p className="eyebrow">Read later</p>
@@ -163,7 +204,7 @@ export default function Home() {
             <p>
               GitHub Actions собирает свежие записи, отбрасывает шум, создаёт русский
               конспект и публикует обновлённую страницу. Предыдущие выпуски сохраняются
-              в архиве репозитория.
+              в открытом архиве, а недельная страница обновляется автоматически.
             </p>
           </div>
           <ol className="workflow">
@@ -201,9 +242,7 @@ export default function Home() {
           <strong>Frontend Radar</strong>
           <span>Русская выжимка, оригинальные ссылки, никакой полной перепечатки.</span>
         </div>
-        <a href="https://github.com/andreyps5turkey-hub/frontend-radar" target="_blank" rel="noreferrer">
-          Исходный код на GitHub <span aria-hidden="true">↗</span>
-        </a>
+        <a href={weeklyPath()}>Итоги недели</a>
         <a className="footer__rss" href={sitePath("/feed.xml")}>
           <Rss aria-hidden="true" size={16} /> RSS выпуска
         </a>

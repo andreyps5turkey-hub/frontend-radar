@@ -17,15 +17,18 @@ test("catalog contains every dated archive in newest-first order", async () => {
   catalog.issues.forEach((issue) => validateDigest(issue));
 });
 
-test("static export contains archive pages, a real 404 and a valid RSS feed", async () => {
+test("static export contains archive and weekly pages, a real 404 and a valid RSS feed", async () => {
   const catalog = JSON.parse(await readFile(new URL("../data/archive/catalog.json", import.meta.url), "utf8"));
-  const [archiveHtml, notFoundHtml, feedText] = await Promise.all([
+  const [archiveHtml, weeklyHtml, notFoundHtml, feedText] = await Promise.all([
     readFile(new URL("../pages-dist/archive/index.html", import.meta.url), "utf8"),
+    readFile(new URL("../pages-dist/weekly/index.html", import.meta.url), "utf8"),
     readFile(new URL("../pages-dist/404.html", import.meta.url), "utf8"),
     readFile(new URL("../pages-dist/feed.xml", import.meta.url), "utf8"),
   ]);
   assert.match(archiveHtml, /Архив Frontend Radar/);
   assert.match(archiveHtml, /\/frontend-radar\/archive\//);
+  assert.match(weeklyHtml, /Неделя во фронтенде/);
+  assert.match(weeklyHtml, /\/frontend-radar\/weekly\//);
   assert.match(notFoundHtml, /Такого выпуска нет/);
 
   for (const issue of catalog.issues) {

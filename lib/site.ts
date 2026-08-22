@@ -12,3 +12,7 @@ export function sitePath(path = "/") {
 export function archivePath(date?: string) {
   return sitePath(date ? `/archive/${date}/` : "/archive/");
 }
+
+export function weeklyPath() {
+  return sitePath("/weekly/");
+}
