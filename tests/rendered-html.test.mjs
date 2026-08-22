@@ -46,7 +46,7 @@ test("server-renders the frontend radar", async () => {
   }
   assert.match(html, /Читать оригинал/);
   assert.match(html, /Неделя в одном экране/);
-  assert.match(html, /Персональный радар/);
+  assert.match(html, /React Stack Check/);
   assert.match(html, /frontend-radar-hero-v2\.jpg/);
   assert.match(html, /og\.jpg/);
   assert.doesNotMatch(html, /Исходный код на GitHub|github\.com\/andreyps5turkey-hub\/frontend-radar/);
@@ -81,11 +81,39 @@ test("server-renders the local project workspace", async () => {
   const response = await render("/project");
   assert.equal(response.status, 200);
   const html = await response.text();
-  assert.match(html, /Мой проект/);
-  assert.match(html, /Импортировать package\.json/);
-  assert.match(html, /Пакеты под наблюдением/);
+  assert.match(html, /React Stack Check/);
+  assert.match(html, /Перетащите package\.json и lock-файл/);
+  assert.match(html, /Добавьте package\.json/);
   assert.match(html, /Что проверить и обновить/);
   assert.match(html, /Только на устройстве/);
+});
+
+test("server-renders package directory, package details and package data", async () => {
+  const catalog = JSON.parse(await readFile(new URL("../data/packages/catalog.json", import.meta.url), "utf8"));
+  const directoryResponse = await render("/packages");
+  assert.equal(directoryResponse.status, 200);
+  const directoryHtml = await directoryResponse.text();
+  assert.match(directoryHtml, /Пакеты React-стека/);
+  assert.match(directoryHtml, /Каталог частично устарел|Источники отвечают/);
+  assert.match(directoryHtml, /Успешно/);
+  for (const item of catalog.packages) {
+    assert.ok(directoryHtml.includes(item.label));
+    assert.match(directoryHtml, new RegExp(`href="(?:/frontend-radar)?/packages/${item.slug}/"`));
+  }
+
+  const item = catalog.packages.find(({ slug }) => slug === "next") ?? catalog.packages[0];
+  const packageResponse = await render(`/packages/${item.slug}`);
+  assert.equal(packageResponse.status, 200);
+  const packageHtml = await packageResponse.text();
+  assert.ok(packageHtml.includes(`${item.label}: релизы и совместимость`));
+  assert.match(packageHtml, /Совместимость major-линий/);
+  assert.match(packageHtml, /Что проверить перед обновлением/);
+  assert.ok(packageHtml.includes(`href="${item.npmUrl}"`));
+
+  const dataResponse = await render("/package-catalog.json");
+  assert.equal(dataResponse.status, 200);
+  assert.match(dataResponse.headers.get("content-type") ?? "", /application\/json/);
+  assert.equal((await dataResponse.json()).schemaVersion, 1);
 });
 
 test("server-renders archive search and permanent issue pages", async () => {
@@ -152,6 +180,9 @@ test("ships daily automation and a valid Russian digest", async () => {
   assert.equal(scripts["digest:collect"], "node scripts/collect-news.mjs");
   assert.equal(scripts["digest:curate"], "node scripts/curate-with-groq.mjs");
   assert.equal(scripts["digest:catalog"], "node scripts/generate-catalog.mjs");
+  assert.equal(scripts["packages:refresh"], "node scripts/generate-package-catalog.mjs");
   assert.equal(scripts["digest:links"], "node scripts/validate-article-links.mjs");
   assert.equal(scripts["pages:export"], "node scripts/export-pages.mjs");
+  assert.match(workflow, /Refresh package intelligence/);
+  assert.match(workflow, /data\/packages\/catalog\.json/);
 });

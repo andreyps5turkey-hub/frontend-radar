@@ -20,3 +20,11 @@ export function weeklyPath() {
 export function projectPath() {
   return sitePath("/project/");
 }
+
+export function packagesPath(slug?: string) {
+  return sitePath(slug ? `/packages/${slug}/` : "/packages/");
+}
+
+export function packageCatalogPath() {
+  return sitePath("/package-catalog.json");
+}

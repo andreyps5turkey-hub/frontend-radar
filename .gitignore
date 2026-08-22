@@ -5,6 +5,7 @@
 /.cache
 /.npm-cache
 /.pnpm-home
+/.pnpm-store
 /.pnp
 .pnp.*
 .yarn/*
@@ -24,6 +25,7 @@
 # misc
 .DS_Store
 *.pem
+*.tsbuildinfo
 
 # debug
 npm-debug.log*

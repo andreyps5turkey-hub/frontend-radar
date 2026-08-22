@@ -7,7 +7,7 @@ import { ProjectPulse } from "./project-pulse";
 import { SourceHealthPanel } from "./source-health";
 import type { ArchiveCatalog, Digest, Priority } from "@/lib/digest";
 import { formatIssueDate } from "@/lib/digest";
-import { archivePath, projectPath, sitePath, weeklyPath } from "@/lib/site";
+import { archivePath, packagesPath, projectPath, sitePath, weeklyPath } from "@/lib/site";
 import { buildWeeklyDigest, formatWeeklyRange } from "@/lib/weekly";
 
 type SourceGroup = {
@@ -69,8 +69,8 @@ export default function Home() {
               <a href="#today">Сегодня</a>
               <a href={weeklyPath()}>Неделя</a>
               <a href={archivePath()}>Архив</a>
+              <a href={packagesPath()}>Пакеты</a>
               <a href={projectPath()}>Мой проект</a>
-              <a href="#sources">Источники</a>
             </div>
           </nav>
 
@@ -249,6 +249,7 @@ export default function Home() {
           <span>Русская выжимка, оригинальные ссылки, никакой полной перепечатки.</span>
         </div>
         <a href={weeklyPath()}>Итоги недели</a>
+        <a href={packagesPath()}>Пакеты</a>
         <a href={projectPath()}>Мой проект</a>
         <a className="footer__rss" href={sitePath("/feed.xml")}>
           <Rss aria-hidden="true" size={16} /> RSS выпуска

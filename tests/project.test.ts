@@ -34,7 +34,7 @@ const enrichedItem: DigestItem = {
 
 function project(version: string): ProjectProfile {
   return {
-    version: 1,
+    version: 2,
     name: "radar-app",
     packages: [{ name: "next", version, sections: ["dependencies"] }],
     technologies: ["nextjs", "react"],
@@ -147,7 +147,7 @@ test("version radar compares exact package metadata and legacy release titles", 
     issues: [issue("2026-08-14", nextRelease), issue("2026-08-13", viteRelease)],
   };
   const profile: ProjectProfile = {
-    version: 1,
+    version: 2,
     name: "radar-app",
     packages: [
       { name: "next", version: "^15.4.0", sections: ["dependencies"] },

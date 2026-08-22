@@ -2,8 +2,10 @@ import { coerce, diff, gt, intersects, minVersion, satisfies, valid, validRange 
 import type { ArchiveCatalog, ChangeType, DigestItem, RiskLevel } from "./digest";
 import { topicIdsForItem, topics, type TopicId } from "./topics";
 
-export const PROJECT_KEY = "frontend-radar:project:v1";
+export const PROJECT_KEY = "frontend-radar:project:v2";
+export const LEGACY_PROJECT_KEY = "frontend-radar:project:v1";
 export const ACTIONS_KEY = "frontend-radar:action-state:v1";
+export const SCAN_HISTORY_KEY = "frontend-radar:scan-history:v1";
 
 export const packageRegistry = [
   { name: "react", label: "React", technologies: ["react"] },
@@ -29,15 +31,21 @@ const packageTechnologyMap = new Map<string, readonly TopicId[]>(
 export type ProjectPackage = {
   name: string;
   version: string;
+  declaredVersion?: string;
+  resolvedVersion?: string;
+  resolution?: "lockfile" | "manifest" | "manual";
   sections: string[];
 };
 
 export type ProjectProfile = {
-  version: 1;
+  version: 2;
   name: string;
   packages: ProjectPackage[];
   technologies: TopicId[];
   packageManager?: PackageManager;
+  nodeVersion?: string;
+  nodeRange?: string;
+  lockfileName?: string;
   updatedAt: string;
 };
 
@@ -62,6 +70,7 @@ type PackageManifest = {
   devDependencies?: unknown;
   peerDependencies?: unknown;
   optionalDependencies?: unknown;
+  engines?: unknown;
 };
 
 const dependencySections = ["dependencies", "optionalDependencies", "devDependencies", "peerDependencies"] as const;
@@ -142,7 +151,7 @@ export function parseProjectManifest(text: string, now = new Date().toISOString(
       if (current) {
         if (!current.sections.includes(section)) current.sections.push(section);
       } else {
-        found.set(name, { name, version: rawVersion.trim(), sections: [section] });
+        found.set(name, { name, version: rawVersion.trim(), declaredVersion: rawVersion.trim(), resolution: "manifest", sections: [section] });
       }
     }
   }
@@ -151,11 +160,12 @@ export function parseProjectManifest(text: string, now = new Date().toISOString(
   const technologies = [...new Set(packages.flatMap(({ name }) => technologiesForPackage(name)))];
   return {
     profile: {
-      version: 1 as const,
+      version: 2 as const,
       name: typeof manifest.name === "string" && manifest.name.trim() ? manifest.name.trim() : "Мой проект",
       packages,
       technologies,
       packageManager: packageManagerFrom(manifest.packageManager),
+      nodeRange: isRecord(manifest.engines) && typeof manifest.engines.node === "string" ? manifest.engines.node.trim() : undefined,
       updatedAt: now,
     },
     ignored: Math.max(0, dependencyNames.size - packages.length),
@@ -163,23 +173,31 @@ export function parseProjectManifest(text: string, now = new Date().toISOString(
 }
 
 export function createEmptyProject(now = new Date().toISOString()): ProjectProfile {
-  return { version: 1, name: "Мой проект", packages: [], technologies: [], packageManager: "pnpm", updatedAt: now };
+  return { version: 2, name: "Мой проект", packages: [], technologies: [], packageManager: "pnpm", updatedAt: now };
 }
 
 export function readProjectProfile(value: string): ProjectProfile | null {
   try {
     const profile = JSON.parse(value) as Partial<ProjectProfile>;
-    if (profile.version !== 1 || typeof profile.name !== "string" || !Array.isArray(profile.packages) || !Array.isArray(profile.technologies)) return null;
+    if (![1, 2].includes(Number(profile.version)) || typeof profile.name !== "string" || !Array.isArray(profile.packages) || !Array.isArray(profile.technologies)) return null;
     const validTopics = new Set(topics.map(({ id }) => id));
     return {
-      version: 1,
+      version: 2,
       name: profile.name.trim() || "Мой проект",
       packages: profile.packages.filter((entry): entry is ProjectPackage => Boolean(entry)
         && typeof entry.name === "string"
         && typeof entry.version === "string"
-        && Array.isArray(entry.sections)),
+        && Array.isArray(entry.sections)).map((entry) => ({
+          ...entry,
+          declaredVersion: typeof entry.declaredVersion === "string" ? entry.declaredVersion : entry.version,
+          resolvedVersion: typeof entry.resolvedVersion === "string" ? entry.resolvedVersion : undefined,
+          resolution: entry.resolution ?? (valid(entry.version) ? "manual" : "manifest"),
+        })),
       technologies: profile.technologies.filter((topic): topic is TopicId => validTopics.has(topic as TopicId)),
       packageManager: packageManagerFrom(profile.packageManager),
+      nodeVersion: typeof profile.nodeVersion === "string" ? profile.nodeVersion : undefined,
+      nodeRange: typeof profile.nodeRange === "string" ? profile.nodeRange : undefined,
+      lockfileName: typeof profile.lockfileName === "string" ? profile.lockfileName : undefined,
       updatedAt: typeof profile.updatedAt === "string" ? profile.updatedAt : new Date(0).toISOString(),
     };
   } catch {

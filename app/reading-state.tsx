@@ -4,6 +4,7 @@ import { createContext, useCallback, useContext, useMemo, useSyncExternalStore }
 import type { TopicId } from "@/lib/topics";
 import {
   ACTIONS_KEY,
+  LEGACY_PROJECT_KEY,
   PROJECT_KEY,
   readActionMap,
   readProjectProfile,
@@ -66,7 +67,7 @@ function readStorage<T>(value: string, fallback: T): T {
 export function ReadingStateProvider({ children }: { children: React.ReactNode }) {
   const readingJson = useSyncExternalStore(subscribe, () => window.localStorage.getItem(READING_KEY) ?? "{}", () => "{}");
   const topicsJson = useSyncExternalStore(subscribe, () => window.localStorage.getItem(TOPICS_KEY) ?? "[]", () => "[]");
-  const projectJson = useSyncExternalStore(subscribe, () => window.localStorage.getItem(PROJECT_KEY) ?? "null", () => "null");
+  const projectJson = useSyncExternalStore(subscribe, () => window.localStorage.getItem(PROJECT_KEY) ?? window.localStorage.getItem(LEGACY_PROJECT_KEY) ?? "null", () => "null");
   const actionsJson = useSyncExternalStore(subscribe, () => window.localStorage.getItem(ACTIONS_KEY) ?? "{}", () => "{}");
   const hydrated = useSyncExternalStore(() => () => {}, () => true, () => false);
   const reading = useMemo(() => readStorage<ReadingMap>(readingJson, {}), [readingJson]);
@@ -94,11 +95,13 @@ export function ReadingStateProvider({ children }: { children: React.ReactNode }
 
   const saveProject = useCallback((nextProject: ProjectProfile) => {
     window.localStorage.setItem(PROJECT_KEY, JSON.stringify({ ...nextProject, updatedAt: new Date().toISOString() }));
+    window.localStorage.removeItem(LEGACY_PROJECT_KEY);
     emitChange();
   }, []);
 
   const clearProject = useCallback(() => {
     window.localStorage.removeItem(PROJECT_KEY);
+    window.localStorage.removeItem(LEGACY_PROJECT_KEY);
     emitChange();
   }, []);
 

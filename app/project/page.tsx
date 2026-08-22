@@ -9,8 +9,8 @@ import { ProjectWorkspace } from "./project-workspace";
 const catalog = catalogData as ArchiveCatalog;
 
 export const metadata: Metadata = {
-  title: "Мой проект | Frontend Radar",
-  description: "Локальный профиль frontend-проекта, релевантные обновления и персональная очередь действий.",
+  title: "React Stack Check | Frontend Radar",
+  description: "Приватная проверка совместимости React, Next.js, TypeScript и инструментов с консервативным планом обновления.",
   alternates: { canonical: projectPath() },
 };
 
@@ -21,11 +21,10 @@ export default function ProjectPage() {
       <header className="project-header">
         <div className="project-header__inner">
           <div>
-            <p className="eyebrow">Персональный радар</p>
-            <h1>Мой проект</h1>
-            <p>Импортируйте стек один раз, чтобы отличать новости «интересно почитать» от изменений, которые действительно требуют работы.</p>
+            <h1>React Stack Check</h1>
+            <p>Проверьте версии, совместимость и путь обновления. Файлы остаются в браузере.</p>
           </div>
-          <div className="project-header__privacy"><ClipboardCheck aria-hidden="true" size={20} /><strong>Только на устройстве</strong><span>Без аккаунта, загрузки файла и внешней синхронизации.</span></div>
+          <div className="project-header__privacy"><ClipboardCheck aria-hidden="true" size={20} /><strong>Только на устройстве</strong><span>Без аккаунта, загрузки файлов и внешней синхронизации.</span></div>
         </div>
       </header>
       <div className="project-main"><ProjectWorkspace catalog={catalog} /></div>

@@ -12,6 +12,7 @@ const basePath = process.env.PAGES_BASE_PATH ?? `/${repositoryName}`;
 const siteOrigin = process.env.PAGES_ORIGIN ?? "https://andreyps5turkey-hub.github.io";
 const siteUrl = `${siteOrigin}${basePath}`;
 const catalog = JSON.parse(await readFile(resolve("data/archive/catalog.json"), "utf8"));
+const packageCatalog = JSON.parse(await readFile(resolve("data/packages/catalog.json"), "utf8"));
 
 const workerUrl = new URL("../dist/server/index.js", import.meta.url);
 workerUrl.searchParams.set("export", String(Date.now()));
@@ -27,6 +28,8 @@ function rewriteForPages(html) {
     .replaceAll('href="/archive', `href="${basePath}/archive`)
     .replaceAll('href="/weekly', `href="${basePath}/weekly`)
     .replaceAll('href="/project', `href="${basePath}/project`)
+    .replaceAll('href="/packages', `href="${basePath}/packages`)
+    .replaceAll('"/package-catalog.json"', `"${basePath}/package-catalog.json"`)
     .replaceAll('href="/feed.xml"', `href="${basePath}/feed.xml"`)
     .replace(/https?:\/\/[^"'\\<>\s]+\/og\.jpg/g, `${siteUrl}/og.jpg`);
 }
@@ -50,11 +53,12 @@ async function writeRoute(route, html) {
   await writeFile(resolve(directory, "index.html"), html, "utf8");
 }
 
-const [homeHtml, archiveHtml, weeklyHtml, projectHtml, notFoundHtml] = await Promise.all([
+const [homeHtml, archiveHtml, weeklyHtml, projectHtml, packagesHtml, notFoundHtml] = await Promise.all([
   renderRoute("/"),
   renderRoute("/archive/"),
   renderRoute("/weekly/"),
   renderRoute("/project/"),
+  renderRoute("/packages/"),
   renderRoute("/__frontend_radar_missing__", 404),
 ]);
 await Promise.all([
@@ -62,6 +66,7 @@ await Promise.all([
   writeRoute("/archive/", archiveHtml),
   writeRoute("/weekly/", weeklyHtml),
   writeRoute("/project/", projectHtml),
+  writeRoute("/packages/", packagesHtml),
   writeFile(resolve(outputDir, "404.html"), notFoundHtml, "utf8"),
 ]);
 
@@ -71,6 +76,21 @@ for (let index = 0; index < archiveRoutes.length; index += 12) {
   const pages = await Promise.all(batch.map(async (route) => [route, await renderRoute(route)]));
   await Promise.all(pages.map(([route, html]) => writeRoute(route, html)));
 }
+
+const packageRoutes = packageCatalog.packages.map(({ slug }) => `/packages/${slug}/`);
+for (let index = 0; index < packageRoutes.length; index += 12) {
+  const batch = packageRoutes.slice(index, index + 12);
+  const pages = await Promise.all(batch.map(async (route) => [route, await renderRoute(route)]));
+  await Promise.all(pages.map(([route, html]) => writeRoute(route, html)));
+}
+
+const packageCatalogResponse = await worker.fetch(
+  new Request(`${siteOrigin}/package-catalog.json`, { headers: { accept: "application/json" } }),
+  { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } },
+  { waitUntil() {}, passThroughOnException() {} },
+);
+if (!packageCatalogResponse.ok) throw new Error(`Package catalog route returned ${packageCatalogResponse.status}.`);
+await writeFile(resolve(outputDir, "package-catalog.json"), await packageCatalogResponse.text(), "utf8");
 
 function escapeXml(value) {
   return String(value)
@@ -122,5 +142,13 @@ ${feedItems}
 `;
 
 await writeFile(resolve(outputDir, "feed.xml"), feed, "utf8");
+const sitemapRoutes = ["/", "/weekly/", "/archive/", "/project/", "/packages/", ...archiveRoutes, ...packageRoutes];
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${sitemapRoutes.map((route) => `  <url><loc>${escapeXml(`${siteUrl}${route}`)}</loc></url>`).join("\n")}
+</urlset>
+`;
+await writeFile(resolve(outputDir, "sitemap.xml"), sitemap, "utf8");
+await writeFile(resolve(outputDir, "robots.txt"), `User-agent: *\nAllow: /\nSitemap: ${siteUrl}/sitemap.xml\n`, "utf8");
 await writeFile(resolve(outputDir, ".nojekyll"), "", "utf8");
-console.log(`Exported ${archiveRoutes.length + 5} GitHub Pages routes and RSS to ${outputDir} with base path ${basePath}.`);
+console.log(`Exported ${archiveRoutes.length + packageRoutes.length + 6} GitHub Pages routes, package data, RSS and sitemap to ${outputDir} with base path ${basePath}.`);

@@ -24,8 +24,8 @@ export function ProjectPulse({ catalog }: { catalog: ArchiveCatalog }) {
     return (
       <section className="project-pulse project-pulse--empty">
         <FolderCog aria-hidden="true" size={24} />
-        <div><span>Персональный радар</span><strong>Показывать новости для вашего стека</strong><p>Импортируйте package.json локально или выберите технологии вручную.</p></div>
-        <a href={projectPath()}>Настроить проект <ArrowRight aria-hidden="true" size={17} /></a>
+        <div><span>React Stack Check</span><strong>Проверить совместимость проекта</strong><p>Добавьте package.json и lock-файл: версии останутся в браузере.</p></div>
+        <a href={projectPath()}>Проверить проект <ArrowRight aria-hidden="true" size={17} /></a>
       </section>
     );
   }
@@ -33,7 +33,7 @@ export function ProjectPulse({ catalog }: { catalog: ArchiveCatalog }) {
   const recommendedCount = entries.filter(({ item, issueDate }) => isRecommendedAction(item, issueDate, latestDate, project)).length;
   return (
     <section className="project-pulse">
-      <div className="project-pulse__summary"><span>Для «{project.name}» за 7 дней</span><strong>{entries.length} совпадений</strong><p>{recommendedCount ? `Требуют внимания: ${recommendedCount}.` : "Срочных действий по вашему стеку нет."}</p><a href={projectPath()}>Открыть очередь <ArrowRight aria-hidden="true" size={17} /></a></div>
+      <div className="project-pulse__summary"><span>Для «{project.name}» за 7 дней</span><strong>{entries.length} совпадений</strong><p>{recommendedCount ? `Требуют внимания: ${recommendedCount}.` : "Срочных действий по вашему стеку нет."}</p><a href={projectPath()}>Открыть Stack Check <ArrowRight aria-hidden="true" size={17} /></a></div>
       <div className="project-pulse__list">
         {entries.slice(0, 3).map(({ item }) => <a href={item.url} target="_blank" rel="noopener noreferrer" key={item.url}><span>{item.priority} · {item.source}</span><strong>{item.title}<ExternalLink aria-hidden="true" size={14} /></strong></a>)}
         {!entries.length ? <p>В выпусках этой недели совпадений не найдено. Полная лента остаётся ниже.</p> : null}

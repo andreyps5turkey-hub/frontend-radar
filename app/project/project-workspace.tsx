@@ -5,13 +5,15 @@ import {
   Copy,
   ExternalLink,
   FileJson,
+  FileLock2,
   ListPlus,
   Plus,
   RotateCcw,
   Trash2,
+  UploadCloud,
   X,
 } from "lucide-react";
-import { useMemo, useState, type ChangeEvent, type FormEvent } from "react";
+import { useMemo, useState, type ChangeEvent, type DragEvent, type FormEvent } from "react";
 import type { ArchiveCatalog, DigestItem, Priority } from "@/lib/digest";
 import {
   allCatalogItems,
@@ -24,13 +26,15 @@ import {
   type ActionStatus,
   type ProjectProfile,
 } from "@/lib/project";
+import { parseLockfile } from "@/lib/lockfiles";
 import { topics, type TopicId } from "@/lib/topics";
 import { formatIssueDate } from "@/lib/digest";
 import { useReadingState } from "../reading-state";
 import { ItemSignals } from "../item-signals";
-import { VersionRadar } from "./version-radar";
+import { CompatibilityRadar } from "./compatibility-radar";
 
 const MAX_PACKAGE_FILE_SIZE = 1024 * 1024;
+const MAX_LOCK_FILE_SIZE = 8 * 1024 * 1024;
 const priorityRank: Record<Priority, number> = { P0: 0, P1: 1, P2: 2, P3: 3 };
 
 type QueueEntry = {
@@ -48,22 +52,52 @@ function ProjectSetup() {
   const [message, setMessage] = useState("");
   const [packageName, setPackageName] = useState("");
   const [packageVersion, setPackageVersion] = useState("");
+  const [dragging, setDragging] = useState(false);
 
-  const importPackageJson = async (event: ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    event.target.value = "";
-    if (!file) return;
-    if (file.size > MAX_PACKAGE_FILE_SIZE) {
-      setMessage("Файл больше 1 МБ. Выберите обычный package.json без вложенных данных.");
+  const importProjectFiles = async (files: File[]) => {
+    const manifestFile = files.find(({ name }) => name.toLowerCase() === "package.json");
+    const lockFile = files.find(({ name }) => ["package-lock.json", "npm-shrinkwrap.json", "pnpm-lock.yaml", "pnpm-lock.yml", "yarn.lock", "bun.lock", "bun.lockb"].includes(name.toLowerCase()));
+    if (!manifestFile) {
+      setMessage("Добавьте package.json. Lock-файл можно выбрать вместе с ним или позже.");
       return;
     }
-    try {
-      const { profile, ignored } = parseProjectManifest(await file.text());
-      saveProject(profile);
-      setMessage(`Распознано пакетов: ${profile.packages.length}. Не относятся к радару: ${ignored}.`);
-    } catch (error) {
-      setMessage(error instanceof Error ? error.message : "Не удалось прочитать package.json.");
+    if (manifestFile.size > MAX_PACKAGE_FILE_SIZE) {
+      setMessage("package.json больше 1 МБ. Выберите обычный манифест без вложенных данных.");
+      return;
     }
+    if (lockFile && lockFile.size > MAX_LOCK_FILE_SIZE) {
+      setMessage("Lock-файл больше 8 МБ. Для этой версии используем только package.json.");
+    }
+    try {
+      const { profile, ignored } = parseProjectManifest(await manifestFile.text());
+      let nextProfile: ProjectProfile = profile;
+      let lockMessage = "Без lock-файла: совместимость проверяется по диапазонам.";
+      if (lockFile && lockFile.size <= MAX_LOCK_FILE_SIZE) {
+        const result = await parseLockfile(lockFile.name, await lockFile.text(), profile.packages);
+        const packages = profile.packages.map((entry) => {
+          const resolvedVersion = result.versions[entry.name];
+          return resolvedVersion ? { ...entry, version: resolvedVersion, resolvedVersion, resolution: "lockfile" as const } : entry;
+        });
+        nextProfile = { ...profile, packages, packageManager: result.manager, lockfileName: lockFile.name };
+        lockMessage = `${lockFile.name}: точных версий ${Object.keys(result.versions).length}. ${result.warnings.join(" ")}`;
+      }
+      saveProject(nextProfile);
+      setMessage(`Распознано пакетов: ${nextProfile.packages.length}. Не относятся к радару: ${ignored}. ${lockMessage}`);
+    } catch (error) {
+      setMessage(error instanceof Error ? error.message : "Не удалось прочитать файлы проекта.");
+    }
+  };
+
+  const onFileInput = async (event: ChangeEvent<HTMLInputElement>) => {
+    const files = [...(event.target.files ?? [])];
+    event.target.value = "";
+    await importProjectFiles(files);
+  };
+
+  const onDrop = async (event: DragEvent<HTMLDivElement>) => {
+    event.preventDefault();
+    setDragging(false);
+    await importProjectFiles([...event.dataTransfer.files]);
   };
 
   const toggleTechnology = (topic: TopicId) => {
@@ -80,7 +114,7 @@ function ProjectSetup() {
     const version = packageVersion.trim();
     if (!name || !version) return;
     const base = project ?? createEmptyProject();
-    const packages = [...base.packages.filter((entry) => entry.name !== name), { name, version, sections: ["manual"] }]
+    const packages = [...base.packages.filter((entry) => entry.name !== name), { name, version, declaredVersion: version, resolvedVersion: version, resolution: "manual" as const, sections: ["manual"] }]
       .sort((left, right) => left.name.localeCompare(right.name));
     const technologies = [...new Set([...base.technologies, ...technologiesForPackage(name)])];
     saveProject(updatedProject(base, { packages, technologies }));
@@ -96,13 +130,18 @@ function ProjectSetup() {
   return (
     <section className="project-setup" aria-labelledby="project-setup-title">
       <div className="project-setup__intro">
-        <p className="eyebrow">Локальный профиль</p>
-        <h2 id="project-setup-title">Стек проекта</h2>
-        <p>Зависимости сопоставляются с выпусками прямо в браузере. Файл и профиль не отправляются наружу.</p>
-        <label className="button button--ink file-button">
-          <FileJson aria-hidden="true" size={18} /> Импортировать package.json
-          <input type="file" accept="application/json,.json" onChange={importPackageJson} />
-        </label>
+        <p className="eyebrow">Локальная проверка</p>
+        <h2 id="project-setup-title">Загрузите стек проекта</h2>
+        <p>package.json и lock-файл разбираются в браузере. Исходные файлы не сохраняются и никуда не отправляются.</p>
+        <div className={`project-dropzone${dragging ? " is-dragging" : ""}`} onDragEnter={(event) => { event.preventDefault(); setDragging(true); }} onDragOver={(event) => event.preventDefault()} onDragLeave={() => setDragging(false)} onDrop={onDrop}>
+          <UploadCloud aria-hidden="true" size={30} />
+          <strong>Перетащите package.json и lock-файл</strong>
+          <span>npm, pnpm, Yarn или текстовый Bun</span>
+          <label className="button button--ink file-button">
+            <FileJson aria-hidden="true" size={18} /> Выбрать файлы
+            <input type="file" multiple accept=".json,.yaml,.yml,.lock,.lockb,application/json,text/plain,text/yaml" onChange={onFileInput} />
+          </label>
+        </div>
         {message ? <p className="form-message" role="status">{message}</p> : null}
       </div>
 
@@ -114,6 +153,16 @@ function ProjectSetup() {
             value={project?.name ?? ""}
             placeholder="Мой проект"
             onChange={(event) => saveProject(updatedProject(project, { name: event.target.value }))}
+          />
+        </label>
+
+        <label className="project-name">
+          <span>Фактическая Node.js <small>необязательно</small></span>
+          <input
+            type="text"
+            value={project?.nodeVersion ?? ""}
+            placeholder={project?.nodeRange ? `В проекте: ${project.nodeRange}` : "например, 22.18.0"}
+            onChange={(event) => saveProject(updatedProject(project, { nodeVersion: event.target.value.trim() || undefined }))}
           />
         </label>
 
@@ -142,7 +191,7 @@ function ProjectSetup() {
         {project?.packages.length ? (
           <div className="project-packages" aria-label="Пакеты проекта">
             {project.packages.map((entry) => (
-              <div key={entry.name}><code>{entry.name}</code><span>{entry.version}</span><button type="button" onClick={() => removePackage(entry.name)} aria-label={`Удалить ${entry.name}`} title="Удалить пакет"><X aria-hidden="true" size={15} /></button></div>
+              <div key={entry.name}><code>{entry.name}</code><span>{entry.resolvedVersion ?? entry.declaredVersion ?? entry.version}</span>{entry.resolution === "lockfile" ? <FileLock2 aria-label="Точная версия из lock-файла" size={14} /> : null}<button type="button" onClick={() => removePackage(entry.name)} aria-label={`Удалить ${entry.name}`} title="Удалить пакет"><X aria-hidden="true" size={15} /></button></div>
             ))}
           </div>
         ) : <p className="project-packages__empty">Импортируйте файл или добавьте ключевые пакеты вручную.</p>}
@@ -237,5 +286,5 @@ function ActionQueue({ catalog }: { catalog: ArchiveCatalog }) {
 }
 
 export function ProjectWorkspace({ catalog }: { catalog: ArchiveCatalog }) {
-  return <><ProjectSetup /><VersionRadar catalog={catalog} /><ActionQueue catalog={catalog} /></>;
+  return <><ProjectSetup /><CompatibilityRadar /><ActionQueue catalog={catalog} /></>;
 }
