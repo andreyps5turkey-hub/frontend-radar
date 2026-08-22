@@ -70,6 +70,7 @@ test("ships daily automation and a valid Russian digest", async () => {
   assert.match(workflow, /cron: "0 5 \* \* \*"/);
   assert.match(workflow, /actions\/deploy-pages@v4/);
   assert.match(workflow, /GROQ_API_KEY: \$\{\{ secrets\.GROQ \}\}/);
+  assert.match(workflow, /github\.actor != 'github-actions\[bot\]'/);
   assert.doesNotMatch(workflow, /Copilot|copilot-requests/i);
   assert.match(curator, /openai\/gpt-oss-20b/);
   assert.match(curator, /json_schema/);
