@@ -24,6 +24,7 @@ async function render() {
 }
 
 test("server-renders the frontend radar", async () => {
+  const digest = JSON.parse(await readFile(new URL("../data/digest.json", import.meta.url), "utf8"));
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
@@ -32,13 +33,10 @@ test("server-renders the frontend radar", async () => {
   assert.match(html, /<title>Frontend Radar<\/title>/i);
   assert.match(html, /Короткая русская подборка по React и фронтенду/);
   assert.match(html, /08:00/);
-  assert.match(html, /Next\.js 16\.3\.2 исправляет маршрутизацию/);
-  assert.match(html, /ESLint 10\.9\.0 делает автоисправления/);
-  assert.match(html, /Вышел TypeScript 7\.0/);
-  assert.match(html, /Vite 8\.2/);
-  assert.match(html, /React Foundation начала работу/);
+  for (const item of [...digest.items, ...digest.readLater]) {
+    assert.ok(html.includes(item.title), `missing digest title: ${item.title}`);
+  }
   assert.match(html, /Читать оригинал/);
-  assert.match(html, /https:\/\/devblogs\.microsoft\.com\/typescript/);
   assert.match(html, /og\.jpg/);
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|react-loading-skeleton/i);
 });
@@ -56,20 +54,26 @@ test("removes disposable starter preview references", async () => {
 });
 
 test("ships daily automation and a valid Russian digest", async () => {
-  const [digestText, workflow, packageJson] = await Promise.all([
+  const [digestText, workflow, packageJson, curator] = await Promise.all([
     readFile(new URL("../data/digest.json", import.meta.url), "utf8"),
     readFile(new URL("../.github/workflows/pages.yml", import.meta.url), "utf8"),
     readFile(new URL("../package.json", import.meta.url), "utf8"),
+    readFile(new URL("../scripts/curate-with-groq.mjs", import.meta.url), "utf8"),
   ]);
   const digest = JSON.parse(digestText);
   const scripts = JSON.parse(packageJson).scripts;
 
   assert.equal(digest.timezone, "Europe/Moscow");
-  assert.equal(digest.status, "active");
-  assert.equal(digest.items.length, 2);
-  assert.equal(digest.readLater.length, 3);
+  assert.equal(digest.status, digest.items.length ? "active" : "quiet");
+  assert.ok(digest.items.length <= 8);
+  assert.ok(digest.readLater.length >= 2 && digest.readLater.length <= 3);
   assert.match(workflow, /cron: "0 5 \* \* \*"/);
   assert.match(workflow, /actions\/deploy-pages@v4/);
+  assert.match(workflow, /GROQ_API_KEY: \$\{\{ secrets\.GROQ \}\}/);
+  assert.doesNotMatch(workflow, /Copilot|copilot-requests/i);
+  assert.match(curator, /openai\/gpt-oss-20b/);
+  assert.match(curator, /json_schema/);
   assert.equal(scripts["digest:collect"], "node scripts/collect-news.mjs");
+  assert.equal(scripts["digest:curate"], "node scripts/curate-with-groq.mjs");
   assert.equal(scripts["pages:export"], "node scripts/export-pages.mjs");
 });

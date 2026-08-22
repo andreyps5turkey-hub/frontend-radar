@@ -14,7 +14,7 @@
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern pages-dist",
     "db:generate": "drizzle-kit generate",
     "digest:collect": "node scripts/collect-news.mjs",
-    "digest:curate": "node scripts/run-copilot.mjs",
+    "digest:curate": "node scripts/curate-with-groq.mjs",
     "digest:validate": "node scripts/validate-digest.mjs",
     "digest:archive": "node scripts/archive-digest.mjs",
     "digest:finalize": "node scripts/validate-digest.mjs && node scripts/archive-digest.mjs",

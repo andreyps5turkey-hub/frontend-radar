@@ -11,7 +11,6 @@ permissions:
   contents: write
   pages: write
   id-token: write
-  copilot-requests: write
 
 concurrency:
   group: frontend-radar-pages
@@ -47,15 +46,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
 
-      - name: Install Copilot CLI
-        if: github.event_name != 'push'
-        run: npm install --global @github/copilot
-
       - name: Create Russian digest
         if: github.event_name != 'push'
         run: pnpm run digest:curate
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          GROQ_API_KEY: ${{ secrets.GROQ }}
 
       - name: Validate and archive digest
         if: github.event_name != 'push'
@@ -84,7 +79,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-      - name: Save daily issue
+      - name: Commit daily digest
         if: github.event_name != 'push'
         run: |
           git config user.name "github-actions[bot]"
