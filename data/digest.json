@@ -1,53 +1,54 @@
 {
   "date": "2026-08-22",
-  "generatedAt": "2026-08-22T07:42:48.542Z",
+  "generatedAt": "2026-08-22T07:48:12.532Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
-  "sourcesChecked": 20,
+  "sourcesChecked": 21,
   "status": "quiet",
-  "summary": "Значимых новых событий не найдено. Подборка для чтения собрана в резервном режиме.",
+  "summary": "В течение окна ничего значимого не произошло.",
   "items": [],
   "readLater": [
     {
-      "priority": "P3",
-      "title": "Storybook Releases: выпуск v10.5.10",
+      "priority": "P2",
+      "title": "v10.5.10",
       "source": "Storybook Releases",
       "publishedAt": "2026-08-20T11:02:19Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы Storybook Releases.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "whyImportant": "Обновление Vitest с CVE-2026-47428, а также исправления в Core и Docs.",
+      "audience": "frontend‑разработчики",
+      "nextStep": "Проверить совместимость и обновить зависимости.",
       "url": "https://github.com/storybookjs/storybook/releases/tag/v10.5.10",
       "tags": [
-        "storybook",
-        "обновление"
+        "Storybook",
+        "Vitest",
+        "CVE"
       ]
     },
     {
-      "priority": "P3",
-      "title": "Storybook Releases: выпуск v10.5.5",
+      "priority": "P2",
+      "title": "v10.5.7",
       "source": "Storybook Releases",
-      "publishedAt": "2026-07-27T10:14:14Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы Storybook Releases.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/storybookjs/storybook/releases/tag/v10.5.5",
+      "publishedAt": "2026-08-06T13:21:43Z",
+      "whyImportant": "Новые исправления в Angular‑addon и обновление метода getVersionedPackages.",
+      "audience": "frontend‑разработчики",
+      "nextStep": "Обновить Storybook до v10.5.7 и проверить работу addon‑vitest.",
+      "url": "https://github.com/storybookjs/storybook/releases/tag/v10.5.7",
       "tags": [
-        "storybook",
-        "обновление"
+        "Storybook",
+        "Angular"
       ]
     },
     {
       "priority": "P3",
-      "title": "Новый материал от React Status",
-      "source": "React Status",
-      "publishedAt": "Fri, 24 Jul 2026 00:00:00 +0000",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Разработчики и команды, использующие React.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://react.statuscode.com/issues/484",
+      "title": "Shipping less JavaScript with Baseline",
+      "source": "JavaScript Weekly",
+      "publishedAt": "Tue, 11 Aug 2026 00:00:00 +0000",
+      "whyImportant": "Информация о снижении объёма JavaScript и примере миграции монорепозитория.",
+      "audience": "frontend‑разработчики",
+      "nextStep": "Прочитать статью для вдохновения при миграции.",
+      "url": "https://javascriptweekly.com/issues/798",
       "tags": [
-        "react",
-        "обновление"
+        "JavaScript Weekly",
+        "Baseline"
       ]
     }
   ]
