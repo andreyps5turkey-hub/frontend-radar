@@ -46,8 +46,7 @@ let digest;
 try {
   if (!process.env.GROQ_API_KEY) throw new Error("GROQ_API_KEY is not configured");
   if (inputCandidates.length < 2) throw new Error("Not enough candidates for a complete digest");
-  digest = await requestDigest(instructions, issue, inputCandidates);
-  digest = canonicalizeDigest(digest, issue, inputCandidates, dailyCandidates);
+  digest = await createGroqDigest(instructions, issue, inputCandidates, dailyCandidates);
   console.log(`Groq created ${digest.items.length} daily items and ${digest.readLater.length} read-later items.`);
 } catch (error) {
   console.warn(`Groq curation failed, using deterministic fallback: ${error.message}`);
@@ -57,7 +56,22 @@ try {
 await writeFile(temporaryDigestPath, `${JSON.stringify(digest, null, 2)}\n`, "utf8");
 await rename(temporaryDigestPath, digestPath);
 
-async function requestDigest(systemPrompt, trustedIssue, candidates) {
+async function createGroqDigest(systemPrompt, trustedIssue, candidates, dailySourceCandidates) {
+  let correction = "";
+  let lastError;
+  for (let attempt = 1; attempt <= 2; attempt += 1) {
+    const modelDigest = await requestDigest(systemPrompt, trustedIssue, candidates, correction);
+    try {
+      return canonicalizeDigest(modelDigest, trustedIssue, candidates, dailySourceCandidates);
+    } catch (error) {
+      lastError = error;
+      correction = `Previous response failed the Russian-language quality gate: ${error.message}. Rewrite every title, summary, whyImportant, audience, and nextStep in natural Russian with Cyrillic text. A version number or an English source title alone is not a translated title.`;
+    }
+  }
+  throw lastError ?? new Error("Groq did not produce a valid Russian digest");
+}
+
+async function requestDigest(systemPrompt, trustedIssue, candidates, correction) {
   const response = await fetchWithRetry(API_URL, {
     method: "POST",
     headers: {
@@ -70,7 +84,7 @@ async function requestDigest(systemPrompt, trustedIssue, candidates) {
         { role: "system", content: systemPrompt },
         {
           role: "user",
-          content: JSON.stringify({ issue: trustedIssue, candidates }),
+          content: JSON.stringify({ issue: trustedIssue, candidates, correction: correction || undefined }),
         },
       ],
       response_format: {
@@ -142,6 +156,13 @@ function canonicalizeDigest(modelDigest, trustedIssue, candidates, dailySourceCa
   const readLater = modelDigest.readLater.map((item) => canonicalize(item, "readLater"));
   if (readLater.length < 2) throw new Error("Groq returned fewer than two read-later items");
 
+  assertRussianText(modelDigest.summary, "summary");
+  for (const [index, item] of [...items, ...readLater].entries()) {
+    for (const field of ["title", "whyImportant", "audience", "nextStep"]) {
+      assertRussianText(item[field], `entry ${index + 1} ${field}`);
+    }
+  }
+
   return {
     ...trustedIssue,
     status: items.length ? "active" : "quiet",
@@ -149,6 +170,12 @@ function canonicalizeDigest(modelDigest, trustedIssue, candidates, dailySourceCa
     items,
     readLater,
   };
+}
+
+function assertRussianText(value, field) {
+  if (typeof value !== "string" || !/[А-Яа-яЁё]/.test(value)) {
+    throw new Error(`${field} must contain Russian text`);
+  }
 }
 
 function createFallbackDigest(trustedIssue, daily, readLater) {

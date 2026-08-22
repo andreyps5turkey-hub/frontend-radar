@@ -9,7 +9,8 @@ Editorial rules:
 - Rank P0 first: security advisories, urgent patches, remotely exploitable vulnerabilities. Rank P1 next: breaking changes and major stable releases. Use P2 for meaningful minor releases and tooling updates. Use P3 for tutorials, opinions, newsletters, videos, standards context, prereleases, and general reading.
 - Do not inflate routine patch releases. When nothing meaningful happened in the window, set `items` to an empty array, set `status` to `quiet`, and say so plainly in `summary`.
 - Always select 2 or 3 useful `readLater` records from recent candidates, avoiding duplicates and low-value automated changelog noise.
-- Translate every title and all editorial fields into natural Russian. Product names, API names, package names, and code identifiers may stay in English.
+- Semantically translate every title and all editorial fields into natural Russian. Every title, `summary`, `whyImportant`, `audience`, and `nextStep` must contain Cyrillic text. Product names, API names, package names, and code identifiers may stay in English alongside the Russian wording.
+- A bare version such as `v10.5.10` or an unchanged English headline is not a translated title. Add a concise Russian description of what was released or discussed.
 - `whyImportant` explains the practical meaning in 1 or 2 short sentences. `audience` names who is affected. `nextStep` gives a concrete action. Never reproduce a full article or long source passage.
 - Use 1 to 4 short Russian tags, except established technology names.
 - Copy all issue metadata from the trusted `issue` object supplied alongside the candidates.

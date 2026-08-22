@@ -67,6 +67,12 @@ test("ships daily automation and a valid Russian digest", async () => {
   assert.equal(digest.status, digest.items.length ? "active" : "quiet");
   assert.ok(digest.items.length <= 8);
   assert.ok(digest.readLater.length >= 2 && digest.readLater.length <= 3);
+  assert.match(digest.summary, /[А-Яа-яЁё]/);
+  for (const item of [...digest.items, ...digest.readLater]) {
+    for (const field of ["title", "whyImportant", "audience", "nextStep"]) {
+      assert.match(item[field], /[А-Яа-яЁё]/, `${field} must contain Russian text`);
+    }
+  }
   assert.match(workflow, /cron: "0 5 \* \* \*"/);
   assert.match(workflow, /actions\/deploy-pages@v4/);
   assert.match(workflow, /GROQ_API_KEY: \$\{\{ secrets\.GROQ \}\}/);
