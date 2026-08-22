@@ -11,17 +11,18 @@ test("catalog contains every dated archive in newest-first order", async () => {
   ]);
   const catalog = JSON.parse(catalogText);
   const datedFiles = files.filter((file) => /^\d{4}-\d{2}-\d{2}\.json$/.test(file));
-  assert.equal(catalog.version, 1);
+  assert.equal(catalog.version, 2);
   assert.equal(catalog.issues.length, datedFiles.length);
   assert.deepEqual(catalog.issues.map(({ date }) => date), [...catalog.issues.map(({ date }) => date)].sort().reverse());
   catalog.issues.forEach((issue) => validateDigest(issue));
 });
 
-test("static export contains archive and weekly pages, a real 404 and a valid RSS feed", async () => {
+test("static export contains archive, weekly and project pages, a real 404 and a valid RSS feed", async () => {
   const catalog = JSON.parse(await readFile(new URL("../data/archive/catalog.json", import.meta.url), "utf8"));
-  const [archiveHtml, weeklyHtml, notFoundHtml, feedText] = await Promise.all([
+  const [archiveHtml, weeklyHtml, projectHtml, notFoundHtml, feedText] = await Promise.all([
     readFile(new URL("../pages-dist/archive/index.html", import.meta.url), "utf8"),
     readFile(new URL("../pages-dist/weekly/index.html", import.meta.url), "utf8"),
+    readFile(new URL("../pages-dist/project/index.html", import.meta.url), "utf8"),
     readFile(new URL("../pages-dist/404.html", import.meta.url), "utf8"),
     readFile(new URL("../pages-dist/feed.xml", import.meta.url), "utf8"),
   ]);
@@ -29,6 +30,9 @@ test("static export contains archive and weekly pages, a real 404 and a valid RS
   assert.match(archiveHtml, /\/frontend-radar\/archive\//);
   assert.match(weeklyHtml, /Неделя во фронтенде/);
   assert.match(weeklyHtml, /\/frontend-radar\/weekly\//);
+  assert.match(projectHtml, /Мой проект/);
+  assert.match(projectHtml, /Пакеты под наблюдением/);
+  assert.match(projectHtml, /\/frontend-radar\/project\//);
   assert.match(notFoundHtml, /Такого выпуска нет/);
 
   for (const issue of catalog.issues) {

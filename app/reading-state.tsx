@@ -2,6 +2,15 @@
 
 import { createContext, useCallback, useContext, useMemo, useSyncExternalStore } from "react";
 import type { TopicId } from "@/lib/topics";
+import {
+  ACTIONS_KEY,
+  PROJECT_KEY,
+  readActionMap,
+  readProjectProfile,
+  type ActionMap,
+  type ActionStatus,
+  type ProjectProfile,
+} from "@/lib/project";
 
 const READING_KEY = "frontend-radar:reading-state:v1";
 const TOPICS_KEY = "frontend-radar:topics:v1";
@@ -18,9 +27,14 @@ type ReadingContextValue = {
   hydrated: boolean;
   reading: ReadingMap;
   selectedTopics: TopicId[];
+  project: ProjectProfile | null;
+  actions: ActionMap;
   toggleRead: (url: string) => void;
   toggleSaved: (url: string) => void;
   toggleTopic: (topic: TopicId) => void;
+  saveProject: (project: ProjectProfile) => void;
+  clearProject: () => void;
+  setActionStatus: (url: string, status: ActionStatus | null) => void;
 };
 
 const ReadingContext = createContext<ReadingContextValue | null>(null);
@@ -52,9 +66,13 @@ function readStorage<T>(value: string, fallback: T): T {
 export function ReadingStateProvider({ children }: { children: React.ReactNode }) {
   const readingJson = useSyncExternalStore(subscribe, () => window.localStorage.getItem(READING_KEY) ?? "{}", () => "{}");
   const topicsJson = useSyncExternalStore(subscribe, () => window.localStorage.getItem(TOPICS_KEY) ?? "[]", () => "[]");
+  const projectJson = useSyncExternalStore(subscribe, () => window.localStorage.getItem(PROJECT_KEY) ?? "null", () => "null");
+  const actionsJson = useSyncExternalStore(subscribe, () => window.localStorage.getItem(ACTIONS_KEY) ?? "{}", () => "{}");
   const hydrated = useSyncExternalStore(() => () => {}, () => true, () => false);
   const reading = useMemo(() => readStorage<ReadingMap>(readingJson, {}), [readingJson]);
   const selectedTopics = useMemo(() => readStorage<TopicId[]>(topicsJson, []), [topicsJson]);
+  const project = useMemo(() => readProjectProfile(projectJson), [projectJson]);
+  const actions = useMemo(() => readActionMap(actionsJson), [actionsJson]);
 
   const updateItem = useCallback((url: string, field: "read" | "saved") => {
     const current = readStorage<ReadingMap>(window.localStorage.getItem(READING_KEY) ?? "{}", {});
@@ -74,14 +92,38 @@ export function ReadingStateProvider({ children }: { children: React.ReactNode }
     emitChange();
   }, []);
 
+  const saveProject = useCallback((nextProject: ProjectProfile) => {
+    window.localStorage.setItem(PROJECT_KEY, JSON.stringify({ ...nextProject, updatedAt: new Date().toISOString() }));
+    emitChange();
+  }, []);
+
+  const clearProject = useCallback(() => {
+    window.localStorage.removeItem(PROJECT_KEY);
+    emitChange();
+  }, []);
+
+  const setActionStatus = useCallback((url: string, status: ActionStatus | null) => {
+    const current = readActionMap(window.localStorage.getItem(ACTIONS_KEY) ?? "{}");
+    const next = { ...current };
+    if (status) next[url] = { status, updatedAt: new Date().toISOString() };
+    else delete next[url];
+    window.localStorage.setItem(ACTIONS_KEY, JSON.stringify(next));
+    emitChange();
+  }, []);
+
   const value = useMemo<ReadingContextValue>(() => ({
     hydrated,
     reading,
     selectedTopics,
+    project,
+    actions,
     toggleRead: (url) => updateItem(url, "read"),
     toggleSaved: (url) => updateItem(url, "saved"),
     toggleTopic,
-  }), [hydrated, reading, selectedTopics, toggleTopic, updateItem]);
+    saveProject,
+    clearProject,
+    setActionStatus,
+  }), [actions, clearProject, hydrated, project, reading, saveProject, selectedTopics, setActionStatus, toggleTopic, updateItem]);
 
   return <ReadingContext.Provider value={value}>{children}</ReadingContext.Provider>;
 }

@@ -34,6 +34,28 @@ export type WeeklyDigest = {
   };
 };
 
+export type WeeklyTopicChange = {
+  id: TopicId;
+  label: string;
+  current: number;
+  previous: number;
+  delta: number;
+  direction: "new" | "rising" | "quiet";
+};
+
+export type WeeklyComparison = {
+  current: WeeklyDigest;
+  previous: WeeklyDigest;
+  hasBaseline: boolean;
+  deltas: {
+    materials: number;
+    important: number;
+    activeDays: number;
+    sourceHealthPoints: number | null;
+  };
+  topicChanges: WeeklyTopicChange[];
+};
+
 function toDateValue(value: string) {
   return Date.parse(`${value}T12:00:00Z`);
 }
@@ -42,11 +64,8 @@ function dateFromValue(value: number) {
   return new Date(value).toISOString().slice(0, 10);
 }
 
-export function buildWeeklyDigest(catalog: ArchiveCatalog, days = 7): WeeklyDigest {
-  const latest = catalog.issues[0];
-  if (!latest) throw new Error("Weekly digest requires at least one archive issue.");
-
-  const endValue = toDateValue(latest.date);
+function buildWeeklyWindow(catalog: ArchiveCatalog, endDate: string, days: number): WeeklyDigest {
+  const endValue = toDateValue(endDate);
   const startValue = endValue - (days - 1) * DAY_MS;
   const issues = catalog.issues.filter(({ date }) => {
     const value = toDateValue(date);
@@ -99,7 +118,7 @@ export function buildWeeklyDigest(catalog: ArchiveCatalog, days = 7): WeeklyDige
 
   return {
     startDate: dateFromValue(startValue),
-    endDate: latest.date,
+    endDate,
     issues,
     materials,
     highlights,
@@ -111,6 +130,55 @@ export function buildWeeklyDigest(catalog: ArchiveCatalog, days = 7): WeeklyDige
     importantCount: priorityCounts.P0 + priorityCounts.P1,
     activeDays: issues.filter(({ status }) => status === "active").length,
     sourceHealth,
+  };
+}
+
+export function buildWeeklyDigest(catalog: ArchiveCatalog, days = 7): WeeklyDigest {
+  const latest = catalog.issues[0];
+  if (!latest) throw new Error("Weekly digest requires at least one archive issue.");
+  return buildWeeklyWindow(catalog, latest.date, days);
+}
+
+function healthPercent(weekly: WeeklyDigest) {
+  return weekly.sourceHealth.attempted
+    ? Math.round((weekly.sourceHealth.succeeded / weekly.sourceHealth.attempted) * 100)
+    : null;
+}
+
+export function buildWeeklyComparison(catalog: ArchiveCatalog, days = 7): WeeklyComparison {
+  const current = buildWeeklyDigest(catalog, days);
+  const previousEnd = dateFromValue(toDateValue(current.startDate) - DAY_MS);
+  const previous = buildWeeklyWindow(catalog, previousEnd, days);
+  const currentHealth = healthPercent(current);
+  const previousHealth = healthPercent(previous);
+  const currentTopics = new Map(current.topics.map((topic) => [topic.id, topic.count]));
+  const previousTopics = new Map(previous.topics.map((topic) => [topic.id, topic.count]));
+  const topicChanges = topics.flatMap(({ id, label }) => {
+    const currentCount = currentTopics.get(id) ?? 0;
+    const previousCount = previousTopics.get(id) ?? 0;
+    const delta = currentCount - previousCount;
+    if (!delta) return [];
+    return [{
+      id,
+      label,
+      current: currentCount,
+      previous: previousCount,
+      delta,
+      direction: previousCount === 0 && currentCount > 0 ? "new" as const : delta > 0 ? "rising" as const : "quiet" as const,
+    }];
+  }).sort((left, right) => Math.abs(right.delta) - Math.abs(left.delta) || left.label.localeCompare(right.label, "ru"));
+
+  return {
+    current,
+    previous,
+    hasBaseline: previous.issues.length >= 3,
+    deltas: {
+      materials: current.materials.length - previous.materials.length,
+      important: current.importantCount - previous.importantCount,
+      activeDays: current.activeDays - previous.activeDays,
+      sourceHealthPoints: currentHealth === null || previousHealth === null ? null : currentHealth - previousHealth,
+    },
+    topicChanges,
   };
 }
 

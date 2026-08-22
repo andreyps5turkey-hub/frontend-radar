@@ -26,6 +26,7 @@ function rewriteForPages(html) {
     .replaceAll('"/favicon.svg"', `"${basePath}/favicon.svg"`)
     .replaceAll('href="/archive', `href="${basePath}/archive`)
     .replaceAll('href="/weekly', `href="${basePath}/weekly`)
+    .replaceAll('href="/project', `href="${basePath}/project`)
     .replaceAll('href="/feed.xml"', `href="${basePath}/feed.xml"`)
     .replace(/https?:\/\/[^"'\\<>\s]+\/og\.jpg/g, `${siteUrl}/og.jpg`);
 }
@@ -49,16 +50,18 @@ async function writeRoute(route, html) {
   await writeFile(resolve(directory, "index.html"), html, "utf8");
 }
 
-const [homeHtml, archiveHtml, weeklyHtml, notFoundHtml] = await Promise.all([
+const [homeHtml, archiveHtml, weeklyHtml, projectHtml, notFoundHtml] = await Promise.all([
   renderRoute("/"),
   renderRoute("/archive/"),
   renderRoute("/weekly/"),
+  renderRoute("/project/"),
   renderRoute("/__frontend_radar_missing__", 404),
 ]);
 await Promise.all([
   writeRoute("/", homeHtml),
   writeRoute("/archive/", archiveHtml),
   writeRoute("/weekly/", weeklyHtml),
+  writeRoute("/project/", projectHtml),
   writeFile(resolve(outputDir, "404.html"), notFoundHtml, "utf8"),
 ]);
 
@@ -120,4 +123,4 @@ ${feedItems}
 
 await writeFile(resolve(outputDir, "feed.xml"), feed, "utf8");
 await writeFile(resolve(outputDir, ".nojekyll"), "", "utf8");
-console.log(`Exported ${archiveRoutes.length + 4} GitHub Pages routes and RSS to ${outputDir} with base path ${basePath}.`);
+console.log(`Exported ${archiveRoutes.length + 5} GitHub Pages routes and RSS to ${outputDir} with base path ${basePath}.`);

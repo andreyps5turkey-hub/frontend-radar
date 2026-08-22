@@ -13,6 +13,11 @@ Editorial rules:
 - A bare version such as `v10.5.10` or an unchanged English headline is not a translated title. Add a concise Russian description of what was released or discussed.
 - `whyImportant` explains the practical meaning in 1 or 2 short sentences. `audience` names who is affected. `nextStep` gives a concrete action. Never reproduce a full article or long source passage.
 - Use 1 to 4 short Russian tags, except established technology names.
+- Classify each item with `changeType`, `risk`, and `effort`. Keep risk conservative: use `unknown` when the source excerpt is insufficient.
+- Fill `technologies` only with values allowed by the schema. Fill `packages` only for explicitly relevant npm packages.
+- Never invent versions. A `releasedVersion`, `affectedRange`, or `fixedVersion` may be set only when every version number appears literally in the candidate title or summary; otherwise use `null`.
+- Give 1 to 3 short Russian `actionItems` that can be checked off. They must be concrete verification, update, migration, or reading steps.
+- Use `detailsConfidence: source` only when the details are directly stated in the candidate, `inferred` for conservative classification, and `unknown` when there is not enough information.
 - Copy all issue metadata from the trusted `issue` object supplied alongside the candidates.
 - Set `status` to `active` when `items` is non-empty and `quiet` otherwise.
 - Keep at most 8 daily items. Prefer fewer, stronger signals.

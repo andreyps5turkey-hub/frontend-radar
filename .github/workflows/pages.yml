@@ -52,6 +52,10 @@ jobs:
         env:
           GROQ_API_KEY: ${{ secrets.GROQ }}
 
+      - name: Check article links
+        if: github.event_name != 'push' || github.actor != 'github-actions[bot]'
+        run: pnpm run digest:links
+
       - name: Validate and archive digest
         if: github.event_name != 'push' || github.actor != 'github-actions[bot]'
         run: pnpm run digest:finalize

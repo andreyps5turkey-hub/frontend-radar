@@ -5,6 +5,12 @@ const MODEL = "openai/gpt-oss-20b";
 const API_URL = "https://api.groq.com/openai/v1/chat/completions";
 const MAX_INPUT_CANDIDATES = 18;
 const MAX_SUMMARY_LENGTH = 520;
+const PACKAGE_NAMES = [
+  "react", "react-dom", "next", "typescript", "@typescript/native-preview", "vite",
+  "react-router", "react-router-dom", "@reduxjs/toolkit", "@tanstack/react-query",
+  "storybook", "@storybook/react", "eslint", "prettier",
+];
+const TECHNOLOGIES = ["react", "nextjs", "typescript", "vite", "router", "redux", "query", "storybook", "quality", "platform"];
 
 const candidatesPath = resolve("data/candidates.json");
 const digestPath = resolve("data/digest.json");
@@ -22,6 +28,7 @@ const [candidateData, instructions, usedUrls, previousDigest] = await Promise.al
 ]);
 
 const issue = {
+  schemaVersion: 2,
   date: issueDate,
   generatedAt: now.toISOString(),
   timezone: "Europe/Moscow",
@@ -70,7 +77,7 @@ async function createGroqDigest(systemPrompt, trustedIssue, candidates, dailySou
       return canonicalizeDigest(modelDigest, trustedIssue, candidates, dailySourceCandidates);
     } catch (error) {
       lastError = error;
-      correction = `Previous response failed the Russian-language quality gate: ${error.message}. Rewrite every title, summary, whyImportant, audience, and nextStep in natural Russian with Cyrillic text. A version number or an English source title alone is not a translated title.`;
+      correction = `Previous response failed validation: ${error.message}. Rewrite every title and editorial field in natural Russian. Keep structured details conservative and never invent a package version that is absent from the candidate text.`;
     }
   }
   throw lastError ?? new Error("Groq did not produce a valid Russian digest");
@@ -103,7 +110,7 @@ async function requestDigest(systemPrompt, trustedIssue, candidates, correction)
       reasoning_effort: "low",
       include_reasoning: false,
       temperature: 0.2,
-      max_completion_tokens: 2200,
+      max_completion_tokens: 3600,
       stream: false,
     }),
   });
@@ -151,6 +158,7 @@ function canonicalizeDigest(modelDigest, trustedIssue, candidates, dailySourceCa
     seen.add(source.url);
     return {
       ...item,
+      packages: verifyPackageVersions(item.packages, source),
       source: source.source,
       publishedAt: source.publishedAt,
       url: source.url,
@@ -166,6 +174,7 @@ function canonicalizeDigest(modelDigest, trustedIssue, candidates, dailySourceCa
     for (const field of ["title", "whyImportant", "audience", "nextStep"]) {
       assertRussianText(item[field], `entry ${index + 1} ${field}`);
     }
+    item.actionItems.forEach((action, actionIndex) => assertRussianText(action, `entry ${index + 1} action ${actionIndex + 1}`));
   }
 
   return {
@@ -175,6 +184,23 @@ function canonicalizeDigest(modelDigest, trustedIssue, candidates, dailySourceCa
     items,
     readLater,
   };
+}
+
+function verifyPackageVersions(packages, candidate) {
+  const sourceText = `${candidate.title} ${candidate.summary}`.toLowerCase();
+  return packages.map((entry) => ({
+    ...entry,
+    releasedVersion: verifiedVersionField(entry.releasedVersion, sourceText),
+    affectedRange: verifiedVersionField(entry.affectedRange, sourceText),
+    fixedVersion: verifiedVersionField(entry.fixedVersion, sourceText),
+  }));
+}
+
+function verifiedVersionField(value, sourceText) {
+  if (value === null) return null;
+  const versions = String(value).match(/\d+(?:\.\d+){1,3}(?:-[a-z0-9.-]+)?/gi) ?? [];
+  if (!versions.length) return null;
+  return versions.every((version) => sourceText.includes(version.toLowerCase())) ? value : null;
 }
 
 function assertRussianText(value, field) {
@@ -193,7 +219,7 @@ function createFallbackDigest(trustedIssue, daily, readLater) {
   for (const previousItem of previousDigest.readLater ?? []) {
     if (selectedReadLater.length >= 3) break;
     if (!selectedReadLater.some((item) => item.url === previousItem.url)) {
-      selectedReadLater.push(previousItem);
+      selectedReadLater.push(enrichLegacyItem(previousItem));
     }
   }
 
@@ -205,6 +231,27 @@ function createFallbackDigest(trustedIssue, daily, readLater) {
       : "Значимых новых событий не найдено. Подборка для чтения собрана в резервном режиме.",
     items,
     readLater: selectedReadLater,
+  };
+}
+
+function enrichLegacyItem(item) {
+  if (item.changeType && item.technologies && item.packages && item.risk && item.effort && item.actionItems && item.detailsConfidence) return item;
+  const candidate = {
+    title: item.title,
+    summary: `${item.whyImportant} ${item.nextStep}`,
+    source: item.source,
+    sourceKind: item.priority === "P0" ? "security" : "digest",
+  };
+  const version = item.title.match(/v?\d+(?:\.\d+){1,3}(?:-[\w.]+)?/i)?.[0];
+  return {
+    ...item,
+    changeType: inferChangeType(candidate, item.priority),
+    technologies: technologiesFor(candidate),
+    packages: packagesFor(candidate, item.priority === "P0" ? undefined : version),
+    risk: item.priority === "P0" ? "critical" : item.priority === "P1" ? "high" : item.priority === "P2" ? "medium" : "low",
+    effort: item.priority === "P1" ? "days" : item.priority === "P3" ? "minutes" : "hours",
+    actionItems: [item.nextStep],
+    detailsConfidence: "inferred",
   };
 }
 
@@ -228,6 +275,15 @@ function fallbackItem(candidate, forcedPriority) {
       : "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
     url: candidate.url,
     tags: tagsFor(candidate),
+    changeType: inferChangeType(candidate, priority),
+    technologies: technologiesFor(candidate),
+    packages: packagesFor(candidate, priority === "P0" ? undefined : version),
+    risk: priority === "P0" ? "critical" : priority === "P1" ? "high" : priority === "P2" ? "medium" : "low",
+    effort: priority === "P0" ? "hours" : priority === "P1" ? "days" : priority === "P2" ? "hours" : "minutes",
+    actionItems: priority === "P0"
+      ? ["Сверить используемую версию с уведомлением безопасности.", "Установить исправление или применить рекомендованное ограничение."]
+      : ["Проверить список изменений в первоисточнике.", "Протестировать обновление в отдельной ветке."],
+    detailsConfidence: "inferred",
   };
 }
 
@@ -274,6 +330,56 @@ function inferPriority(candidate) {
   return "P2";
 }
 
+function inferChangeType(candidate, priority) {
+  const text = `${candidate.title} ${candidate.summary}`;
+  if (priority === "P0") return "security";
+  if (/breaking|migration|required/i.test(text)) return "breaking";
+  if (/\bmajor\b/i.test(text)) return "major";
+  if (candidate.sourceKind === "standards") return "standard";
+  if (candidate.sourceKind === "digest") return "guide";
+  if (/release|version|v?\d+\.\d+/i.test(text)) return "minor";
+  return "tooling";
+}
+
+function technologiesFor(candidate) {
+  const text = `${candidate.source} ${candidate.title} ${candidate.summary}`;
+  const matches = [];
+  const add = (id, pattern) => { if (pattern.test(text)) matches.push(id); };
+  add("nextjs", /next\.js|nextjs|turbopack/i);
+  add("typescript", /typescript|typescript-go/i);
+  add("vite", /\bvite\b/i);
+  add("router", /react router|react-router/i);
+  add("redux", /redux|@reduxjs\/toolkit/i);
+  add("query", /tanstack query|@tanstack\/react-query/i);
+  add("storybook", /storybook/i);
+  add("quality", /eslint|prettier|lint/i);
+  add("platform", /mdn|web\.dev|baseline|tc39|javascript|css/i);
+  add("react", /\breact(?:\.js)?\b/i);
+  return [...new Set(matches.length ? matches : ["platform"])];
+}
+
+function packagesFor(candidate, version) {
+  const text = `${candidate.source} ${candidate.title}`;
+  const names = [];
+  const add = (name, pattern) => { if (pattern.test(text)) names.push(name); };
+  add("next", /next\.js|nextjs/i);
+  add("typescript", /typescript/i);
+  add("vite", /\bvite\b/i);
+  add("react-router", /react router|react-router/i);
+  add("@reduxjs/toolkit", /redux toolkit|@reduxjs\/toolkit/i);
+  add("@tanstack/react-query", /tanstack query|@tanstack\/react-query/i);
+  add("storybook", /storybook/i);
+  add("eslint", /eslint/i);
+  add("prettier", /prettier/i);
+  if (/\breact(?:\.js)?\b/i.test(text) && !/react router/i.test(text)) names.push("react");
+  return [...new Set(names)].map((name) => ({
+    name,
+    releasedVersion: version ?? null,
+    affectedRange: null,
+    fixedVersion: null,
+  }));
+}
+
 function audienceFor(candidate) {
   if (/Next\.js/i.test(candidate.source)) return "Команды, которые поддерживают приложения на Next.js.";
   if (/React/i.test(candidate.source)) return "Разработчики и команды, использующие React.";
@@ -299,13 +405,35 @@ function digestSchema() {
       nextStep: { type: "string" },
       url: { type: "string" },
       tags: { type: "array", items: { type: "string" }, minItems: 1, maxItems: 4 },
+      changeType: { type: "string", enum: ["security", "breaking", "major", "minor", "tooling", "guide", "standard"] },
+      technologies: { type: "array", items: { type: "string", enum: TECHNOLOGIES }, minItems: 1, maxItems: 5 },
+      packages: {
+        type: "array",
+        maxItems: 6,
+        items: {
+          type: "object",
+          properties: {
+            name: { type: "string", enum: PACKAGE_NAMES },
+            releasedVersion: { type: ["string", "null"] },
+            affectedRange: { type: ["string", "null"] },
+            fixedVersion: { type: ["string", "null"] },
+          },
+          required: ["name", "releasedVersion", "affectedRange", "fixedVersion"],
+          additionalProperties: false,
+        },
+      },
+      risk: { type: "string", enum: ["critical", "high", "medium", "low", "unknown"] },
+      effort: { type: "string", enum: ["minutes", "hours", "days", "unknown"] },
+      actionItems: { type: "array", items: { type: "string" }, minItems: 1, maxItems: 3 },
+      detailsConfidence: { type: "string", enum: ["source", "inferred", "unknown"] },
     },
-    required: ["priority", "title", "source", "publishedAt", "whyImportant", "audience", "nextStep", "url", "tags"],
+    required: ["priority", "title", "source", "publishedAt", "whyImportant", "audience", "nextStep", "url", "tags", "changeType", "technologies", "packages", "risk", "effort", "actionItems", "detailsConfidence"],
     additionalProperties: false,
   };
   return {
     type: "object",
     properties: {
+      schemaVersion: { type: "integer", enum: [2] },
       date: { type: "string" },
       generatedAt: { type: "string" },
       timezone: { type: "string" },
@@ -326,7 +454,7 @@ function digestSchema() {
         additionalProperties: false,
       },
     },
-    required: ["date", "generatedAt", "timezone", "windowHours", "status", "summary", "items", "readLater", "sourcesChecked", "sourceHealth"],
+    required: ["schemaVersion", "date", "generatedAt", "timezone", "windowHours", "status", "summary", "items", "readLater", "sourcesChecked", "sourceHealth"],
     additionalProperties: false,
   };
 }

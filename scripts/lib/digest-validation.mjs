@@ -1,6 +1,11 @@
 const priorities = new Set(["P0", "P1", "P2", "P3"]);
+const changeTypes = new Set(["security", "breaking", "major", "minor", "tooling", "guide", "standard"]);
+const technologies = new Set(["react", "nextjs", "typescript", "vite", "router", "redux", "query", "storybook", "quality", "platform"]);
+const risks = new Set(["critical", "high", "medium", "low", "unknown"]);
+const efforts = new Set(["minutes", "hours", "days", "unknown"]);
+const confidenceLevels = new Set(["source", "inferred", "unknown"]);
 
-export function validateDigest(digest, { requireSourceHealth = false } = {}) {
+export function validateDigest(digest, { requireSourceHealth = false, requireEnrichment = false } = {}) {
   const assert = (condition, message) => {
     if (!condition) throw new Error(`Invalid digest: ${message}`);
   };
@@ -25,9 +30,35 @@ export function validateDigest(digest, { requireSourceHealth = false } = {}) {
     const url = new URL(item.url);
     assert(url.protocol === "https:", `${group}[${index}].url must use HTTPS`);
     assert(Array.isArray(item.tags) && item.tags.length >= 1 && item.tags.length <= 5, `${group}[${index}].tags is invalid`);
+
+    const hasEnrichment = ["changeType", "technologies", "packages", "risk", "effort", "actionItems", "detailsConfidence"]
+      .some((field) => item[field] != null);
+    if (requireEnrichment || digest.schemaVersion === 2 || hasEnrichment) {
+      assert(changeTypes.has(item.changeType), `${group}[${index}].changeType is invalid`);
+      assert(Array.isArray(item.technologies) && item.technologies.length >= 1 && item.technologies.length <= 5, `${group}[${index}].technologies is invalid`);
+      assert(item.technologies.every((technology) => technologies.has(technology)), `${group}[${index}].technologies contains an invalid value`);
+      assert(new Set(item.technologies).size === item.technologies.length, `${group}[${index}].technologies contains duplicates`);
+      assert(Array.isArray(item.packages) && item.packages.length <= 6, `${group}[${index}].packages is invalid`);
+      for (const [packageIndex, entry] of item.packages.entries()) {
+        assert(entry && typeof entry === "object", `${group}[${index}].packages[${packageIndex}] is invalid`);
+        assert(typeof entry.name === "string" && entry.name.trim(), `${group}[${index}].packages[${packageIndex}].name is invalid`);
+        for (const field of ["releasedVersion", "affectedRange", "fixedVersion"]) {
+          assert(entry[field] === null || (typeof entry[field] === "string" && entry[field].trim()), `${group}[${index}].packages[${packageIndex}].${field} is invalid`);
+        }
+      }
+      assert(risks.has(item.risk), `${group}[${index}].risk is invalid`);
+      assert(efforts.has(item.effort), `${group}[${index}].effort is invalid`);
+      assert(Array.isArray(item.actionItems) && item.actionItems.length >= 1 && item.actionItems.length <= 3, `${group}[${index}].actionItems is invalid`);
+      item.actionItems.forEach((action, actionIndex) => {
+        assert(typeof action === "string" && action.trim().length <= 240, `${group}[${index}].actionItems[${actionIndex}] is invalid`);
+        assertRussian(action, `${group}[${index}].actionItems[${actionIndex}]`);
+      });
+      assert(confidenceLevels.has(item.detailsConfidence), `${group}[${index}].detailsConfidence is invalid`);
+    }
   };
 
   assert(digest && typeof digest === "object", "digest must be an object");
+  assert(digest.schemaVersion == null || digest.schemaVersion === 2, "schemaVersion is invalid");
   assert(/^\d{4}-\d{2}-\d{2}$/.test(digest.date), "date must use YYYY-MM-DD");
   assert(!Number.isNaN(Date.parse(digest.generatedAt)), "generatedAt is invalid");
   assert(digest.timezone === "Europe/Moscow", "timezone must be Europe/Moscow");

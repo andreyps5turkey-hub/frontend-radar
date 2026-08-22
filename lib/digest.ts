@@ -1,4 +1,18 @@
+import type { TopicId } from "./topics";
+
 export type Priority = "P0" | "P1" | "P2" | "P3";
+
+export type ChangeType = "security" | "breaking" | "major" | "minor" | "tooling" | "guide" | "standard";
+export type RiskLevel = "critical" | "high" | "medium" | "low" | "unknown";
+export type EffortLevel = "minutes" | "hours" | "days" | "unknown";
+export type DetailsConfidence = "source" | "inferred" | "unknown";
+
+export type AffectedPackage = {
+  name: string;
+  releasedVersion: string | null;
+  affectedRange: string | null;
+  fixedVersion: string | null;
+};
 
 export type DigestItem = {
   priority: Priority;
@@ -10,6 +24,13 @@ export type DigestItem = {
   nextStep: string;
   url: string;
   tags: string[];
+  changeType?: ChangeType;
+  technologies?: TopicId[];
+  packages?: AffectedPackage[];
+  risk?: RiskLevel;
+  effort?: EffortLevel;
+  actionItems?: string[];
+  detailsConfidence?: DetailsConfidence;
 };
 
 export type SourceHealth = {
@@ -19,6 +40,7 @@ export type SourceHealth = {
 };
 
 export type Digest = {
+  schemaVersion?: 2;
   date: string;
   generatedAt: string;
   timezone: "Europe/Moscow";
@@ -32,7 +54,7 @@ export type Digest = {
 };
 
 export type ArchiveCatalog = {
-  version: 1;
+  version: 1 | 2;
   updatedAt: string;
   issues: Digest[];
 };
@@ -42,6 +64,31 @@ export const priorityLabels: Record<Priority, string> = {
   P1: "Важно",
   P2: "Инструменты",
   P3: "На потом",
+};
+
+export const changeTypeLabels: Record<ChangeType, string> = {
+  security: "Безопасность",
+  breaking: "Ломающее изменение",
+  major: "Major-релиз",
+  minor: "Обновление",
+  tooling: "Инструменты",
+  guide: "Практика",
+  standard: "Веб-платформа",
+};
+
+export const riskLabels: Record<RiskLevel, string> = {
+  critical: "Критический риск",
+  high: "Высокий риск",
+  medium: "Средний риск",
+  low: "Низкий риск",
+  unknown: "Риск не определён",
+};
+
+export const effortLabels: Record<EffortLevel, string> = {
+  minutes: "До часа",
+  hours: "Несколько часов",
+  days: "Несколько дней",
+  unknown: "Нужна оценка",
 };
 
 export function formatIssueDate(value: string) {

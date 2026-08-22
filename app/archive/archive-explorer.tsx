@@ -1,12 +1,14 @@
 "use client";
 
-import { Bookmark, Check, RotateCcw, Search, SlidersHorizontal } from "lucide-react";
+import { Bookmark, Check, ExternalLink, ListPlus, RotateCcw, Search, SlidersHorizontal } from "lucide-react";
 import { useDeferredValue, useMemo, useSyncExternalStore } from "react";
-import type { ArchiveCatalog, DigestItem, Priority } from "@/lib/digest";
-import { formatIssueDate, formatMaterialCount, itemAnchor, priorityLabels } from "@/lib/digest";
+import type { ArchiveCatalog, ChangeType, DigestItem, Priority, RiskLevel } from "@/lib/digest";
+import { formatIssueDate, formatMaterialCount, priorityLabels } from "@/lib/digest";
 import { archivePath } from "@/lib/site";
 import { topicIdsForItem, topics, type TopicId } from "@/lib/topics";
 import { useReadingState } from "../reading-state";
+import { changeTypeOptions, relevanceForItem, riskOptions } from "@/lib/project";
+import { ItemSignals } from "../item-signals";
 
 type Filters = {
   query: string;
@@ -16,6 +18,9 @@ type Filters = {
   savedOnly: boolean;
   unreadOnly: boolean;
   myTopics: boolean;
+  projectOnly: boolean;
+  changeType: ChangeType | "";
+  risk: RiskLevel | "";
 };
 
 type IndexedEntry = {
@@ -32,6 +37,9 @@ const defaultFilters: Filters = {
   savedOnly: false,
   unreadOnly: false,
   myTopics: false,
+  projectOnly: false,
+  changeType: "",
+  risk: "",
 };
 
 const urlListeners = new Set<() => void>();
@@ -50,6 +58,8 @@ function filtersFromSearch(search: string): Filters {
   const priorities = (params.get("priority")?.split(",") ?? [])
     .filter((value): value is Priority => ["P0", "P1", "P2", "P3"].includes(value));
   const topic = params.get("topic") ?? "";
+  const changeType = params.get("change") ?? "";
+  const risk = params.get("risk") ?? "";
   return {
     query: params.get("q") ?? "",
     priorities,
@@ -58,6 +68,9 @@ function filtersFromSearch(search: string): Filters {
     savedOnly: params.get("saved") === "1",
     unreadOnly: params.get("unread") === "1",
     myTopics: params.get("mine") === "1",
+    projectOnly: params.get("project") === "1",
+    changeType: changeTypeOptions.some((item) => item.value === changeType) ? changeType as ChangeType : "",
+    risk: riskOptions.some((item) => item.value === risk) ? risk as RiskLevel : "",
   };
 }
 
@@ -70,6 +83,9 @@ function filtersToSearch(filters: Filters) {
   if (filters.savedOnly) params.set("saved", "1");
   if (filters.unreadOnly) params.set("unread", "1");
   if (filters.myTopics) params.set("mine", "1");
+  if (filters.projectOnly) params.set("project", "1");
+  if (filters.changeType) params.set("change", filters.changeType);
+  if (filters.risk) params.set("risk", filters.risk);
   const query = params.toString();
   return query ? `?${query}` : "";
 }
@@ -81,17 +97,18 @@ function replaceFilters(filters: Filters) {
 
 function searchableText(entry: IndexedEntry) {
   const { item, issueSummary } = entry;
-  return [item.title, item.source, item.whyImportant, item.audience, item.nextStep, item.tags.join(" "), issueSummary]
+  return [item.title, item.source, item.whyImportant, item.audience, item.nextStep, item.tags.join(" "), item.actionItems?.join(" "), item.technologies?.join(" "), item.packages?.map(({ name, releasedVersion, affectedRange, fixedVersion }) => `${name} ${releasedVersion ?? ""} ${affectedRange ?? ""} ${fixedVersion ?? ""}`).join(" "), issueSummary]
     .join(" ")
     .toLocaleLowerCase("ru-RU");
 }
 
 function ArchiveResult({ entry }: { entry: IndexedEntry }) {
-  const { hydrated, reading, toggleRead, toggleSaved } = useReadingState();
+  const { hydrated, reading, toggleRead, toggleSaved, project, actions, setActionStatus } = useReadingState();
   const state = reading[entry.item.url];
   const isRead = hydrated && Boolean(state?.read);
   const isSaved = hydrated && Boolean(state?.saved);
-  const href = `${archivePath(entry.issueDate)}#${itemAnchor(entry.item.url)}`;
+  const relevance = relevanceForItem(entry.item, project);
+  const isPlanned = hydrated && actions[entry.item.url]?.status === "planned";
 
   return (
     <article className={`archive-result${isRead ? " archive-result--read" : ""}`}>
@@ -103,13 +120,28 @@ function ArchiveResult({ entry }: { entry: IndexedEntry }) {
           <span>{entry.item.source}</span>
           <span>{priorityLabels[entry.item.priority]}</span>
         </div>
-        <h3><a href={href}>{entry.item.title}</a></h3>
+        <h3>
+          <a className="article-title-link" href={entry.item.url} target="_blank" rel="noopener noreferrer">
+            {entry.item.title}<ExternalLink aria-hidden="true" size={14} />
+          </a>
+        </h3>
         <p>{entry.item.whyImportant}</p>
+        <ItemSignals item={entry.item} relevance={relevance} />
         <div className="tag-row" aria-label="Темы материала">
           {entry.item.tags.map((tag) => <span key={tag}>{tag}</span>)}
         </div>
       </div>
       <div className="archive-result__actions">
+        <button
+          className={`icon-button${isPlanned ? " is-active" : ""}`}
+          type="button"
+          aria-label={isPlanned ? "Убрать из плана" : "Добавить в план"}
+          aria-pressed={isPlanned}
+          title={isPlanned ? "Убрать из плана" : "Добавить в план"}
+          onClick={() => setActionStatus(entry.item.url, isPlanned ? null : "planned")}
+        >
+          <ListPlus aria-hidden="true" size={17} />
+        </button>
         <button
           className={`icon-button${isSaved ? " is-active" : ""}`}
           type="button"
@@ -136,7 +168,7 @@ function ArchiveResult({ entry }: { entry: IndexedEntry }) {
 }
 
 export function ArchiveExplorer({ catalog }: { catalog: ArchiveCatalog }) {
-  const { hydrated, reading, selectedTopics, toggleTopic } = useReadingState();
+  const { hydrated, reading, selectedTopics, toggleTopic, project } = useReadingState();
   const search = useSyncExternalStore(subscribeToUrl, () => window.location.search, () => "");
   const filters = useMemo(() => filtersFromSearch(search), [search]);
   const deferredQuery = useDeferredValue(filters.query.trim().toLocaleLowerCase("ru-RU"));
@@ -157,11 +189,14 @@ export function ArchiveExplorer({ catalog }: { catalog: ArchiveCatalog }) {
     if (filters.priorities.length && !filters.priorities.includes(entry.item.priority)) return false;
     if (filters.source && filters.source !== entry.item.source) return false;
     if (filters.topic && !itemTopics.includes(filters.topic)) return false;
+    if (filters.changeType && filters.changeType !== entry.item.changeType) return false;
+    if (filters.risk && filters.risk !== entry.item.risk) return false;
+    if (filters.projectOnly && relevanceForItem(entry.item, project).level === "none") return false;
     if (filters.myTopics && selectedTopics.length && !itemTopics.some((topic) => selectedTopics.includes(topic))) return false;
     if (filters.savedOnly && !reading[entry.item.url]?.saved) return false;
     if (filters.unreadOnly && reading[entry.item.url]?.read) return false;
     return true;
-  }), [deferredQuery, entries, filters, reading, selectedTopics]);
+  }), [deferredQuery, entries, filters, project, reading, selectedTopics]);
 
   const groupedResults = useMemo(() => {
     const groups = new Map<string, IndexedEntry[]>();
@@ -217,6 +252,22 @@ export function ArchiveExplorer({ catalog }: { catalog: ArchiveCatalog }) {
           </label>
 
           <label className="select-control">
+            <span>Тип изменения</span>
+            <select value={filters.changeType} onChange={(event) => update("changeType", event.target.value as ChangeType | "")}>
+              <option value="">Все типы</option>
+              {changeTypeOptions.map((option) => <option value={option.value} key={option.value}>{option.label}</option>)}
+            </select>
+          </label>
+
+          <label className="select-control">
+            <span>Риск</span>
+            <select value={filters.risk} onChange={(event) => update("risk", event.target.value as RiskLevel | "")}>
+              <option value="">Любой риск</option>
+              {riskOptions.map((option) => <option value={option.value} key={option.value}>{option.label}</option>)}
+            </select>
+          </label>
+
+          <label className="select-control">
             <span>Тема</span>
             <select value={filters.topic} onChange={(event) => update("topic", event.target.value as TopicId | "")}>
               <option value="">Все темы</option>
@@ -229,6 +280,9 @@ export function ArchiveExplorer({ catalog }: { catalog: ArchiveCatalog }) {
           </button>
           <button className={`filter-toggle${filters.unreadOnly ? " is-selected" : ""}`} type="button" aria-pressed={filters.unreadOnly} onClick={() => update("unreadOnly", !filters.unreadOnly)}>
             <Check aria-hidden="true" size={18} /> Непрочитанные
+          </button>
+          <button className={`filter-toggle${filters.projectOnly ? " is-selected" : ""}`} type="button" disabled={!hydrated || !project} aria-pressed={filters.projectOnly} onClick={() => update("projectOnly", !filters.projectOnly)}>
+            <SlidersHorizontal aria-hidden="true" size={17} /> Для моего проекта
           </button>
         </div>
 

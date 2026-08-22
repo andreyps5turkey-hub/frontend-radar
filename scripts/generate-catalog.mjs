@@ -23,7 +23,7 @@ const dates = issues.map((issue) => issue.date);
 if (new Set(dates).size !== dates.length) throw new Error("Archive contains duplicate dates.");
 
 const catalog = {
-  version: 1,
+  version: 2,
   updatedAt: issues[0]?.generatedAt ?? new Date(0).toISOString(),
   issues,
 };

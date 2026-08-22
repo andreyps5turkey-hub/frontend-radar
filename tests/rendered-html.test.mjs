@@ -42,9 +42,11 @@ test("server-renders the frontend radar", async () => {
   assert.match(html, /08:00/);
   for (const item of [...digest.items, ...digest.readLater]) {
     assert.ok(html.includes(item.title), `missing digest title: ${item.title}`);
+    assert.ok(html.includes(`href="${item.url}"`), `missing original article link: ${item.url}`);
   }
   assert.match(html, /Читать оригинал/);
   assert.match(html, /Неделя в одном экране/);
+  assert.match(html, /Персональный радар/);
   assert.match(html, /frontend-radar-hero-v2\.jpg/);
   assert.match(html, /og\.jpg/);
   assert.doesNotMatch(html, /Исходный код на GitHub|github\.com\/andreyps5turkey-hub\/frontend-radar/);
@@ -60,6 +62,7 @@ test("server-renders an automatically ranked weekly digest", async () => {
   assert.match(html, /Что не стоит пропустить/);
   assert.match(html, /Пульс приоритетов/);
   assert.match(html, /Как развивалась неделя/);
+  assert.match(html, /По сравнению с прошлой неделей/);
 
   const latest = Date.parse(`${catalog.issues[0].date}T12:00:00Z`);
   const issues = catalog.issues.filter(({ date }) => Date.parse(`${date}T12:00:00Z`) >= latest - 6 * 86400000);
@@ -71,6 +74,18 @@ test("server-renders an automatically ranked weekly digest", async () => {
       || Date.parse(right.publishedAt) - Date.parse(left.publishedAt))
     .slice(0, 7);
   for (const item of highlights) assert.ok(html.includes(item.title));
+  for (const item of highlights) assert.ok(html.includes(`href="${item.url}"`), `weekly title does not link to original: ${item.url}`);
+});
+
+test("server-renders the local project workspace", async () => {
+  const response = await render("/project");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /Мой проект/);
+  assert.match(html, /Импортировать package\.json/);
+  assert.match(html, /Пакеты под наблюдением/);
+  assert.match(html, /Что проверить и обновить/);
+  assert.match(html, /Только на устройстве/);
 });
 
 test("server-renders archive search and permanent issue pages", async () => {
@@ -128,6 +143,7 @@ test("ships daily automation and a valid Russian digest", async () => {
   assert.match(workflow, /cron: "0 5 \* \* \*"/);
   assert.match(workflow, /actions\/deploy-pages@v4/);
   assert.match(workflow, /pnpm run test:built/);
+  assert.match(workflow, /pnpm run digest:links/);
   assert.match(workflow, /GROQ_API_KEY: \$\{\{ secrets\.GROQ \}\}/);
   assert.match(workflow, /github\.actor != 'github-actions\[bot\]'/);
   assert.doesNotMatch(workflow, /Copilot|copilot-requests/i);
@@ -136,5 +152,6 @@ test("ships daily automation and a valid Russian digest", async () => {
   assert.equal(scripts["digest:collect"], "node scripts/collect-news.mjs");
   assert.equal(scripts["digest:curate"], "node scripts/curate-with-groq.mjs");
   assert.equal(scripts["digest:catalog"], "node scripts/generate-catalog.mjs");
+  assert.equal(scripts["digest:links"], "node scripts/validate-article-links.mjs");
   assert.equal(scripts["pages:export"], "node scripts/export-pages.mjs");
 });

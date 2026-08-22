@@ -16,3 +16,7 @@ export function archivePath(date?: string) {
 export function weeklyPath() {
   return sitePath("/weekly/");
 }
+
+export function projectPath() {
+  return sitePath("/project/");
+}

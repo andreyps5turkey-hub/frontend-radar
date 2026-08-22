@@ -1,12 +1,13 @@
 import digestData from "@/data/digest.json";
 import catalogData from "@/data/archive/catalog.json";
-import { ArrowRight, CalendarRange, Rss } from "lucide-react";
+import { ArrowRight, CalendarRange, ExternalLink, Rss } from "lucide-react";
 import { DigestCard } from "./digest-card";
 import { ReadingSummary } from "./reading-summary";
+import { ProjectPulse } from "./project-pulse";
 import { SourceHealthPanel } from "./source-health";
 import type { ArchiveCatalog, Digest, Priority } from "@/lib/digest";
-import { formatIssueDate, itemAnchor } from "@/lib/digest";
-import { archivePath, sitePath, weeklyPath } from "@/lib/site";
+import { formatIssueDate } from "@/lib/digest";
+import { archivePath, projectPath, sitePath, weeklyPath } from "@/lib/site";
 import { buildWeeklyDigest, formatWeeklyRange } from "@/lib/weekly";
 
 type SourceGroup = {
@@ -68,6 +69,7 @@ export default function Home() {
               <a href="#today">Сегодня</a>
               <a href={weeklyPath()}>Неделя</a>
               <a href={archivePath()}>Архив</a>
+              <a href={projectPath()}>Мой проект</a>
               <a href="#sources">Источники</a>
             </div>
           </nav>
@@ -136,6 +138,10 @@ export default function Home() {
         <ReadingSummary knownUrls={knownUrls} weeklyUrls={weeklyUrls} />
       </div>
 
+      <div className="section section--project-pulse">
+        <ProjectPulse catalog={catalog} />
+      </div>
+
       <section className="section" id="today">
         <div className="section__head section__head--row">
           <div>
@@ -174,11 +180,11 @@ export default function Home() {
             <a className="button button--ink" href={weeklyPath()}>Открыть итоги недели <ArrowRight aria-hidden="true" size={18} /></a>
           </div>
           <div className="weekly-preview__list">
-            {weekly.highlights.slice(0, 3).map(({ item, issueDate }, index) => (
-              <a href={`${archivePath(issueDate)}#${itemAnchor(item.url)}`} key={item.url}>
+            {weekly.highlights.slice(0, 3).map(({ item }, index) => (
+              <a href={item.url} target="_blank" rel="noopener noreferrer" key={item.url}>
                 <span>{String(index + 1).padStart(2, "0")}</span>
                 <div><small>{item.priority} · {item.source}</small><strong>{item.title}</strong></div>
-                <ArrowRight aria-hidden="true" size={18} />
+                <ExternalLink aria-hidden="true" size={17} />
               </a>
             ))}
           </div>
@@ -243,6 +249,7 @@ export default function Home() {
           <span>Русская выжимка, оригинальные ссылки, никакой полной перепечатки.</span>
         </div>
         <a href={weeklyPath()}>Итоги недели</a>
+        <a href={projectPath()}>Мой проект</a>
         <a className="footer__rss" href={sitePath("/feed.xml")}>
           <Rss aria-hidden="true" size={16} /> RSS выпуска
         </a>

@@ -1,17 +1,24 @@
 import type { Metadata } from "next";
-import { ArrowRight, CalendarDays, RadioTower } from "lucide-react";
+import { ArrowDownRight, ArrowRight, ArrowUpRight, CalendarDays, Minus, RadioTower } from "lucide-react";
 import catalogData from "@/data/archive/catalog.json";
 import type { ArchiveCatalog, Priority } from "@/lib/digest";
 import { formatIssueDate, formatMaterialCount } from "@/lib/digest";
 import { archivePath, sitePath, weeklyPath } from "@/lib/site";
-import { buildWeeklyDigest, formatWeeklyRange, weeklySummary } from "@/lib/weekly";
+import { buildWeeklyComparison, formatWeeklyRange, weeklySummary } from "@/lib/weekly";
 import { SiteHeader } from "../site-header";
 import { WeeklyHighlight } from "./weekly-highlight";
 
 const catalog = catalogData as ArchiveCatalog;
-const weekly = buildWeeklyDigest(catalog);
+const comparison = buildWeeklyComparison(catalog);
+const weekly = comparison.current;
 const range = formatWeeklyRange(weekly.startDate, weekly.endDate);
 const priorities: Priority[] = ["P0", "P1", "P2", "P3"];
+
+function Delta({ value, suffix = "" }: { value: number | null; suffix?: string }) {
+  if (value === null) return <span className="weekly-delta weekly-delta--flat"><Minus aria-hidden="true" size={15} /> нет данных</span>;
+  const Icon = value > 0 ? ArrowUpRight : value < 0 ? ArrowDownRight : Minus;
+  return <span className={`weekly-delta weekly-delta--${value > 0 ? "up" : value < 0 ? "down" : "flat"}`}><Icon aria-hidden="true" size={15} />{value > 0 ? "+" : ""}{value}{suffix}</span>;
+}
 
 export const metadata: Metadata = {
   title: "Неделя во фронтенде | Frontend Radar",
@@ -47,6 +54,33 @@ export default function WeeklyPage() {
         <div><span>Без повторов</span><strong>{weekly.materials.length}</strong><small>{formatMaterialCount(weekly.materials.length)}</small></div>
         <div><span>Требуют внимания</span><strong>{weekly.importantCount}</strong><small>материалов P0–P1</small></div>
         <div><span>Доступность источников</span><strong>{healthPercent === null ? "н/д" : `${healthPercent}%`}</strong><small>по выпускам с диагностикой</small></div>
+      </section>
+
+      <section className="section weekly-comparison" aria-labelledby="weekly-comparison-title">
+        <div className="weekly-comparison__head">
+          <div><p className="eyebrow">Изменение сигнала</p><h2 id="weekly-comparison-title">По сравнению с прошлой неделей</h2></div>
+          <span>{formatWeeklyRange(comparison.previous.startDate, comparison.previous.endDate)}</span>
+        </div>
+        {comparison.hasBaseline ? (
+          <>
+            <div className="weekly-comparison__metrics">
+              <div><span>Материалы</span><strong>{weekly.materials.length}</strong><Delta value={comparison.deltas.materials} /></div>
+              <div><span>P0–P1</span><strong>{weekly.importantCount}</strong><Delta value={comparison.deltas.important} /></div>
+              <div><span>Активные дни</span><strong>{weekly.activeDays}</strong><Delta value={comparison.deltas.activeDays} /></div>
+              <div><span>Доступность</span><strong>{healthPercent === null ? "н/д" : `${healthPercent}%`}</strong><Delta value={comparison.deltas.sourceHealthPoints} suffix=" п.п." /></div>
+            </div>
+            <div className="weekly-comparison__topics">
+              <h3>Как сдвинулись темы</h3>
+              {comparison.topicChanges.length ? comparison.topicChanges.slice(0, 6).map((topic) => (
+                <a href={`${archivePath()}?topic=${topic.id}`} className={`topic-shift topic-shift--${topic.direction}`} key={topic.id}>
+                  <span>{topic.label}</span><small>{topic.direction === "new" ? "Новая тема" : topic.direction === "rising" ? "Стало больше" : "Стало тише"}</small><strong>{topic.previous} → {topic.current}</strong>
+                </a>
+              )) : <p>Распределение тем не изменилось.</p>}
+            </div>
+          </>
+        ) : (
+          <div className="weekly-comparison__empty"><Minus aria-hidden="true" size={21} /><div><strong>Пока недостаточно данных</strong><p>Для честного сравнения нужно хотя бы три выпуска в предыдущем семидневном окне. Секция заполнится автоматически.</p></div></div>
+        )}
       </section>
 
       <div className="section weekly-main">
