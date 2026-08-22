@@ -27,6 +27,11 @@ const issue = {
   timezone: "Europe/Moscow",
   windowHours: candidateData.windowHours,
   sourcesChecked: candidateData.sourcesSucceeded,
+  sourceHealth: {
+    attempted: candidateData.sourcesAttempted,
+    succeeded: candidateData.sourcesSucceeded,
+    failed: candidateData.failures.map(({ source }) => source),
+  },
 };
 
 const unseen = candidateData.items.filter((candidate) => !usedUrls.has(candidate.url));
@@ -310,8 +315,18 @@ function digestSchema() {
       items: { type: "array", items: item, maxItems: 8 },
       readLater: { type: "array", items: item, minItems: 2, maxItems: 3 },
       sourcesChecked: { type: "integer" },
+      sourceHealth: {
+        type: "object",
+        properties: {
+          attempted: { type: "integer" },
+          succeeded: { type: "integer" },
+          failed: { type: "array", items: { type: "string" } },
+        },
+        required: ["attempted", "succeeded", "failed"],
+        additionalProperties: false,
+      },
     },
-    required: ["date", "generatedAt", "timezone", "windowHours", "status", "summary", "items", "readLater", "sourcesChecked"],
+    required: ["date", "generatedAt", "timezone", "windowHours", "status", "summary", "items", "readLater", "sourcesChecked", "sourceHealth"],
     additionalProperties: false,
   };
 }
@@ -325,7 +340,7 @@ async function readArchivedUrls(excludeDate) {
     return urls;
   }
   await Promise.all(files
-    .filter((file) => file.endsWith(".json") && file !== `${excludeDate}.json`)
+    .filter((file) => /^\d{4}-\d{2}-\d{2}\.json$/.test(file) && file !== `${excludeDate}.json`)
     .map(async (file) => {
     const digest = await readJson(resolve(archiveDirectory, file));
     for (const item of [...(digest.items ?? []), ...(digest.readLater ?? [])]) {

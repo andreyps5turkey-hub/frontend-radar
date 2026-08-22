@@ -1,0 +1,148 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-22T07:42:48.542Z",
+  "issues": [
+    {
+      "date": "2026-08-22",
+      "generatedAt": "2026-08-22T07:42:48.542Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 20,
+      "status": "quiet",
+      "summary": "Значимых новых событий не найдено. Подборка для чтения собрана в резервном режиме.",
+      "items": [],
+      "readLater": [
+        {
+          "priority": "P3",
+          "title": "Storybook Releases: выпуск v10.5.10",
+          "source": "Storybook Releases",
+          "publishedAt": "2026-08-20T11:02:19Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, использующие инструменты из экосистемы Storybook Releases.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/storybookjs/storybook/releases/tag/v10.5.10",
+          "tags": [
+            "storybook",
+            "обновление"
+          ]
+        },
+        {
+          "priority": "P3",
+          "title": "Storybook Releases: выпуск v10.5.5",
+          "source": "Storybook Releases",
+          "publishedAt": "2026-07-27T10:14:14Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, использующие инструменты из экосистемы Storybook Releases.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/storybookjs/storybook/releases/tag/v10.5.5",
+          "tags": [
+            "storybook",
+            "обновление"
+          ]
+        },
+        {
+          "priority": "P3",
+          "title": "Новый материал от React Status",
+          "source": "React Status",
+          "publishedAt": "Fri, 24 Jul 2026 00:00:00 +0000",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Разработчики и команды, использующие React.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://react.statuscode.com/issues/484",
+          "tags": [
+            "react",
+            "обновление"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-08-21",
+      "generatedAt": "2026-08-21T17:30:00+03:00",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "status": "active",
+      "summary": "За последние 26 часов вышли два плановых обновления: Next.js 16.3.2 с исправлениями и ESLint 10.9.0. Срочных уведомлений безопасности и ломающих изменений нет.",
+      "items": [
+        {
+          "priority": "P2",
+          "title": "Next.js 16.3.2 исправляет маршрутизацию и загрузку чанков Turbopack",
+          "source": "Next.js Releases",
+          "publishedAt": "2026-08-21T09:36:58Z",
+          "whyImportant": "Патч исправляет ситуацию, когда catch-all index-страница могла открываться для посторонних адресов, а также проблемы загрузки worker-чанков Turbopack при использовании asset prefix.",
+          "audience": "Проекты на Next.js 16.3, особенно с Pages Router, catch-all маршрутами, Turbopack или собственным asset prefix.",
+          "nextStep": "Обновиться в отдельной ветке и проверить динамические маршруты, production-сборку и загрузку чанков через CDN.",
+          "url": "https://github.com/vercel/next.js/releases/tag/v16.3.2",
+          "tags": [
+            "nextjs",
+            "turbopack",
+            "исправления"
+          ]
+        },
+        {
+          "priority": "P2",
+          "title": "ESLint 10.9.0 делает автоисправления no-var безопаснее",
+          "source": "ESLint Releases",
+          "publishedAt": "2026-08-21T13:05:50Z",
+          "whyImportant": "Релиз закрывает несколько случаев, когда автоисправление no-var могло менять смысл кода при поднятии функций или затенении переменной параметром catch. Также обновлены проверки чисел и условий циклов.",
+          "audience": "Команды на ESLint 10, которые запускают автоматические исправления в редакторе или CI.",
+          "nextStep": "Обновить ESLint в тестовой ветке, запустить lint с автоисправлением и внимательно просмотреть изменения var в старом коде.",
+          "url": "https://github.com/eslint/eslint/releases/tag/v10.9.0",
+          "tags": [
+            "eslint",
+            "качество кода",
+            "автоисправления"
+          ]
+        }
+      ],
+      "readLater": [
+        {
+          "priority": "P1",
+          "title": "Вышел TypeScript 7.0: нативный компилятор стал основой новой версии",
+          "source": "TypeScript Blog",
+          "publishedAt": "2026-07-08T12:00:00Z",
+          "whyImportant": "TypeScript 7 переносит компилятор и языковой сервис на Go. Команда сообщает о заметном ускорении проверки типов и работы редактора на крупных проектах.",
+          "audience": "Команды с большими TypeScript-монорепозиториями, тяжёлой проверкой типов и медленным откликом IDE.",
+          "nextStep": "Проверить отдельную ветку или некритичный проект, сравнить время сборки и убедиться, что плагины редактора и настройки компилятора совместимы.",
+          "url": "https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/",
+          "tags": [
+            "typescript",
+            "компилятор",
+            "миграция"
+          ]
+        },
+        {
+          "priority": "P2",
+          "title": "Vite 8.2: очередное обновление сборщика и экосистемы плагинов",
+          "source": "Vite Releases",
+          "publishedAt": "2026-07-30T12:00:00Z",
+          "whyImportant": "Релиз продолжает развитие ветки Vite 8 и связанных инструментов. Для большинства проектов это плановое обновление, но изменения сборщика стоит проверить на реальной конфигурации.",
+          "audience": "Проекты на Vite 8, авторы плагинов и команды со сложной сборкой или поддержкой старых браузеров.",
+          "nextStep": "Просмотреть changelog, обновиться в отдельной ветке и прогнать production-сборку, тесты и проверку размера бандла.",
+          "url": "https://github.com/vitejs/vite/releases/tag/v8.2.0",
+          "tags": [
+            "vite",
+            "сборка",
+            "tooling"
+          ]
+        },
+        {
+          "priority": "P3",
+          "title": "React Foundation начала работу под эгидой Linux Foundation",
+          "source": "React Blog",
+          "publishedAt": "2026-02-24T12:00:00Z",
+          "whyImportant": "У React появилась отдельная организационная основа для управления проектом, инфраструктурой и долгосрочным развитием экосистемы.",
+          "audience": "Технические руководители, авторы библиотек и команды, которые планируют долгую поддержку продуктов на React.",
+          "nextStep": "Прочитать обзор структуры фонда и учитывать официальные каналы React как главный источник релизных и организационных изменений.",
+          "url": "https://react.dev/blog/2026/02/24/the-react-foundation",
+          "tags": [
+            "react",
+            "экосистема",
+            "управление"
+          ]
+        }
+      ],
+      "sourcesChecked": 20
+    }
+  ]
+}

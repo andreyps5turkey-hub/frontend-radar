@@ -60,12 +60,16 @@ jobs:
         run: pnpm run build
         env:
           SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
 
       - name: Export static site
         run: pnpm run pages:export
         env:
           PAGES_BASE_PATH: /${{ github.event.repository.name }}
           PAGES_ORIGIN: https://${{ github.repository_owner }}.github.io
+
+      - name: Test rendered site
+        run: pnpm run test:built
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

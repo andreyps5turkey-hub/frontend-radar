@@ -2,13 +2,20 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 
-async function render() {
+let workerPromise;
+
+async function getWorker() {
+  if (workerPromise) return workerPromise;
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
-  const { default: worker } = await import(workerUrl.href);
+  workerPromise = import(workerUrl.href).then((module) => module.default);
+  return workerPromise;
+}
 
+async function render(path = "/") {
+  const worker = await getWorker();
   return worker.fetch(
-    new Request("http://localhost/", {
+    new Request(`http://localhost${path}`, {
       headers: { accept: "text/html" },
     }),
     {
@@ -39,6 +46,26 @@ test("server-renders the frontend radar", async () => {
   assert.match(html, /Читать оригинал/);
   assert.match(html, /og\.jpg/);
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|react-loading-skeleton/i);
+});
+
+test("server-renders archive search and permanent issue pages", async () => {
+  const catalog = JSON.parse(await readFile(new URL("../data/archive/catalog.json", import.meta.url), "utf8"));
+  const archiveResponse = await render("/archive");
+  assert.equal(archiveResponse.status, 200);
+  const archiveHtml = await archiveResponse.text();
+  assert.match(archiveHtml, /Архив Frontend Radar/);
+  assert.match(archiveHtml, /Поиск по архиву/);
+
+  const issue = catalog.issues[0];
+  const issueResponse = await render(`/archive/${issue.date}`);
+  assert.equal(issueResponse.status, 200);
+  const issueHtml = await issueResponse.text();
+  assert.ok(issueHtml.includes(issue.summary));
+  for (const item of [...issue.items, ...issue.readLater]) assert.ok(issueHtml.includes(item.title));
+
+  const missingResponse = await render("/archive/1900-01-01");
+  assert.equal(missingResponse.status, 404);
+  assert.match(await missingResponse.text(), /Такого выпуска нет/);
 });
 
 test("removes disposable starter preview references", async () => {
@@ -75,6 +102,7 @@ test("ships daily automation and a valid Russian digest", async () => {
   }
   assert.match(workflow, /cron: "0 5 \* \* \*"/);
   assert.match(workflow, /actions\/deploy-pages@v4/);
+  assert.match(workflow, /pnpm run test:built/);
   assert.match(workflow, /GROQ_API_KEY: \$\{\{ secrets\.GROQ \}\}/);
   assert.match(workflow, /github\.actor != 'github-actions\[bot\]'/);
   assert.doesNotMatch(workflow, /Copilot|copilot-requests/i);
@@ -82,5 +110,6 @@ test("ships daily automation and a valid Russian digest", async () => {
   assert.match(curator, /json_schema/);
   assert.equal(scripts["digest:collect"], "node scripts/collect-news.mjs");
   assert.equal(scripts["digest:curate"], "node scripts/curate-with-groq.mjs");
+  assert.equal(scripts["digest:catalog"], "node scripts/generate-catalog.mjs");
   assert.equal(scripts["pages:export"], "node scripts/export-pages.mjs");
 });

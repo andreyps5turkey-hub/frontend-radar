@@ -1,18 +1,10 @@
 import digestData from "@/data/digest.json";
-
-type Priority = "P0" | "P1" | "P2" | "P3";
-
-type DigestItem = {
-  priority: Priority;
-  title: string;
-  source: string;
-  publishedAt: string;
-  whyImportant: string;
-  audience: string;
-  nextStep: string;
-  url: string;
-  tags: string[];
-};
+import { Archive, Rss } from "lucide-react";
+import { DigestCard } from "./digest-card";
+import { SourceHealthPanel } from "./source-health";
+import type { Digest, Priority } from "@/lib/digest";
+import { formatIssueDate } from "@/lib/digest";
+import { archivePath, sitePath } from "@/lib/site";
 
 type SourceGroup = {
   priority: Priority;
@@ -20,17 +12,7 @@ type SourceGroup = {
   sources: string[];
 };
 
-const digest = digestData as {
-  date: string;
-  generatedAt: string;
-  timezone: string;
-  windowHours: number;
-  status: "active" | "quiet";
-  summary: string;
-  items: DigestItem[];
-  readLater: DigestItem[];
-  sourcesChecked: number;
-};
+const digest = digestData as Digest;
 
 const sourceGroups: SourceGroup[] = [
   {
@@ -55,70 +37,6 @@ const sourceGroups: SourceGroup[] = [
   },
 ];
 
-const priorityLabels: Record<Priority, string> = {
-  P0: "Срочно",
-  P1: "Важно",
-  P2: "Инструменты",
-  P3: "На потом",
-};
-
-function formatIssueDate(value: string) {
-  return new Intl.DateTimeFormat("ru-RU", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-    timeZone: "Europe/Moscow",
-  }).format(new Date(`${value}T12:00:00+03:00`));
-}
-
-function formatPublishedAt(value: string) {
-  return new Intl.DateTimeFormat("ru-RU", {
-    day: "numeric",
-    month: "short",
-    year: "numeric",
-    timeZone: "Europe/Moscow",
-  }).format(new Date(value));
-}
-
-function DigestCard({ item }: { item: DigestItem }) {
-  return (
-    <article className={`digest-card digest-card--${item.priority}`}>
-      <div className="digest-card__meta">
-        <span className={`priority priority--${item.priority}`}>
-          {item.priority} · {priorityLabels[item.priority]}
-        </span>
-        <span>{item.source}</span>
-        <time dateTime={item.publishedAt}>{formatPublishedAt(item.publishedAt)}</time>
-      </div>
-      <h3>{item.title}</h3>
-      <div className="digest-card__body">
-        <div>
-          <span className="field-label">Почему важно</span>
-          <p>{item.whyImportant}</p>
-        </div>
-        <div>
-          <span className="field-label">Кого затронет</span>
-          <p>{item.audience}</p>
-        </div>
-        <div className="next-step">
-          <span className="field-label">Следующий шаг</span>
-          <p>{item.nextStep}</p>
-        </div>
-      </div>
-      <div className="digest-card__footer">
-        <div className="tag-row" aria-label="Темы материала">
-          {item.tags.map((tag) => (
-            <span key={tag}>{tag}</span>
-          ))}
-        </div>
-        <a className="text-link" href={item.url} target="_blank" rel="noreferrer">
-          Читать оригинал <span aria-hidden="true">↗</span>
-        </a>
-      </div>
-    </article>
-  );
-}
-
 export default function Home() {
   const issueDate = formatIssueDate(digest.date);
   const importantCount = digest.items.filter(
@@ -137,6 +55,7 @@ export default function Home() {
             <div className="topbar__links">
               <a href="#today">Сегодня</a>
               <a href="#read-later">На потом</a>
+              <a href={archivePath()}>Архив</a>
               <a href="#sources">Источники</a>
             </div>
           </nav>
@@ -151,7 +70,7 @@ export default function Home() {
               </p>
               <div className="hero__actions">
                 <a className="button button--primary" href="#today">Читать выпуск</a>
-                <a className="button" href="#automation">Как обновляется</a>
+                <a className="button" href={archivePath()}><Archive aria-hidden="true" size={18} /> Архив выпусков</a>
               </div>
             </div>
 
@@ -176,9 +95,9 @@ export default function Home() {
 
       <section className="metrics" aria-label="Сводка выпуска">
         <div className="metric">
-          <span>Проверено</span>
-          <strong>{digest.sourcesChecked}</strong>
-          <small>официальных источников</small>
+          <span>Источники</span>
+          <strong>{digest.sourceHealth?.succeeded ?? digest.sourcesChecked}/{digest.sourceHealth?.attempted ?? 21}</strong>
+          <small>ответили при сборе</small>
         </div>
         <div className="metric">
           <span>Требуют внимания</span>
@@ -196,6 +115,10 @@ export default function Home() {
           <small>до утреннего выпуска</small>
         </div>
       </section>
+
+      <div className="section section--health">
+        <SourceHealthPanel digest={digest} />
+      </div>
 
       <section className="section" id="today">
         <div className="section__head section__head--row">
@@ -280,6 +203,9 @@ export default function Home() {
         </div>
         <a href="https://github.com/andreyps5turkey-hub/frontend-radar" target="_blank" rel="noreferrer">
           Исходный код на GitHub <span aria-hidden="true">↗</span>
+        </a>
+        <a className="footer__rss" href={sitePath("/feed.xml")}>
+          <Rss aria-hidden="true" size={16} /> RSS выпуска
         </a>
       </footer>
     </main>
