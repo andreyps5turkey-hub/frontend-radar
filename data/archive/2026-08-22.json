@@ -1,6 +1,6 @@
 {
   "date": "2026-08-22",
-  "generatedAt": "2026-08-22T08:40:14.719Z",
+  "generatedAt": "2026-08-22T08:59:59.753Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 21,
@@ -10,53 +10,52 @@
     "failed": []
   },
   "status": "quiet",
-  "summary": "В течение окна ничего значимого не произошло.",
+  "summary": "В течение окна не было значимых обновлений, которые требовали бы внимания фронтенд‑разработчиков.",
   "items": [],
   "readLater": [
     {
       "priority": "P2",
-      "title": "React Router v6.30.6 – обновление с новыми патчами",
+      "title": "Storybook v10.5.10 – обновление Vitest с CVE-2026-47428",
+      "source": "Storybook Releases",
+      "publishedAt": "2026-08-20T11:02:19Z",
+      "url": "https://github.com/storybookjs/storybook/releases/tag/v10.5.10",
+      "whyImportant": "Обновление Vitest устраняет известную уязвимость, повышая безопасность сборок.",
+      "audience": "Разработчики, использующие Storybook",
+      "nextStep": "Проверьте, что ваша версия Storybook обновлена до v10.5.10, и примените патч Vitest.",
+      "tags": [
+        "Storybook",
+        "Vitest",
+        "CVE"
+      ]
+    },
+    {
+      "priority": "P2",
+      "title": "React Router v6.30.6 – новые мелкие исправления",
       "source": "React Router Releases",
       "publishedAt": "2026-08-18T14:55:01Z",
       "url": "https://github.com/remix-run/react-router/releases/tag/react-router%406.30.6",
+      "whyImportant": "Небольшие исправления повышают стабильность маршрутизации в приложениях.",
+      "audience": "Разработчики, использующие React Router",
+      "nextStep": "Обновите пакет до v6.30.6, если используете старую версию.",
       "tags": [
         "React Router",
-        "патч",
-        "обновление"
-      ],
-      "audience": "Разработчики, использующие React Router",
-      "nextStep": "Проверьте совместимость и примените обновление в продакшене.",
-      "whyImportant": "Новые исправления повышают стабильность маршрутизации и устраняют мелкие баги."
+        "routing"
+      ]
     },
     {
-      "priority": "P2",
-      "title": "Storybook v10.5.7 – улучшения для Angular и рефакторинг",
-      "source": "Storybook Releases",
-      "publishedAt": "2026-08-06T13:21:43Z",
-      "url": "https://github.com/storybookjs/storybook/releases/tag/v10.5.7",
+      "priority": "P3",
+      "title": "JavaScript Weekly #798 – миграция монорепозитория Flow в TypeScript",
+      "source": "JavaScript Weekly",
+      "publishedAt": "Tue, 11 Aug 2026 00:00:00 +0000",
+      "url": "https://javascriptweekly.com/issues/798",
+      "whyImportant": "Практическое руководство по переходу от Flow к TypeScript в крупном проекте.",
+      "audience": "Разработчики, планирующие миграцию",
+      "nextStep": "Изучите материал, чтобы подготовить план миграции.",
       "tags": [
-        "Storybook",
-        "Angular",
-        "рефакторинг"
-      ],
-      "audience": "Команды, использующие Storybook с Angular",
-      "nextStep": "Обновите Storybook до версии 10.5.7 и проверьте работу addon-vitest.",
-      "whyImportant": "Обновление устраняет проблемы с зависимостями и повышает совместимость с Angular."
-    },
-    {
-      "priority": "P2",
-      "title": "React v19.2.8 – улучшения производительности Server Components",
-      "source": "React Releases",
-      "publishedAt": "2026-07-21T15:49:09Z",
-      "url": "https://github.com/react/react/releases/tag/v19.2.8",
-      "tags": [
-        "React",
-        "Server Components",
-        "производительность"
-      ],
-      "audience": "Разработчики, работающие с Server Components",
-      "nextStep": "Изучите изменения в декодировании и примените их при необходимости.",
-      "whyImportant": "Оптимизация декодирования повышает скорость рендеринга серверных компонентов."
+        "TypeScript",
+        "миграция",
+        "монорепо"
+      ]
     }
   ]
 }
