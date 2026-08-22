@@ -1,16 +1,11 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-22T16:25:36.475Z",
+  "generatedAt": "2026-08-22T16:42:03.297Z",
   "sourceHealth": {
     "attempted": 28,
-    "succeeded": 24,
-    "failed": [
-      "github-advisories:storybook",
-      "github-advisories:@storybook/react",
-      "github-advisories:eslint",
-      "github-advisories:prettier"
-    ],
-    "stale": true
+    "succeeded": 28,
+    "failed": [],
+    "stale": false
   },
   "packages": [
     {
