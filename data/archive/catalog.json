@@ -1,7 +1,127 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-22T16:41:05.458Z",
+  "updatedAt": "2026-08-23T06:00:14.250Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-08-23",
+      "generatedAt": "2026-08-23T06:00:14.250Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 21,
+      "sourceHealth": {
+        "attempted": 21,
+        "succeeded": 21,
+        "failed": []
+      },
+      "status": "quiet",
+      "summary": "Значимых новых событий не найдено. Подборка для чтения собрана в резервном режиме.",
+      "items": [],
+      "readLater": [
+        {
+          "priority": "P3",
+          "title": "Новый материал от This Week in React",
+          "source": "This Week in React",
+          "publishedAt": "Wed, 22 Jul 2026 00:00:00 GMT",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Разработчики и команды, использующие React.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://thisweekinreact.com/newsletter/291",
+          "tags": [
+            "this",
+            "обновление"
+          ],
+          "changeType": "guide",
+          "technologies": [
+            "quality",
+            "react"
+          ],
+          "packages": [
+            {
+              "name": "react",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        },
+        {
+          "priority": "P3",
+          "title": "React Router Releases: выпуск v6.30.6",
+          "source": "React Router Releases",
+          "publishedAt": "2026-08-18T14:55:01Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Разработчики и команды, использующие React.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/remix-run/react-router/releases/tag/react-router%406.30.6",
+          "tags": [
+            "react",
+            "обновление"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "router",
+            "react"
+          ],
+          "packages": [
+            {
+              "name": "react-router",
+              "releasedVersion": "v6.30.6",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        },
+        {
+          "priority": "P3",
+          "title": "React Router Releases: выпуск v7.18.2",
+          "source": "React Router Releases",
+          "publishedAt": "2026-07-28T21:53:57Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Разработчики и команды, использующие React.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/remix-run/react-router/releases/tag/react-router%407.18.2",
+          "tags": [
+            "react",
+            "обновление"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "router",
+            "react"
+          ],
+          "packages": [
+            {
+              "name": "react-router",
+              "releasedVersion": "v7.18.2",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-08-22",

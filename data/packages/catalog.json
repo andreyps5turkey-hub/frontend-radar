@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-22T16:42:03.297Z",
+  "generatedAt": "2026-08-23T06:01:06.040Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -1320,6 +1320,17 @@
           "publishedAt": "Fri, 24 Jul 2026 00:00:00 +0000",
           "source": "React Status",
           "url": "https://react.statuscode.com/issues/484"
+        },
+        {
+          "id": "33adc1f3d6888c",
+          "kind": "patch",
+          "priority": "P3",
+          "version": null,
+          "title": "Новый материал от This Week in React",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "Wed, 22 Jul 2026 00:00:00 GMT",
+          "source": "This Week in React",
+          "url": "https://thisweekinreact.com/newsletter/291"
         },
         {
           "id": "6908f21d383034",
@@ -7764,7 +7775,30 @@
           ]
         }
       ],
-      "events": []
+      "events": [
+        {
+          "id": "41b4943ee374a3",
+          "kind": "minor",
+          "priority": "P3",
+          "version": "6.30.6",
+          "title": "React Router Releases: выпуск v6.30.6",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-08-18T14:55:01Z",
+          "source": "React Router Releases",
+          "url": "https://github.com/remix-run/react-router/releases/tag/react-router%406.30.6"
+        },
+        {
+          "id": "2c3125547888e7",
+          "kind": "minor",
+          "priority": "P3",
+          "version": "7.18.2",
+          "title": "React Router Releases: выпуск v7.18.2",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-07-28T21:53:57Z",
+          "source": "React Router Releases",
+          "url": "https://github.com/remix-run/react-router/releases/tag/react-router%407.18.2"
+        }
+      ]
     },
     {
       "slug": "redux-toolkit",
@@ -8144,15 +8178,15 @@
       "packageNames": [
         "@tanstack/react-query"
       ],
-      "latestVersion": "5.101.4",
-      "latestPublishedAt": "2026-07-21T13:04:07.544Z",
+      "latestVersion": "5.102.0",
+      "latestPublishedAt": "2026-08-22T18:56:06.716Z",
       "npmUrl": "https://www.npmjs.com/package/@tanstack/react-query",
       "repositoryUrl": "https://github.com/TanStack/query",
       "packages": [
         {
           "name": "@tanstack/react-query",
-          "latestVersion": "5.101.4",
-          "latestPublishedAt": "2026-07-21T13:04:07.544Z",
+          "latestVersion": "5.102.0",
+          "latestPublishedAt": "2026-08-22T18:56:06.716Z",
           "npmUrl": "https://www.npmjs.com/package/@tanstack/react-query",
           "compatibility": [
             {
@@ -8209,9 +8243,9 @@
               "deprecated": null
             },
             {
-              "range": ">=5.52.1 <=5.101.4",
+              "range": ">=5.52.1 <=5.102.0",
               "minVersion": "5.52.1",
-              "maxVersion": "5.101.4",
+              "maxVersion": "5.102.0",
               "peerDependencies": {
                 "react": "^18 || ^19"
               },
@@ -8221,6 +8255,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "5.102.0",
+              "publishedAt": "2026-08-22T18:56:06.716Z"
+            },
             {
               "version": "5.101.4",
               "publishedAt": "2026-07-21T13:04:07.544Z"
