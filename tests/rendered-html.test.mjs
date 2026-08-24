@@ -173,7 +173,7 @@ test("ships daily automation and a valid Russian digest", async () => {
   assert.match(workflow, /pnpm run test:built/);
   assert.match(workflow, /pnpm run digest:links/);
   assert.match(workflow, /GROQ_API_KEY: \$\{\{ secrets\.GROQ \}\}/);
-  assert.match(workflow, /if: github\.event_name != 'push'/);
+  assert.match(workflow, /github\.actor != 'github-actions\[bot\]'/);
   assert.doesNotMatch(workflow, /Copilot|copilot-requests/i);
   assert.match(curator, /openai\/gpt-oss-20b/);
   assert.match(curator, /json_schema/);
