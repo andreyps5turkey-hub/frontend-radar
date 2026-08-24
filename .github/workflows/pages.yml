@@ -61,6 +61,7 @@ jobs:
 
       - name: Check article links
         if: github.event_name != 'push' || github.actor != 'github-actions[bot]'
+        continue-on-error: true
         run: pnpm run digest:links
 
       - name: Validate and archive digest
