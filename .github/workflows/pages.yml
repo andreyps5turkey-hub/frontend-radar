@@ -41,19 +41,19 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Collect fresh candidates
-        if: github.event_name != 'push'
+        if: github.event_name != 'push' || github.actor != 'github-actions[bot]'
         run: pnpm run digest:collect
         env:
           GITHUB_TOKEN: ${{ github.token }}
 
       - name: Create Russian digest
-        if: github.event_name != 'push'
+        if: github.event_name != 'push' || github.actor != 'github-actions[bot]'
         run: pnpm run digest:curate
         env:
           GROQ_API_KEY: ${{ secrets.GROQ }}
 
       - name: Refresh package intelligence
-        if: github.event_name != 'push'
+        if: github.event_name != 'push' || github.actor != 'github-actions[bot]'
         continue-on-error: true
         run: pnpm run packages:refresh
         env:
@@ -61,12 +61,12 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ }}
 
       - name: Check article links
-        if: github.event_name != 'push'
+        if: github.event_name != 'push' || github.actor != 'github-actions[bot]'
         continue-on-error: true
         run: pnpm run digest:links
 
       - name: Validate and archive digest
-        if: github.event_name != 'push'
+        if: github.event_name != 'push' || github.actor != 'github-actions[bot]'
         run: pnpm run digest:finalize
 
       - name: Build site
@@ -97,7 +97,7 @@ jobs:
         uses: actions/deploy-pages@v4
 
       - name: Commit daily digest
-        if: github.event_name != 'push'
+        if: github.event_name != 'push' || github.actor != 'github-actions[bot]'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
