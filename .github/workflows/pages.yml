@@ -5,6 +5,7 @@ on:
     branches: [main]
   schedule:
     - cron: "17 5 * * *"
+    - cron: "17 6 * * *"
   workflow_dispatch:
 
 permissions:
@@ -40,20 +41,35 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Decide whether digest refresh is needed
+        id: digest_gate
+        shell: bash
+        run: |
+          TODAY="$(TZ=Europe/Moscow date +%F)"
+          git fetch origin main --quiet
+          REMOTE_DIGEST="$(git show origin/main:data/digest.json 2>/dev/null || cat data/digest.json)"
+          DIGEST_DATE="$(printf '%s' "$REMOTE_DIGEST" | node -e 'let s=""; process.stdin.on("data", d => s += d); process.stdin.on("end", () => { try { process.stdout.write(JSON.parse(s).date ?? ""); } catch { process.stdout.write(""); } });')"
+          SHOULD_REFRESH=true
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$DIGEST_DATE" = "$TODAY" ]; then
+            SHOULD_REFRESH=false
+          fi
+          echo "should_refresh=$SHOULD_REFRESH" >> "$GITHUB_OUTPUT"
+          echo "Moscow date: $TODAY; current digest: ${DIGEST_DATE:-unknown}; refresh: $SHOULD_REFRESH"
+
       - name: Collect fresh candidates
-        if: github.event_name != 'push' || github.actor != 'github-actions[bot]'
+        if: steps.digest_gate.outputs.should_refresh == 'true' && (github.event_name != 'push' || github.actor != 'github-actions[bot]')
         run: pnpm run digest:collect
         env:
           GITHUB_TOKEN: ${{ github.token }}
 
       - name: Create Russian digest
-        if: github.event_name != 'push' || github.actor != 'github-actions[bot]'
+        if: steps.digest_gate.outputs.should_refresh == 'true' && (github.event_name != 'push' || github.actor != 'github-actions[bot]')
         run: pnpm run digest:curate
         env:
           GROQ_API_KEY: ${{ secrets.GROQ }}
 
       - name: Refresh package intelligence
-        if: github.event_name != 'push' || github.actor != 'github-actions[bot]'
+        if: steps.digest_gate.outputs.should_refresh == 'true' && (github.event_name != 'push' || github.actor != 'github-actions[bot]')
         continue-on-error: true
         run: pnpm run packages:refresh
         env:
@@ -61,43 +77,49 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ }}
 
       - name: Check article links
-        if: github.event_name != 'push' || github.actor != 'github-actions[bot]'
+        if: steps.digest_gate.outputs.should_refresh == 'true' && (github.event_name != 'push' || github.actor != 'github-actions[bot]')
         continue-on-error: true
         run: pnpm run digest:links
 
       - name: Validate and archive digest
-        if: github.event_name != 'push' || github.actor != 'github-actions[bot]'
+        if: steps.digest_gate.outputs.should_refresh == 'true' && (github.event_name != 'push' || github.actor != 'github-actions[bot]')
         run: pnpm run digest:finalize
 
       - name: Build site
+        if: steps.digest_gate.outputs.should_refresh == 'true'
         run: pnpm run build
         env:
           SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
           NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
 
       - name: Export static site
+        if: steps.digest_gate.outputs.should_refresh == 'true'
         run: pnpm run pages:export
         env:
           PAGES_BASE_PATH: /${{ github.event.repository.name }}
           PAGES_ORIGIN: https://${{ github.repository_owner }}.github.io
 
       - name: Test rendered site
+        if: steps.digest_gate.outputs.should_refresh == 'true'
         run: pnpm run test:built
 
       - name: Configure Pages
+        if: steps.digest_gate.outputs.should_refresh == 'true'
         uses: actions/configure-pages@v5
 
       - name: Upload Pages artifact
+        if: steps.digest_gate.outputs.should_refresh == 'true'
         uses: actions/upload-pages-artifact@v4
         with:
           path: pages-dist
 
       - name: Deploy Pages
+        if: steps.digest_gate.outputs.should_refresh == 'true'
         id: deployment
         uses: actions/deploy-pages@v4
 
       - name: Commit daily digest
-        if: github.event_name != 'push' || github.actor != 'github-actions[bot]'
+        if: steps.digest_gate.outputs.should_refresh == 'true' && (github.event_name != 'push' || github.actor != 'github-actions[bot]')
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
