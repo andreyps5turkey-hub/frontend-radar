@@ -1,7 +1,159 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-24T07:23:50.765Z",
+  "updatedAt": "2026-08-25T06:03:14.874Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-08-25",
+      "generatedAt": "2026-08-25T06:03:14.874Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 21,
+      "sourceHealth": {
+        "attempted": 21,
+        "succeeded": 21,
+        "failed": []
+      },
+      "status": "active",
+      "summary": "В окне дня опубликован новый выпуск ESLint с исправлениями ошибок. Остальные релизы находятся вне окна.",
+      "items": [
+        {
+          "priority": "P2",
+          "title": "ESLint v10.9.1 – исправления ошибок и обновление плагинов",
+          "source": "ESLint Releases",
+          "publishedAt": "2026-08-24T18:18:59Z",
+          "whyImportant": "Выпуск устраняет ложные срабатывания проверки точности с плавающей точкой и обновляет устаревшие пакеты, повышая надёжность линтинга.",
+          "audience": "Разработчики, использующие ESLint",
+          "nextStep": "Обновите ESLint до версии 10.9.1 и проверьте, что правила работают корректно.",
+          "url": "https://github.com/eslint/eslint/releases/tag/v10.9.1",
+          "tags": [
+            "eslint",
+            "bugfix",
+            "plugin"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "quality"
+          ],
+          "packages": [
+            {
+              "name": "eslint",
+              "releasedVersion": "v10.9.1",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Обновить пакет eslint до v10.9.1",
+            "Проверить, что предупреждения о точности исчезли"
+          ],
+          "detailsConfidence": "source"
+        }
+      ],
+      "readLater": [
+        {
+          "priority": "P3",
+          "title": "Vite v8.2.2 – обновление зависимостей",
+          "source": "Vite Releases",
+          "publishedAt": "2026-08-20T04:08:13Z",
+          "whyImportant": "Обновление пакета может содержать исправления и улучшения производительности.",
+          "audience": "Разработчики, использующие Vite",
+          "nextStep": "Проверьте совместимость проекта с новой версией.",
+          "url": "https://github.com/vitejs/vite/releases/tag/v8.2.2",
+          "tags": [
+            "vite",
+            "update"
+          ],
+          "changeType": "tooling",
+          "technologies": [
+            "vite"
+          ],
+          "packages": [
+            {
+              "name": "vite",
+              "releasedVersion": "v8.2.2",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Обновить vite до v8.2.2",
+            "Проверить сборку проекта"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P3",
+          "title": "plugin-legacy@8.2.3 – обновление плагина Vite",
+          "source": "Vite Releases",
+          "publishedAt": "2026-08-06T13:44:50Z",
+          "whyImportant": "Плагин обеспечивает совместимость старых проектов с новыми версиями Vite.",
+          "audience": "Разработчики, использующие legacy-плагин",
+          "nextStep": "Обновите плагин и проверьте работу сборки.",
+          "url": "https://github.com/vitejs/vite/releases/tag/plugin-legacy%408.2.3",
+          "tags": [
+            "vite",
+            "plugin"
+          ],
+          "changeType": "tooling",
+          "technologies": [
+            "vite"
+          ],
+          "packages": [
+            {
+              "name": "vite",
+              "releasedVersion": "plugin-legacy@8.2.3",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Обновить plugin-legacy до 8.2.3",
+            "Проверить сборку проекта"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P3",
+          "title": "create-vite@9.1.2 – новый шаблон проекта",
+          "source": "Vite Releases",
+          "publishedAt": "2026-07-30T12:03:27Z",
+          "whyImportant": "Новый шаблон облегчает создание новых проектов с последними настройками Vite.",
+          "audience": "Разработчики, создающие новые проекты",
+          "nextStep": "Используйте create-vite 9.1.2 для новых проектов.",
+          "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.1.2",
+          "tags": [
+            "vite",
+            "template"
+          ],
+          "changeType": "tooling",
+          "technologies": [
+            "vite"
+          ],
+          "packages": [
+            {
+              "name": "vite",
+              "releasedVersion": "create-vite@9.1.2",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Установить create-vite 9.1.2",
+            "Создать новый проект с помощью шаблона"
+          ],
+          "detailsConfidence": "source"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-08-24",
