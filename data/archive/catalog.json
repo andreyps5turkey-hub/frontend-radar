@@ -1,7 +1,148 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-25T06:03:14.874Z",
+  "updatedAt": "2026-08-26T07:34:58.984Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-08-26",
+      "generatedAt": "2026-08-26T07:34:58.984Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 21,
+      "sourceHealth": {
+        "attempted": 21,
+        "succeeded": 21,
+        "failed": []
+      },
+      "status": "active",
+      "summary": "В течение дня обновились Next.js до версии 16.3.3, исправив критические уязвимости, а также выпущена версия 15.5.24 с теми же патчами. В качестве «read later» оставлены отдельные отчёты об уязвимостях, которые стоит изучить подробнее.",
+      "items": [
+        {
+          "priority": "P0",
+          "title": "Обновление Next.js до v16.3.3 – критические исправления RCE",
+          "source": "Next.js Releases",
+          "publishedAt": "2026-08-25T16:17:10Z",
+          "whyImportant": "Выпущена версия, устраняющая удалённое выполнение кода на Windows‑серверах и при оптимизации AVIF‑файлов.",
+          "audience": "Разработчики, использующие Next.js на Windows и работающие с изображениями",
+          "nextStep": "Обновить Next.js до v16.3.3 и проверить, что серверы работают корректно.",
+          "url": "https://github.com/vercel/next.js/releases/tag/v16.3.3",
+          "tags": [
+            "Next.js",
+            "безопасность",
+            "RCE"
+          ],
+          "changeType": "security",
+          "technologies": [
+            "nextjs"
+          ],
+          "packages": [
+            {
+              "name": "next",
+              "releasedVersion": "v16.3.3",
+              "affectedRange": null,
+              "fixedVersion": "v16.3.3"
+            }
+          ],
+          "risk": "critical",
+          "effort": "minutes",
+          "actionItems": [
+            "Обновить пакет next до v16.3.3",
+            "Перезапустить сервер и убедиться в отсутствии ошибок"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P1",
+          "title": "Обновление Next.js до v15.5.24 – исправления RCE",
+          "source": "Next.js Releases",
+          "publishedAt": "2026-08-25T16:16:55Z",
+          "whyImportant": "Версия 15.5.24 содержит те же критические патчи, что и v16.3.3, но предназначена для проектов, не готовых к миграции на v16.",
+          "audience": "Разработчики, работающие с Next.js 15.x",
+          "nextStep": "Обновить до v15.5.24 и проверить совместимость.",
+          "url": "https://github.com/vercel/next.js/releases/tag/v15.5.24",
+          "tags": [
+            "Next.js",
+            "безопасность",
+            "RCE"
+          ],
+          "changeType": "security",
+          "technologies": [
+            "nextjs"
+          ],
+          "packages": [
+            {
+              "name": "next",
+              "releasedVersion": "v15.5.24",
+              "affectedRange": null,
+              "fixedVersion": "v15.5.24"
+            }
+          ],
+          "risk": "critical",
+          "effort": "minutes",
+          "actionItems": [
+            "Обновить пакет next до v15.5.24",
+            "Проверить работу серверных маршрутов"
+          ],
+          "detailsConfidence": "source"
+        }
+      ],
+      "readLater": [
+        {
+          "priority": "P0",
+          "title": "Уязвимость: Unauthenticated Remote Code Execution в Image Optimization API при использовании AVIF",
+          "source": "Next.js Security",
+          "publishedAt": "2026-08-25T16:16:28Z",
+          "whyImportant": "Библиотека libheif, используемая sharp, позволяет удалённо выполнить код при обработке AVIF‑файлов.",
+          "audience": "Разработчики, работающие с изображениями в Next.js",
+          "nextStep": "Избегать оптимизации AVIF до выпуска патча, следить за обновлениями.",
+          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-2xp9-vwfh-vxw4",
+          "tags": [
+            "Next.js",
+            "безопасность",
+            "image"
+          ],
+          "changeType": "security",
+          "technologies": [
+            "nextjs"
+          ],
+          "packages": [],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить, используются ли AVIF‑файлы в проекте",
+            "Отключить оптимизацию AVIF до обновления"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P0",
+          "title": "Уязвимость: Unauthenticated Remote Code Execution на Windows‑сервере без Cache Component",
+          "source": "Next.js Security",
+          "publishedAt": "2026-08-25T16:15:42Z",
+          "whyImportant": "Приложения без Cache Component, размещённые на Windows, могут быть атакованы удалённым кодом.",
+          "audience": "Разработчики, размещающие Next.js на Windows",
+          "nextStep": "Обновить до версии с патчами и включить Cache Component.",
+          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-p293-qw3h-jr36",
+          "tags": [
+            "Next.js",
+            "безопасность",
+            "Windows"
+          ],
+          "changeType": "security",
+          "technologies": [
+            "nextjs"
+          ],
+          "packages": [],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить, используется ли Cache Component",
+            "Обновить Next.js до v16.3.3 или v15.5.24"
+          ],
+          "detailsConfidence": "source"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-08-25",

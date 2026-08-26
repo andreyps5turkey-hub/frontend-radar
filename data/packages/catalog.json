@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-25T06:03:39.210Z",
+  "generatedAt": "2026-08-26T07:35:04.605Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -1363,15 +1363,15 @@
       "packageNames": [
         "next"
       ],
-      "latestVersion": "16.3.2",
-      "latestPublishedAt": "2026-08-21T09:54:02.099Z",
+      "latestVersion": "16.3.3",
+      "latestPublishedAt": "2026-08-25T15:32:19.558Z",
       "npmUrl": "https://www.npmjs.com/package/next",
       "repositoryUrl": "https://github.com/vercel/next.js",
       "packages": [
         {
           "name": "next",
-          "latestVersion": "16.3.2",
-          "latestPublishedAt": "2026-08-21T09:54:02.099Z",
+          "latestVersion": "16.3.3",
+          "latestPublishedAt": "2026-08-25T15:32:19.558Z",
           "npmUrl": "https://www.npmjs.com/package/next",
           "compatibility": [
             {
@@ -1735,9 +1735,9 @@
               "deprecated": "This version has a security vulnerability. Please upgrade to a patched version. See https://nextjs.org/blog/security-update-2025-12-11 for more details."
             },
             {
-              "range": ">=15.5.9 <=15.5.23",
+              "range": ">=15.5.9 <=15.5.24",
               "minVersion": "15.5.9",
-              "maxVersion": "15.5.23",
+              "maxVersion": "15.5.24",
               "peerDependencies": {
                 "react": "^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0",
                 "react-dom": "^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0"
@@ -1771,9 +1771,9 @@
               "deprecated": "This version has a security vulnerability. Please upgrade to a patched version. See https://nextjs.org/blog/security-update-2025-12-11 for more details."
             },
             {
-              "range": ">=16.0.10 <=16.3.2",
+              "range": ">=16.0.10 <=16.3.3",
               "minVersion": "16.0.10",
-              "maxVersion": "16.3.2",
+              "maxVersion": "16.3.3",
               "peerDependencies": {
                 "react": "^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0",
                 "react-dom": "^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0"
@@ -1784,6 +1784,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "16.3.3",
+              "publishedAt": "2026-08-25T15:32:19.558Z"
+            },
             {
               "version": "16.3.2",
               "publishedAt": "2026-08-21T09:54:02.099Z"
@@ -1927,6 +1931,10 @@
             {
               "version": "16.0.0",
               "publishedAt": "2025-10-22T00:12:16.323Z"
+            },
+            {
+              "version": "15.5.24",
+              "publishedAt": "2026-08-25T16:14:06.715Z"
             },
             {
               "version": "15.5.23",
@@ -4277,6 +4285,50 @@
         }
       ],
       "events": [
+        {
+          "id": "34a948d52363cb",
+          "kind": "security",
+          "priority": "P0",
+          "version": "16.3.3",
+          "title": "Обновление Next.js до v16.3.3 – критические исправления RCE",
+          "summary": "Выпущена версия, устраняющая удалённое выполнение кода на Windows‑серверах и при оптимизации AVIF‑файлов.",
+          "publishedAt": "2026-08-25T16:17:10Z",
+          "source": "Next.js Releases",
+          "url": "https://github.com/vercel/next.js/releases/tag/v16.3.3"
+        },
+        {
+          "id": "ac2a40ff8ecb7d",
+          "kind": "security",
+          "priority": "P1",
+          "version": "15.5.24",
+          "title": "Обновление Next.js до v15.5.24 – исправления RCE",
+          "summary": "Версия 15.5.24 содержит те же критические патчи, что и v16.3.3, но предназначена для проектов, не готовых к миграции на v16.",
+          "publishedAt": "2026-08-25T16:16:55Z",
+          "source": "Next.js Releases",
+          "url": "https://github.com/vercel/next.js/releases/tag/v15.5.24"
+        },
+        {
+          "id": "941e35a9a29ae8",
+          "kind": "security",
+          "priority": "P0",
+          "version": null,
+          "title": "Уязвимость: Unauthenticated Remote Code Execution в Image Optimization API при использовании AVIF",
+          "summary": "Библиотека libheif, используемая sharp, позволяет удалённо выполнить код при обработке AVIF‑файлов.",
+          "publishedAt": "2026-08-25T16:16:28Z",
+          "source": "Next.js Security",
+          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-2xp9-vwfh-vxw4"
+        },
+        {
+          "id": "d8f1ff07a33703",
+          "kind": "security",
+          "priority": "P0",
+          "version": null,
+          "title": "Уязвимость: Unauthenticated Remote Code Execution на Windows‑сервере без Cache Component",
+          "summary": "Приложения без Cache Component, размещённые на Windows, могут быть атакованы удалённым кодом.",
+          "publishedAt": "2026-08-25T16:15:42Z",
+          "source": "Next.js Security",
+          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-p293-qw3h-jr36"
+        },
         {
           "id": "68c0c0f4579f7a",
           "kind": "patch",
@@ -8233,15 +8285,15 @@
       "packageNames": [
         "@tanstack/react-query"
       ],
-      "latestVersion": "5.102.3",
-      "latestPublishedAt": "2026-08-24T19:26:18.951Z",
+      "latestVersion": "5.102.4",
+      "latestPublishedAt": "2026-08-25T21:27:52.178Z",
       "npmUrl": "https://www.npmjs.com/package/@tanstack/react-query",
       "repositoryUrl": "https://github.com/TanStack/query",
       "packages": [
         {
           "name": "@tanstack/react-query",
-          "latestVersion": "5.102.3",
-          "latestPublishedAt": "2026-08-24T19:26:18.951Z",
+          "latestVersion": "5.102.4",
+          "latestPublishedAt": "2026-08-25T21:27:52.178Z",
           "npmUrl": "https://www.npmjs.com/package/@tanstack/react-query",
           "compatibility": [
             {
@@ -8298,9 +8350,9 @@
               "deprecated": null
             },
             {
-              "range": ">=5.52.1 <=5.102.3",
+              "range": ">=5.52.1 <=5.102.4",
               "minVersion": "5.52.1",
-              "maxVersion": "5.102.3",
+              "maxVersion": "5.102.4",
               "peerDependencies": {
                 "react": "^18 || ^19"
               },
@@ -8310,6 +8362,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "5.102.4",
+              "publishedAt": "2026-08-25T21:27:52.178Z"
+            },
             {
               "version": "5.102.3",
               "publishedAt": "2026-08-24T19:26:18.951Z"
