@@ -170,6 +170,7 @@ test("ships daily automation and a valid Russian digest", async () => {
   }
   assert.match(workflow, /cron: "17 5 \* \* \*"/);
   assert.match(workflow, /cron: "17 6 \* \* \*"/);
+  assert.match(workflow, /cron: "17 12 \* \* \*"/);
   assert.match(workflow, /Decide whether digest refresh is needed/);
   assert.match(workflow, /TZ=Europe\/Moscow date \+%F/);
   assert.match(workflow, /should_refresh/);
