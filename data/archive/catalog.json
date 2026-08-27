@@ -1,7 +1,124 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-26T07:34:58.984Z",
+  "updatedAt": "2026-08-27T12:26:31.359Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-08-27",
+      "generatedAt": "2026-08-27T12:26:31.359Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 21,
+      "sourceHealth": {
+        "attempted": 21,
+        "succeeded": 21,
+        "failed": []
+      },
+      "status": "quiet",
+      "summary": "Значимых новых событий не найдено. Подборка для чтения собрана в резервном режиме.",
+      "items": [],
+      "readLater": [
+        {
+          "priority": "P3",
+          "title": "React Releases: выпуск 19.1.9",
+          "source": "React Releases",
+          "publishedAt": "2026-07-21T15:48:51Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Разработчики и команды, использующие React.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/react/react/releases/tag/v19.1.9",
+          "tags": [
+            "react",
+            "обновление"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "react"
+          ],
+          "packages": [
+            {
+              "name": "react",
+              "releasedVersion": "19.1.9",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        },
+        {
+          "priority": "P3",
+          "title": "React Releases: выпуск 19.0.8",
+          "source": "React Releases",
+          "publishedAt": "2026-07-21T15:48:28Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Разработчики и команды, использующие React.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/react/react/releases/tag/v19.0.8",
+          "tags": [
+            "react",
+            "обновление"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "react"
+          ],
+          "packages": [
+            {
+              "name": "react",
+              "releasedVersion": "19.0.8",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        },
+        {
+          "priority": "P3",
+          "title": "Vite Releases: выпуск v8.2.1",
+          "source": "Vite Releases",
+          "publishedAt": "2026-08-06T13:44:35Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, использующие инструменты из экосистемы Vite Releases.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/vitejs/vite/releases/tag/v8.2.1",
+          "tags": [
+            "vite",
+            "обновление"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "vite"
+          ],
+          "packages": [
+            {
+              "name": "vite",
+              "releasedVersion": "v8.2.1",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-08-26",
