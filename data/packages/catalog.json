@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-28T11:52:40.941Z",
+  "generatedAt": "2026-08-28T21:27:36.595Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -4309,33 +4309,33 @@
       "events": [
         {
           "id": "34a948d52363cb",
-          "kind": "security",
-          "priority": "P0",
+          "kind": "minor",
+          "priority": "P3",
           "version": "16.3.3",
-          "title": "Обновление Next.js до v16.3.3 – критические исправления RCE",
-          "summary": "Выпущена версия, устраняющая удалённое выполнение кода на Windows‑серверах и при оптимизации AVIF‑файлов.",
+          "title": "Next.js Releases: выпуск v16.3.3",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
           "publishedAt": "2026-08-25T16:17:10Z",
           "source": "Next.js Releases",
           "url": "https://github.com/vercel/next.js/releases/tag/v16.3.3"
         },
         {
           "id": "ac2a40ff8ecb7d",
-          "kind": "security",
-          "priority": "P1",
+          "kind": "minor",
+          "priority": "P3",
           "version": "15.5.24",
-          "title": "Обновление Next.js до v15.5.24 – исправления RCE",
-          "summary": "Версия 15.5.24 содержит те же критические патчи, что и v16.3.3, но предназначена для проектов, не готовых к миграции на v16.",
+          "title": "Next.js Releases: выпуск v15.5.24",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
           "publishedAt": "2026-08-25T16:16:55Z",
           "source": "Next.js Releases",
           "url": "https://github.com/vercel/next.js/releases/tag/v15.5.24"
         },
         {
           "id": "941e35a9a29ae8",
-          "kind": "security",
-          "priority": "P0",
+          "kind": "patch",
+          "priority": "P3",
           "version": null,
-          "title": "Уязвимость: Unauthenticated Remote Code Execution в Image Optimization API при использовании AVIF",
-          "summary": "Библиотека libheif, используемая sharp, позволяет удалённо выполнить код при обработке AVIF‑файлов.",
+          "title": "Новый материал от Next.js Security",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
           "publishedAt": "2026-08-25T16:16:28Z",
           "source": "Next.js Security",
           "url": "https://github.com/vercel/next.js/security/advisories/GHSA-2xp9-vwfh-vxw4"
@@ -6290,15 +6290,15 @@
         "react-router",
         "react-router-dom"
       ],
-      "latestVersion": "8.3.0",
-      "latestPublishedAt": "2026-07-22T15:04:41.794Z",
+      "latestVersion": "8.3.1",
+      "latestPublishedAt": "2026-08-28T14:47:42.622Z",
       "npmUrl": "https://www.npmjs.com/package/react-router",
       "repositoryUrl": "https://github.com/remix-run/react-router",
       "packages": [
         {
           "name": "react-router",
-          "latestVersion": "8.3.0",
-          "latestPublishedAt": "2026-07-22T15:04:41.794Z",
+          "latestVersion": "8.3.1",
+          "latestPublishedAt": "2026-08-28T14:47:42.622Z",
           "npmUrl": "https://www.npmjs.com/package/react-router",
           "compatibility": [
             {
@@ -6346,9 +6346,9 @@
               "deprecated": null
             },
             {
-              "range": ">=7.0.0 <=7.18.2",
+              "range": ">=7.0.0 <=7.18.3",
               "minVersion": "7.0.0",
-              "maxVersion": "7.18.2",
+              "maxVersion": "7.18.3",
               "peerDependencies": {
                 "react": ">=18",
                 "react-dom": ">=18"
@@ -6360,9 +6360,9 @@
               "deprecated": null
             },
             {
-              "range": ">=8.0.0 <=8.3.0",
+              "range": ">=8.0.0 <=8.3.1",
               "minVersion": "8.0.0",
-              "maxVersion": "8.3.0",
+              "maxVersion": "8.3.1",
               "peerDependencies": {
                 "react": ">=19.2.7",
                 "react-dom": ">=19.2.7"
@@ -6375,6 +6375,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "8.3.1",
+              "publishedAt": "2026-08-28T14:47:42.622Z"
+            },
             {
               "version": "8.3.0",
               "publishedAt": "2026-07-22T15:04:41.794Z"
@@ -6394,6 +6398,10 @@
             {
               "version": "8.0.0",
               "publishedAt": "2026-06-17T19:19:11.383Z"
+            },
+            {
+              "version": "7.18.3",
+              "publishedAt": "2026-08-28T14:30:10.445Z"
             },
             {
               "version": "7.18.2",
@@ -6923,8 +6931,8 @@
         },
         {
           "name": "react-router-dom",
-          "latestVersion": "7.18.2",
-          "latestPublishedAt": "2026-07-28T21:53:51.695Z",
+          "latestVersion": "7.18.3",
+          "latestPublishedAt": "2026-08-28T14:30:10.417Z",
           "npmUrl": "https://www.npmjs.com/package/react-router-dom",
           "compatibility": [
             {
@@ -6986,9 +6994,9 @@
               "deprecated": null
             },
             {
-              "range": ">=7.0.0 <=7.18.2",
+              "range": ">=7.0.0 <=7.18.3",
               "minVersion": "7.0.0",
-              "maxVersion": "7.18.2",
+              "maxVersion": "7.18.3",
               "peerDependencies": {
                 "react": ">=18",
                 "react-dom": ">=18"
@@ -6999,6 +7007,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "7.18.3",
+              "publishedAt": "2026-08-28T14:30:10.417Z"
+            },
             {
               "version": "7.18.2",
               "publishedAt": "2026-07-28T21:53:51.695Z"
@@ -7949,6 +7961,28 @@
         }
       ],
       "events": [
+        {
+          "id": "79dc827d42f0f6",
+          "kind": "minor",
+          "priority": 0,
+          "version": "8.3.1",
+          "title": "React Router Releases: выпуск v8.3.1",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-08-28T14:44:12Z",
+          "source": "React Router Releases",
+          "url": "https://github.com/remix-run/react-router/releases/tag/react-router%408.3.1"
+        },
+        {
+          "id": "eeca25539f5dee",
+          "kind": "minor",
+          "priority": 1,
+          "version": "7.18.3",
+          "title": "React Router Releases: выпуск v7.18.3",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-08-28T14:29:26Z",
+          "source": "React Router Releases",
+          "url": "https://github.com/remix-run/react-router/releases/tag/react-router%407.18.3"
+        },
         {
           "id": "41b4943ee374a3",
           "kind": "minor",
