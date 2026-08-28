@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-27T12:27:07.171Z",
+  "generatedAt": "2026-08-28T11:52:40.941Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -6246,6 +6246,39 @@
           "publishedAt": "2026-07-30T12:00:00Z",
           "source": "Vite Releases",
           "url": "https://github.com/vitejs/vite/releases/tag/v8.2.0"
+        },
+        {
+          "id": "5b455220b36cae",
+          "kind": "minor",
+          "priority": "P3",
+          "version": "8.2.2",
+          "title": "plugin‑legacy@8.2.2 – обновление Vite",
+          "summary": "Новый патч для плагина legacy, который может улучшить совместимость с устаревшими модулями.",
+          "publishedAt": "2026-07-23T04:45:07Z",
+          "source": "Vite Releases",
+          "url": "https://github.com/vitejs/vite/releases/tag/plugin-legacy%408.2.2"
+        },
+        {
+          "id": "085beb7b9c04a7",
+          "kind": "minor",
+          "priority": "P3",
+          "version": "8.1.5",
+          "title": "v8.1.5 – обновление Vite",
+          "summary": "Обновление ядра Vite, возможно, содержит исправления производительности и совместимости.",
+          "publishedAt": "2026-07-16T06:50:05Z",
+          "source": "Vite Releases",
+          "url": "https://github.com/vitejs/vite/releases/tag/v8.1.5"
+        },
+        {
+          "id": "501322757da849",
+          "kind": "minor",
+          "priority": "P3",
+          "version": "8.2.1",
+          "title": "plugin-legacy@8.2.1 – обновление Vite",
+          "summary": "Предыдущий патч для legacy‑плагина, который может содержать исправления багов.",
+          "publishedAt": "2026-07-16T06:49:00Z",
+          "source": "Vite Releases",
+          "url": "https://github.com/vitejs/vite/releases/tag/plugin-legacy%408.2.1"
         }
       ]
     },
@@ -8318,15 +8351,15 @@
       "packageNames": [
         "@tanstack/react-query"
       ],
-      "latestVersion": "5.102.7",
-      "latestPublishedAt": "2026-08-27T08:33:25.188Z",
+      "latestVersion": "5.102.8",
+      "latestPublishedAt": "2026-08-27T16:06:57.089Z",
       "npmUrl": "https://www.npmjs.com/package/@tanstack/react-query",
       "repositoryUrl": "https://github.com/TanStack/query",
       "packages": [
         {
           "name": "@tanstack/react-query",
-          "latestVersion": "5.102.7",
-          "latestPublishedAt": "2026-08-27T08:33:25.188Z",
+          "latestVersion": "5.102.8",
+          "latestPublishedAt": "2026-08-27T16:06:57.089Z",
           "npmUrl": "https://www.npmjs.com/package/@tanstack/react-query",
           "compatibility": [
             {
@@ -8383,9 +8416,9 @@
               "deprecated": null
             },
             {
-              "range": ">=5.52.1 <=5.102.7",
+              "range": ">=5.52.1 <=5.102.8",
               "minVersion": "5.52.1",
-              "maxVersion": "5.102.7",
+              "maxVersion": "5.102.8",
               "peerDependencies": {
                 "react": "^18 || ^19"
               },
@@ -8395,6 +8428,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "5.102.8",
+              "publishedAt": "2026-08-27T16:06:57.089Z"
+            },
             {
               "version": "5.102.7",
               "publishedAt": "2026-08-27T08:33:25.188Z"

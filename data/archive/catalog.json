@@ -1,7 +1,126 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-27T12:26:31.359Z",
+  "updatedAt": "2026-08-28T11:52:34.895Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-08-28",
+      "generatedAt": "2026-08-28T11:52:34.895Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 21,
+      "sourceHealth": {
+        "attempted": 21,
+        "succeeded": 21,
+        "failed": []
+      },
+      "status": "quiet",
+      "summary": "В течение окна не было значимых обновлений для фронтенд‑разработчиков.",
+      "items": [],
+      "readLater": [
+        {
+          "priority": "P3",
+          "title": "plugin‑legacy@8.2.2 – обновление Vite",
+          "source": "Vite Releases",
+          "publishedAt": "2026-07-23T04:45:07Z",
+          "whyImportant": "Новый патч для плагина legacy, который может улучшить совместимость с устаревшими модулями.",
+          "audience": "Разработчики, использующие Vite с legacy‑плагином",
+          "nextStep": "Проверьте changelog и обновите пакет до 8.2.2, если требуется совместимость.",
+          "url": "https://github.com/vitejs/vite/releases/tag/plugin-legacy%408.2.2",
+          "tags": [
+            "vite",
+            "plugin",
+            "legacy"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "vite"
+          ],
+          "packages": [
+            {
+              "name": "vite",
+              "releasedVersion": "8.2.2",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить changelog",
+            "Обновить пакет до 8.2.2"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P3",
+          "title": "v8.1.5 – обновление Vite",
+          "source": "Vite Releases",
+          "publishedAt": "2026-07-16T06:50:05Z",
+          "whyImportant": "Обновление ядра Vite, возможно, содержит исправления производительности и совместимости.",
+          "audience": "Разработчики, использующие Vite",
+          "nextStep": "Сравните changelog и решите, стоит ли обновлять до 8.1.5.",
+          "url": "https://github.com/vitejs/vite/releases/tag/v8.1.5",
+          "tags": [
+            "vite",
+            "core"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "vite"
+          ],
+          "packages": [
+            {
+              "name": "vite",
+              "releasedVersion": "8.1.5",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Сравнить changelog",
+            "Рассмотреть обновление"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P3",
+          "title": "plugin-legacy@8.2.1 – обновление Vite",
+          "source": "Vite Releases",
+          "publishedAt": "2026-07-16T06:49:00Z",
+          "whyImportant": "Предыдущий патч для legacy‑плагина, который может содержать исправления багов.",
+          "audience": "Разработчики, использующие Vite с legacy‑плагином",
+          "nextStep": "Проверьте changelog и обновите до 8.2.1, если необходимо.",
+          "url": "https://github.com/vitejs/vite/releases/tag/plugin-legacy%408.2.1",
+          "tags": [
+            "vite",
+            "plugin",
+            "legacy"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "vite"
+          ],
+          "packages": [
+            {
+              "name": "vite",
+              "releasedVersion": "8.2.1",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить changelog",
+            "Обновить пакет до 8.2.1"
+          ],
+          "detailsConfidence": "source"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-08-27",
