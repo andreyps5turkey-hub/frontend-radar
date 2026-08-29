@@ -156,17 +156,21 @@ function canonicalizeDigest(modelDigest, trustedIssue, candidates, dailySourceCa
       throw new Error("Groq placed a non-daily candidate into items");
     }
     seen.add(source.url);
+    const fallback = fallbackItem(source, group === "readLater" ? "P3" : item.priority);
     return {
       ...item,
-      packages: verifyPackageVersions(item.packages, source),
+      tags: normalizedList(item.tags, fallback.tags, 4),
+      technologies: normalizedList(item.technologies, fallback.technologies, 5),
+      packages: verifyPackageVersions(item.packages, source).slice(0, 6),
+      actionItems: normalizedList(item.actionItems, fallback.actionItems, 3),
       source: source.source,
       publishedAt: source.publishedAt,
       url: source.url,
     };
   };
 
-  const items = modelDigest.items.map((item) => canonicalize(item, "items"));
-  const readLater = modelDigest.readLater.map((item) => canonicalize(item, "readLater"));
+  const items = modelDigest.items.slice(0, 8).map((item) => canonicalize(item, "items"));
+  const readLater = modelDigest.readLater.slice(0, 3).map((item) => canonicalize(item, "readLater"));
   for (const candidate of candidates) {
     if (readLater.length >= 2) break;
     if (!seen.has(candidate.url)) {
@@ -198,6 +202,11 @@ function canonicalizeDigest(modelDigest, trustedIssue, candidates, dailySourceCa
     items,
     readLater,
   };
+}
+
+function normalizedList(values, fallbackValues, limit) {
+  const normalized = [...new Set(Array.isArray(values) ? values : [])].slice(0, limit);
+  return normalized.length ? normalized : fallbackValues.slice(0, limit);
 }
 
 function verifyPackageVersions(packages, candidate) {
@@ -418,12 +427,11 @@ function digestSchema() {
       audience: { type: "string" },
       nextStep: { type: "string" },
       url: { type: "string" },
-      tags: { type: "array", items: { type: "string" }, minItems: 1, maxItems: 4 },
+      tags: { type: "array", items: { type: "string" } },
       changeType: { type: "string", enum: ["security", "breaking", "major", "minor", "tooling", "guide", "standard"] },
-      technologies: { type: "array", items: { type: "string", enum: TECHNOLOGIES }, minItems: 1, maxItems: 5 },
+      technologies: { type: "array", items: { type: "string", enum: TECHNOLOGIES } },
       packages: {
         type: "array",
-        maxItems: 6,
         items: {
           type: "object",
           properties: {
@@ -438,7 +446,7 @@ function digestSchema() {
       },
       risk: { type: "string", enum: ["critical", "high", "medium", "low", "unknown"] },
       effort: { type: "string", enum: ["minutes", "hours", "days", "unknown"] },
-      actionItems: { type: "array", items: { type: "string" }, minItems: 1, maxItems: 3 },
+      actionItems: { type: "array", items: { type: "string" } },
       detailsConfidence: { type: "string", enum: ["source", "inferred", "unknown"] },
     },
     required: ["priority", "title", "source", "publishedAt", "whyImportant", "audience", "nextStep", "url", "tags", "changeType", "technologies", "packages", "risk", "effort", "actionItems", "detailsConfidence"],
@@ -454,8 +462,8 @@ function digestSchema() {
       windowHours: { type: "integer" },
       status: { type: "string", enum: ["active", "quiet"] },
       summary: { type: "string" },
-      items: { type: "array", items: item, maxItems: 8 },
-      readLater: { type: "array", items: item, maxItems: 3 },
+      items: { type: "array", items: item },
+      readLater: { type: "array", items: item },
       sourcesChecked: { type: "integer" },
       sourceHealth: {
         type: "object",
