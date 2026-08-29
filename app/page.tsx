@@ -1,6 +1,6 @@
 import digestData from "@/data/digest.json";
 import catalogData from "@/data/archive/catalog.json";
-import { ArrowRight, CalendarRange, ExternalLink, Rss } from "lucide-react";
+import { ArrowRight, CalendarRange, ExternalLink } from "lucide-react";
 import { DigestCard } from "./digest-card";
 import { ReadingSummary } from "./reading-summary";
 import { ProjectPulse } from "./project-pulse";
@@ -202,26 +202,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="automation-band" id="automation">
-        <div className="section automation-grid">
-          <div>
-            <p className="eyebrow">Автоматизация</p>
-            <h2>Новый выпуск каждый день в 08:00 МСК</h2>
-            <p>
-              GitHub Actions собирает свежие записи, отбрасывает шум, создаёт русский
-              конспект и публикует обновлённую страницу. Предыдущие выпуски сохраняются
-              в открытом архиве, а недельная страница обновляется автоматически.
-            </p>
-          </div>
-          <ol className="workflow">
-            <li><strong>05:00 UTC</strong><span>Сбор RSS, Atom и релизов за последние 26 часов</span></li>
-            <li><strong>P0–P3</strong><span>Оценка срочности и практической пользы</span></li>
-            <li><strong>Русский</strong><span>Перевод заголовка, сути и следующего шага</span></li>
-            <li><strong>Публикация</strong><span>Проверка данных, сборка страницы и обновление архива</span></li>
-          </ol>
-        </div>
-      </section>
-
       <section className="section sources-section" id="sources">
         <div className="section__head">
           <p className="eyebrow">Карта источников</p>
@@ -243,18 +223,6 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="footer">
-        <div>
-          <strong>Frontend Radar</strong>
-          <span>Русская выжимка, оригинальные ссылки, никакой полной перепечатки.</span>
-        </div>
-        <a href={weeklyPath()}>Итоги недели</a>
-        <a href={packagesPath()}>Пакеты</a>
-        <a href={projectPath()}>Мой проект</a>
-        <a className="footer__rss" href={sitePath("/feed.xml")}>
-          <Rss aria-hidden="true" size={16} /> RSS выпуска
-        </a>
-      </footer>
     </main>
   );
 }

@@ -49,6 +49,9 @@ test("server-renders the frontend radar", async () => {
   assert.match(html, /React Stack Check/);
   assert.match(html, /frontend-radar-hero-v2\.jpg/);
   assert.match(html, /og\.jpg/);
+  assert.match(html, /Создал/);
+  assert.match(html, /andrei\.chebasov/);
+  assert.doesNotMatch(html, /GitHub Actions|Автоматизация/);
   assert.doesNotMatch(html, /Исходный код на GitHub|github\.com\/andreyps5turkey-hub\/frontend-radar/);
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|react-loading-skeleton/i);
 });
@@ -168,17 +171,20 @@ test("ships daily automation and a valid Russian digest", async () => {
       assert.match(item[field], /[А-Яа-яЁё]/, `${field} must contain Russian text`);
     }
   }
+  assert.match(workflow, /cron: "37 4 \* \* \*"/);
   assert.match(workflow, /cron: "17 5 \* \* \*"/);
   assert.match(workflow, /cron: "17 6 \* \* \*"/);
   assert.match(workflow, /cron: "17 12 \* \* \*"/);
   assert.match(workflow, /Decide whether digest refresh is needed/);
   assert.match(workflow, /TZ=Europe\/Moscow date \+%F/);
   assert.match(workflow, /should_refresh/);
+  assert.match(workflow, /retry Russian curation after fallback/);
+  assert.match(workflow, /timeout-minutes: 20/);
   assert.match(workflow, /actions\/deploy-pages@v4/);
   assert.match(workflow, /pnpm run test:built/);
   assert.match(workflow, /pnpm run digest:links/);
   assert.match(workflow, /GROQ_API_KEY: \$\{\{ secrets\.GROQ \}\}/);
-  assert.match(workflow, /github\.actor != 'github-actions\[bot\]'/);
+  assert.match(workflow, /github\.actor.*github-actions\[bot\]/);
   assert.doesNotMatch(workflow, /Copilot|copilot-requests/i);
   assert.match(curator, /openai\/gpt-oss-20b/);
   assert.match(curator, /json_schema/);

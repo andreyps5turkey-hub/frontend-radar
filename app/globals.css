@@ -432,8 +432,7 @@ h3 {
   max-width: 790px;
 }
 
-.section__head > p:last-child,
-.automation-grid > div > p:last-child {
+.section__head > p:last-child {
   color: var(--muted);
   margin-bottom: 0;
 }
@@ -808,64 +807,6 @@ h3 {
   text-underline-offset: 4px;
 }
 
-.automation-band {
-  background: var(--ink);
-  color: #fffefb;
-  margin-top: 78px;
-  padding-bottom: 72px;
-}
-
-.automation-grid {
-  display: grid;
-  gap: 54px;
-  grid-template-columns: minmax(0, 0.82fr) minmax(380px, 1fr);
-}
-
-.automation-grid h2 {
-  color: #ffffff;
-}
-
-.automation-grid > div > p:last-child {
-  color: rgba(255, 254, 251, 0.7);
-}
-
-.automation-band .eyebrow {
-  color: #ffd889;
-}
-
-.workflow {
-  border: 1px solid rgba(255, 254, 251, 0.17);
-  border-radius: 7px;
-  list-style: none;
-  margin: 0;
-  padding: 6px;
-}
-
-.workflow li {
-  align-items: start;
-  border-bottom: 1px solid rgba(255, 254, 251, 0.13);
-  display: grid;
-  gap: 14px;
-  grid-template-columns: 92px minmax(0, 1fr);
-  padding: 15px 13px;
-}
-
-.workflow li:last-child {
-  border-bottom: 0;
-}
-
-.workflow strong {
-  color: #ffd889;
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 0.82rem;
-}
-
-.workflow span {
-  color: rgba(255, 254, 251, 0.82);
-  font-size: 0.92rem;
-  line-height: 1.5;
-}
-
 .sources-section {
   padding-bottom: 72px;
 }
@@ -902,11 +843,35 @@ h3 {
 }
 
 .footer {
+  align-items: flex-start;
   border-top: 1px solid var(--line);
   color: var(--muted);
+  flex-wrap: wrap;
   gap: 24px;
   justify-content: space-between;
   padding: 24px;
+}
+
+.footer__identity {
+  max-width: 540px;
+}
+
+.footer__credit {
+  margin-top: 7px;
+}
+
+.footer__credit strong {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.84rem;
+}
+
+.footer__links {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  justify-content: flex-end;
+  margin-left: auto;
 }
 
 .footer__rss {
@@ -2501,7 +2466,6 @@ h3 {
 
 @media (max-width: 860px) {
   .hero__grid,
-  .automation-grid,
   .weekly-preview__inner,
   .weekly-header__inner {
     grid-template-columns: 1fr;
@@ -2860,16 +2824,6 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .automation-band {
-    margin-top: 64px;
-    padding-bottom: 60px;
-  }
-
-  .workflow li {
-    grid-template-columns: 1fr;
-    gap: 6px;
-  }
-
   .sources-section {
     padding-bottom: 60px;
   }
@@ -2878,6 +2832,11 @@ h3 {
     align-items: flex-start;
     flex-direction: column;
     padding: 22px 18px;
+  }
+
+  .footer__links {
+    justify-content: flex-start;
+    margin-left: 0;
   }
 }
 

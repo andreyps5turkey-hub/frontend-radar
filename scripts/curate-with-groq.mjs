@@ -167,7 +167,21 @@ function canonicalizeDigest(modelDigest, trustedIssue, candidates, dailySourceCa
 
   const items = modelDigest.items.map((item) => canonicalize(item, "items"));
   const readLater = modelDigest.readLater.map((item) => canonicalize(item, "readLater"));
-  if (readLater.length < 2) throw new Error("Groq returned fewer than two read-later items");
+  for (const candidate of candidates) {
+    if (readLater.length >= 2) break;
+    if (!seen.has(candidate.url)) {
+      seen.add(candidate.url);
+      readLater.push(fallbackItem(candidate, "P3"));
+    }
+  }
+  for (const previousItem of previousDigest.readLater ?? []) {
+    if (readLater.length >= 2) break;
+    if (!seen.has(previousItem.url)) {
+      seen.add(previousItem.url);
+      readLater.push({ ...enrichLegacyItem(previousItem), priority: "P3" });
+    }
+  }
+  if (readLater.length < 2) throw new Error("Not enough unique read-later candidates");
 
   assertRussianText(modelDigest.summary, "summary");
   for (const [index, item] of [...items, ...readLater].entries()) {
@@ -441,7 +455,7 @@ function digestSchema() {
       status: { type: "string", enum: ["active", "quiet"] },
       summary: { type: "string" },
       items: { type: "array", items: item, maxItems: 8 },
-      readLater: { type: "array", items: item, minItems: 2, maxItems: 3 },
+      readLater: { type: "array", items: item, maxItems: 3 },
       sourcesChecked: { type: "integer" },
       sourceHealth: {
         type: "object",

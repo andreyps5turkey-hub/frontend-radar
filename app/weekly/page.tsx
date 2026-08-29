@@ -3,7 +3,7 @@ import { ArrowDownRight, ArrowRight, ArrowUpRight, CalendarDays, Minus, RadioTow
 import catalogData from "@/data/archive/catalog.json";
 import type { ArchiveCatalog, Priority } from "@/lib/digest";
 import { formatIssueDate, formatMaterialCount } from "@/lib/digest";
-import { archivePath, sitePath, weeklyPath } from "@/lib/site";
+import { archivePath, weeklyPath } from "@/lib/site";
 import { buildWeeklyComparison, formatWeeklyRange, weeklySummary } from "@/lib/weekly";
 import { SiteHeader } from "../site-header";
 import { WeeklyHighlight } from "./weekly-highlight";
@@ -152,10 +152,6 @@ export default function WeeklyPage() {
         </div>
       </section>
 
-      <footer className="footer">
-        <div><strong>Frontend Radar</strong><span>Ежедневная выжимка и недельный контекст на русском языке.</span></div>
-        <a href={sitePath("/feed.xml")}>RSS выпуска</a>
-      </footer>
     </main>
   );
 }

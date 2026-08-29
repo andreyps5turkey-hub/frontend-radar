@@ -4,6 +4,7 @@ on:
   push:
     branches: [main]
   schedule:
+    - cron: "37 4 * * *"
     - cron: "17 5 * * *"
     - cron: "17 6 * * *"
     - cron: "17 12 * * *"
@@ -21,26 +22,13 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v7
-        with:
-          node-version: 22
-
-      - name: Set up pnpm
-        uses: pnpm/action-setup@v5
-        with:
-          version: 11.19.0
-          run_install: false
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
 
       - name: Decide whether digest refresh is needed
         id: digest_gate
@@ -49,28 +37,57 @@ jobs:
           TODAY="$(TZ=Europe/Moscow date +%F)"
           git fetch origin main --quiet
           REMOTE_DIGEST="$(git show origin/main:data/digest.json 2>/dev/null || cat data/digest.json)"
-          DIGEST_DATE="$(printf '%s' "$REMOTE_DIGEST" | node -e 'let s=""; process.stdin.on("data", d => s += d); process.stdin.on("end", () => { try { process.stdout.write(JSON.parse(s).date ?? ""); } catch { process.stdout.write(""); } });')"
+          DIGEST_DATE="$(printf '%s' "$REMOTE_DIGEST" | jq -r '.date // empty' 2>/dev/null || true)"
+          DIGEST_SUMMARY="$(printf '%s' "$REMOTE_DIGEST" | jq -r '.summary // empty' 2>/dev/null || true)"
           SHOULD_REFRESH=true
-          if [ "${{ github.event_name }}" = "schedule" ] && [ "$DIGEST_DATE" = "$TODAY" ]; then
+          REASON="new digest required"
+          if [ "${{ github.event_name }}" = "push" ] && [ "${{ github.actor }}" = "github-actions[bot]" ]; then
             SHOULD_REFRESH=false
+            REASON="bot commit already deployed"
+          elif [ "${{ github.event_name }}" = "schedule" ] && [ "$DIGEST_DATE" = "$TODAY" ]; then
+            if [[ "$DIGEST_SUMMARY" == *"резервном режиме"* ]]; then
+              REASON="retry Russian curation after fallback"
+            else
+              SHOULD_REFRESH=false
+              REASON="today's digest is already published"
+            fi
           fi
           echo "should_refresh=$SHOULD_REFRESH" >> "$GITHUB_OUTPUT"
-          echo "Moscow date: $TODAY; current digest: ${DIGEST_DATE:-unknown}; refresh: $SHOULD_REFRESH"
+          echo "reason=$REASON" >> "$GITHUB_OUTPUT"
+          echo "Moscow date: $TODAY; current digest: ${DIGEST_DATE:-unknown}; refresh: $SHOULD_REFRESH; reason: $REASON"
+          printf '### Frontend Radar\n\n- Moscow date: `%s`\n- Current digest: `%s`\n- Refresh: `%s`\n- Reason: %s\n' "$TODAY" "${DIGEST_DATE:-unknown}" "$SHOULD_REFRESH" "$REASON" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Set up Node.js
+        if: steps.digest_gate.outputs.should_refresh == 'true'
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Set up pnpm
+        if: steps.digest_gate.outputs.should_refresh == 'true'
+        uses: pnpm/action-setup@v5
+        with:
+          version: 11.19.0
+          run_install: false
+
+      - name: Install dependencies
+        if: steps.digest_gate.outputs.should_refresh == 'true'
+        run: pnpm install --frozen-lockfile
 
       - name: Collect fresh candidates
-        if: steps.digest_gate.outputs.should_refresh == 'true' && (github.event_name != 'push' || github.actor != 'github-actions[bot]')
+        if: steps.digest_gate.outputs.should_refresh == 'true'
         run: pnpm run digest:collect
         env:
           GITHUB_TOKEN: ${{ github.token }}
 
       - name: Create Russian digest
-        if: steps.digest_gate.outputs.should_refresh == 'true' && (github.event_name != 'push' || github.actor != 'github-actions[bot]')
+        if: steps.digest_gate.outputs.should_refresh == 'true'
         run: pnpm run digest:curate
         env:
           GROQ_API_KEY: ${{ secrets.GROQ }}
 
       - name: Refresh package intelligence
-        if: steps.digest_gate.outputs.should_refresh == 'true' && (github.event_name != 'push' || github.actor != 'github-actions[bot]')
+        if: steps.digest_gate.outputs.should_refresh == 'true'
         continue-on-error: true
         run: pnpm run packages:refresh
         env:
@@ -78,12 +95,12 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ }}
 
       - name: Check article links
-        if: steps.digest_gate.outputs.should_refresh == 'true' && (github.event_name != 'push' || github.actor != 'github-actions[bot]')
+        if: steps.digest_gate.outputs.should_refresh == 'true'
         continue-on-error: true
         run: pnpm run digest:links
 
       - name: Validate and archive digest
-        if: steps.digest_gate.outputs.should_refresh == 'true' && (github.event_name != 'push' || github.actor != 'github-actions[bot]')
+        if: steps.digest_gate.outputs.should_refresh == 'true'
         run: pnpm run digest:finalize
 
       - name: Build site
@@ -123,7 +140,7 @@ jobs:
           artifact_name: github-pages-${{ github.run_attempt }}
 
       - name: Commit daily digest
-        if: steps.digest_gate.outputs.should_refresh == 'true' && (github.event_name != 'push' || github.actor != 'github-actions[bot]')
+        if: steps.digest_gate.outputs.should_refresh == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
