@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-28T21:27:36.595Z",
+  "generatedAt": "2026-08-29T17:52:49.675Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -7964,7 +7964,7 @@
         {
           "id": "79dc827d42f0f6",
           "kind": "minor",
-          "priority": 0,
+          "priority": "P3",
           "version": "8.3.1",
           "title": "React Router Releases: выпуск v8.3.1",
           "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
@@ -7975,7 +7975,7 @@
         {
           "id": "eeca25539f5dee",
           "kind": "minor",
-          "priority": 1,
+          "priority": "P3",
           "version": "7.18.3",
           "title": "React Router Releases: выпуск v7.18.3",
           "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
@@ -10206,7 +10206,19 @@
         }
       ],
       "advisories": [],
-      "events": []
+      "events": [
+        {
+          "id": "ff12c5ad852952",
+          "kind": "minor",
+          "priority": 0,
+          "version": null,
+          "title": "Новый материал от TanStack Query Releases",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-08-28T23:43:54Z",
+          "source": "TanStack Query Releases",
+          "url": "https://github.com/TanStack/query/releases/tag/release-2026-08-28-2343"
+        }
+      ]
     },
     {
       "slug": "storybook",

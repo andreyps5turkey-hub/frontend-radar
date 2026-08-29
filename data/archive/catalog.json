@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-28T21:26:51.403Z",
+  "updatedAt": "2026-08-29T17:52:15.490Z",
   "issues": [
     {
       "schemaVersion": 2,
       "date": "2026-08-29",
-      "generatedAt": "2026-08-28T21:26:51.403Z",
+      "generatedAt": "2026-08-29T17:52:15.490Z",
       "timezone": "Europe/Moscow",
       "windowHours": 26,
       "sourcesChecked": 21,
@@ -19,6 +19,42 @@
       "items": [
         {
           "priority": "P2",
+          "title": "Новый материал от TanStack Query Releases",
+          "source": "TanStack Query Releases",
+          "publishedAt": "2026-08-28T23:43:54Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, использующие инструменты из экосистемы TanStack Query Releases.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/TanStack/query/releases/tag/release-2026-08-28-2343",
+          "tags": [
+            "tanstack",
+            "обновление"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "query",
+            "quality"
+          ],
+          "packages": [
+            {
+              "name": "@tanstack/react-query",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        }
+      ],
+      "readLater": [
+        {
+          "priority": "P3",
           "title": "React Router Releases: выпуск v8.3.1",
           "source": "React Router Releases",
           "publishedAt": "2026-08-28T14:44:12Z",
@@ -52,7 +88,7 @@
           "detailsConfidence": "inferred"
         },
         {
-          "priority": "P2",
+          "priority": "P3",
           "title": "React Router Releases: выпуск v7.18.3",
           "source": "React Router Releases",
           "publishedAt": "2026-08-28T14:29:26Z",
@@ -84,9 +120,7 @@
             "Протестировать обновление в отдельной ветке."
           ],
           "detailsConfidence": "inferred"
-        }
-      ],
-      "readLater": [
+        },
         {
           "priority": "P3",
           "title": "Next.js Releases: выпуск v16.3.3",
@@ -108,72 +142,6 @@
             {
               "name": "next",
               "releasedVersion": "v16.3.3",
-              "affectedRange": null,
-              "fixedVersion": null
-            }
-          ],
-          "risk": "low",
-          "effort": "minutes",
-          "actionItems": [
-            "Проверить список изменений в первоисточнике.",
-            "Протестировать обновление в отдельной ветке."
-          ],
-          "detailsConfidence": "inferred"
-        },
-        {
-          "priority": "P3",
-          "title": "Next.js Releases: выпуск v15.5.24",
-          "source": "Next.js Releases",
-          "publishedAt": "2026-08-25T16:16:55Z",
-          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-          "audience": "Команды, которые поддерживают приложения на Next.js.",
-          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-          "url": "https://github.com/vercel/next.js/releases/tag/v15.5.24",
-          "tags": [
-            "next.js",
-            "обновление"
-          ],
-          "changeType": "minor",
-          "technologies": [
-            "nextjs"
-          ],
-          "packages": [
-            {
-              "name": "next",
-              "releasedVersion": "v15.5.24",
-              "affectedRange": null,
-              "fixedVersion": null
-            }
-          ],
-          "risk": "low",
-          "effort": "minutes",
-          "actionItems": [
-            "Проверить список изменений в первоисточнике.",
-            "Протестировать обновление в отдельной ветке."
-          ],
-          "detailsConfidence": "inferred"
-        },
-        {
-          "priority": "P3",
-          "title": "Новый материал от Next.js Security",
-          "source": "Next.js Security",
-          "publishedAt": "2026-08-25T16:16:28Z",
-          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-          "audience": "Команды, которые поддерживают приложения на Next.js.",
-          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-2xp9-vwfh-vxw4",
-          "tags": [
-            "next.js",
-            "безопасность"
-          ],
-          "changeType": "tooling",
-          "technologies": [
-            "nextjs"
-          ],
-          "packages": [
-            {
-              "name": "next",
-              "releasedVersion": null,
               "affectedRange": null,
               "fixedVersion": null
             }
