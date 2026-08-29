@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-29T17:52:15.490Z",
+  "updatedAt": "2026-08-29T17:55:36.367Z",
   "issues": [
     {
       "schemaVersion": 2,
       "date": "2026-08-29",
-      "generatedAt": "2026-08-29T17:52:15.490Z",
+      "generatedAt": "2026-08-29T17:55:36.367Z",
       "timezone": "Europe/Moscow",
       "windowHours": 26,
       "sourcesChecked": 21,
