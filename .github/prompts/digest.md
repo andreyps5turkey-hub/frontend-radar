@@ -18,8 +18,7 @@ Editorial rules:
 - Never invent versions. A `releasedVersion`, `affectedRange`, or `fixedVersion` may be set only when every version number appears literally in the candidate title or summary; otherwise use `null`.
 - Give 1 to 3 short Russian `actionItems` that can be checked off. They must be concrete verification, update, migration, or reading steps.
 - Use `detailsConfidence: source` only when the details are directly stated in the candidate, `inferred` for conservative classification, and `unknown` when there is not enough information.
-- Copy all issue metadata from the trusted `issue` object supplied alongside the candidates.
-- Set `status` to `active` when `items` is non-empty and `quiet` otherwise.
+- Return only `summary`, `items`, and `readLater`; trusted issue metadata is attached after editorial validation.
 - Keep at most 8 daily items. Prefer fewer, stronger signals.
 
 Return only the structured response required by the API schema.

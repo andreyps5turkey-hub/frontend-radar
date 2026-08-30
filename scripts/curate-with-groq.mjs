@@ -11,6 +11,11 @@ const PACKAGE_NAMES = [
   "storybook", "@storybook/react", "eslint", "prettier",
 ];
 const TECHNOLOGIES = ["react", "nextjs", "typescript", "vite", "router", "redux", "query", "storybook", "quality", "platform"];
+const PRIORITIES = ["P0", "P1", "P2", "P3"];
+const CHANGE_TYPES = ["security", "breaking", "major", "minor", "tooling", "guide", "standard"];
+const RISKS = ["critical", "high", "medium", "low", "unknown"];
+const EFFORTS = ["minutes", "hours", "days", "unknown"];
+const CONFIDENCE_LEVELS = ["source", "inferred", "unknown"];
 
 const candidatesPath = resolve("data/candidates.json");
 const digestPath = resolve("data/digest.json");
@@ -156,13 +161,19 @@ function canonicalizeDigest(modelDigest, trustedIssue, candidates, dailySourceCa
       throw new Error("Groq placed a non-daily candidate into items");
     }
     seen.add(source.url);
-    const fallback = fallbackItem(source, group === "readLater" ? "P3" : item.priority);
+    const priority = PRIORITIES.includes(item.priority) ? item.priority : inferPriority(source);
+    const fallback = fallbackItem(source, group === "readLater" ? "P3" : priority);
     return {
       ...item,
+      priority,
       tags: normalizedList(item.tags, fallback.tags, 4),
-      technologies: normalizedList(item.technologies, fallback.technologies, 5),
+      changeType: allowedValue(item.changeType, CHANGE_TYPES, fallback.changeType),
+      technologies: normalizedList(item.technologies, fallback.technologies, 5, TECHNOLOGIES),
       packages: verifyPackageVersions(item.packages, source).slice(0, 6),
+      risk: allowedValue(item.risk, RISKS, fallback.risk),
+      effort: allowedValue(item.effort, EFFORTS, fallback.effort),
       actionItems: normalizedList(item.actionItems, fallback.actionItems, 3),
+      detailsConfidence: allowedValue(item.detailsConfidence, CONFIDENCE_LEVELS, fallback.detailsConfidence),
       source: source.source,
       publishedAt: source.publishedAt,
       url: source.url,
@@ -204,14 +215,23 @@ function canonicalizeDigest(modelDigest, trustedIssue, candidates, dailySourceCa
   };
 }
 
-function normalizedList(values, fallbackValues, limit) {
-  const normalized = [...new Set(Array.isArray(values) ? values : [])].slice(0, limit);
+function normalizedList(values, fallbackValues, limit, allowedValues) {
+  const normalized = [...new Set(Array.isArray(values) ? values : [])]
+    .filter((value) => typeof value === "string" && (!allowedValues || allowedValues.includes(value)))
+    .slice(0, limit);
   return normalized.length ? normalized : fallbackValues.slice(0, limit);
+}
+
+function allowedValue(value, allowedValues, fallback) {
+  return allowedValues.includes(value) ? value : fallback;
 }
 
 function verifyPackageVersions(packages, candidate) {
   const sourceText = `${candidate.title} ${candidate.summary}`.toLowerCase();
-  return packages.map((entry) => ({
+  const supported = Array.isArray(packages)
+    ? packages.filter((entry) => entry && PACKAGE_NAMES.includes(entry.name))
+    : [];
+  return [...new Map(supported.map((entry) => [entry.name, entry])).values()].map((entry) => ({
     ...entry,
     releasedVersion: verifiedVersionField(entry.releasedVersion, sourceText),
     affectedRange: verifiedVersionField(entry.affectedRange, sourceText),
@@ -419,7 +439,7 @@ function digestSchema() {
   const item = {
     type: "object",
     properties: {
-      priority: { type: "string", enum: ["P0", "P1", "P2", "P3"] },
+      priority: { type: "string" },
       title: { type: "string" },
       source: { type: "string" },
       publishedAt: { type: "string" },
@@ -428,14 +448,14 @@ function digestSchema() {
       nextStep: { type: "string" },
       url: { type: "string" },
       tags: { type: "array", items: { type: "string" } },
-      changeType: { type: "string", enum: ["security", "breaking", "major", "minor", "tooling", "guide", "standard"] },
-      technologies: { type: "array", items: { type: "string", enum: TECHNOLOGIES } },
+      changeType: { type: "string" },
+      technologies: { type: "array", items: { type: "string" } },
       packages: {
         type: "array",
         items: {
           type: "object",
           properties: {
-            name: { type: "string", enum: PACKAGE_NAMES },
+            name: { type: "string" },
             releasedVersion: { type: ["string", "null"] },
             affectedRange: { type: ["string", "null"] },
             fixedVersion: { type: ["string", "null"] },
@@ -444,10 +464,10 @@ function digestSchema() {
           additionalProperties: false,
         },
       },
-      risk: { type: "string", enum: ["critical", "high", "medium", "low", "unknown"] },
-      effort: { type: "string", enum: ["minutes", "hours", "days", "unknown"] },
+      risk: { type: "string" },
+      effort: { type: "string" },
       actionItems: { type: "array", items: { type: "string" } },
-      detailsConfidence: { type: "string", enum: ["source", "inferred", "unknown"] },
+      detailsConfidence: { type: "string" },
     },
     required: ["priority", "title", "source", "publishedAt", "whyImportant", "audience", "nextStep", "url", "tags", "changeType", "technologies", "packages", "risk", "effort", "actionItems", "detailsConfidence"],
     additionalProperties: false,
@@ -455,28 +475,11 @@ function digestSchema() {
   return {
     type: "object",
     properties: {
-      schemaVersion: { type: "integer", enum: [2] },
-      date: { type: "string" },
-      generatedAt: { type: "string" },
-      timezone: { type: "string" },
-      windowHours: { type: "integer" },
-      status: { type: "string", enum: ["active", "quiet"] },
       summary: { type: "string" },
       items: { type: "array", items: item },
       readLater: { type: "array", items: item },
-      sourcesChecked: { type: "integer" },
-      sourceHealth: {
-        type: "object",
-        properties: {
-          attempted: { type: "integer" },
-          succeeded: { type: "integer" },
-          failed: { type: "array", items: { type: "string" } },
-        },
-        required: ["attempted", "succeeded", "failed"],
-        additionalProperties: false,
-      },
     },
-    required: ["schemaVersion", "date", "generatedAt", "timezone", "windowHours", "status", "summary", "items", "readLater", "sourcesChecked", "sourceHealth"],
+    required: ["summary", "items", "readLater"],
     additionalProperties: false,
   };
 }
