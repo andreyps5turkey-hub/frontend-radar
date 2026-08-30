@@ -191,6 +191,7 @@ test("ships daily automation and a valid Russian digest", async () => {
   assert.match(curator, /normalizedList/);
   assert.doesNotMatch(curator, /maxItems/);
   assert.doesNotMatch(curator, /enum:/);
+  assert.doesNotMatch(curator, /inputCandidates\.length < 2/);
   assert.equal(scripts["digest:collect"], "node scripts/collect-news.mjs");
   assert.equal(scripts["digest:curate"], "node scripts/curate-with-groq.mjs");
   assert.equal(scripts["digest:catalog"], "node scripts/generate-catalog.mjs");

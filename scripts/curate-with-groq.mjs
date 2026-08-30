@@ -62,7 +62,7 @@ const inputCandidates = uniqueByUrl([...dailyCandidates, ...readLaterCandidates]
 let digest;
 try {
   if (!process.env.GROQ_API_KEY) throw new Error("GROQ_API_KEY is not configured");
-  if (inputCandidates.length < 2) throw new Error("Not enough candidates for a complete digest");
+  if (inputCandidates.length < 1) throw new Error("No new candidates for editorial curation");
   digest = await createGroqDigest(instructions, issue, inputCandidates, dailyCandidates);
   console.log(`Groq created ${digest.items.length} daily items and ${digest.readLater.length} read-later items.`);
 } catch (error) {
