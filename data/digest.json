@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "date": "2026-08-30",
-  "generatedAt": "2026-08-30T15:23:25.111Z",
+  "generatedAt": "2026-08-30T15:25:57.342Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 21,
@@ -11,9 +11,42 @@
     "failed": []
   },
   "status": "quiet",
-  "summary": "Значимых новых событий не найдено. Подборка для чтения собрана в резервном режиме.",
+  "summary": "В данный день ничего существенного не произошло.",
   "items": [],
   "readLater": [
+    {
+      "priority": "P3",
+      "title": "Версия 10.5.9 Storybook",
+      "source": "Storybook Releases",
+      "publishedAt": "2026-08-18T07:02:34Z",
+      "whyImportant": "Обновление исправляет проблемы с псевдо‑состояниями и улучшает работу модуля графа.",
+      "audience": "Frontend‑инженеры, использующие Storybook",
+      "nextStep": "Проверьте совместимость с текущими плагинами и протестируйте отображение компонентов.",
+      "url": "https://github.com/storybookjs/storybook/releases/tag/v10.5.9",
+      "tags": [
+        "Storybook",
+        "обновление"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "storybook"
+      ],
+      "packages": [
+        {
+          "name": "storybook",
+          "releasedVersion": "10.5.9",
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить наличие конфликтов с плагинами",
+        "Тестировать отображение компонентов с псевдо‑состояниями"
+      ],
+      "detailsConfidence": "source"
+    },
     {
       "priority": "P3",
       "title": "Next.js Releases: выпуск v16.3.3",
@@ -35,72 +68,6 @@
         {
           "name": "next",
           "releasedVersion": "v16.3.3",
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "low",
-      "effort": "minutes",
-      "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
-      ],
-      "detailsConfidence": "inferred"
-    },
-    {
-      "priority": "P3",
-      "title": "Next.js Releases: выпуск v15.5.24",
-      "source": "Next.js Releases",
-      "publishedAt": "2026-08-25T16:16:55Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, которые поддерживают приложения на Next.js.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/vercel/next.js/releases/tag/v15.5.24",
-      "tags": [
-        "next.js",
-        "обновление"
-      ],
-      "changeType": "minor",
-      "technologies": [
-        "nextjs"
-      ],
-      "packages": [
-        {
-          "name": "next",
-          "releasedVersion": "v15.5.24",
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "low",
-      "effort": "minutes",
-      "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
-      ],
-      "detailsConfidence": "inferred"
-    },
-    {
-      "priority": "P3",
-      "title": "Новый материал от Next.js Security",
-      "source": "Next.js Security",
-      "publishedAt": "2026-08-25T16:16:28Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, которые поддерживают приложения на Next.js.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-2xp9-vwfh-vxw4",
-      "tags": [
-        "next.js",
-        "безопасность"
-      ],
-      "changeType": "tooling",
-      "technologies": [
-        "nextjs"
-      ],
-      "packages": [
-        {
-          "name": "next",
-          "releasedVersion": null,
           "affectedRange": null,
           "fixedVersion": null
         }
