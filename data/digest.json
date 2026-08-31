@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "date": "2026-08-31",
-  "generatedAt": "2026-08-31T05:18:49.528Z",
+  "generatedAt": "2026-08-31T06:20:18.167Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 21,
@@ -14,6 +14,32 @@
   "summary": "Значимых новых событий не найдено. Подборка для чтения собрана в резервном режиме.",
   "items": [],
   "readLater": [
+    {
+      "priority": "P3",
+      "title": "Новый материал от Веб-стандарты",
+      "source": "Веб-стандарты",
+      "publishedAt": "Mon, 31 Aug 2026 09:00:00 GMT",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы Веб-стандарты.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://web-standards.ru/podcast/542/",
+      "tags": [
+        "веб-стандарты",
+        "обновление"
+      ],
+      "changeType": "guide",
+      "technologies": [
+        "platform"
+      ],
+      "packages": [],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    },
     {
       "priority": "P3",
       "title": "Next.js Releases: выпуск v16.3.3",
@@ -68,39 +94,6 @@
         {
           "name": "next",
           "releasedVersion": "v15.5.24",
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "low",
-      "effort": "minutes",
-      "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
-      ],
-      "detailsConfidence": "inferred"
-    },
-    {
-      "priority": "P3",
-      "title": "Новый материал от Next.js Security",
-      "source": "Next.js Security",
-      "publishedAt": "2026-08-25T16:16:28Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, которые поддерживают приложения на Next.js.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-2xp9-vwfh-vxw4",
-      "tags": [
-        "next.js",
-        "безопасность"
-      ],
-      "changeType": "tooling",
-      "technologies": [
-        "nextjs"
-      ],
-      "packages": [
-        {
-          "name": "next",
-          "releasedVersion": null,
           "affectedRange": null,
           "fixedVersion": null
         }
