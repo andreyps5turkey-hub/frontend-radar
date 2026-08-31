@@ -1,7 +1,124 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-30T15:25:57.342Z",
+  "updatedAt": "2026-08-31T04:44:34.193Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-08-31",
+      "generatedAt": "2026-08-31T04:44:34.193Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 21,
+      "sourceHealth": {
+        "attempted": 21,
+        "succeeded": 21,
+        "failed": []
+      },
+      "status": "quiet",
+      "summary": "Значимых новых событий не найдено. Подборка для чтения собрана в резервном режиме.",
+      "items": [],
+      "readLater": [
+        {
+          "priority": "P3",
+          "title": "Next.js Releases: выпуск v16.3.3",
+          "source": "Next.js Releases",
+          "publishedAt": "2026-08-25T16:17:10Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, которые поддерживают приложения на Next.js.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/vercel/next.js/releases/tag/v16.3.3",
+          "tags": [
+            "next.js",
+            "обновление"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "nextjs"
+          ],
+          "packages": [
+            {
+              "name": "next",
+              "releasedVersion": "v16.3.3",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        },
+        {
+          "priority": "P3",
+          "title": "Next.js Releases: выпуск v15.5.24",
+          "source": "Next.js Releases",
+          "publishedAt": "2026-08-25T16:16:55Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, которые поддерживают приложения на Next.js.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/vercel/next.js/releases/tag/v15.5.24",
+          "tags": [
+            "next.js",
+            "обновление"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "nextjs"
+          ],
+          "packages": [
+            {
+              "name": "next",
+              "releasedVersion": "v15.5.24",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        },
+        {
+          "priority": "P3",
+          "title": "Новый материал от Next.js Security",
+          "source": "Next.js Security",
+          "publishedAt": "2026-08-25T16:16:28Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, которые поддерживают приложения на Next.js.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-2xp9-vwfh-vxw4",
+          "tags": [
+            "next.js",
+            "безопасность"
+          ],
+          "changeType": "tooling",
+          "technologies": [
+            "nextjs"
+          ],
+          "packages": [
+            {
+              "name": "next",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-08-30",
