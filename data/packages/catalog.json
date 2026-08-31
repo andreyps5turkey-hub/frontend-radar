@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-31T06:20:26.198Z",
+  "generatedAt": "2026-08-31T12:19:22.044Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -4331,11 +4331,11 @@
         },
         {
           "id": "941e35a9a29ae8",
-          "kind": "patch",
-          "priority": "P3",
+          "kind": "security",
+          "priority": "P0",
           "version": null,
-          "title": "Новый материал от Next.js Security",
-          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "title": "Уязвимость: Unauthenticated Remote Code Execution в Image Optimization API при использовании AVIF",
+          "summary": "Библиотека libheif, используемая sharp, позволяет удалённо выполнить код при обработке AVIF‑файлов.",
           "publishedAt": "2026-08-25T16:16:28Z",
           "source": "Next.js Security",
           "url": "https://github.com/vercel/next.js/security/advisories/GHSA-2xp9-vwfh-vxw4"
