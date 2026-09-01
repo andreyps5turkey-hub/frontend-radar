@@ -1,7 +1,156 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-31T12:19:15.057Z",
+  "updatedAt": "2026-09-01T04:46:48.739Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-09-01",
+      "generatedAt": "2026-09-01T04:46:48.739Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 21,
+      "sourceHealth": {
+        "attempted": 21,
+        "succeeded": 21,
+        "failed": []
+      },
+      "status": "active",
+      "summary": "В окне дня выпустили обновления Next.js, включающие исправления и восстановление поддержки AVIF‑оптимизации изображений.",
+      "items": [
+        {
+          "priority": "P2",
+          "title": "Выпущена версия Next.js 15.5.25 – восстановлена поддержка AVIF‑оптимизации изображений",
+          "source": "Next.js Releases",
+          "publishedAt": "2026-08-31T20:02:11Z",
+          "whyImportant": "Восстановление AVIF‑оптимизации позволяет использовать более эффективный формат изображений, улучшая производительность сайтов.",
+          "audience": "Разработчики, использующие Next.js 15.x",
+          "nextStep": "Обновите проект до версии 15.5.25 и проверьте работу оптимизации изображений.",
+          "url": "https://github.com/vercel/next.js/releases/tag/v15.5.25",
+          "tags": [
+            "Next.js",
+            "AVIF",
+            "оптимизация изображений"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "nextjs"
+          ],
+          "packages": [
+            {
+              "name": "next",
+              "releasedVersion": "v15.5.25",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "hours",
+          "actionItems": [
+            "Проверить наличие обновления в package.json",
+            "Выполнить npm install next@v15.5.25",
+            "Тестировать оптимизацию изображений"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P2",
+          "title": "Выпущена версия Next.js 16.3.4 – восстановлена поддержка AVIF‑оптимизации и исправлены ошибки тестового режима",
+          "source": "Next.js Releases",
+          "publishedAt": "2026-08-31T20:02:15Z",
+          "whyImportant": "Восстановление AVIF‑оптимизации и исправления в тестовом режиме повышают стабильность и производительность приложений на Next.js 16.x.",
+          "audience": "Разработчики, использующие Next.js 16.x",
+          "nextStep": "Обновите проект до версии 16.3.4 и проверьте работу тестового режима и оптимизации изображений.",
+          "url": "https://github.com/vercel/next.js/releases/tag/v16.3.4",
+          "tags": [
+            "Next.js",
+            "AVIF",
+            "тестовый режим"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "nextjs",
+            "typescript"
+          ],
+          "packages": [
+            {
+              "name": "next",
+              "releasedVersion": "v16.3.4",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "hours",
+          "actionItems": [
+            "Проверить наличие обновления в package.json",
+            "Выполнить npm install next@v16.3.4",
+            "Тестировать тестовый режим и оптимизацию изображений"
+          ],
+          "detailsConfidence": "source"
+        }
+      ],
+      "readLater": [
+        {
+          "priority": "P3",
+          "title": "Новый материал от Веб-стандарты",
+          "source": "Веб-стандарты",
+          "publishedAt": "Mon, 31 Aug 2026 09:00:00 GMT",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, использующие инструменты из экосистемы Веб-стандарты.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://web-standards.ru/podcast/542/",
+          "tags": [
+            "веб-стандарты",
+            "обновление"
+          ],
+          "changeType": "guide",
+          "technologies": [
+            "platform"
+          ],
+          "packages": [],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        },
+        {
+          "priority": "P3",
+          "title": "Next.js Releases: выпуск v16.3.3",
+          "source": "Next.js Releases",
+          "publishedAt": "2026-08-25T16:17:10Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, которые поддерживают приложения на Next.js.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/vercel/next.js/releases/tag/v16.3.3",
+          "tags": [
+            "next.js",
+            "обновление"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "nextjs"
+          ],
+          "packages": [
+            {
+              "name": "next",
+              "releasedVersion": "v16.3.3",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-08-31",
