@@ -1,7 +1,126 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-01T04:46:48.739Z",
+  "updatedAt": "2026-09-02T04:47:35.868Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-09-02",
+      "generatedAt": "2026-09-02T04:47:35.868Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 21,
+      "sourceHealth": {
+        "attempted": 21,
+        "succeeded": 21,
+        "failed": []
+      },
+      "status": "quiet",
+      "summary": "Значимых новых событий не найдено. Подборка для чтения собрана в резервном режиме.",
+      "items": [],
+      "readLater": [
+        {
+          "priority": "P3",
+          "title": "Новый материал от Next.js Security",
+          "source": "Next.js Security",
+          "publishedAt": "2026-08-25T16:16:28Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, которые поддерживают приложения на Next.js.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-2xp9-vwfh-vxw4",
+          "tags": [
+            "next.js",
+            "безопасность"
+          ],
+          "changeType": "tooling",
+          "technologies": [
+            "nextjs"
+          ],
+          "packages": [
+            {
+              "name": "next",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        },
+        {
+          "priority": "P3",
+          "title": "Новый материал от Next.js Security",
+          "source": "Next.js Security",
+          "publishedAt": "2026-08-25T16:15:42Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, которые поддерживают приложения на Next.js.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-p293-qw3h-jr36",
+          "tags": [
+            "next.js",
+            "безопасность"
+          ],
+          "changeType": "tooling",
+          "technologies": [
+            "nextjs"
+          ],
+          "packages": [
+            {
+              "name": "next",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        },
+        {
+          "priority": "P3",
+          "title": "Storybook Releases: выпуск v10.5.10",
+          "source": "Storybook Releases",
+          "publishedAt": "2026-08-20T11:02:19Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, использующие инструменты из экосистемы Storybook Releases.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/storybookjs/storybook/releases/tag/v10.5.10",
+          "tags": [
+            "storybook",
+            "обновление"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "storybook",
+            "quality",
+            "react"
+          ],
+          "packages": [
+            {
+              "name": "storybook",
+              "releasedVersion": "v10.5.10",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-09-01",
