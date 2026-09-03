@@ -1,30 +1,30 @@
 {
   "schemaVersion": 2,
   "date": "2026-09-03",
-  "generatedAt": "2026-09-03T05:42:49.565Z",
+  "generatedAt": "2026-09-03T19:09:56.499Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
-  "sourcesChecked": 21,
+  "sourcesChecked": 32,
   "sourceHealth": {
-    "attempted": 21,
-    "succeeded": 21,
+    "attempted": 32,
+    "succeeded": 32,
     "failed": []
   },
   "status": "active",
-  "summary": "В окне дня две релизные новости: TanStack Query RC2 и Storybook 10.6.0. Всё остальное тихо.",
+  "summary": "В окне дня появились обновления двух популярных библиотек: TanStack Query (RC‑версия) и Puppeteer. Обе версии содержат новые возможности и исправления, но не содержат критических уязвимостей.",
   "items": [
     {
       "priority": "P1",
-      "title": "TanStack Query RC2: встроенный single‑flight consumer и улучшения кэша useMutation",
+      "title": "TanStack Query RC‑версия 6.0.0‑rc.2 – новые возможности и исправления",
       "source": "TanStack Query Releases",
       "publishedAt": "2026-09-02T22:20:16Z",
-      "whyImportant": "Добавлен механизм single‑flight consumer, упрощающий одновременные запросы, и улучшен кэш useMutation, повышая производительность и надёжность.",
-      "audience": "Frontend‑инженеры, использующие TanStack Query",
-      "nextStep": "Обновить @tanstack/solid-query до версии 6.0.0‑rc.2 и проверить работу кэша в вашем приложении.",
+      "whyImportant": "Включена встроенная поддержка single‑flight через FLIGHT_DATA_SOURCE, улучшена подписка к кэшу useMutation, что повышает производительность и упрощает управление состоянием.",
+      "audience": "Разработчики, использующие TanStack Query в React, Solid, Vue и других фреймворках",
+      "nextStep": "Обновить пакеты @tanstack/solid-query, @tanstack/react-query, @tanstack/react-query-devtools и @tanstack/react-query-persist-client до 6.0.0‑rc.2 и проверить работу кэша и мутаций.",
       "url": "https://github.com/TanStack/query/releases/tag/release-2026-09-02-2220",
       "tags": [
         "TanStack Query",
-        "solid-query",
+        "RC",
         "single‑flight",
         "cache"
       ],
@@ -32,41 +32,10 @@
       "technologies": [
         "query"
       ],
-      "packages": [],
-      "risk": "unknown",
-      "effort": "days",
-      "actionItems": [
-        "Проверить совместимость с текущим кодом",
-        "Обновить зависимости",
-        "Тестировать кэш useMutation"
-      ],
-      "detailsConfidence": "source"
-    },
-    {
-      "priority": "P1",
-      "title": "Storybook 10.6.0: новая архитектура навыков и улучшения производительности",
-      "source": "Storybook Releases",
-      "publishedAt": "2026-09-02T13:57:23Z",
-      "whyImportant": "Включена поддержка agent‑workflow, улучшены CLI‑bindings и снижен размер бандла, что ускоряет сборку и повышает удобство разработки.",
-      "audience": "Frontend‑команды, использующие Storybook",
-      "nextStep": "Обновить Storybook до 10.6.0 и протестировать новые MCP‑фичи в вашем проекте.",
-      "url": "https://github.com/storybookjs/storybook/releases/tag/v10.6.0",
-      "tags": [
-        "Storybook",
-        "MCP",
-        "CLI",
-        "performance"
-      ],
-      "changeType": "minor",
-      "technologies": [
-        "nextjs",
-        "vite",
-        "storybook"
-      ],
       "packages": [
         {
-          "name": "storybook",
-          "releasedVersion": "10.6.0",
+          "name": "@tanstack/react-query",
+          "releasedVersion": "6.0.0-rc.2",
           "affectedRange": null,
           "fixedVersion": null
         }
@@ -74,72 +43,123 @@
       "risk": "unknown",
       "effort": "days",
       "actionItems": [
-        "Обновить зависимость storybook",
-        "Проверить работу MCP‑addons",
-        "Оптимизировать сборку"
+        "Обновить зависимости до 6.0.0‑rc.2",
+        "Проверить работу useMutation и кэша",
+        "Тестировать интеграцию с серверными данными"
+      ],
+      "detailsConfidence": "source"
+    },
+    {
+      "priority": "P1",
+      "title": "Puppeteer 25.10.0 – обновление зависимостей и синхронизация версий",
+      "source": "Puppeteer Releases",
+      "publishedAt": "2026-09-03T13:06:55Z",
+      "whyImportant": "Обновлены puppeteer-core до 25.10.0 и puppeteer‑browsers до 3.2.2, что обеспечивает совместимость с последними версиями браузеров и исправляет мелкие баги.",
+      "audience": "Разработчики, использующие Puppeteer для тестирования и скрапинга",
+      "nextStep": "Обновить пакеты puppeteer и puppeteer‑browsers до последних версий и проверить работу существующих скриптов.",
+      "url": "https://github.com/puppeteer/puppeteer/releases/tag/puppeteer-v25.10.0",
+      "tags": [
+        "Puppeteer",
+        "update",
+        "browsers"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "platform"
+      ],
+      "packages": [
+        {
+          "name": "puppeteer",
+          "releasedVersion": "25.10.0",
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
+      "effort": "days",
+      "actionItems": [
+        "Обновить puppeteer до 25.10.0",
+        "Обновить puppeteer‑browsers до 3.2.2",
+        "Проверить совместимость скриптов"
       ],
       "detailsConfidence": "source"
     }
   ],
   "readLater": [
     {
-      "priority": "P3",
-      "title": "Frontend Focus: выпуск 4.0",
-      "source": "Frontend Focus",
-      "publishedAt": "Wed, 2 Sep 2026 00:00:00 +0000",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы Frontend Focus.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://frontendfoc.us/issues/756",
+      "priority": "P2",
+      "title": "DOMPurify 3.4.13 – исправления багов с хуками и клонированием",
+      "source": "DOMPurify Releases",
+      "publishedAt": "2026-08-04T10:02:08Z",
+      "whyImportant": "Устранены проблемы с удалением хуков при IN_PLACE‑санитизации и предотвращены потенциальные обходы защиты от DOM‑клоуберинга.",
+      "audience": "Разработчики, использующие DOMPurify для очистки пользовательского ввода",
+      "nextStep": "Обновить пакет до 3.4.13 и проверить работу sanitization в режиме IN_PLACE.",
+      "url": "https://github.com/cure53/DOMPurify/releases/tag/3.4.13",
       "tags": [
-        "frontend",
-        "обновление"
+        "DOMPurify",
+        "security",
+        "sanitization"
       ],
-      "changeType": "major",
+      "changeType": "minor",
       "technologies": [
         "platform"
       ],
-      "packages": [],
-      "risk": "low",
-      "effort": "minutes",
-      "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
-      ],
-      "detailsConfidence": "inferred"
-    },
-    {
-      "priority": "P3",
-      "title": "Новый материал от Next.js Security",
-      "source": "Next.js Security",
-      "publishedAt": "2026-08-25T16:16:28Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, которые поддерживают приложения на Next.js.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-2xp9-vwfh-vxw4",
-      "tags": [
-        "next.js",
-        "безопасность"
-      ],
-      "changeType": "tooling",
-      "technologies": [
-        "nextjs"
-      ],
       "packages": [
         {
-          "name": "next",
-          "releasedVersion": null,
+          "name": "dompurify",
+          "releasedVersion": "3.4.13",
           "affectedRange": null,
           "fixedVersion": null
         }
       ],
-      "risk": "low",
+      "risk": "unknown",
       "effort": "minutes",
       "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
+        "Обновить dompurify до 3.4.13",
+        "Проверить sanitization в режиме IN_PLACE"
       ],
-      "detailsConfidence": "inferred"
+      "detailsConfidence": "source"
+    },
+    {
+      "priority": "P2",
+      "title": "typescript-eslint v8.68.0 – новые правила и исправления",
+      "source": "typescript-eslint Releases",
+      "publishedAt": "2026-08-24T18:35:02Z",
+      "whyImportant": "Добавлены новые правила и исправления, включая поддержку strict‑void‑return и улучшения в автозаполнении, что повышает качество кода.",
+      "audience": "Разработчики, использующие eslint‑plugin‑typescript‑eslint",
+      "nextStep": "Обновить пакет до 8.68.0 и включить новые правила в конфигурацию ESLint.",
+      "url": "https://github.com/typescript-eslint/typescript-eslint/releases/tag/v8.68.0",
+      "tags": [
+        "typescript-eslint",
+        "eslint",
+        "rules"
+      ],
+      "changeType": "breaking",
+      "technologies": [
+        "typescript",
+        "quality"
+      ],
+      "packages": [
+        {
+          "name": "typescript-eslint",
+          "releasedVersion": "8.68.0",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "@typescript-eslint/parser",
+          "releasedVersion": "8.68.0",
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
+      "effort": "minutes",
+      "actionItems": [
+        "Обновить typescript-eslint до 8.68.0",
+        "Проверить новые правила в проекте"
+      ],
+      "detailsConfidence": "source"
     }
   ]
 }
