@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-02T12:31:58.240Z",
+  "generatedAt": "2026-09-03T05:38:01.016Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -10238,6 +10238,17 @@
       "advisories": [],
       "events": [
         {
+          "id": "6803037581b546",
+          "kind": "minor",
+          "priority": 0,
+          "version": null,
+          "title": "Новый материал от TanStack Query Releases",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-09-02T22:20:16Z",
+          "source": "TanStack Query Releases",
+          "url": "https://github.com/TanStack/query/releases/tag/release-2026-09-02-2220"
+        },
+        {
           "id": "ff12c5ad852952",
           "kind": "minor",
           "priority": "P2",
@@ -10258,15 +10269,15 @@
         "storybook",
         "@storybook/react"
       ],
-      "latestVersion": "10.5.10",
-      "latestPublishedAt": "2026-08-20T10:52:53.637Z",
+      "latestVersion": "10.6.0",
+      "latestPublishedAt": "2026-09-02T14:07:30.853Z",
       "npmUrl": "https://www.npmjs.com/package/storybook",
       "repositoryUrl": "https://github.com/storybookjs/storybook",
       "packages": [
         {
           "name": "storybook",
-          "latestVersion": "10.5.10",
-          "latestPublishedAt": "2026-08-20T10:52:53.637Z",
+          "latestVersion": "10.6.0",
+          "latestPublishedAt": "2026-09-02T14:07:30.853Z",
           "npmUrl": "https://www.npmjs.com/package/storybook",
           "compatibility": [
             {
@@ -10279,9 +10290,9 @@
               "deprecated": null
             },
             {
-              "range": ">=8.4.0 <=10.5.10",
+              "range": ">=8.4.0 <=10.6.0",
               "minVersion": "8.4.0",
-              "maxVersion": "10.5.10",
+              "maxVersion": "10.6.0",
               "peerDependencies": {
                 "prettier": "^2 || ^3"
               },
@@ -10293,6 +10304,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "10.6.0",
+              "publishedAt": "2026-09-02T14:07:30.853Z"
+            },
             {
               "version": "10.5.10",
               "publishedAt": "2026-08-20T10:52:53.637Z"
@@ -11321,8 +11336,8 @@
         },
         {
           "name": "@storybook/react",
-          "latestVersion": "10.5.10",
-          "latestPublishedAt": "2026-08-20T10:46:47.796Z",
+          "latestVersion": "10.6.0",
+          "latestPublishedAt": "2026-09-02T13:59:27.390Z",
           "npmUrl": "https://www.npmjs.com/package/@storybook/react",
           "compatibility": [
             {
@@ -13943,9 +13958,29 @@
               ],
               "nodeRange": null,
               "deprecated": null
+            },
+            {
+              "range": "10.6.0",
+              "minVersion": "10.6.0",
+              "maxVersion": "10.6.0",
+              "peerDependencies": {
+                "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+                "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+                "storybook": "^10.6.0",
+                "typescript": ">= 4.9.x"
+              },
+              "optionalPeers": [
+                "typescript"
+              ],
+              "nodeRange": null,
+              "deprecated": null
             }
           ],
           "versions": [
+            {
+              "version": "10.6.0",
+              "publishedAt": "2026-09-02T13:59:27.390Z"
+            },
             {
               "version": "10.5.10",
               "publishedAt": "2026-08-20T10:46:47.796Z"
@@ -15037,6 +15072,17 @@
         }
       ],
       "events": [
+        {
+          "id": "2c92b16c6d9762",
+          "kind": "minor",
+          "priority": 1,
+          "version": "10.6.0",
+          "title": "Storybook Releases: выпуск v10.6.0",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-09-02T13:57:23Z",
+          "source": "Storybook Releases",
+          "url": "https://github.com/storybookjs/storybook/releases/tag/v10.6.0"
+        },
         {
           "id": "785d7843a62294",
           "kind": "minor",
