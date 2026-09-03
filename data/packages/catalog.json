@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-03T05:38:01.016Z",
+  "generatedAt": "2026-09-03T05:42:55.726Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -10240,10 +10240,10 @@
         {
           "id": "6803037581b546",
           "kind": "minor",
-          "priority": 0,
+          "priority": "P1",
           "version": null,
-          "title": "Новый материал от TanStack Query Releases",
-          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "title": "TanStack Query RC2: встроенный single‑flight consumer и улучшения кэша useMutation",
+          "summary": "Добавлен механизм single‑flight consumer, упрощающий одновременные запросы, и улучшен кэш useMutation, повышая производительность и надёжность.",
           "publishedAt": "2026-09-02T22:20:16Z",
           "source": "TanStack Query Releases",
           "url": "https://github.com/TanStack/query/releases/tag/release-2026-09-02-2220"
@@ -15075,10 +15075,10 @@
         {
           "id": "2c92b16c6d9762",
           "kind": "minor",
-          "priority": 1,
+          "priority": "P1",
           "version": "10.6.0",
-          "title": "Storybook Releases: выпуск v10.6.0",
-          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "title": "Storybook 10.6.0: новая архитектура навыков и улучшения производительности",
+          "summary": "Включена поддержка agent‑workflow, улучшены CLI‑bindings и снижен размер бандла, что ускоряет сборку и повышает удобство разработки.",
           "publishedAt": "2026-09-02T13:57:23Z",
           "source": "Storybook Releases",
           "url": "https://github.com/storybookjs/storybook/releases/tag/v10.6.0"

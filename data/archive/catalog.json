@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-03T05:37:53.141Z",
+  "updatedAt": "2026-09-03T05:42:49.565Z",
   "issues": [
     {
       "schemaVersion": 2,
       "date": "2026-09-03",
-      "generatedAt": "2026-09-03T05:37:53.141Z",
+      "generatedAt": "2026-09-03T05:42:49.565Z",
       "timezone": "Europe/Moscow",
       "windowHours": 26,
       "sourcesChecked": 21,
@@ -15,53 +15,51 @@
         "failed": []
       },
       "status": "active",
-      "summary": "Автоматическая подборка собрана в резервном режиме. Проверьте релизы по ссылкам на первоисточники.",
+      "summary": "В окне дня две релизные новости: TanStack Query RC2 и Storybook 10.6.0. Всё остальное тихо.",
       "items": [
         {
-          "priority": "P2",
-          "title": "Новый материал от TanStack Query Releases",
+          "priority": "P1",
+          "title": "TanStack Query RC2: встроенный single‑flight consumer и улучшения кэша useMutation",
           "source": "TanStack Query Releases",
           "publishedAt": "2026-09-02T22:20:16Z",
-          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-          "audience": "Команды, использующие инструменты из экосистемы TanStack Query Releases.",
-          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "whyImportant": "Добавлен механизм single‑flight consumer, упрощающий одновременные запросы, и улучшен кэш useMutation, повышая производительность и надёжность.",
+          "audience": "Frontend‑инженеры, использующие TanStack Query",
+          "nextStep": "Обновить @tanstack/solid-query до версии 6.0.0‑rc.2 и проверить работу кэша в вашем приложении.",
           "url": "https://github.com/TanStack/query/releases/tag/release-2026-09-02-2220",
           "tags": [
-            "tanstack",
-            "обновление"
+            "TanStack Query",
+            "solid-query",
+            "single‑flight",
+            "cache"
           ],
           "changeType": "minor",
           "technologies": [
             "query"
           ],
-          "packages": [
-            {
-              "name": "@tanstack/react-query",
-              "releasedVersion": null,
-              "affectedRange": null,
-              "fixedVersion": null
-            }
-          ],
-          "risk": "low",
-          "effort": "minutes",
+          "packages": [],
+          "risk": "unknown",
+          "effort": "days",
           "actionItems": [
-            "Проверить список изменений в первоисточнике.",
-            "Протестировать обновление в отдельной ветке."
+            "Проверить совместимость с текущим кодом",
+            "Обновить зависимости",
+            "Тестировать кэш useMutation"
           ],
-          "detailsConfidence": "inferred"
+          "detailsConfidence": "source"
         },
         {
-          "priority": "P2",
-          "title": "Storybook Releases: выпуск v10.6.0",
+          "priority": "P1",
+          "title": "Storybook 10.6.0: новая архитектура навыков и улучшения производительности",
           "source": "Storybook Releases",
           "publishedAt": "2026-09-02T13:57:23Z",
-          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-          "audience": "Команды, использующие инструменты из экосистемы Storybook Releases.",
-          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "whyImportant": "Включена поддержка agent‑workflow, улучшены CLI‑bindings и снижен размер бандла, что ускоряет сборку и повышает удобство разработки.",
+          "audience": "Frontend‑команды, использующие Storybook",
+          "nextStep": "Обновить Storybook до 10.6.0 и протестировать новые MCP‑фичи в вашем проекте.",
           "url": "https://github.com/storybookjs/storybook/releases/tag/v10.6.0",
           "tags": [
-            "storybook",
-            "обновление"
+            "Storybook",
+            "MCP",
+            "CLI",
+            "performance"
           ],
           "changeType": "minor",
           "technologies": [
@@ -72,11 +70,40 @@
           "packages": [
             {
               "name": "storybook",
-              "releasedVersion": "v10.6.0",
+              "releasedVersion": "10.6.0",
               "affectedRange": null,
               "fixedVersion": null
             }
           ],
+          "risk": "unknown",
+          "effort": "days",
+          "actionItems": [
+            "Обновить зависимость storybook",
+            "Проверить работу MCP‑addons",
+            "Оптимизировать сборку"
+          ],
+          "detailsConfidence": "source"
+        }
+      ],
+      "readLater": [
+        {
+          "priority": "P3",
+          "title": "Frontend Focus: выпуск 4.0",
+          "source": "Frontend Focus",
+          "publishedAt": "Wed, 2 Sep 2026 00:00:00 +0000",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, использующие инструменты из экосистемы Frontend Focus.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://frontendfoc.us/issues/756",
+          "tags": [
+            "frontend",
+            "обновление"
+          ],
+          "changeType": "major",
+          "technologies": [
+            "platform"
+          ],
+          "packages": [],
           "risk": "low",
           "effort": "minutes",
           "actionItems": [
@@ -84,9 +111,7 @@
             "Протестировать обновление в отдельной ветке."
           ],
           "detailsConfidence": "inferred"
-        }
-      ],
-      "readLater": [
+        },
         {
           "priority": "P3",
           "title": "Новый материал от Next.js Security",
@@ -108,74 +133,6 @@
             {
               "name": "next",
               "releasedVersion": null,
-              "affectedRange": null,
-              "fixedVersion": null
-            }
-          ],
-          "risk": "low",
-          "effort": "minutes",
-          "actionItems": [
-            "Проверить список изменений в первоисточнике.",
-            "Протестировать обновление в отдельной ветке."
-          ],
-          "detailsConfidence": "inferred"
-        },
-        {
-          "priority": "P3",
-          "title": "Новый материал от Next.js Security",
-          "source": "Next.js Security",
-          "publishedAt": "2026-08-25T16:15:42Z",
-          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-          "audience": "Команды, которые поддерживают приложения на Next.js.",
-          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-p293-qw3h-jr36",
-          "tags": [
-            "next.js",
-            "безопасность"
-          ],
-          "changeType": "tooling",
-          "technologies": [
-            "nextjs"
-          ],
-          "packages": [
-            {
-              "name": "next",
-              "releasedVersion": null,
-              "affectedRange": null,
-              "fixedVersion": null
-            }
-          ],
-          "risk": "low",
-          "effort": "minutes",
-          "actionItems": [
-            "Проверить список изменений в первоисточнике.",
-            "Протестировать обновление в отдельной ветке."
-          ],
-          "detailsConfidence": "inferred"
-        },
-        {
-          "priority": "P3",
-          "title": "Storybook Releases: выпуск v10.5.10",
-          "source": "Storybook Releases",
-          "publishedAt": "2026-08-20T11:02:19Z",
-          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-          "audience": "Команды, использующие инструменты из экосистемы Storybook Releases.",
-          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-          "url": "https://github.com/storybookjs/storybook/releases/tag/v10.5.10",
-          "tags": [
-            "storybook",
-            "обновление"
-          ],
-          "changeType": "minor",
-          "technologies": [
-            "storybook",
-            "quality",
-            "react"
-          ],
-          "packages": [
-            {
-              "name": "storybook",
-              "releasedVersion": "v10.5.10",
               "affectedRange": null,
               "fixedVersion": null
             }
