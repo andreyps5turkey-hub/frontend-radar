@@ -5,11 +5,13 @@ const MODEL = "openai/gpt-oss-20b";
 const API_URL = "https://api.groq.com/openai/v1/chat/completions";
 const MAX_INPUT_CANDIDATES = 18;
 const MAX_SUMMARY_LENGTH = 520;
-const PACKAGE_NAMES = [
+const sourceRegistry = JSON.parse(await readFile(new URL("../data/sources.json", import.meta.url), "utf8"));
+const PACKAGE_NAMES = [...new Set([
   "react", "react-dom", "next", "typescript", "@typescript/native-preview", "vite",
   "react-router", "react-router-dom", "@reduxjs/toolkit", "@tanstack/react-query",
   "storybook", "@storybook/react", "eslint", "prettier",
-];
+  ...sourceRegistry.flatMap(({ packages = [] }) => packages),
+])];
 const TECHNOLOGIES = ["react", "nextjs", "typescript", "vite", "router", "redux", "query", "storybook", "quality", "platform"];
 const PRIORITIES = ["P0", "P1", "P2", "P3"];
 const CHANGE_TYPES = ["security", "breaking", "major", "minor", "tooling", "guide", "standard"];
@@ -228,9 +230,15 @@ function allowedValue(value, allowedValues, fallback) {
 
 function verifyPackageVersions(packages, candidate) {
   const sourceText = `${candidate.title} ${candidate.summary}`.toLowerCase();
-  const supported = Array.isArray(packages)
-    ? packages.filter((entry) => entry && PACKAGE_NAMES.includes(entry.name))
-    : [];
+  const hinted = (candidate.sourcePackages ?? []).map((name) => ({
+    name,
+    releasedVersion: null,
+    affectedRange: null,
+    fixedVersion: null,
+  }));
+  const supplied = Array.isArray(packages) ? packages : [];
+  const supported = [...hinted, ...supplied]
+    .filter((entry) => entry && PACKAGE_NAMES.includes(entry.name));
   return [...new Map(supported.map((entry) => [entry.name, entry])).values()].map((entry) => ({
     ...entry,
     releasedVersion: verifiedVersionField(entry.releasedVersion, sourceText),
@@ -340,6 +348,7 @@ function compactCandidate(candidate) {
     url: candidate.url,
     score: candidate.score,
     inDailyWindow: candidate.inDailyWindow,
+    sourcePackages: candidate.sourcePackages ?? [],
   };
 }
 
@@ -390,21 +399,28 @@ function technologiesFor(candidate) {
   const add = (id, pattern) => { if (pattern.test(text)) matches.push(id); };
   add("nextjs", /next\.js|nextjs|turbopack/i);
   add("typescript", /typescript|typescript-go/i);
-  add("vite", /\bvite\b/i);
+  add("vite", /\bvite\b|\bswc\b/i);
   add("router", /react router|react-router/i);
   add("redux", /redux|@reduxjs\/toolkit/i);
   add("query", /tanstack query|@tanstack\/react-query/i);
   add("storybook", /storybook/i);
-  add("quality", /eslint|prettier|lint/i);
-  add("platform", /mdn|web\.dev|baseline|tc39|javascript|css/i);
+  add("quality", /eslint|prettier|stylelint|jest|testing library|lint/i);
+  add("platform", /mdn|web\.dev|baseline|tc39|javascript|css|node\.js|core-js|dompurify|puppeteer/i);
   add("react", /\breact(?:\.js)?\b/i);
   return [...new Set(matches.length ? matches : ["platform"])];
 }
 
 function packagesFor(candidate, version) {
   const text = `${candidate.source} ${candidate.title}`;
-  const names = [];
-  const add = (name, pattern) => { if (pattern.test(text)) names.push(name); };
+  const hinted = Array.isArray(candidate.sourcePackages) ? candidate.sourcePackages : [];
+  const names = [...hinted];
+  const inferred = new Set();
+  const add = (name, pattern) => {
+    if (pattern.test(text)) {
+      names.push(name);
+      inferred.add(name);
+    }
+  };
   add("next", /next\.js|nextjs/i);
   add("typescript", /typescript/i);
   add("vite", /\bvite\b/i);
@@ -414,10 +430,23 @@ function packagesFor(candidate, version) {
   add("storybook", /storybook/i);
   add("eslint", /eslint/i);
   add("prettier", /prettier/i);
-  if (/\breact(?:\.js)?\b/i.test(text) && !/react router/i.test(text)) names.push("react");
+  add("dompurify", /dompurify/i);
+  add("core-js", /core-js/i);
+  add("@vitejs/plugin-react-swc", /@vitejs\/plugin-react-swc/i);
+  add("@vitejs/plugin-react", /@vitejs\/plugin-react(?!-swc)/i);
+  add("@swc/core", /\bswc\b/i);
+  add("typescript-eslint", /typescript-eslint/i);
+  add("stylelint", /stylelint/i);
+  add("jest", /\bjest\b/i);
+  add("@testing-library/react", /testing library react|react testing library|@testing-library\/react/i);
+  add("puppeteer", /puppeteer/i);
+  if (/\breact(?:\.js)?\b/i.test(text) && !/react router/i.test(text)) {
+    names.push("react");
+    inferred.add("react");
+  }
   return [...new Set(names)].map((name) => ({
     name,
-    releasedVersion: version ?? null,
+    releasedVersion: version && (inferred.has(name) || hinted.length === 1) ? version : null,
     affectedRange: null,
     fixedVersion: null,
   }));

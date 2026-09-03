@@ -65,6 +65,11 @@ export type ScanSnapshot = {
   packages: Record<string, { currentVersion: string | null; targetVersion: string | null; status: CompatibilityStatus }>;
 };
 
+export type ScanHistory = {
+  version: 2;
+  snapshots: ScanSnapshot[];
+};
+
 const packageOrder = ["react", "react-dom", "next", "react-router", "react-router-dom", "@reduxjs/toolkit", "@tanstack/react-query", "typescript", "vite", "storybook", "@storybook/react", "eslint", "prettier"];
 
 function cleanRange(value: string) {
@@ -345,6 +350,36 @@ export function scanChanges(previous: ScanSnapshot | null, current: ScanSnapshot
     if (old.targetVersion !== value.targetVersion) return [`${name}: новая рекомендуемая версия ${value.targetVersion ?? "не требуется"}.`];
     return [];
   });
+}
+
+export function readScanHistory(value: string | null): ScanSnapshot[] {
+  if (!value) return [];
+  try {
+    const parsed = JSON.parse(value) as ScanSnapshot | ScanHistory;
+    if (parsed && parsed.version === 2 && Array.isArray((parsed as ScanHistory).snapshots)) {
+      return (parsed as ScanHistory).snapshots.filter((snapshot) => snapshot?.version === 1).slice(0, 10);
+    }
+    if (parsed && parsed.version === 1 && typeof (parsed as ScanSnapshot).packages === "object") return [parsed as ScanSnapshot];
+  } catch {
+    return [];
+  }
+  return [];
+}
+
+function snapshotSignature(snapshot: ScanSnapshot) {
+  return JSON.stringify({ catalogGeneratedAt: snapshot.catalogGeneratedAt, packages: snapshot.packages });
+}
+
+export function appendScanSnapshot(history: ScanSnapshot[], snapshot: ScanSnapshot) {
+  if (history[0] && snapshotSignature(history[0]) === snapshotSignature(snapshot)) return history;
+  return [snapshot, ...history].slice(0, 10);
+}
+
+export function scanSnapshotCounts(snapshot: ScanSnapshot) {
+  return Object.values(snapshot.packages).reduce((counts, item) => ({
+    ...counts,
+    [item.status]: counts[item.status] + 1,
+  }), { compatible: 0, update: 0, prerequisite: 0, conflict: 0, unknown: 0 } as Record<CompatibilityStatus, number>);
 }
 
 export function reportMarkdown(project: ProjectProfile, report: CompatibilityReport) {

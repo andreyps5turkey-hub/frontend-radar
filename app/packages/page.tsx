@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ArrowRight, Boxes, ShieldCheck } from "lucide-react";
 import catalogData from "@/data/packages/catalog.json";
 import type { PackageCatalogV1 } from "@/lib/package-catalog";
-import { packagesPath, projectPath } from "@/lib/site";
+import { comparePath, packagesPath, projectPath } from "@/lib/site";
 import { SiteHeader } from "../site-header";
 
 const catalog = catalogData as PackageCatalogV1;
@@ -20,7 +20,7 @@ export default function PackagesPage() {
       <header className="packages-header">
         <div className="packages-header__inner">
           <div><Boxes aria-hidden="true" size={24} /><h1>Пакеты React-стека</h1><p>Версии, совместимость и русская история важных изменений из официальных источников.</p></div>
-          <a className="button button--primary" href={projectPath()}>Проверить свой проект <ArrowRight aria-hidden="true" size={17} /></a>
+          <div className="packages-header__actions"><a className="button" href={comparePath()}>Сравнить версии</a><a className="button button--primary" href={projectPath()}>Проверить свой проект <ArrowRight aria-hidden="true" size={17} /></a></div>
         </div>
       </header>
       <div className={`package-catalog-health${catalog.sourceHealth.stale ? " is-stale" : ""}`}>

@@ -1,9 +1,10 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { buildCompatibilityReport, createScanSnapshot, reportMarkdown, scanChanges } from "../lib/compatibility";
+import { appendScanSnapshot, buildCompatibilityReport, createScanSnapshot, readScanHistory, reportMarkdown, scanChanges, scanSnapshotCounts } from "../lib/compatibility";
 import { parseLockfile } from "../lib/lockfiles";
 import type { PackageCatalogV1, PackageIntelligence, TrackedPackage } from "../lib/package-catalog";
 import { parseProjectManifest, readProjectProfile, type ProjectProfile } from "../lib/project";
+import { buildVersionComparison, comparisonPullRequestMarkdown, migrationDefinitions } from "../lib/version-comparison";
 
 function tracked(name: string, versions: string[], peerDependencies: Record<string, string> = {}, nodeRange: string | null = ">=20.0.0"): TrackedPackage {
   return {
@@ -146,4 +147,29 @@ test("scan history reports version and recommendation changes", () => {
   const first = createScanSnapshot(buildCompatibilityReport(profile([exactPackages[1]]), reactCatalog), reactCatalog.generatedAt, "2026-08-21T00:00:00.000Z");
   const second = createScanSnapshot(buildCompatibilityReport(profile([{ ...exactPackages[1], version: "19.2.0", resolvedVersion: "19.2.0" }]), reactCatalog), reactCatalog.generatedAt, "2026-08-22T00:00:00.000Z");
   assert.match(scanChanges(first, second)[0], /19\.1\.0.*19\.2\.0/);
+  const history = appendScanSnapshot([first], second);
+  assert.equal(history.length, 2);
+  assert.deepEqual(readScanHistory(JSON.stringify({ version: 2, snapshots: history })), history);
+  assert.deepEqual(readScanHistory(JSON.stringify(first)), [first]);
+  assert.equal(scanSnapshotCounts(second).compatible, 1);
+  assert.equal(appendScanSnapshot(history, second), history);
+});
+
+test("version comparison builds a major migration and a ready-to-use PR body", () => {
+  const next = group("next", "Next.js", "next", [tracked("next", ["15.4.1", "15.4.2", "16.0.0"], { react: "^19.0.0" })]);
+  next.events.push({ id: "next-16", kind: "major", priority: "P1", version: "16.0.0", title: "Next.js 16", summary: "Новая major-линия.", publishedAt: "2026-08-22T05:00:00.000Z", source: "Next.js Releases", url: "https://github.com/vercel/next.js/releases/tag/v16.0.0" });
+  next.advisories.push({
+    ghsaId: "GHSA-version-diff", cveId: null, severity: "high", cvss: 8.1, title: "Тестовый advisory", summary: "Исправляется обновлением.", publishedAt: "2026-08-20T00:00:00.000Z", updatedAt: "2026-08-20T00:00:00.000Z", url: "https://github.com/advisories/GHSA-version-diff",
+    vulnerabilities: [{ packageName: "next", vulnerableRange: "<15.4.2", fixedVersion: "15.4.2" }],
+  });
+  const packageCatalog = catalog([next]);
+  const comparison = buildVersionComparison(packageCatalog, "next", "15.4.1", "16.0.0");
+  assert.ok(comparison);
+  assert.equal(comparison.changeKind, "major");
+  assert.deepEqual(comparison.releases.map(({ version }) => version), ["15.4.2", "16.0.0"]);
+  assert.equal(comparison.advisories[0].state, "resolved");
+  assert.match(comparisonPullRequestMarkdown(comparison, "pnpm"), /pnpm add next@16\.0\.0/);
+  assert.match(comparisonPullRequestMarkdown(comparison, "pnpm"), /GHSA-version-diff/);
+  assert.deepEqual(migrationDefinitions(packageCatalog).map(({ transition }) => transition), ["15-to-16"]);
+  assert.equal(buildVersionComparison(packageCatalog, "next", "16.0.0", "15.4.1"), null);
 });

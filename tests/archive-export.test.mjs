@@ -17,16 +17,17 @@ test("catalog contains every dated archive in newest-first order", async () => {
   catalog.issues.forEach((issue) => validateDigest(issue));
 });
 
-test("static export contains archive, project and package pages, SEO files, a real 404 and a valid RSS feed", async () => {
+test("static export contains archive, project, comparison and migration pages, SEO files, a real 404 and a valid RSS feed", async () => {
   const [catalog, packageCatalog] = await Promise.all([
     readFile(new URL("../data/archive/catalog.json", import.meta.url), "utf8").then(JSON.parse),
     readFile(new URL("../data/packages/catalog.json", import.meta.url), "utf8").then(JSON.parse),
   ]);
-  const [archiveHtml, weeklyHtml, projectHtml, packagesHtml, packageDataText, notFoundHtml, feedText, sitemapText, robotsText] = await Promise.all([
+  const [archiveHtml, weeklyHtml, projectHtml, packagesHtml, compareHtml, packageDataText, notFoundHtml, feedText, sitemapText, robotsText] = await Promise.all([
     readFile(new URL("../pages-dist/archive/index.html", import.meta.url), "utf8"),
     readFile(new URL("../pages-dist/weekly/index.html", import.meta.url), "utf8"),
     readFile(new URL("../pages-dist/project/index.html", import.meta.url), "utf8"),
     readFile(new URL("../pages-dist/packages/index.html", import.meta.url), "utf8"),
+    readFile(new URL("../pages-dist/compare/index.html", import.meta.url), "utf8"),
     readFile(new URL("../pages-dist/package-catalog.json", import.meta.url), "utf8"),
     readFile(new URL("../pages-dist/404.html", import.meta.url), "utf8"),
     readFile(new URL("../pages-dist/feed.xml", import.meta.url), "utf8"),
@@ -42,6 +43,9 @@ test("static export contains archive, project and package pages, SEO files, a re
   assert.match(projectHtml, /\/frontend-radar\/project\//);
   assert.match(packagesHtml, /Пакеты React-стека/);
   assert.match(packagesHtml, /\/frontend-radar\/packages\//);
+  assert.match(compareHtml, /Сравнение версий/);
+  assert.match(compareHtml, /\/frontend-radar\/compare\//);
+  assert.doesNotMatch(compareHtml, /http:\/\/localhost:3000/);
   assert.equal(JSON.parse(packageDataText).schemaVersion, 1);
   assert.match(notFoundHtml, /Такого выпуска нет/);
 
@@ -56,6 +60,13 @@ test("static export contains archive, project and package pages, SEO files, a re
     assert.ok(html.includes(`${item.label}: релизы и совместимость`));
     assert.ok(html.includes(item.npmUrl));
     assert.match(sitemapText, new RegExp(`/frontend-radar/packages/${item.slug}/`));
+  }
+  const migrationMatches = [...sitemapText.matchAll(/\/frontend-radar\/migrations\/([^/]+)\/(\d+-to-\d+)\//g)];
+  assert.ok(migrationMatches.length > 0);
+  for (const [, slug, transition] of migrationMatches) {
+    const html = await readFile(new URL(`../pages-dist/migrations/${slug}/${transition}/index.html`, import.meta.url), "utf8");
+    assert.match(html, /Checklist миграции/);
+    assert.match(html, /\/frontend-radar\/compare\//);
   }
   assert.match(robotsText, /Sitemap: https:\/\/andreyps5turkey-hub\.github\.io\/frontend-radar\/sitemap\.xml/);
   const clientFiles = await readdir(new URL("../pages-dist/_next/static/chunks/", import.meta.url));

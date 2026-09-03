@@ -1,13 +1,14 @@
 import digestData from "@/data/digest.json";
 import catalogData from "@/data/archive/catalog.json";
+import sourcesData from "@/data/sources.json";
 import { ArrowRight, CalendarRange, ExternalLink } from "lucide-react";
 import { DigestCard } from "./digest-card";
 import { ReadingSummary } from "./reading-summary";
-import { ProjectPulse } from "./project-pulse";
+import { PersonalRadar } from "./personal-radar";
 import { SourceHealthPanel } from "./source-health";
 import type { ArchiveCatalog, Digest, Priority } from "@/lib/digest";
 import { formatIssueDate } from "@/lib/digest";
-import { archivePath, packagesPath, projectPath, sitePath, weeklyPath } from "@/lib/site";
+import { archivePath, comparePath, packagesPath, projectPath, sitePath, weeklyPath } from "@/lib/site";
 import { buildWeeklyDigest, formatWeeklyRange } from "@/lib/weekly";
 
 type SourceGroup = {
@@ -16,34 +17,28 @@ type SourceGroup = {
   sources: string[];
 };
 
+type SourceDefinition = {
+  name: string;
+  group: Priority;
+};
+
 const digest = digestData as Digest;
 const catalog = catalogData as ArchiveCatalog;
 const weekly = buildWeeklyDigest(catalog);
 const knownUrls = [...new Set(catalog.issues.flatMap((issue) => [...issue.items, ...issue.readLater].map(({ url }) => url)))];
 const weeklyUrls = weekly.materials.map(({ item }) => item.url);
-
-const sourceGroups: SourceGroup[] = [
-  {
-    priority: "P0",
-    label: "Срочно",
-    sources: ["React Security", "Next.js Advisories"],
-  },
-  {
-    priority: "P1",
-    label: "Первоисточники",
-    sources: ["React", "Next.js", "TypeScript", "typescript-go", "Vite"],
-  },
-  {
-    priority: "P2",
-    label: "Экосистема",
-    sources: ["React Router", "Redux Toolkit", "TanStack Query", "Storybook", "ESLint", "Prettier"],
-  },
-  {
-    priority: "P3",
-    label: "Контекст",
-    sources: ["MDN", "web.dev", "TC39", "React Status", "This Week in React", "Frontend Focus", "JavaScript Weekly", "Веб-стандарты"],
-  },
-];
+const sourceDefinitions = sourcesData as SourceDefinition[];
+const sourceGroupLabels: Record<Priority, string> = {
+  P0: "Срочно",
+  P1: "Первоисточники",
+  P2: "Экосистема",
+  P3: "Контекст",
+};
+const sourceGroups: SourceGroup[] = (["P0", "P1", "P2", "P3"] as Priority[]).map((priority) => ({
+  priority,
+  label: sourceGroupLabels[priority],
+  sources: sourceDefinitions.filter(({ group }) => group === priority).map(({ name }) => name),
+}));
 
 export default function Home() {
   const issueDate = formatIssueDate(digest.date);
@@ -70,6 +65,7 @@ export default function Home() {
               <a href={weeklyPath()}>Неделя</a>
               <a href={archivePath()}>Архив</a>
               <a href={packagesPath()}>Пакеты</a>
+              <a href={comparePath()}>Сравнение</a>
               <a href={projectPath()}>Мой проект</a>
             </div>
           </nav>
@@ -110,7 +106,7 @@ export default function Home() {
       <section className="metrics" aria-label="Сводка выпуска">
         <div className="metric">
           <span>Источники</span>
-          <strong>{digest.sourceHealth?.succeeded ?? digest.sourcesChecked}/{digest.sourceHealth?.attempted ?? 21}</strong>
+          <strong>{digest.sourceHealth?.succeeded ?? digest.sourcesChecked}/{digest.sourceHealth?.attempted ?? digest.sourcesChecked}</strong>
           <small>ответили при сборе</small>
         </div>
         <div className="metric">
@@ -139,7 +135,7 @@ export default function Home() {
       </div>
 
       <div className="section section--project-pulse">
-        <ProjectPulse catalog={catalog} />
+        <PersonalRadar catalog={catalog} />
       </div>
 
       <section className="section" id="today">
@@ -205,8 +201,8 @@ export default function Home() {
       <section className="section sources-section" id="sources">
         <div className="section__head">
           <p className="eyebrow">Карта источников</p>
-          <h2>{digest.sourcesChecked} каналов без общей свалки</h2>
-          <p>Каждая группа получает свой вес: первоисточник всегда выше пересказа.</p>
+          <h2>{sourceDefinitions.length} канала без общей свалки</h2>
+          <p>В реестре только крупные технологии и проверенные редакционные каналы. Каждая группа получает свой вес.</p>
         </div>
         <div className="source-groups">
           {sourceGroups.map((group) => (

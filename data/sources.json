@@ -1,0 +1,37 @@
+[
+  { "name": "Next.js Security", "api": "https://api.github.com/repos/vercel/next.js/security-advisories", "weight": 125, "kind": "security", "group": "P0", "packages": ["next"] },
+
+  { "name": "React Blog", "url": "https://react.dev/rss.xml", "weight": 100, "kind": "official", "group": "P1", "packages": ["react", "react-dom"] },
+  { "name": "React Releases", "url": "https://github.com/facebook/react/releases.atom", "weight": 100, "kind": "release", "group": "P1", "packages": ["react", "react-dom"] },
+  { "name": "Next.js Releases", "url": "https://github.com/vercel/next.js/releases.atom", "weight": 100, "kind": "release", "group": "P1", "packages": ["next"] },
+  { "name": "Vite Releases", "url": "https://github.com/vitejs/vite/releases.atom", "weight": 90, "kind": "release", "group": "P1", "packages": ["vite", "@vitejs/plugin-legacy"] },
+  { "name": "TypeScript Blog", "url": "https://devblogs.microsoft.com/typescript/feed/", "weight": 100, "kind": "official", "group": "P1", "packages": ["typescript"] },
+  { "name": "typescript-go Releases", "url": "https://github.com/microsoft/typescript-go/releases.atom", "weight": 95, "kind": "release", "group": "P1", "packages": ["@typescript/native-preview"] },
+  { "name": "Node.js Releases", "url": "https://github.com/nodejs/node/releases.atom", "weight": 95, "kind": "release", "group": "P1", "packages": [] },
+  { "name": "DOMPurify Releases", "url": "https://github.com/cure53/DOMPurify/releases.atom", "weight": 88, "kind": "release", "group": "P1", "packages": ["dompurify"] },
+  { "name": "core-js Releases", "url": "https://github.com/zloirock/core-js/releases.atom", "weight": 78, "kind": "release", "group": "P1", "packages": ["core-js"] },
+
+  { "name": "React Router Releases", "url": "https://github.com/remix-run/react-router/releases.atom", "weight": 80, "kind": "release", "group": "P2", "packages": ["react-router", "react-router-dom"] },
+  { "name": "Redux Toolkit Releases", "url": "https://github.com/reduxjs/redux-toolkit/releases.atom", "weight": 75, "kind": "release", "group": "P2", "packages": ["@reduxjs/toolkit"] },
+  { "name": "TanStack Query Releases", "url": "https://github.com/TanStack/query/releases.atom", "weight": 75, "kind": "release", "group": "P2", "packages": ["@tanstack/react-query"] },
+  { "name": "Storybook Releases", "url": "https://github.com/storybookjs/storybook/releases.atom", "weight": 75, "kind": "release", "group": "P2", "packages": ["storybook", "@storybook/react"] },
+  { "name": "ESLint Releases", "url": "https://github.com/eslint/eslint/releases.atom", "weight": 70, "kind": "release", "group": "P2", "packages": ["eslint"] },
+  { "name": "Prettier Releases", "url": "https://github.com/prettier/prettier/releases.atom", "weight": 70, "kind": "release", "group": "P2", "packages": ["prettier"] },
+  { "name": "Vite React Plugins", "url": "https://github.com/vitejs/vite-plugin-react/releases.atom", "weight": 68, "kind": "release", "group": "P2", "packages": ["@vitejs/plugin-react", "@vitejs/plugin-react-swc", "@vitejs/plugin-rsc"] },
+  { "name": "SWC Releases", "url": "https://github.com/swc-project/swc/releases.atom", "weight": 58, "kind": "release", "group": "P2", "packages": ["@swc/core"] },
+  { "name": "typescript-eslint Releases", "url": "https://github.com/typescript-eslint/typescript-eslint/releases.atom", "weight": 68, "kind": "release", "group": "P2", "packages": ["typescript-eslint", "@typescript-eslint/parser"] },
+  { "name": "Stylelint Releases", "url": "https://github.com/stylelint/stylelint/releases.atom", "weight": 64, "kind": "release", "group": "P2", "packages": ["stylelint"] },
+  { "name": "Jest Releases", "url": "https://github.com/jestjs/jest/releases.atom", "weight": 64, "kind": "release", "group": "P2", "packages": ["jest"] },
+  { "name": "Testing Library React", "url": "https://github.com/testing-library/react-testing-library/releases.atom", "weight": 62, "kind": "release", "group": "P2", "packages": ["@testing-library/react"] },
+  { "name": "Puppeteer Releases", "url": "https://github.com/puppeteer/puppeteer/releases.atom", "weight": 58, "kind": "release", "group": "P2", "packages": ["puppeteer"] },
+  { "name": "Yarn Berry Releases", "url": "https://github.com/yarnpkg/berry/releases.atom", "weight": 64, "kind": "release", "group": "P2", "packages": [] },
+
+  { "name": "MDN Blog", "url": "https://developer.mozilla.org/en-US/blog/rss.xml", "weight": 60, "kind": "platform", "group": "P3", "packages": [] },
+  { "name": "web.dev", "url": "https://web.dev/feed.xml", "weight": 65, "kind": "platform", "group": "P3", "packages": [] },
+  { "name": "TC39 Proposals", "url": "https://github.com/tc39/proposals/commits/main.atom", "weight": 55, "kind": "standards", "group": "P3", "packages": [] },
+  { "name": "React Status", "url": "https://react.statuscode.com/rss", "weight": 45, "kind": "digest", "group": "P3", "packages": [] },
+  { "name": "This Week in React", "url": "https://thisweekinreact.com/newsletter/rss.xml", "weight": 45, "kind": "digest", "group": "P3", "packages": [] },
+  { "name": "Frontend Focus", "url": "https://frontendfoc.us/rss", "weight": 45, "kind": "digest", "group": "P3", "packages": [] },
+  { "name": "JavaScript Weekly", "url": "https://javascriptweekly.com/rss", "weight": 45, "kind": "digest", "group": "P3", "packages": [] },
+  { "name": "Веб-стандарты", "url": "https://web-standards.ru/podcast/feed/", "weight": 45, "kind": "digest", "group": "P3", "packages": [] }
+]

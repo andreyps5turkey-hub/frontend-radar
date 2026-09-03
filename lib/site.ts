@@ -21,6 +21,20 @@ export function projectPath() {
   return sitePath("/project/");
 }
 
+export function comparePath(params?: { slug?: string; from?: string; to?: string }) {
+  const path = sitePath("/compare/");
+  if (!params || (!params.slug && !params.from && !params.to)) return path;
+  const query = new URLSearchParams();
+  if (params.slug) query.set("package", params.slug);
+  if (params.from) query.set("from", params.from);
+  if (params.to) query.set("to", params.to);
+  return `${path}?${query.toString()}`;
+}
+
+export function migrationPath(slug: string, transition: string) {
+  return sitePath(`/migrations/${slug}/${transition}/`);
+}
+
 export function packagesPath(slug?: string) {
   return sitePath(slug ? `/packages/${slug}/` : "/packages/");
 }

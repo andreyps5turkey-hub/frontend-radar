@@ -20,5 +20,6 @@ Editorial rules:
 - Use `detailsConfidence: source` only when the details are directly stated in the candidate, `inferred` for conservative classification, and `unknown` when there is not enough information.
 - Return only `summary`, `items`, and `readLater`; trusted issue metadata is attached after editorial validation.
 - Keep at most 8 daily items. Prefer fewer, stronger signals.
+- Among otherwise equal candidates, prefer the high-signal Reactor stack: Node.js, DOMPurify, core-js, Vite React plugins, SWC, typescript-eslint, Stylelint, Jest, React Testing Library, Puppeteer, and Yarn Berry.
 
 Return only the structured response required by the API schema.

@@ -19,7 +19,7 @@ RSS/Atom-ленты и релизы, поднимает безопасность
 - персональная очередь чтения с быстрыми переходами к сохранённым и непрочитанным;
 - RSS-лента русских конспектов по адресу `/feed.xml`;
 - состояние проверенных и временно недоступных источников;
-- сборщик 21 официального источника;
+- единый реестр из 32 крупных официальных и редакционных источников;
 - приоритеты P0–P3;
 - русские конспекты без полной перепечатки статей;
 - ежедневный GitHub Actions workflow в 05:00 UTC (08:00 МСК);
@@ -43,7 +43,7 @@ pnpm run test
 ```
 
 `package.json` читается File API только в браузере. Профиль хранится в
-`frontend-radar:project:v1`, а очередь действий — в
+`frontend-radar:project:v2`, а очередь действий — в
 `frontend-radar:action-state:v1`. Эти данные не отправляются в GitHub, Groq или
 другие сервисы.
 
@@ -65,6 +65,11 @@ Groq. Ключ используется только как `GROQ_API_KEY` вн�
 
 ## Источники
 
-React, Next.js, TypeScript, Vite, React Router, Redux Toolkit, TanStack Query,
-Storybook, ESLint, Prettier, MDN, web.dev, TC39, React Status, This Week in React,
-Frontend Focus, JavaScript Weekly и Веб-стандарты.
+Базовый радар следит за React, Next.js, TypeScript, Vite, React Router, Redux
+Toolkit, TanStack Query, Storybook, ESLint, Prettier, MDN, web.dev, TC39 и
+крупными frontend-дайджестами. Для стека Reactor добавлены только значимые
+первоисточники: Node.js, DOMPurify, core-js, Vite React Plugins, SWC,
+typescript-eslint, Stylelint, Jest, React Testing Library, Puppeteer и Yarn Berry.
+
+Полный машинно-читаемый список хранится в `data/sources.json`; его одновременно
+используют ежедневный сборщик и карта источников на главной странице.

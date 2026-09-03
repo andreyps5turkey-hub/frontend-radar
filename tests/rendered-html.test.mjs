@@ -31,7 +31,10 @@ async function render(path = "/") {
 }
 
 test("server-renders the frontend radar", async () => {
-  const digest = JSON.parse(await readFile(new URL("../data/digest.json", import.meta.url), "utf8"));
+  const [digest, sources] = await Promise.all([
+    readFile(new URL("../data/digest.json", import.meta.url), "utf8").then(JSON.parse),
+    readFile(new URL("../data/sources.json", import.meta.url), "utf8").then(JSON.parse),
+  ]);
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
@@ -47,6 +50,10 @@ test("server-renders the frontend radar", async () => {
   assert.match(html, /Читать оригинал/);
   assert.match(html, /Неделя в одном экране/);
   assert.match(html, /React Stack Check/);
+  assert.match(html, /Мой радар/);
+  assert.match(html, /Сравнение/);
+  assert.match(html, new RegExp(`${sources.length}(?:<!-- -->)? канала`));
+  for (const source of sources) assert.ok(html.includes(source.name), `missing source label: ${source.name}`);
   assert.match(html, /frontend-radar-hero-v2\.jpg/);
   assert.match(html, /og\.jpg/);
   assert.match(html, /Создал/);
@@ -117,6 +124,27 @@ test("server-renders package directory, package details and package data", async
   assert.equal(dataResponse.status, 200);
   assert.match(dataResponse.headers.get("content-type") ?? "", /application\/json/);
   assert.equal((await dataResponse.json()).schemaVersion, 1);
+});
+
+test("server-renders version comparison and permanent migration pages", async () => {
+  const catalog = JSON.parse(await readFile(new URL("../data/packages/catalog.json", import.meta.url), "utf8"));
+  const compareResponse = await render("/compare");
+  assert.equal(compareResponse.status, 200);
+  const compareHtml = await compareResponse.text();
+  assert.match(compareHtml, /Сравнение версий/);
+  assert.match(compareHtml, /Загружаем стабильные версии/);
+
+  const item = catalog.packages.find(({ slug }) => slug === "next") ?? catalog.packages[0];
+  const tracked = item.packages.find(({ name }) => name === item.primaryPackage) ?? item.packages[0];
+  const majors = [...new Set(tracked.versions.filter(({ version }) => !version.includes("-")).map(({ version }) => Number(version.split(".")[0])))].sort((left, right) => left - right).slice(-4);
+  assert.ok(majors.length >= 2);
+  const transition = `${majors.at(-2)}-to-${majors.at(-1)}`;
+  const migrationResponse = await render(`/migrations/${item.slug}/${transition}`);
+  assert.equal(migrationResponse.status, 200);
+  const migrationHtml = await migrationResponse.text();
+  assert.match(migrationHtml, /Major migration/);
+  assert.match(migrationHtml, /Checklist миграции/);
+  assert.match(migrationHtml, /Получить PR-текст/);
 });
 
 test("server-renders archive search and permanent issue pages", async () => {

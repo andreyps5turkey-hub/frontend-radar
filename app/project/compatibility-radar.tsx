@@ -17,15 +17,19 @@ import { useEffect, useMemo, useState } from "react";
 import type { PackageCatalogV1 } from "@/lib/package-catalog";
 import {
   buildCompatibilityReport,
+  appendScanSnapshot,
   createScanSnapshot,
+  readScanHistory,
   reportMarkdown,
   scanChanges,
+  scanSnapshotCounts,
   type CompatibilitySignal,
   type CompatibilityStatus,
   type ScanSnapshot,
 } from "@/lib/compatibility";
 import { SCAN_HISTORY_KEY, type PackageManager } from "@/lib/project";
-import { packageCatalogPath } from "@/lib/site";
+import { packageGroupForName } from "@/lib/package-catalog";
+import { comparePath, packageCatalogPath } from "@/lib/site";
 import { useReadingState } from "../reading-state";
 
 type RadarFilter = "all" | "attention" | "compatible" | "unknown";
@@ -61,6 +65,10 @@ function SignalRow({ signal, selected, onSelect }: { signal: CompatibilitySignal
 }
 
 function SignalDetails({ signal }: { signal: CompatibilitySignal }) {
+  const group = packageGroupForName(signal.package.name);
+  const comparisonHref = group && signal.currentVersion && signal.targetVersion
+    ? comparePath({ slug: group.slug, from: signal.currentVersion, to: signal.targetVersion })
+    : null;
   return (
     <aside className="compatibility-detail" aria-label={`Подробности ${signal.package.name}`}>
       <div className="compatibility-detail__head">
@@ -89,6 +97,7 @@ function SignalDetails({ signal }: { signal: CompatibilitySignal }) {
       {signal.requirements.length ? <div className="compatibility-detail__list"><strong>Требования выбранной версии</strong><ul>{signal.requirements.map((item) => <li key={item}>{item}</li>)}</ul></div> : null}
       {signal.blockers.length ? <div className="compatibility-detail__list compatibility-detail__list--danger"><strong>Что мешает</strong><ul>{signal.blockers.map((item) => <li key={item}>{item}</li>)}</ul></div> : null}
       {signal.sourceUrl ? <a className="text-link" href={signal.sourceUrl} target="_blank" rel="noopener noreferrer">Официальный источник <ExternalLink aria-hidden="true" size={14} /></a> : null}
+      {comparisonHref ? <a className="text-link" href={comparisonHref}><GitCompareArrows aria-hidden="true" size={14} /> Сравнить версии и получить PR-текст</a> : null}
     </aside>
   );
 }
@@ -110,6 +119,7 @@ export function CompatibilityRadar() {
   const [selectedName, setSelectedName] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
   const [changes, setChanges] = useState<string[]>([]);
+  const [history, setHistory] = useState<ScanSnapshot[]>([]);
 
   useEffect(() => {
     if (!project?.packages.length || catalog) return;
@@ -135,13 +145,12 @@ export function CompatibilityRadar() {
   useEffect(() => {
     if (!report || !catalog || !report.signals.length) return;
     const current = createScanSnapshot(report, catalog.generatedAt);
-    let previous: ScanSnapshot | null = null;
-    try { previous = JSON.parse(window.localStorage.getItem(SCAN_HISTORY_KEY) ?? "null") as ScanSnapshot | null; } catch { previous = null; }
+    const stored = readScanHistory(window.localStorage.getItem(SCAN_HISTORY_KEY));
+    const previous = stored[0] ?? null;
     const nextChanges = scanChanges(previous, current);
-    const timer = window.setTimeout(() => setChanges(nextChanges), 0);
-    if (!previous || previous.catalogGeneratedAt !== current.catalogGeneratedAt || JSON.stringify(previous.packages) !== JSON.stringify(current.packages)) {
-      window.localStorage.setItem(SCAN_HISTORY_KEY, JSON.stringify(current));
-    }
+    const nextHistory = appendScanSnapshot(stored, current);
+    const timer = window.setTimeout(() => { setChanges(nextChanges); setHistory(nextHistory); }, 0);
+    if (nextHistory !== stored) window.localStorage.setItem(SCAN_HISTORY_KEY, JSON.stringify({ version: 2, snapshots: nextHistory }));
     return () => window.clearTimeout(timer);
   }, [catalog, report]);
 
@@ -200,6 +209,7 @@ export function CompatibilityRadar() {
       </div>
 
       <details className="scan-changes" open={Boolean(changes.length)}><summary><GitCompareArrows aria-hidden="true" size={18} /> Изменения с прошлого сканирования <span>{changes.length}</span></summary>{changes.length ? <ul>{changes.map((item) => <li key={item}>{item}</li>)}</ul> : <p>Это первое сканирование проекта или результаты не изменились.</p>}</details>
+      <details className="scan-history"><summary>История локальных проверок <span>{history.length}</span></summary><div>{history.map((snapshot) => { const snapshotCounts = scanSnapshotCounts(snapshot); return <article key={`${snapshot.generatedAt}:${snapshot.catalogGeneratedAt}`}><time dateTime={snapshot.generatedAt}>{new Intl.DateTimeFormat("ru-RU", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", timeZone: "Europe/Moscow" }).format(new Date(snapshot.generatedAt))}</time><span>Пакетов: {Object.keys(snapshot.packages).length}</span><span>Обновить: {snapshotCounts.update}</span><span>Конфликты: {snapshotCounts.conflict}</span></article>; })}</div></details>
       <p className="compatibility-disclaimer">Проверяются только поддерживаемые прямые зависимости. React Stack Check не заменяет npm audit или Dependabot.</p>
     </section>
   );

@@ -14,6 +14,23 @@ const siteUrl = `${siteOrigin}${basePath}`;
 const catalog = JSON.parse(await readFile(resolve("data/archive/catalog.json"), "utf8"));
 const packageCatalog = JSON.parse(await readFile(resolve("data/packages/catalog.json"), "utf8"));
 
+function stableMajorMigrations(item) {
+  const tracked = item.packages.find(({ name }) => name === item.primaryPackage) ?? item.packages[0];
+  const byMajor = new Map();
+  for (const entry of tracked?.versions ?? []) {
+    const match = /^(\d+)\./.exec(entry.version);
+    if (!match || entry.version.includes("-")) continue;
+    const line = Number(match[1]);
+    const current = byMajor.get(line);
+    if (!current || entry.version.localeCompare(current, undefined, { numeric: true }) > 0) byMajor.set(line, entry.version);
+  }
+  const majors = [...byMajor.keys()].sort((left, right) => left - right).slice(-4);
+  return majors.slice(1).map((toMajor, index) => ({
+    slug: item.slug,
+    transition: `${majors[index]}-to-${toMajor}`,
+  }));
+}
+
 const workerUrl = new URL("../dist/server/index.js", import.meta.url);
 workerUrl.searchParams.set("export", String(Date.now()));
 const { default: worker } = await import(workerUrl.href);
@@ -23,12 +40,16 @@ await cp(resolve("dist/client"), outputDir, { recursive: true });
 
 function rewriteForPages(html) {
   return html
+    .replaceAll(`http://localhost:3000${basePath}`, siteUrl)
+    .replaceAll("http://localhost:3000", siteUrl)
     .replaceAll("/_next/", `${basePath}/_next/`)
     .replaceAll('"/favicon.svg"', `"${basePath}/favicon.svg"`)
     .replaceAll('href="/archive', `href="${basePath}/archive`)
     .replaceAll('href="/weekly', `href="${basePath}/weekly`)
     .replaceAll('href="/project', `href="${basePath}/project`)
     .replaceAll('href="/packages', `href="${basePath}/packages`)
+    .replaceAll('href="/compare', `href="${basePath}/compare`)
+    .replaceAll('href="/migrations', `href="${basePath}/migrations`)
     .replaceAll('"/package-catalog.json"', `"${basePath}/package-catalog.json"`)
     .replaceAll('href="/feed.xml"', `href="${basePath}/feed.xml"`)
     .replace(/https?:\/\/[^"'\\<>\s]+\/og\.jpg/g, `${siteUrl}/og.jpg`);
@@ -53,12 +74,13 @@ async function writeRoute(route, html) {
   await writeFile(resolve(directory, "index.html"), html, "utf8");
 }
 
-const [homeHtml, archiveHtml, weeklyHtml, projectHtml, packagesHtml, notFoundHtml] = await Promise.all([
+const [homeHtml, archiveHtml, weeklyHtml, projectHtml, packagesHtml, compareHtml, notFoundHtml] = await Promise.all([
   renderRoute("/"),
   renderRoute("/archive/"),
   renderRoute("/weekly/"),
   renderRoute("/project/"),
   renderRoute("/packages/"),
+  renderRoute("/compare/"),
   renderRoute("/__frontend_radar_missing__", 404),
 ]);
 await Promise.all([
@@ -67,6 +89,7 @@ await Promise.all([
   writeRoute("/weekly/", weeklyHtml),
   writeRoute("/project/", projectHtml),
   writeRoute("/packages/", packagesHtml),
+  writeRoute("/compare/", compareHtml),
   writeFile(resolve(outputDir, "404.html"), notFoundHtml, "utf8"),
 ]);
 
@@ -80,6 +103,14 @@ for (let index = 0; index < archiveRoutes.length; index += 12) {
 const packageRoutes = packageCatalog.packages.map(({ slug }) => `/packages/${slug}/`);
 for (let index = 0; index < packageRoutes.length; index += 12) {
   const batch = packageRoutes.slice(index, index + 12);
+  const pages = await Promise.all(batch.map(async (route) => [route, await renderRoute(route)]));
+  await Promise.all(pages.map(([route, html]) => writeRoute(route, html)));
+}
+
+const migrationRoutes = packageCatalog.packages.flatMap(stableMajorMigrations)
+  .map(({ slug, transition }) => `/migrations/${slug}/${transition}/`);
+for (let index = 0; index < migrationRoutes.length; index += 12) {
+  const batch = migrationRoutes.slice(index, index + 12);
   const pages = await Promise.all(batch.map(async (route) => [route, await renderRoute(route)]));
   await Promise.all(pages.map(([route, html]) => writeRoute(route, html)));
 }
@@ -142,7 +173,7 @@ ${feedItems}
 `;
 
 await writeFile(resolve(outputDir, "feed.xml"), feed, "utf8");
-const sitemapRoutes = ["/", "/weekly/", "/archive/", "/project/", "/packages/", ...archiveRoutes, ...packageRoutes];
+const sitemapRoutes = ["/", "/weekly/", "/archive/", "/project/", "/packages/", "/compare/", ...archiveRoutes, ...packageRoutes, ...migrationRoutes];
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${sitemapRoutes.map((route) => `  <url><loc>${escapeXml(`${siteUrl}${route}`)}</loc></url>`).join("\n")}
@@ -151,4 +182,4 @@ ${sitemapRoutes.map((route) => `  <url><loc>${escapeXml(`${siteUrl}${route}`)}</
 await writeFile(resolve(outputDir, "sitemap.xml"), sitemap, "utf8");
 await writeFile(resolve(outputDir, "robots.txt"), `User-agent: *\nAllow: /\nSitemap: ${siteUrl}/sitemap.xml\n`, "utf8");
 await writeFile(resolve(outputDir, ".nojekyll"), "", "utf8");
-console.log(`Exported ${archiveRoutes.length + packageRoutes.length + 6} GitHub Pages routes, package data, RSS and sitemap to ${outputDir} with base path ${basePath}.`);
+console.log(`Exported ${archiveRoutes.length + packageRoutes.length + migrationRoutes.length + 7} GitHub Pages routes, package data, RSS and sitemap to ${outputDir} with base path ${basePath}.`);

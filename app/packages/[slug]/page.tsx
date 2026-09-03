@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Check, ChevronLeft, ExternalLink, Package, ShieldCheck } from "lucide-react";
+import { ArrowRight, Check, ChevronLeft, ExternalLink, Package, ShieldCheck } from "lucide-react";
 import { major, satisfies, valid } from "semver";
 import catalogData from "@/data/packages/catalog.json";
 import type { CompatibilityRule, PackageCatalogV1, PackageIntelligence } from "@/lib/package-catalog";
-import { packagesPath, projectPath } from "@/lib/site";
+import { comparePath, migrationPath, packagesPath, projectPath } from "@/lib/site";
+import { migrationDefinitions } from "@/lib/version-comparison";
 import { SiteHeader } from "../../site-header";
 import { CopyCommand } from "../copy-command";
 import { PackageTimeline } from "../package-timeline";
@@ -72,6 +73,7 @@ export default async function PackagePage({ params }: { params: Promise<{ slug: 
   if (!item) notFound();
   const active = activeAdvisories(item);
   const related = catalog.packages.filter(({ slug }) => slug !== item.slug).slice(0, 3);
+  const migrations = migrationDefinitions(catalog).filter(({ slug }) => slug === item.slug);
   const published = item.latestPublishedAt ? new Intl.DateTimeFormat("ru-RU", { day: "numeric", month: "long", year: "numeric", timeZone: "Europe/Moscow" }).format(new Date(item.latestPublishedAt)) : "дата неизвестна";
 
   return (
@@ -81,7 +83,7 @@ export default async function PackagePage({ params }: { params: Promise<{ slug: 
       <header className="package-header">
         <div className="package-header__inner">
           <a className="back-link" href={packagesPath()}><ChevronLeft aria-hidden="true" size={17} /> Пакеты</a>
-          <div className="package-header__title"><div><h1>{item.label}: релизы и совместимость</h1><p>Последние версии, advisory и русские практические выводы без пересказа документации.</p></div><a className="button button--primary" href={projectPath()}><ShieldCheck aria-hidden="true" size={17} /> Проверить свой проект</a></div>
+          <div className="package-header__title"><div><h1>{item.label}: релизы и совместимость</h1><p>Последние версии, advisory и русские практические выводы без пересказа документации.</p></div><div className="package-header__actions"><a className="button" href={comparePath({ slug: item.slug })}>Сравнить версии</a><a className="button button--primary" href={projectPath()}><ShieldCheck aria-hidden="true" size={17} /> Проверить свой проект</a></div></div>
           <div className="package-facts">
             <div><Package aria-hidden="true" size={20} /><span><small>Пакет</small><strong>{item.primaryPackage}</strong></span></div>
             <div><span><small>Последняя stable</small><strong>{item.latestVersion ? `v${item.latestVersion}` : "нет данных"}</strong></span></div>
@@ -120,6 +122,8 @@ export default async function PackagePage({ params }: { params: Promise<{ slug: 
       </section>
 
       <PackageTimeline events={item.events} />
+
+      {migrations.length ? <section className="package-migrations"><div className="package-section-head"><div><span>Пути обновления</span><h2>Major-миграции</h2></div></div><div>{migrations.map((migration) => <a href={migrationPath(migration.slug, migration.transition)} key={migration.transition}><span>{migration.fromMajor}.x → {migration.toMajor}.x</span><strong>{migration.fromVersion} → {migration.toVersion}</strong><ArrowRight aria-hidden="true" size={17} /></a>)}</div></section> : null}
 
       <section className="package-upgrade-check">
         <div><span>Консервативное обновление</span><h2>Что проверить перед обновлением</h2><ul><li>Прочитать release notes и breaking changes для целевой линии.</li><li>Сверить требования Node.js и peer dependencies с проектом.</li><li>Запустить typecheck, тесты и production build в отдельной ветке.</li></ul></div>

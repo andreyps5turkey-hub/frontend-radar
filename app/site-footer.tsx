@@ -1,5 +1,5 @@
 import { Rss } from "lucide-react";
-import { archivePath, packagesPath, projectPath, sitePath, weeklyPath } from "@/lib/site";
+import { archivePath, comparePath, packagesPath, projectPath, sitePath, weeklyPath } from "@/lib/site";
 
 export function SiteFooter() {
   return (
@@ -13,6 +13,7 @@ export function SiteFooter() {
         <a href={weeklyPath()}>Неделя</a>
         <a href={archivePath()}>Архив</a>
         <a href={packagesPath()}>Пакеты</a>
+        <a href={comparePath()}>Сравнение</a>
         <a href={projectPath()}>Мой проект</a>
         <a className="footer__rss" href={sitePath("/feed.xml")}>
           <Rss aria-hidden="true" size={16} /> RSS

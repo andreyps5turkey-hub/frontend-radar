@@ -1,5 +1,5 @@
 import { Rss } from "lucide-react";
-import { archivePath, packagesPath, projectPath, sitePath, weeklyPath } from "@/lib/site";
+import { archivePath, comparePath, packagesPath, projectPath, sitePath, weeklyPath } from "@/lib/site";
 
 export function SiteHeader() {
   return (
@@ -14,6 +14,7 @@ export function SiteHeader() {
           <a href={weeklyPath()}>Неделя</a>
           <a href={archivePath()}>Архив</a>
           <a href={packagesPath()}>Пакеты</a>
+          <a href={comparePath()}>Сравнение</a>
           <a href={projectPath()}>Мой проект</a>
           <a className="site-nav__icon" href={sitePath("/feed.xml")} aria-label="RSS Frontend Radar" title="RSS Frontend Radar">
             <Rss aria-hidden="true" size={18} />
