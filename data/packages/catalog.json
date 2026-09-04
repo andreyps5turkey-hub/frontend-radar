@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-03T19:10:02.631Z",
+  "generatedAt": "2026-09-04T04:46:53.647Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -1310,6 +1310,17 @@
         }
       ],
       "events": [
+        {
+          "id": "c25152fe5d0384",
+          "kind": "major",
+          "priority": "P3",
+          "version": "0.5.31",
+          "title": "Vite React Plugins: выпуск 0.5.31",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-07-28T06:34:17Z",
+          "source": "Vite React Plugins",
+          "url": "https://github.com/vitejs/vite-plugin-react/releases/tag/plugin-rsc%400.5.31"
+        },
         {
           "id": "fb4be1cf35a15a",
           "kind": "patch",
@@ -6276,6 +6287,17 @@
           "publishedAt": "2026-07-30T12:00:00Z",
           "source": "Vite Releases",
           "url": "https://github.com/vitejs/vite/releases/tag/v8.2.0"
+        },
+        {
+          "id": "c25152fe5d0384",
+          "kind": "major",
+          "priority": "P3",
+          "version": "0.5.31",
+          "title": "Vite React Plugins: выпуск 0.5.31",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-07-28T06:34:17Z",
+          "source": "Vite React Plugins",
+          "url": "https://github.com/vitejs/vite-plugin-react/releases/tag/plugin-rsc%400.5.31"
         },
         {
           "id": "5b455220b36cae",
@@ -15072,17 +15094,6 @@
         }
       ],
       "events": [
-        {
-          "id": "2c92b16c6d9762",
-          "kind": "minor",
-          "priority": "P1",
-          "version": "10.6.0",
-          "title": "Storybook 10.6.0: новая архитектура навыков и улучшения производительности",
-          "summary": "Включена поддержка agent‑workflow, улучшены CLI‑bindings и снижен размер бандла, что ускоряет сборку и повышает удобство разработки.",
-          "publishedAt": "2026-09-02T13:57:23Z",
-          "source": "Storybook Releases",
-          "url": "https://github.com/storybookjs/storybook/releases/tag/v10.6.0"
-        },
         {
           "id": "785d7843a62294",
           "kind": "minor",
