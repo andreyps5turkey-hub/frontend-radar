@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-04T04:46:53.647Z",
+  "generatedAt": "2026-09-05T04:45:35.940Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -10260,6 +10260,17 @@
       "advisories": [],
       "events": [
         {
+          "id": "5155631451b4d0",
+          "kind": "minor",
+          "priority": "P1",
+          "version": null,
+          "title": "Релиз 2026‑09‑04 22:28",
+          "summary": "Обновление Solid‑Query до rc.3 включает улучшения кеширования и исправления, которые могут повлиять на производительность и стабильность приложений.",
+          "publishedAt": "2026-09-04T22:28:51Z",
+          "source": "TanStack Query Releases",
+          "url": "https://github.com/TanStack/query/releases/tag/release-2026-09-04-2228"
+        },
+        {
           "id": "6803037581b546",
           "kind": "minor",
           "priority": "P1",
@@ -15147,15 +15158,15 @@
       "packageNames": [
         "eslint"
       ],
-      "latestVersion": "10.9.1",
-      "latestPublishedAt": "2026-08-24T18:21:58.062Z",
+      "latestVersion": "10.10.0",
+      "latestPublishedAt": "2026-09-04T14:34:21.799Z",
       "npmUrl": "https://www.npmjs.com/package/eslint",
       "repositoryUrl": "https://github.com/eslint/eslint",
       "packages": [
         {
           "name": "eslint",
-          "latestVersion": "10.9.1",
-          "latestPublishedAt": "2026-08-24T18:21:58.062Z",
+          "latestVersion": "10.10.0",
+          "latestPublishedAt": "2026-09-04T14:34:21.799Z",
           "npmUrl": "https://www.npmjs.com/package/eslint",
           "compatibility": [
             {
@@ -15186,9 +15197,9 @@
               "deprecated": "This version is no longer supported. Please see https://eslint.org/version-support for other options."
             },
             {
-              "range": ">=10.0.0 <=10.9.1",
+              "range": ">=10.0.0 <=10.10.0",
               "minVersion": "10.0.0",
-              "maxVersion": "10.9.1",
+              "maxVersion": "10.10.0",
               "peerDependencies": {},
               "optionalPeers": [],
               "nodeRange": "^20.19.0 || ^22.13.0 || >=24",
@@ -15196,6 +15207,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "10.10.0",
+              "publishedAt": "2026-09-04T14:34:21.799Z"
+            },
             {
               "version": "10.9.1",
               "publishedAt": "2026-08-24T18:21:58.062Z"

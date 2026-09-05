@@ -1,7 +1,149 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-04T04:46:48.151Z",
+  "updatedAt": "2026-09-05T04:45:09.827Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-09-05",
+      "generatedAt": "2026-09-05T04:45:09.827Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 32,
+      "sourceHealth": {
+        "attempted": 32,
+        "succeeded": 32,
+        "failed": []
+      },
+      "status": "active",
+      "summary": "В окне дня только один релиз – обновление TanStack Query для Solid. Остальные события не попали в период.",
+      "items": [
+        {
+          "priority": "P1",
+          "title": "Релиз 2026‑09‑04 22:28",
+          "source": "TanStack Query Releases",
+          "publishedAt": "2026-09-04T22:28:51Z",
+          "whyImportant": "Обновление Solid‑Query до rc.3 включает улучшения кеширования и исправления, которые могут повлиять на производительность и стабильность приложений.",
+          "audience": "Разработчики, использующие Solid‑Query",
+          "nextStep": "Обновите пакеты @tanstack/solid-query, @tanstack/solid-query-devtools и @tanstack/solid-query-persist-client до версии 6.0.0‑rc.3 и проверьте работу кеша.",
+          "url": "https://github.com/TanStack/query/releases/tag/release-2026-09-04-2228",
+          "tags": [
+            "solid-query",
+            "TanStack",
+            "React"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "query"
+          ],
+          "packages": [
+            {
+              "name": "@tanstack/react-query",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "days",
+          "actionItems": [
+            "Проверить совместимость с текущей версией Solid",
+            "Обновить пакеты до rc.3",
+            "Тестировать кеширование и revalidation"
+          ],
+          "detailsConfidence": "source"
+        }
+      ],
+      "readLater": [
+        {
+          "priority": "P3",
+          "title": "htmx 4.0: расширенные возможности сервер‑драйвенных приложений",
+          "source": "Frontend Focus",
+          "publishedAt": "Wed, 2 Sep 2026 00:00:00 +0000",
+          "whyImportant": "Новая версия htmx позволяет управлять запросами и обновлениями DOM через атрибуты HTML без JavaScript, упрощая разработку интерактивных страниц.",
+          "audience": "Frontend‑разработчики, работающие с сервер‑драйвенными UI",
+          "nextStep": "Изучить документацию, попробовать пример на простом проекте.",
+          "url": "https://frontendfoc.us/issues/756",
+          "tags": [
+            "htmx",
+            "HTML",
+            "Server‑Driven"
+          ],
+          "changeType": "major",
+          "technologies": [
+            "platform"
+          ],
+          "packages": [],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Прочитать официальную документацию htmx 4.0",
+            "Создать тестовый проект с <hx‑partial>"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P3",
+          "title": "StyleX: переход от styled‑components к более строгому стилевому решению",
+          "source": "React Status",
+          "publishedAt": "Fri, 4 Sep 2026 00:00:00 +0000",
+          "whyImportant": "StyleX обеспечивает более предсказуемый и быстрый рендеринг стилей, что важно для крупных приложений с большим количеством компонентов.",
+          "audience": "Разработчики React, использующие styled‑components",
+          "nextStep": "Оценить совместимость с текущим кодом, протестировать миграцию на небольшом модуле.",
+          "url": "https://react.statuscode.com/issues/489",
+          "tags": [
+            "StyleX",
+            "styled-components",
+            "React"
+          ],
+          "changeType": "breaking",
+          "technologies": [
+            "react"
+          ],
+          "packages": [],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Прочитать кейс Linear по миграции",
+            "Проверить совместимость с текущим кодом"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P3",
+          "title": "core‑js 3.50.0: новые итераторы и улучшения в API",
+          "source": "core-js Releases",
+          "publishedAt": "2026-08-05T08:42:45Z",
+          "whyImportant": "Добавлены новые итераторы Iterator.zip и Iterator.prototype.chunks, а также улучшено поведение ошибок при некорректных аргументах.",
+          "audience": "Разработчики, использующие polyfills core‑js",
+          "nextStep": "Обновить core‑js до 3.50.0 и проверить совместимость с существующим кодом.",
+          "url": "https://github.com/zloirock/core-js/releases/tag/v3.50.0",
+          "tags": [
+            "core-js",
+            "polyfill",
+            "ES"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "platform"
+          ],
+          "packages": [
+            {
+              "name": "core-js",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Обновить core‑js до 3.50.0",
+            "Проверить работу новых итераторов в проекте"
+          ],
+          "detailsConfidence": "source"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-09-04",
