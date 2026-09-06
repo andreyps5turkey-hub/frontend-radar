@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "date": "2026-09-06",
-  "generatedAt": "2026-09-06T04:46:13.534Z",
+  "generatedAt": "2026-09-06T05:22:45.805Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -11,9 +11,56 @@
     "failed": []
   },
   "status": "quiet",
-  "summary": "Значимых новых событий не найдено. Подборка для чтения собрана в резервном режиме.",
+  "summary": "В течение дня значимых обновлений фронтенд‑технологий не произошло.",
   "items": [],
   "readLater": [
+    {
+      "priority": "P3",
+      "title": "plugin-react@6.1.1 – Вариант логирования диагностик компилятора React",
+      "source": "Vite React Plugins",
+      "publishedAt": "2026-08-28T03:30:01Z",
+      "whyImportant": "Позволяет включить подробный вывод ошибок компиляции React в Vite, что упрощает отладку.",
+      "audience": "Разработчики, использующие Vite + React",
+      "nextStep": "Добавьте `compiler.logDiagnostics: true` в конфигурацию Vite, если хотите видеть диагностические сообщения.",
+      "url": "https://github.com/vitejs/vite-plugin-react/releases/tag/plugin-react%406.1.1",
+      "tags": [
+        "Vite",
+        "React",
+        "Diagnostics"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "vite",
+        "react"
+      ],
+      "packages": [
+        {
+          "name": "@vitejs/plugin-react",
+          "releasedVersion": "6.1.1",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "@vitejs/plugin-react-swc",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "@vitejs/plugin-rsc",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
+      "effort": "minutes",
+      "actionItems": [
+        "Установить пакет @vitejs/plugin-react@6.1.1",
+        "Включить compiler.logDiagnostics в vite.config.js"
+      ],
+      "detailsConfidence": "source"
+    },
     {
       "priority": "P3",
       "title": "Node.js Releases: выпуск 26.5.1",
@@ -23,58 +70,6 @@
       "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
       "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
       "url": "https://github.com/nodejs/node/releases/tag/v26.5.1",
-      "tags": [
-        "node.js",
-        "обновление"
-      ],
-      "changeType": "minor",
-      "technologies": [
-        "platform"
-      ],
-      "packages": [],
-      "risk": "low",
-      "effort": "minutes",
-      "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
-      ],
-      "detailsConfidence": "inferred"
-    },
-    {
-      "priority": "P3",
-      "title": "Node.js Releases: выпуск 22.23.2",
-      "source": "Node.js Releases",
-      "publishedAt": "2026-07-29T14:00:18Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/nodejs/node/releases/tag/v22.23.2",
-      "tags": [
-        "node.js",
-        "обновление"
-      ],
-      "changeType": "minor",
-      "technologies": [
-        "platform"
-      ],
-      "packages": [],
-      "risk": "low",
-      "effort": "minutes",
-      "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
-      ],
-      "detailsConfidence": "inferred"
-    },
-    {
-      "priority": "P3",
-      "title": "Node.js Releases: выпуск 24.19.0",
-      "source": "Node.js Releases",
-      "publishedAt": "2026-08-03T13:48:33Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/nodejs/node/releases/tag/v24.19.0",
       "tags": [
         "node.js",
         "обновление"
