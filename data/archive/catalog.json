@@ -1,7 +1,150 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-06T05:22:45.805Z",
+  "updatedAt": "2026-09-07T04:48:18.127Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-09-07",
+      "generatedAt": "2026-09-07T04:48:18.127Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 32,
+      "sourceHealth": {
+        "attempted": 32,
+        "succeeded": 32,
+        "failed": []
+      },
+      "status": "active",
+      "summary": "В окне дня опубликована новая версия DOMPurify с улучшениями безопасности.",
+      "items": [
+        {
+          "priority": "P2",
+          "title": "DOMPurify 3.4.15 – улучшения защиты от XML‑атак",
+          "source": "DOMPurify Releases",
+          "publishedAt": "2026-09-06T11:37:19Z",
+          "whyImportant": "Добавлена более надёжная защита при работе с XML‑контентом, что снижает риск XSS‑атак через XML‑переопределения.",
+          "audience": "Разработчики, использующие DOMPurify для очистки пользовательского ввода",
+          "nextStep": "Обновить пакет до версии 3.4.15 и проверить работу очистки XML‑данных в тестах.",
+          "url": "https://github.com/cure53/DOMPurify/releases/tag/3.4.15",
+          "tags": [
+            "DOMPurify",
+            "XSS",
+            "XML"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "platform"
+          ],
+          "packages": [
+            {
+              "name": "dompurify",
+              "releasedVersion": "3.4.15",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "hours",
+          "actionItems": [
+            "Проверить, что версия 3.4.15 установлена в проекте",
+            "Запустить тесты очистки XML‑данных",
+            "Проверить, что новые hardening‑механизмы работают"
+          ],
+          "detailsConfidence": "source"
+        }
+      ],
+      "readLater": [
+        {
+          "priority": "P3",
+          "title": "plugin-react@6.1.0 – экспериментальная поддержка React Compiler",
+          "source": "Vite React Plugins",
+          "publishedAt": "2026-08-20T02:47:42Z",
+          "whyImportant": "Позволяет использовать новый компилятор React в Vite, что может улучшить производительность и поддержку новых синтаксических возможностей.",
+          "audience": "Разработчики, использующие Vite с React",
+          "nextStep": "Установить пакет и включить опцию compiler в конфигурации Vite.",
+          "url": "https://github.com/vitejs/vite-plugin-react/releases/tag/plugin-react%406.1.0",
+          "tags": [
+            "Vite",
+            "React",
+            "Compiler"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "vite",
+            "react"
+          ],
+          "packages": [
+            {
+              "name": "@vitejs/plugin-react",
+              "releasedVersion": "6.1.0",
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "@vitejs/plugin-react-swc",
+              "releasedVersion": "6.1.0",
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "@vitejs/plugin-rsc",
+              "releasedVersion": "6.1.0",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Установить plugin-react@6.1.0",
+            "Включить compiler:true в конфигурацию Vite",
+            "Проверить сборку проекта"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P3",
+          "title": "typescript-eslint v8.69.0 – новые правила и исправления",
+          "source": "typescript-eslint Releases",
+          "publishedAt": "2026-08-31T17:06:30Z",
+          "whyImportant": "Включены новые правила eslint-plugin и исправлены баги, повышающие точность статического анализа TypeScript.",
+          "audience": "Разработчики, использующие typescript-eslint",
+          "nextStep": "Обновить пакет до версии 8.69.0 и пересобрать конфигурацию ESLint.",
+          "url": "https://github.com/typescript-eslint/typescript-eslint/releases/tag/v8.69.0",
+          "tags": [
+            "ESLint",
+            "TypeScript",
+            "Static Analysis"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "typescript",
+            "quality"
+          ],
+          "packages": [
+            {
+              "name": "typescript-eslint",
+              "releasedVersion": "8.69.0",
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "@typescript-eslint/parser",
+              "releasedVersion": "8.69.0",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Обновить пакеты typescript-eslint и @typescript-eslint/parser до 8.69.0",
+            "Запустить ESLint и проверить наличие новых предупреждений"
+          ],
+          "detailsConfidence": "source"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-09-06",
