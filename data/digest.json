@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "date": "2026-09-08",
-  "generatedAt": "2026-09-08T05:24:49.063Z",
+  "generatedAt": "2026-09-08T06:31:57.511Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -11,25 +11,25 @@
     "failed": []
   },
   "status": "active",
-  "summary": "Автоматическая подборка собрана в резервном режиме. Проверьте релизы по ссылкам на первоисточники.",
+  "summary": "В окне дня только релиз TypeScript‑ESLint v8.70.0 с новыми правилами и исправлениями.",
   "items": [
     {
-      "priority": "P2",
-      "title": "typescript-eslint Releases: выпуск v8.70.0",
+      "priority": "P1",
+      "title": "TypeScript‑ESLint v8.70.0 – новые правила и исправления",
       "source": "typescript-eslint Releases",
       "publishedAt": "2026-09-07T17:06:49Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды с TypeScript-проектами и авторами библиотек.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "whyImportant": "Добавлены новые правила eslint-plugin, улучшена совместимость с pnpm и Docusaurus, исправлены ложные срабатывания.",
+      "audience": "Разработчики, использующие TypeScript‑ESLint",
+      "nextStep": "Обновить пакет до v8.70.0 и проверить конфигурацию eslint.",
       "url": "https://github.com/typescript-eslint/typescript-eslint/releases/tag/v8.70.0",
       "tags": [
-        "typescript-eslint",
-        "обновление"
+        "typescript",
+        "eslint",
+        "typescript-eslint"
       ],
       "changeType": "minor",
       "technologies": [
-        "typescript",
-        "quality"
+        "typescript"
       ],
       "packages": [
         {
@@ -40,110 +40,108 @@
         },
         {
           "name": "@typescript-eslint/parser",
-          "releasedVersion": null,
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "typescript",
-          "releasedVersion": "v8.70.0",
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "eslint",
           "releasedVersion": "v8.70.0",
           "affectedRange": null,
           "fixedVersion": null
         }
       ],
-      "risk": "low",
-      "effort": "minutes",
+      "risk": "unknown",
+      "effort": "days",
       "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
+        "Обновить пакеты до v8.70.0",
+        "Проверить правила eslint-plugin на проекте",
+        "Проверить совместимость с pnpm 12.3.4"
       ],
-      "detailsConfidence": "inferred"
+      "detailsConfidence": "source"
     }
   ],
   "readLater": [
     {
       "priority": "P3",
-      "title": "Node.js Releases: выпуск 22.23.2",
-      "source": "Node.js Releases",
-      "publishedAt": "2026-07-29T14:00:18Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/nodejs/node/releases/tag/v22.23.2",
+      "title": "TypeScript‑ESLint v8.67.0 – экспорт базовых шаблонов",
+      "source": "typescript-eslint Releases",
+      "publishedAt": "2026-08-10T18:52:02Z",
+      "whyImportant": "Позволяет использовать готовые шаблоны globs для tseslint, упрощая настройку проекта.",
+      "audience": "Разработчики, работающие с tseslint",
+      "nextStep": "Изучить документацию по экспортируемым шаблонам.",
+      "url": "https://github.com/typescript-eslint/typescript-eslint/releases/tag/v8.67.0",
       "tags": [
-        "node.js",
-        "обновление"
+        "typescript",
+        "eslint",
+        "typescript-eslint"
       ],
       "changeType": "minor",
       "technologies": [
-        "platform"
+        "typescript"
       ],
-      "packages": [],
-      "risk": "low",
+      "packages": [
+        {
+          "name": "typescript-eslint",
+          "releasedVersion": "v8.67.0",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "@typescript-eslint/parser",
+          "releasedVersion": "v8.67.0",
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
       "effort": "minutes",
       "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
+        "Прочитать changelog",
+        "Проверить совместимость с текущим проектом"
       ],
-      "detailsConfidence": "inferred"
+      "detailsConfidence": "source"
     },
     {
       "priority": "P3",
-      "title": "Node.js Releases: выпуск 24.19.0",
-      "source": "Node.js Releases",
-      "publishedAt": "2026-08-03T13:48:33Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/nodejs/node/releases/tag/v24.19.0",
+      "title": "plugin-react-swc@4.3.3 – поддержка bundled-dev режима",
+      "source": "Vite React Plugins",
+      "publishedAt": "2026-07-30T10:22:58Z",
+      "whyImportant": "Обеспечивает совместимость с экспериментальным bundled-dev режимом Vite, что важно для быстрых прототипов.",
+      "audience": "Разработчики, использующие Vite и React",
+      "nextStep": "Обновить плагин до версии 4.3.3 и протестировать bundled-dev режим.",
+      "url": "https://github.com/vitejs/vite-plugin-react/releases/tag/plugin-react-swc%404.3.3",
       "tags": [
-        "node.js",
-        "обновление"
+        "vite",
+        "react",
+        "swc"
       ],
       "changeType": "minor",
       "technologies": [
-        "platform"
+        "vite",
+        "react"
       ],
-      "packages": [],
-      "risk": "low",
+      "packages": [
+        {
+          "name": "@vitejs/plugin-react",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "@vitejs/plugin-react-swc",
+          "releasedVersion": "4.3.3",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "@vitejs/plugin-rsc",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
       "effort": "minutes",
       "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
+        "Обновить пакет до 4.3.3",
+        "Тестировать bundled-dev режим в проекте"
       ],
-      "detailsConfidence": "inferred"
-    },
-    {
-      "priority": "P3",
-      "title": "Node.js Releases: выпуск 26.8.0",
-      "source": "Node.js Releases",
-      "publishedAt": "2026-08-26T14:28:49Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/nodejs/node/releases/tag/v26.8.0",
-      "tags": [
-        "node.js",
-        "обновление"
-      ],
-      "changeType": "minor",
-      "technologies": [
-        "platform"
-      ],
-      "packages": [],
-      "risk": "low",
-      "effort": "minutes",
-      "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
-      ],
-      "detailsConfidence": "inferred"
+      "detailsConfidence": "source"
     }
   ]
 }

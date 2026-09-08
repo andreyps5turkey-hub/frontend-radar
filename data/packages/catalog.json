@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-08T05:25:04.781Z",
+  "generatedAt": "2026-09-08T06:32:04.303Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -4734,7 +4734,7 @@
         {
           "id": "cadee4ce9b1d42",
           "kind": "minor",
-          "priority": 0,
+          "priority": "P2",
           "version": "8.70.0",
           "title": "typescript-eslint Releases: выпуск v8.70.0",
           "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
@@ -15894,7 +15894,7 @@
         {
           "id": "cadee4ce9b1d42",
           "kind": "minor",
-          "priority": 0,
+          "priority": "P2",
           "version": "8.70.0",
           "title": "typescript-eslint Releases: выпуск v8.70.0",
           "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
