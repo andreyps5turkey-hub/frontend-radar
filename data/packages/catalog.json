@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-07T04:48:38.560Z",
+  "generatedAt": "2026-09-08T04:49:31.026Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -4731,6 +4731,17 @@
       ],
       "advisories": [],
       "events": [
+        {
+          "id": "cadee4ce9b1d42",
+          "kind": "minor",
+          "priority": 0,
+          "version": "8.70.0",
+          "title": "typescript-eslint Releases: выпуск v8.70.0",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-09-07T17:06:49Z",
+          "source": "typescript-eslint Releases",
+          "url": "https://github.com/typescript-eslint/typescript-eslint/releases/tag/v8.70.0"
+        },
         {
           "id": "47fcec638d2ad5",
           "kind": "patch",
@@ -15880,6 +15891,17 @@
       ],
       "advisories": [],
       "events": [
+        {
+          "id": "cadee4ce9b1d42",
+          "kind": "minor",
+          "priority": 0,
+          "version": "8.70.0",
+          "title": "typescript-eslint Releases: выпуск v8.70.0",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-09-07T17:06:49Z",
+          "source": "typescript-eslint Releases",
+          "url": "https://github.com/typescript-eslint/typescript-eslint/releases/tag/v8.70.0"
+        },
         {
           "id": "aac7b125de5f0b",
           "kind": "minor",
