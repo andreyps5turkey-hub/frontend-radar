@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-08T06:32:04.303Z",
+  "generatedAt": "2026-09-09T04:48:47.020Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -2698,6 +2698,52 @@
       ],
       "advisories": [
         {
+          "ghsaId": "GHSA-2xp9-vwfh-vxw4",
+          "cveId": null,
+          "severity": "critical",
+          "cvss": null,
+          "title": "Уязвимость GHSA-2xp9-vwfh-vxw4 в next",
+          "summary": "Проверьте установленную версию next и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
+          "publishedAt": "2026-09-08T21:21:12Z",
+          "updatedAt": "2026-09-08T21:21:13Z",
+          "url": "https://github.com/advisories/GHSA-2xp9-vwfh-vxw4",
+          "vulnerabilities": [
+            {
+              "packageName": "next",
+              "vulnerableRange": ">= 10.0.0, < 15.5.24",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "next",
+              "vulnerableRange": ">= 16.0.0, < 16.3.3",
+              "fixedVersion": null
+            }
+          ]
+        },
+        {
+          "ghsaId": "GHSA-p293-qw3h-jr36",
+          "cveId": "CVE-2026-75604",
+          "severity": "critical",
+          "cvss": 9,
+          "title": "Уязвимость GHSA-p293-qw3h-jr36 в next",
+          "summary": "Проверьте установленную версию next и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
+          "publishedAt": "2026-09-08T20:51:40Z",
+          "updatedAt": "2026-09-08T20:51:43Z",
+          "url": "https://github.com/advisories/GHSA-p293-qw3h-jr36",
+          "vulnerabilities": [
+            {
+              "packageName": "next",
+              "vulnerableRange": ">= 13.4.0, < 15.5.24",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "next",
+              "vulnerableRange": ">= 16.0.0, < 16.3.3",
+              "fixedVersion": null
+            }
+          ]
+        },
+        {
           "ghsaId": "GHSA-89xv-2m56-2m9x",
           "cveId": "CVE-2026-64649",
           "severity": "high",
@@ -4731,17 +4777,6 @@
       ],
       "advisories": [],
       "events": [
-        {
-          "id": "cadee4ce9b1d42",
-          "kind": "minor",
-          "priority": "P2",
-          "version": "8.70.0",
-          "title": "typescript-eslint Releases: выпуск v8.70.0",
-          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-          "publishedAt": "2026-09-07T17:06:49Z",
-          "source": "typescript-eslint Releases",
-          "url": "https://github.com/typescript-eslint/typescript-eslint/releases/tag/v8.70.0"
-        },
         {
           "id": "47fcec638d2ad5",
           "kind": "patch",
@@ -7643,6 +7678,83 @@
       ],
       "advisories": [
         {
+          "ghsaId": "GHSA-3cgp-3xvw-98x8",
+          "cveId": "CVE-2025-59057",
+          "severity": "high",
+          "cvss": 7.6,
+          "title": "Уязвимость GHSA-3cgp-3xvw-98x8 в react-router",
+          "summary": "Проверьте установленную версию react-router и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
+          "publishedAt": "2026-01-08T20:42:20Z",
+          "updatedAt": "2026-09-08T16:31:36Z",
+          "url": "https://github.com/advisories/GHSA-3cgp-3xvw-98x8",
+          "vulnerabilities": [
+            {
+              "packageName": "react-router",
+              "vulnerableRange": ">= 7.0.0, <= 7.8.2",
+              "fixedVersion": null
+            }
+          ]
+        },
+        {
+          "ghsaId": "GHSA-8v8x-cx79-35w7",
+          "cveId": "CVE-2026-21884",
+          "severity": "high",
+          "cvss": 8.2,
+          "title": "Уязвимость GHSA-8v8x-cx79-35w7 в react-router",
+          "summary": "Проверьте установленную версию react-router и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
+          "publishedAt": "2026-01-08T20:50:05Z",
+          "updatedAt": "2026-09-08T16:29:56Z",
+          "url": "https://github.com/advisories/GHSA-8v8x-cx79-35w7",
+          "vulnerabilities": [
+            {
+              "packageName": "react-router",
+              "vulnerableRange": ">= 7.0.0, < 7.12.0",
+              "fixedVersion": null
+            }
+          ]
+        },
+        {
+          "ghsaId": "GHSA-f22v-gfqf-p8f3",
+          "cveId": "CVE-2026-33244",
+          "severity": "medium",
+          "cvss": 5.4,
+          "title": "Уязвимость GHSA-f22v-gfqf-p8f3 в react-router",
+          "summary": "Проверьте установленную версию react-router и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
+          "publishedAt": "2026-06-03T20:33:01Z",
+          "updatedAt": "2026-09-08T16:28:03Z",
+          "url": "https://github.com/advisories/GHSA-f22v-gfqf-p8f3",
+          "vulnerabilities": [
+            {
+              "packageName": "react-router",
+              "vulnerableRange": ">= 7.5.1, < 7.13.2",
+              "fixedVersion": null
+            }
+          ]
+        },
+        {
+          "ghsaId": "GHSA-jjmj-jmhj-qwj2",
+          "cveId": "CVE-2026-53668",
+          "severity": "medium",
+          "cvss": 6.9,
+          "title": "Уязвимость GHSA-jjmj-jmhj-qwj2 в react-router-dom, react-router",
+          "summary": "Проверьте установленную версию react-router-dom, react-router и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
+          "publishedAt": "2026-07-23T19:36:31Z",
+          "updatedAt": "2026-09-08T15:09:29Z",
+          "url": "https://github.com/advisories/GHSA-jjmj-jmhj-qwj2",
+          "vulnerabilities": [
+            {
+              "packageName": "react-router",
+              "vulnerableRange": ">= 7.9.6, <= 7.12.0",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "react-router-dom",
+              "vulnerableRange": ">= 6.30.2, <= 6.30.5",
+              "fixedVersion": null
+            }
+          ]
+        },
+        {
           "ghsaId": "GHSA-qwww-vcr4-c8h2",
           "cveId": null,
           "severity": "high",
@@ -7720,29 +7832,6 @@
             {
               "packageName": "react-router",
               "vulnerableRange": ">= 6.0.0, < 7.18.0",
-              "fixedVersion": null
-            }
-          ]
-        },
-        {
-          "ghsaId": "GHSA-jjmj-jmhj-qwj2",
-          "cveId": "CVE-2026-53668",
-          "severity": "medium",
-          "cvss": 6.9,
-          "title": "Уязвимость GHSA-jjmj-jmhj-qwj2 в react-router-dom, react-router",
-          "summary": "Проверьте установленную версию react-router-dom, react-router и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
-          "publishedAt": "2026-07-23T19:36:31Z",
-          "updatedAt": "2026-07-23T19:36:32Z",
-          "url": "https://github.com/advisories/GHSA-jjmj-jmhj-qwj2",
-          "vulnerabilities": [
-            {
-              "packageName": "react-router-dom",
-              "vulnerableRange": ">= 6.30.2, <= 6.30.4",
-              "fixedVersion": null
-            },
-            {
-              "packageName": "react-router",
-              "vulnerableRange": ">= 7.9.6, <= 7.12.0",
               "fixedVersion": null
             }
           ]
@@ -7892,24 +7981,6 @@
           ]
         },
         {
-          "ghsaId": "GHSA-f22v-gfqf-p8f3",
-          "cveId": "CVE-2026-33244",
-          "severity": "medium",
-          "cvss": 5.4,
-          "title": "Уязвимость GHSA-f22v-gfqf-p8f3 в react-router",
-          "summary": "Проверьте установленную версию react-router и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
-          "publishedAt": "2026-06-03T20:33:01Z",
-          "updatedAt": "2026-06-03T20:33:02Z",
-          "url": "https://github.com/advisories/GHSA-f22v-gfqf-p8f3",
-          "vulnerabilities": [
-            {
-              "packageName": "react-router",
-              "vulnerableRange": ">= 7.5.1, < 7.13.2",
-              "fixedVersion": null
-            }
-          ]
-        },
-        {
           "ghsaId": "GHSA-cpj6-fhp6-mr6j",
           "cveId": "CVE-2025-43865",
           "severity": "high",
@@ -7946,24 +8017,6 @@
           ]
         },
         {
-          "ghsaId": "GHSA-8v8x-cx79-35w7",
-          "cveId": "CVE-2026-21884",
-          "severity": "high",
-          "cvss": 8.2,
-          "title": "Уязвимость GHSA-8v8x-cx79-35w7 в react-router",
-          "summary": "Проверьте установленную версию react-router и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
-          "publishedAt": "2026-01-08T20:50:05Z",
-          "updatedAt": "2026-01-11T14:54:10Z",
-          "url": "https://github.com/advisories/GHSA-8v8x-cx79-35w7",
-          "vulnerabilities": [
-            {
-              "packageName": "react-router",
-              "vulnerableRange": ">= 7.0.0, < 7.12.0",
-              "fixedVersion": null
-            }
-          ]
-        },
-        {
           "ghsaId": "GHSA-9jcx-v3wj-wh4m",
           "cveId": "CVE-2025-68470",
           "severity": "medium",
@@ -7982,24 +8035,6 @@
             {
               "packageName": "react-router",
               "vulnerableRange": ">= 7.0.0, < 7.9.6",
-              "fixedVersion": null
-            }
-          ]
-        },
-        {
-          "ghsaId": "GHSA-3cgp-3xvw-98x8",
-          "cveId": "CVE-2025-59057",
-          "severity": "high",
-          "cvss": 7.6,
-          "title": "Уязвимость GHSA-3cgp-3xvw-98x8 в react-router",
-          "summary": "Проверьте установленную версию react-router и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
-          "publishedAt": "2026-01-08T20:42:20Z",
-          "updatedAt": "2026-01-11T14:53:50Z",
-          "url": "https://github.com/advisories/GHSA-3cgp-3xvw-98x8",
-          "vulnerabilities": [
-            {
-              "packageName": "react-router",
-              "vulnerableRange": ">= 7.0.0, <= 7.8.2",
               "fixedVersion": null
             }
           ]
@@ -15891,17 +15926,6 @@
       ],
       "advisories": [],
       "events": [
-        {
-          "id": "cadee4ce9b1d42",
-          "kind": "minor",
-          "priority": "P2",
-          "version": "8.70.0",
-          "title": "typescript-eslint Releases: выпуск v8.70.0",
-          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-          "publishedAt": "2026-09-07T17:06:49Z",
-          "source": "typescript-eslint Releases",
-          "url": "https://github.com/typescript-eslint/typescript-eslint/releases/tag/v8.70.0"
-        },
         {
           "id": "aac7b125de5f0b",
           "kind": "minor",

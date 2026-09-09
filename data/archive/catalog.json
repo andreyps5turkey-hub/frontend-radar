@@ -1,7 +1,144 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-08T06:31:57.511Z",
+  "updatedAt": "2026-09-09T04:48:20.467Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-09-09",
+      "generatedAt": "2026-09-09T04:48:20.467Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 32,
+      "sourceHealth": {
+        "attempted": 32,
+        "succeeded": 32,
+        "failed": []
+      },
+      "status": "active",
+      "summary": "В окне дня опубликована новая версия Node.js 24.21.0 (LTS).",
+      "items": [
+        {
+          "priority": "P2",
+          "title": "Node.js 24.21.0 «Krypton» (LTS) – обновление сертификатов и OpenSSL",
+          "source": "Node.js Releases",
+          "publishedAt": "2026-09-08T21:51:09Z",
+          "whyImportant": "Обновлены корневые сертификаты и OpenSSL до 3.5.8, что повышает безопасность TLS‑соединений и совместимость с новыми сертификатами.",
+          "audience": "Разработчики, использующие Node.js",
+          "nextStep": "Проверьте, что ваши приложения корректно работают с новыми сертификатами; при необходимости обновите зависимости, использующие OpenSSL.",
+          "url": "https://github.com/nodejs/node/releases/tag/v24.21.0",
+          "tags": [
+            "Node.js",
+            "LTS",
+            "OpenSSL",
+            "TLS"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "platform"
+          ],
+          "packages": [],
+          "risk": "unknown",
+          "effort": "hours",
+          "actionItems": [
+            "Проверить совместимость с новыми сертификатами",
+            "Обновить зависимости, использующие OpenSSL",
+            "Запустить тесты на TLS‑соединения"
+          ],
+          "detailsConfidence": "source"
+        }
+      ],
+      "readLater": [
+        {
+          "priority": "P3",
+          "title": "typescript-eslint v8.66.0 – улучшения парсера и исправления правил",
+          "source": "typescript-eslint Releases",
+          "publishedAt": "2026-08-03T17:34:06Z",
+          "whyImportant": "Добавлен новый синтаксис import.defer() и исправлены несколько правил ESLint, повышая точность статического анализа кода.",
+          "audience": "Разработчики, использующие TypeScript и ESLint",
+          "nextStep": "Обновить пакет @typescript-eslint/parser до версии 8.66.0 и проверить конфигурацию правил.",
+          "url": "https://github.com/typescript-eslint/typescript-eslint/releases/tag/v8.66.0",
+          "tags": [
+            "typescript-eslint",
+            "ESLint",
+            "TypeScript"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "typescript",
+            "quality"
+          ],
+          "packages": [
+            {
+              "name": "typescript-eslint",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "@typescript-eslint/parser",
+              "releasedVersion": "v8.66.0",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Обновить @typescript-eslint/parser до v8.66.0",
+            "Проверить конфигурацию правил ESLint",
+            "Запустить линтер на проекте"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P3",
+          "title": "plugin-react v6.0.5 – исправление производительности фильтра компилятора",
+          "source": "Vite React Plugins",
+          "publishedAt": "2026-07-30T10:10:58Z",
+          "whyImportant": "Фильтр компилятора React теперь линейный, устраняя регрессию производительности, что ускоряет сборку приложений Vite.",
+          "audience": "Разработчики, использующие Vite с React",
+          "nextStep": "Обновить @vitejs/plugin-react до версии 6.0.5 и убедиться, что сборка проходит быстрее.",
+          "url": "https://github.com/vitejs/vite-plugin-react/releases/tag/plugin-react%406.0.5",
+          "tags": [
+            "Vite",
+            "React",
+            "plugin-react"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "vite",
+            "react"
+          ],
+          "packages": [
+            {
+              "name": "@vitejs/plugin-react",
+              "releasedVersion": "v6.0.5",
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "@vitejs/plugin-react-swc",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "@vitejs/plugin-rsc",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Обновить @vitejs/plugin-react до v6.0.5",
+            "Проверить время сборки проекта"
+          ],
+          "detailsConfidence": "source"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-09-08",
