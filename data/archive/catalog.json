@@ -1,7 +1,158 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-09T04:48:20.467Z",
+  "updatedAt": "2026-09-10T04:48:32.566Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-09-10",
+      "generatedAt": "2026-09-10T04:48:32.566Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 32,
+      "sourceHealth": {
+        "attempted": 32,
+        "succeeded": 32,
+        "failed": []
+      },
+      "status": "active",
+      "summary": "Сегодня в окне релизов появились Node.js v26.8.2 и React 19.3.0 – оба выпуска содержат значимые обновления, включая исправления безопасности и новые API.",
+      "items": [
+        {
+          "priority": "P1",
+          "title": "Node.js v26.8.2 – обновление с исправлениями безопасности",
+          "source": "Node.js Releases",
+          "publishedAt": "2026-09-09T16:07:48Z",
+          "whyImportant": "Обновление включает исправление уязвимостей в OpenSSL 3.5.8 и обновление Undici до 8.10.2, что повышает безопасность и совместимость.",
+          "audience": "Разработчики, использующие Node.js",
+          "nextStep": "Обновить до версии 26.8.2 и проверить, что приложения корректно работают с новыми версиями зависимостей.",
+          "url": "https://github.com/nodejs/node/releases/tag/v26.8.2",
+          "tags": [
+            "Node.js",
+            "OpenSSL",
+            "Undici"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "platform"
+          ],
+          "packages": [],
+          "risk": "unknown",
+          "effort": "days",
+          "actionItems": [
+            "Проверить совместимость приложений с Node.js 26.8.2",
+            "Обновить зависимости до последних версий",
+            "Запустить тесты безопасности"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P1",
+          "title": "React 19.3.0 – новый релиз с View Transitions и Trusted Types",
+          "source": "React Releases",
+          "publishedAt": "2026-09-09T18:01:33Z",
+          "whyImportant": "Включены новые API ViewTransition, Fragment Refs, browser() и Trusted Types, расширяющие возможности UI и безопасности браузера.",
+          "audience": "Frontend‑инженеры, работающие с React",
+          "nextStep": "Изучить новые API и обновить код, чтобы использовать ViewTransition и Trusted Types.",
+          "url": "https://github.com/react/react/releases/tag/v19.3.0",
+          "tags": [
+            "React",
+            "ViewTransition",
+            "Trusted Types"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "react"
+          ],
+          "packages": [
+            {
+              "name": "react",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "react-dom",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "days",
+          "actionItems": [
+            "Прочитать официальную статью о ViewTransition",
+            "Проверить совместимость существующего кода с Trusted Types",
+            "Внедрить ViewTransition в тестовый компонент"
+          ],
+          "detailsConfidence": "source"
+        }
+      ],
+      "readLater": [
+        {
+          "priority": "P2",
+          "title": "Node.js v26.8.1 – исправление версии в выводе",
+          "source": "Node.js Releases",
+          "publishedAt": "2026-08-26T22:10:37Z",
+          "whyImportant": "Устранена ошибка, из-за которой команда node --version выводила альфа‑версию.",
+          "audience": "Разработчики, использующие Node.js",
+          "nextStep": "Проверить, что команда node --version теперь показывает корректную версию.",
+          "url": "https://github.com/nodejs/node/releases/tag/v26.8.1",
+          "tags": [
+            "Node.js",
+            "bugfix"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "platform"
+          ],
+          "packages": [],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Запустить node --version и убедиться в правильном выводе"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P3",
+          "title": "React 19.3 – обзор новых возможностей",
+          "source": "React Blog",
+          "publishedAt": "Wed, 09 Sep 2026 00:00:00 GMT",
+          "whyImportant": "Блог‑пост описывает новые функции, включая View Transitions и Trusted Types, и содержит рекомендации по миграции.",
+          "audience": "Frontend‑инженеры, интересующиеся новыми возможностями React",
+          "nextStep": "Прочитать статью и планировать внедрение новых API.",
+          "url": "https://react.dev/blog/2026/09/09/react-19-3",
+          "tags": [
+            "React",
+            "blog"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "react"
+          ],
+          "packages": [
+            {
+              "name": "react",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "react-dom",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Прочитать блог‑пост о React 19.3"
+          ],
+          "detailsConfidence": "source"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-09-09",

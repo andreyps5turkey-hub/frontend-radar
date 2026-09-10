@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-09T04:48:47.020Z",
+  "generatedAt": "2026-09-10T04:48:39.623Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -16,15 +16,15 @@
         "react",
         "react-dom"
       ],
-      "latestVersion": "19.2.8",
-      "latestPublishedAt": "2026-07-21T15:41:28.716Z",
+      "latestVersion": "19.3.0",
+      "latestPublishedAt": "2026-09-09T17:21:30.071Z",
       "npmUrl": "https://www.npmjs.com/package/react",
       "repositoryUrl": "https://github.com/facebook/react",
       "packages": [
         {
           "name": "react",
-          "latestVersion": "19.2.8",
-          "latestPublishedAt": "2026-07-21T15:41:28.716Z",
+          "latestVersion": "19.3.0",
+          "latestPublishedAt": "2026-09-09T17:21:30.071Z",
           "npmUrl": "https://www.npmjs.com/package/react",
           "compatibility": [
             {
@@ -46,9 +46,9 @@
               "deprecated": "React 16.6.2 release is broken. Please update React to 16.6.3."
             },
             {
-              "range": ">=16.6.3 <=19.2.8",
+              "range": ">=16.6.3 <=19.3.0",
               "minVersion": "16.6.3",
-              "maxVersion": "19.2.8",
+              "maxVersion": "19.3.0",
               "peerDependencies": {},
               "optionalPeers": [],
               "nodeRange": ">=0.10.0",
@@ -56,6 +56,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "19.3.0",
+              "publishedAt": "2026-09-09T17:21:30.071Z"
+            },
             {
               "version": "19.2.8",
               "publishedAt": "2026-07-21T15:41:28.716Z"
@@ -340,8 +344,8 @@
         },
         {
           "name": "react-dom",
-          "latestVersion": "19.2.8",
-          "latestPublishedAt": "2026-07-21T15:41:41.267Z",
+          "latestVersion": "19.3.0",
+          "latestPublishedAt": "2026-09-09T17:17:39.744Z",
           "npmUrl": "https://www.npmjs.com/package/react-dom",
           "compatibility": [
             {
@@ -926,9 +930,24 @@
               "optionalPeers": [],
               "nodeRange": null,
               "deprecated": null
+            },
+            {
+              "range": "19.3.0",
+              "minVersion": "19.3.0",
+              "maxVersion": "19.3.0",
+              "peerDependencies": {
+                "react": "^19.3.0"
+              },
+              "optionalPeers": [],
+              "nodeRange": null,
+              "deprecated": null
             }
           ],
           "versions": [
+            {
+              "version": "19.3.0",
+              "publishedAt": "2026-09-09T17:17:39.744Z"
+            },
             {
               "version": "19.2.8",
               "publishedAt": "2026-07-21T15:41:41.267Z"
@@ -1310,6 +1329,28 @@
         }
       ],
       "events": [
+        {
+          "id": "8a7cf4293a3188",
+          "kind": "minor",
+          "priority": "P1",
+          "version": "19.3.0",
+          "title": "React 19.3.0 – новый релиз с View Transitions и Trusted Types",
+          "summary": "Включены новые API ViewTransition, Fragment Refs, browser() и Trusted Types, расширяющие возможности UI и безопасности браузера.",
+          "publishedAt": "2026-09-09T18:01:33Z",
+          "source": "React Releases",
+          "url": "https://github.com/react/react/releases/tag/v19.3.0"
+        },
+        {
+          "id": "c45550bed620f8",
+          "kind": "minor",
+          "priority": "P3",
+          "version": "19.3",
+          "title": "React 19.3 – обзор новых возможностей",
+          "summary": "Блог‑пост описывает новые функции, включая View Transitions и Trusted Types, и содержит рекомендации по миграции.",
+          "publishedAt": "Wed, 09 Sep 2026 00:00:00 GMT",
+          "source": "React Blog",
+          "url": "https://react.dev/blog/2026/09/09/react-19-3"
+        },
         {
           "id": "c25152fe5d0384",
           "kind": "major",
