@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-10T04:48:39.623Z",
+  "generatedAt": "2026-09-11T04:47:54.753Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -4838,15 +4838,15 @@
       "packageNames": [
         "vite"
       ],
-      "latestVersion": "8.2.2",
-      "latestPublishedAt": "2026-08-20T04:14:39.107Z",
+      "latestVersion": "8.3.0",
+      "latestPublishedAt": "2026-09-10T11:30:26.283Z",
       "npmUrl": "https://www.npmjs.com/package/vite",
       "repositoryUrl": "https://github.com/vitejs/vite",
       "packages": [
         {
           "name": "vite",
-          "latestVersion": "8.2.2",
-          "latestPublishedAt": "2026-08-20T04:14:39.107Z",
+          "latestVersion": "8.3.0",
+          "latestPublishedAt": "2026-09-10T11:30:26.283Z",
           "npmUrl": "https://www.npmjs.com/package/vite",
           "compatibility": [
             {
@@ -4868,9 +4868,9 @@
               "deprecated": null
             },
             {
-              "range": ">=7.0.0 <=8.2.2",
+              "range": ">=7.0.0 <=8.3.0",
               "minVersion": "7.0.0",
-              "maxVersion": "8.2.2",
+              "maxVersion": "8.3.0",
               "peerDependencies": {},
               "optionalPeers": [],
               "nodeRange": "^20.19.0 || >=22.12.0",
@@ -4878,6 +4878,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "8.3.0",
+              "publishedAt": "2026-09-10T11:30:26.283Z"
+            },
             {
               "version": "8.2.2",
               "publishedAt": "2026-08-20T04:14:39.107Z"
@@ -6309,6 +6313,28 @@
         }
       ],
       "events": [
+        {
+          "id": "f885e46ff3d751",
+          "kind": "major",
+          "priority": "P2",
+          "version": "9.2.1",
+          "title": "Создание Vite 9.2.1 – обновление зависимостей",
+          "summary": "Обновлены все не‑мажорные зависимости, повышая совместимость и безопасность проекта.",
+          "publishedAt": "2026-09-10T11:41:17Z",
+          "source": "Vite Releases",
+          "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.2.1"
+        },
+        {
+          "id": "27d92b9e24d11a",
+          "kind": "minor",
+          "priority": "P2",
+          "version": "8.3.0",
+          "title": "Vite 8.3.0 – исправления и улучшения производительности",
+          "summary": "Включены исправления CRLF, улучшения кэширования и оптимизации серверного кода, повышающие стабильность сборки.",
+          "publishedAt": "2026-09-10T11:25:16Z",
+          "source": "Vite Releases",
+          "url": "https://github.com/vitejs/vite/releases/tag/v8.3.0"
+        },
         {
           "id": "9891f0c478befb",
           "kind": "major",

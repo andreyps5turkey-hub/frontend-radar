@@ -1,7 +1,160 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-10T04:48:32.566Z",
+  "updatedAt": "2026-09-11T04:47:47.997Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-09-11",
+      "generatedAt": "2026-09-11T04:47:47.997Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 32,
+      "sourceHealth": {
+        "attempted": 32,
+        "succeeded": 32,
+        "failed": []
+      },
+      "status": "active",
+      "summary": "В окне дня отмечены обновления Vite: новая версия create‑vite 9.2.1 и основной пакет Vite 8.3.0. Оба выпуска содержат исправления и небольшие улучшения, но не представляют критических изменений.",
+      "items": [
+        {
+          "priority": "P2",
+          "title": "Создание Vite 9.2.1 – обновление зависимостей",
+          "source": "Vite Releases",
+          "publishedAt": "2026-09-10T11:41:17Z",
+          "whyImportant": "Обновлены все не‑мажорные зависимости, повышая совместимость и безопасность проекта.",
+          "audience": "Разработчики, использующие Vite CLI",
+          "nextStep": "Проверьте совместимость ваших плагинов и обновите их до последних версий.",
+          "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.2.1",
+          "tags": [
+            "Vite",
+            "CLI",
+            "обновление зависимостей"
+          ],
+          "changeType": "major",
+          "technologies": [
+            "vite"
+          ],
+          "packages": [
+            {
+              "name": "vite",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "@vitejs/plugin-legacy",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "hours",
+          "actionItems": [
+            "Проверить совместимость плагинов",
+            "Обновить пакеты до последних версий"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P2",
+          "title": "Vite 8.3.0 – исправления и улучшения производительности",
+          "source": "Vite Releases",
+          "publishedAt": "2026-09-10T11:25:16Z",
+          "whyImportant": "Включены исправления CRLF, улучшения кэширования и оптимизации серверного кода, повышающие стабильность сборки.",
+          "audience": "Разработчики, использующие Vite для сборки проектов",
+          "nextStep": "Обновите Vite до 8.3.0 и проверьте сборку на наличие ошибок.",
+          "url": "https://github.com/vitejs/vite/releases/tag/v8.3.0",
+          "tags": [
+            "Vite",
+            "build",
+            "performance"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "vite"
+          ],
+          "packages": [
+            {
+              "name": "vite",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "@vitejs/plugin-legacy",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "hours",
+          "actionItems": [
+            "Обновить Vite до 8.3.0",
+            "Проверить сборку на наличие ошибок"
+          ],
+          "detailsConfidence": "source"
+        }
+      ],
+      "readLater": [
+        {
+          "priority": "P3",
+          "title": "This Week in React #296 – обзор новых релизов и инструментов",
+          "source": "This Week in React",
+          "publishedAt": "Wed, 09 Sep 2026 00:00:00 GMT",
+          "whyImportant": "Показывает последние обновления React, Next.js и других популярных библиотек, полезно для планирования миграций.",
+          "audience": "Frontend‑инженеры, следящие за экосистемой React",
+          "nextStep": "Прочитать обзор и оценить, какие изменения могут повлиять на ваш проект.",
+          "url": "https://thisweekinreact.com/newsletter/296",
+          "tags": [
+            "React",
+            "Next.js",
+            "обзор"
+          ],
+          "changeType": "guide",
+          "technologies": [
+            "nextjs",
+            "react"
+          ],
+          "packages": [],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Прочитать обзор"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P3",
+          "title": "JavaScript Weekly #801 – Chunking и Runtime Bugs",
+          "source": "JavaScript Weekly",
+          "publishedAt": "Tue, 8 Sep 2026 00:00:00 +0000",
+          "whyImportant": "Рассказывает о стратегии chunking в Turbopack и инструментах для обнаружения ошибок в PR, полезно для оптимизации сборки.",
+          "audience": "Разработчики, работающие с сборщиками и CI",
+          "nextStep": "Изучить предложенные техники и инструменты, применить в проекте.",
+          "url": "https://javascriptweekly.com/issues/801",
+          "tags": [
+            "Turbopack",
+            "CI",
+            "обзор"
+          ],
+          "changeType": "guide",
+          "technologies": [
+            "nextjs",
+            "platform"
+          ],
+          "packages": [],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Изучить техники chunking"
+          ],
+          "detailsConfidence": "source"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-09-10",
