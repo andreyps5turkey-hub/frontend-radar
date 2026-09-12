@@ -1,7 +1,115 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-11T04:47:47.997Z",
+  "updatedAt": "2026-09-12T04:47:11.864Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-09-12",
+      "generatedAt": "2026-09-12T04:47:11.864Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 32,
+      "sourceHealth": {
+        "attempted": 32,
+        "succeeded": 32,
+        "failed": []
+      },
+      "status": "active",
+      "summary": "В окне дня только обновление Next.js v16.3.5, включающее исправления кэширования и CSP. Для дальнейшего чтения рекомендовано обратить внимание на новые версии Node.js 26.8.0 и 26.7.0.",
+      "items": [
+        {
+          "priority": "P1",
+          "title": "Обновление Next.js v16.3.5 – исправления кэширования и CSP",
+          "source": "Next.js Releases",
+          "publishedAt": "2026-09-11T19:15:50Z",
+          "whyImportant": "Включены исправления, влияющие на работу кэширования изображений и безопасность CSP, что повышает надёжность и производительность приложений.",
+          "audience": "Разработчики Next.js",
+          "nextStep": "Проверьте совместимость с текущими настройками кэширования и CSP, обновите зависимости до v16.3.5.",
+          "url": "https://github.com/vercel/next.js/releases/tag/v16.3.5",
+          "tags": [
+            "Next.js",
+            "CSP",
+            "кэширование"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "nextjs"
+          ],
+          "packages": [
+            {
+              "name": "next",
+              "releasedVersion": "v16.3.5",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "days",
+          "actionItems": [
+            "Обновить пакет next до v16.3.5",
+            "Проверить логи кэширования изображений",
+            "Убедиться, что CSP nonce применяются в шаблонах"
+          ],
+          "detailsConfidence": "source"
+        }
+      ],
+      "readLater": [
+        {
+          "priority": "P2",
+          "title": "Node.js v26.8.0 – новые режимы шифрования и улучшения производительности",
+          "source": "Node.js Releases",
+          "publishedAt": "2026-08-26T14:28:49Z",
+          "whyImportant": "Добавлены режимы SIV и GCM‑SIV в API Cipher/Decipher, а также улучшения в реализации гистограмм, что повышает безопасность и эффективность.",
+          "audience": "Разработчики, использующие Node.js",
+          "nextStep": "Обновить Node.js до v26.8.0 и протестировать криптографические операции.",
+          "url": "https://github.com/nodejs/node/releases/tag/v26.8.0",
+          "tags": [
+            "Node.js",
+            "crypto",
+            "performance"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "platform"
+          ],
+          "packages": [],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Обновить Node.js до v26.8.0",
+            "Проверить совместимость криптографических функций"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P2",
+          "title": "Node.js v26.7.0 – поддержка приватных ключей и perfetto",
+          "source": "Node.js Releases",
+          "publishedAt": "2026-08-05T16:25:04Z",
+          "whyImportant": "Включена поддержка загрузки приватных ключей через STORE‑загрузчики и интеграция perfetto для профилирования, что облегчает разработку и отладку.",
+          "audience": "Разработчики, работающие с криптографией и производительностью",
+          "nextStep": "Обновить Node.js до v26.7.0 и использовать perfetto для анализа производительности.",
+          "url": "https://github.com/nodejs/node/releases/tag/v26.7.0",
+          "tags": [
+            "Node.js",
+            "crypto",
+            "perfetto"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "platform"
+          ],
+          "packages": [],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Обновить Node.js до v26.7.0",
+            "Включить perfetto для профилирования"
+          ],
+          "detailsConfidence": "source"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-09-11",

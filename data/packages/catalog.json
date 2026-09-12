@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-11T04:47:54.753Z",
+  "generatedAt": "2026-09-12T04:47:17.796Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -1437,15 +1437,15 @@
       "packageNames": [
         "next"
       ],
-      "latestVersion": "16.3.4",
-      "latestPublishedAt": "2026-08-31T20:00:51.381Z",
+      "latestVersion": "16.3.5",
+      "latestPublishedAt": "2026-09-11T17:26:46.049Z",
       "npmUrl": "https://www.npmjs.com/package/next",
       "repositoryUrl": "https://github.com/vercel/next.js",
       "packages": [
         {
           "name": "next",
-          "latestVersion": "16.3.4",
-          "latestPublishedAt": "2026-08-31T20:00:51.381Z",
+          "latestVersion": "16.3.5",
+          "latestPublishedAt": "2026-09-11T17:26:46.049Z",
           "npmUrl": "https://www.npmjs.com/package/next",
           "compatibility": [
             {
@@ -1845,9 +1845,9 @@
               "deprecated": "This version has a security vulnerability. Please upgrade to a patched version. See https://nextjs.org/blog/security-update-2025-12-11 for more details."
             },
             {
-              "range": ">=16.0.10 <=16.3.4",
+              "range": ">=16.0.10 <=16.3.5",
               "minVersion": "16.0.10",
-              "maxVersion": "16.3.4",
+              "maxVersion": "16.3.5",
               "peerDependencies": {
                 "react": "^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0",
                 "react-dom": "^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0"
@@ -1858,6 +1858,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "16.3.5",
+              "publishedAt": "2026-09-11T17:26:46.049Z"
+            },
             {
               "version": "16.3.4",
               "publishedAt": "2026-08-31T20:00:51.381Z"
@@ -4413,6 +4417,17 @@
         }
       ],
       "events": [
+        {
+          "id": "77e3de73fcbae5",
+          "kind": "minor",
+          "priority": "P1",
+          "version": "16.3.5",
+          "title": "Обновление Next.js v16.3.5 – исправления кэширования и CSP",
+          "summary": "Включены исправления, влияющие на работу кэширования изображений и безопасность CSP, что повышает надёжность и производительность приложений.",
+          "publishedAt": "2026-09-11T19:15:50Z",
+          "source": "Next.js Releases",
+          "url": "https://github.com/vercel/next.js/releases/tag/v16.3.5"
+        },
         {
           "id": "55b9b348db0162",
           "kind": "minor",
