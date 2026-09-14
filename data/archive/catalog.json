@@ -1,7 +1,77 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-13T04:46:36.417Z",
+  "updatedAt": "2026-09-14T04:49:25.740Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-09-14",
+      "generatedAt": "2026-09-14T04:49:25.740Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 32,
+      "sourceHealth": {
+        "attempted": 32,
+        "succeeded": 32,
+        "failed": []
+      },
+      "status": "quiet",
+      "summary": "В течение дня ничего значимого не произошло.",
+      "items": [],
+      "readLater": [
+        {
+          "priority": "P3",
+          "title": "Node.js Releases: выпуск 26.6.0",
+          "source": "Node.js Releases",
+          "publishedAt": "2026-08-03T13:50:21Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/nodejs/node/releases/tag/v26.6.0",
+          "tags": [
+            "node.js",
+            "обновление"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "platform"
+          ],
+          "packages": [],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        },
+        {
+          "priority": "P3",
+          "title": "Node.js Releases: выпуск 24.19.0",
+          "source": "Node.js Releases",
+          "publishedAt": "2026-08-03T13:48:33Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/nodejs/node/releases/tag/v24.19.0",
+          "tags": [
+            "node.js",
+            "обновление"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "platform"
+          ],
+          "packages": [],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-09-13",
