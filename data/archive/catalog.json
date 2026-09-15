@@ -1,7 +1,133 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-14T04:49:25.740Z",
+  "updatedAt": "2026-09-15T04:50:39.916Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-09-15",
+      "generatedAt": "2026-09-15T04:50:39.916Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 32,
+      "sourceHealth": {
+        "attempted": 32,
+        "succeeded": 32,
+        "failed": []
+      },
+      "status": "quiet",
+      "summary": "Значимых новых событий не найдено. Подборка для чтения собрана в резервном режиме.",
+      "items": [],
+      "readLater": [
+        {
+          "priority": "P3",
+          "title": "Node.js Releases: выпуск 26.8.2",
+          "source": "Node.js Releases",
+          "publishedAt": "2026-09-09T16:07:48Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/nodejs/node/releases/tag/v26.8.2",
+          "tags": [
+            "node.js",
+            "обновление"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "platform"
+          ],
+          "packages": [],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        },
+        {
+          "priority": "P3",
+          "title": "Storybook Releases: выпуск v10.5.10",
+          "source": "Storybook Releases",
+          "publishedAt": "2026-08-20T11:02:19Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, использующие инструменты из экосистемы Storybook Releases.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/storybookjs/storybook/releases/tag/v10.5.10",
+          "tags": [
+            "storybook",
+            "обновление"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "storybook",
+            "quality",
+            "react"
+          ],
+          "packages": [
+            {
+              "name": "storybook",
+              "releasedVersion": "v10.5.10",
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "@storybook/react",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        },
+        {
+          "priority": "P3",
+          "title": "Vite Releases: выпуск 9.2.0",
+          "source": "Vite Releases",
+          "publishedAt": "2026-08-24T04:58:55Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, использующие инструменты из экосистемы Vite Releases.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.2.0",
+          "tags": [
+            "vite",
+            "обновление"
+          ],
+          "changeType": "major",
+          "technologies": [
+            "vite",
+            "quality",
+            "react"
+          ],
+          "packages": [
+            {
+              "name": "vite",
+              "releasedVersion": "9.2.0",
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "@vitejs/plugin-legacy",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-09-14",
