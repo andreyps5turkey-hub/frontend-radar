@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-15T12:30:49.276Z",
+  "generatedAt": "2026-09-16T04:48:07.849Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -6470,15 +6470,15 @@
         "react-router",
         "react-router-dom"
       ],
-      "latestVersion": "8.3.1",
-      "latestPublishedAt": "2026-08-28T14:47:42.622Z",
+      "latestVersion": "8.4.0",
+      "latestPublishedAt": "2026-09-15T15:23:42.214Z",
       "npmUrl": "https://www.npmjs.com/package/react-router",
       "repositoryUrl": "https://github.com/remix-run/react-router",
       "packages": [
         {
           "name": "react-router",
-          "latestVersion": "8.3.1",
-          "latestPublishedAt": "2026-08-28T14:47:42.622Z",
+          "latestVersion": "8.4.0",
+          "latestPublishedAt": "2026-09-15T15:23:42.214Z",
           "npmUrl": "https://www.npmjs.com/package/react-router",
           "compatibility": [
             {
@@ -6526,9 +6526,9 @@
               "deprecated": null
             },
             {
-              "range": ">=7.0.0 <=7.18.3",
+              "range": ">=7.0.0 <=7.18.4",
               "minVersion": "7.0.0",
-              "maxVersion": "7.18.3",
+              "maxVersion": "7.18.4",
               "peerDependencies": {
                 "react": ">=18",
                 "react-dom": ">=18"
@@ -6540,9 +6540,9 @@
               "deprecated": null
             },
             {
-              "range": ">=8.0.0 <=8.3.1",
+              "range": ">=8.0.0 <=8.4.0",
               "minVersion": "8.0.0",
-              "maxVersion": "8.3.1",
+              "maxVersion": "8.4.0",
               "peerDependencies": {
                 "react": ">=19.2.7",
                 "react-dom": ">=19.2.7"
@@ -6555,6 +6555,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "8.4.0",
+              "publishedAt": "2026-09-15T15:23:42.214Z"
+            },
             {
               "version": "8.3.1",
               "publishedAt": "2026-08-28T14:47:42.622Z"
@@ -6578,6 +6582,10 @@
             {
               "version": "8.0.0",
               "publishedAt": "2026-06-17T19:19:11.383Z"
+            },
+            {
+              "version": "7.18.4",
+              "publishedAt": "2026-09-15T15:08:29.127Z"
             },
             {
               "version": "7.18.3",
@@ -7111,8 +7119,8 @@
         },
         {
           "name": "react-router-dom",
-          "latestVersion": "7.18.3",
-          "latestPublishedAt": "2026-08-28T14:30:10.417Z",
+          "latestVersion": "7.18.4",
+          "latestPublishedAt": "2026-09-15T15:05:55.974Z",
           "npmUrl": "https://www.npmjs.com/package/react-router-dom",
           "compatibility": [
             {
@@ -7174,9 +7182,9 @@
               "deprecated": null
             },
             {
-              "range": ">=7.0.0 <=7.18.3",
+              "range": ">=7.0.0 <=7.18.4",
               "minVersion": "7.0.0",
-              "maxVersion": "7.18.3",
+              "maxVersion": "7.18.4",
               "peerDependencies": {
                 "react": ">=18",
                 "react-dom": ">=18"
@@ -7187,6 +7195,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "7.18.4",
+              "publishedAt": "2026-09-15T15:05:55.974Z"
+            },
             {
               "version": "7.18.3",
               "publishedAt": "2026-08-28T14:30:10.417Z"
@@ -8141,6 +8153,39 @@
         }
       ],
       "events": [
+        {
+          "id": "8a719d9422e4c2",
+          "kind": "minor",
+          "priority": "P1",
+          "version": "8.4.0",
+          "title": "React Router v8.4.0: новые возможности маршрутизации",
+          "summary": "Включает улучшения в работе с динамическими маршрутами и оптимизацию загрузки компонентов.",
+          "publishedAt": "2026-09-15T15:22:42Z",
+          "source": "React Router Releases",
+          "url": "https://github.com/remix-run/react-router/releases/tag/react-router%408.4.0"
+        },
+        {
+          "id": "6a0eb3b9273aab",
+          "kind": "minor",
+          "priority": "P3",
+          "version": "7.18.4",
+          "title": "React Router Releases: выпуск v7.18.4",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-09-15T15:05:10Z",
+          "source": "React Router Releases",
+          "url": "https://github.com/remix-run/react-router/releases/tag/react-router%407.18.4"
+        },
+        {
+          "id": "681f7a3ce1049a",
+          "kind": "minor",
+          "priority": "P3",
+          "version": "7.18.4",
+          "title": "React Router v7.18.4: обновление зависимостей",
+          "summary": "Обновление зависимостей повышает безопасность и совместимость с новыми версиями React.",
+          "publishedAt": "2026-09-15T15:02:42Z",
+          "source": "React Router Releases",
+          "url": "https://github.com/remix-run/react-router/releases/tag/react-router-dom%407.18.4"
+        },
         {
           "id": "79dc827d42f0f6",
           "kind": "minor",
