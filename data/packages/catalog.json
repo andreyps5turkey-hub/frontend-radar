@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-16T04:48:07.849Z",
+  "generatedAt": "2026-09-17T04:48:44.851Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -8610,15 +8610,15 @@
       "packageNames": [
         "@tanstack/react-query"
       ],
-      "latestVersion": "5.102.8",
-      "latestPublishedAt": "2026-08-27T16:06:57.089Z",
+      "latestVersion": "5.103.1",
+      "latestPublishedAt": "2026-09-16T15:01:15.056Z",
       "npmUrl": "https://www.npmjs.com/package/@tanstack/react-query",
       "repositoryUrl": "https://github.com/TanStack/query",
       "packages": [
         {
           "name": "@tanstack/react-query",
-          "latestVersion": "5.102.8",
-          "latestPublishedAt": "2026-08-27T16:06:57.089Z",
+          "latestVersion": "5.103.1",
+          "latestPublishedAt": "2026-09-16T15:01:15.056Z",
           "npmUrl": "https://www.npmjs.com/package/@tanstack/react-query",
           "compatibility": [
             {
@@ -8675,9 +8675,9 @@
               "deprecated": null
             },
             {
-              "range": ">=5.52.1 <=5.102.8",
+              "range": ">=5.52.1 <=5.103.1",
               "minVersion": "5.52.1",
-              "maxVersion": "5.102.8",
+              "maxVersion": "5.103.1",
               "peerDependencies": {
                 "react": "^18 || ^19"
               },
@@ -8687,6 +8687,14 @@
             }
           ],
           "versions": [
+            {
+              "version": "5.103.1",
+              "publishedAt": "2026-09-16T15:01:15.056Z"
+            },
+            {
+              "version": "5.103.0",
+              "publishedAt": "2026-09-16T07:08:58.778Z"
+            },
             {
               "version": "5.102.8",
               "publishedAt": "2026-08-27T16:06:57.089Z"
@@ -16084,15 +16092,15 @@
       "packageNames": [
         "prettier"
       ],
-      "latestVersion": "3.9.6",
-      "latestPublishedAt": "2026-07-21T05:51:53.987Z",
+      "latestVersion": "3.9.7",
+      "latestPublishedAt": "2026-09-16T08:23:07.844Z",
       "npmUrl": "https://www.npmjs.com/package/prettier",
       "repositoryUrl": "https://github.com/prettier/prettier",
       "packages": [
         {
           "name": "prettier",
-          "latestVersion": "3.9.6",
-          "latestPublishedAt": "2026-07-21T05:51:53.987Z",
+          "latestVersion": "3.9.7",
+          "latestPublishedAt": "2026-09-16T08:23:07.844Z",
           "npmUrl": "https://www.npmjs.com/package/prettier",
           "compatibility": [
             {
@@ -16123,9 +16131,9 @@
               "deprecated": null
             },
             {
-              "range": ">=3.0.0 <=3.9.6",
+              "range": ">=3.0.0 <=3.9.7",
               "minVersion": "3.0.0",
-              "maxVersion": "3.9.6",
+              "maxVersion": "3.9.7",
               "peerDependencies": {},
               "optionalPeers": [],
               "nodeRange": ">=14",
@@ -16133,6 +16141,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "3.9.7",
+              "publishedAt": "2026-09-16T08:23:07.844Z"
+            },
             {
               "version": "3.9.6",
               "publishedAt": "2026-07-21T05:51:53.987Z"

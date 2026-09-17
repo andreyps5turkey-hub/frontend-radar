@@ -1,7 +1,122 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-16T04:48:00.789Z",
+  "updatedAt": "2026-09-17T04:48:38.553Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-09-17",
+      "generatedAt": "2026-09-17T04:48:38.553Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 32,
+      "sourceHealth": {
+        "attempted": 32,
+        "succeeded": 32,
+        "failed": []
+      },
+      "status": "active",
+      "summary": "В окне дня выпущена новая версия Node.js 26.9.0 с несколькими улучшениями в криптографии и производительности. В остальном ничего существенного не произошло.",
+      "items": [
+        {
+          "priority": "P2",
+          "title": "Node.js 26.9.0 – новые возможности криптографии и производительности",
+          "source": "Node.js Releases",
+          "publishedAt": "2026-09-16T18:16:39Z",
+          "whyImportant": "Добавлен универсальный API MAC, расширена поддержка OpenSSL‑провайдеров и улучшены внутренние инструменты измерения производительности.",
+          "audience": "Разработчики, использующие Node.js",
+          "nextStep": "Обновите Node.js до версии 26.9.0 и проверьте совместимость ваших криптографических модулей.",
+          "url": "https://github.com/nodejs/node/releases/tag/v26.9.0",
+          "tags": [
+            "Node.js",
+            "crypto",
+            "perf_hooks"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "platform"
+          ],
+          "packages": [],
+          "risk": "unknown",
+          "effort": "hours",
+          "actionItems": [
+            "Проверить наличие обновлений зависимостей",
+            "Тестировать критические криптографические операции",
+            "Сравнить производительность с предыдущей версией"
+          ],
+          "detailsConfidence": "source"
+        }
+      ],
+      "readLater": [
+        {
+          "priority": "P3",
+          "title": "Новый материал от Frontend Focus",
+          "source": "Frontend Focus",
+          "publishedAt": "Wed, 16 Sep 2026 00:00:00 +0000",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, использующие инструменты из экосистемы Frontend Focus.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://frontendfoc.us/issues/758",
+          "tags": [
+            "frontend",
+            "обновление"
+          ],
+          "changeType": "guide",
+          "technologies": [
+            "platform"
+          ],
+          "packages": [],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        },
+        {
+          "priority": "P3",
+          "title": "React Router v7.18.4: обновление зависимостей",
+          "source": "React Router Releases",
+          "publishedAt": "2026-09-15T15:02:42Z",
+          "whyImportant": "Обновление зависимостей повышает безопасность и совместимость с новыми версиями React.",
+          "audience": "Frontend‑инженеры, использующие React Router 7",
+          "nextStep": "Проверить совместимость и обновить пакет до версии 7.18.4 при необходимости.",
+          "url": "https://github.com/remix-run/react-router/releases/tag/react-router-dom%407.18.4",
+          "tags": [
+            "React Router",
+            "Dependencies",
+            "React"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "router",
+            "react"
+          ],
+          "packages": [
+            {
+              "name": "react-router",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "react-router-dom",
+              "releasedVersion": "7.18.4",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить совместимость с текущим кодом",
+            "Обновить зависимость в package.json",
+            "Тестировать маршруты в staging"
+          ],
+          "detailsConfidence": "source"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-09-16",
