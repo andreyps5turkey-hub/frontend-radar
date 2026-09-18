@@ -1,7 +1,125 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-17T04:48:38.553Z",
+  "updatedAt": "2026-09-18T04:47:15.311Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-09-18",
+      "generatedAt": "2026-09-18T04:47:15.311Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 32,
+      "sourceHealth": {
+        "attempted": 32,
+        "succeeded": 32,
+        "failed": []
+      },
+      "status": "active",
+      "summary": "В окне дня только релиз TanStack Query – обновление solid‑query до rc.4 с исправлениями SSR и рефетча.",
+      "items": [
+        {
+          "priority": "P1",
+          "title": "Обновление solid‑query до rc.4",
+          "source": "TanStack Query Releases",
+          "publishedAt": "2026-09-17T08:24:59Z",
+          "whyImportant": "Новые исправления устраняют проблемы с удалёнными запросами и SSR, повышая надёжность приложений.",
+          "audience": "Разработчики, использующие TanStack Query в SolidJS",
+          "nextStep": "Обновить пакеты @tanstack/solid-query, @tanstack/solid-query-devtools и @tanstack/solid-query-persist-client до версии 6.0.0-rc.4 и проверить работу SSR.",
+          "url": "https://github.com/TanStack/query/releases/tag/release-2026-09-17-0824",
+          "tags": [
+            "TanStack Query",
+            "solid-query"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "query"
+          ],
+          "packages": [
+            {
+              "name": "@tanstack/react-query",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "days",
+          "actionItems": [
+            "Проверить совместимость с текущим кодом",
+            "Запустить тесты SSR",
+            "Обновить зависимости в package.json"
+          ],
+          "detailsConfidence": "source"
+        }
+      ],
+      "readLater": [
+        {
+          "priority": "P3",
+          "title": "Обновление Jest до v30.5.0",
+          "source": "Jest Releases",
+          "publishedAt": "2026-08-28T08:42:35Z",
+          "whyImportant": "Большой релиз с множеством изменений в jest-runtime, jest-resolve и jest-haste-map, возможны регрессии.",
+          "audience": "Разработчики, использующие Jest",
+          "nextStep": "Проверить тесты после обновления, открыть issue при регрессии.",
+          "url": "https://github.com/jestjs/jest/releases/tag/v30.5.0",
+          "tags": [
+            "Jest"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "quality"
+          ],
+          "packages": [
+            {
+              "name": "jest",
+              "releasedVersion": "30.5.0",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Обновить jest до v30.5.0",
+            "Запустить полный тестовый набор",
+            "Отслеживать ошибки"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P3",
+          "title": "Обновление DOMPurify до 3.4.14",
+          "source": "DOMPurify Releases",
+          "publishedAt": "2026-08-19T10:19:32Z",
+          "whyImportant": "Исправлены потенциальные обходы при allow‑listing, добавлены новые атрибуты SVG, улучшена валидизация.",
+          "audience": "Разработчики, работающие с DOMPurify",
+          "nextStep": "Обновить пакет до 3.4.14 и проверить безопасность рендеринга.",
+          "url": "https://github.com/cure53/DOMPurify/releases/tag/3.4.14",
+          "tags": [
+            "DOMPurify"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "platform"
+          ],
+          "packages": [
+            {
+              "name": "dompurify",
+              "releasedVersion": "3.4.14",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Обновить dompurify до 3.4.14",
+            "Проверить рендеринг опасных тегов"
+          ],
+          "detailsConfidence": "source"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-09-17",

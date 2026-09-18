@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-17T04:48:44.851Z",
+  "generatedAt": "2026-09-18T04:47:21.904Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -10441,6 +10441,17 @@
       "advisories": [],
       "events": [
         {
+          "id": "4fcddf9a8c943f",
+          "kind": "minor",
+          "priority": "P1",
+          "version": null,
+          "title": "Обновление solid‑query до rc.4",
+          "summary": "Новые исправления устраняют проблемы с удалёнными запросами и SSR, повышая надёжность приложений.",
+          "publishedAt": "2026-09-17T08:24:59Z",
+          "source": "TanStack Query Releases",
+          "url": "https://github.com/TanStack/query/releases/tag/release-2026-09-17-0824"
+        },
+        {
           "id": "5155631451b4d0",
           "kind": "minor",
           "priority": "P1",
@@ -16092,15 +16103,15 @@
       "packageNames": [
         "prettier"
       ],
-      "latestVersion": "3.9.7",
-      "latestPublishedAt": "2026-09-16T08:23:07.844Z",
+      "latestVersion": "3.9.8",
+      "latestPublishedAt": "2026-09-17T21:41:05.085Z",
       "npmUrl": "https://www.npmjs.com/package/prettier",
       "repositoryUrl": "https://github.com/prettier/prettier",
       "packages": [
         {
           "name": "prettier",
-          "latestVersion": "3.9.7",
-          "latestPublishedAt": "2026-09-16T08:23:07.844Z",
+          "latestVersion": "3.9.8",
+          "latestPublishedAt": "2026-09-17T21:41:05.085Z",
           "npmUrl": "https://www.npmjs.com/package/prettier",
           "compatibility": [
             {
@@ -16131,9 +16142,9 @@
               "deprecated": null
             },
             {
-              "range": ">=3.0.0 <=3.9.7",
+              "range": ">=3.0.0 <=3.9.8",
               "minVersion": "3.0.0",
-              "maxVersion": "3.9.7",
+              "maxVersion": "3.9.8",
               "peerDependencies": {},
               "optionalPeers": [],
               "nodeRange": ">=14",
@@ -16141,6 +16152,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "3.9.8",
+              "publishedAt": "2026-09-17T21:41:05.085Z"
+            },
             {
               "version": "3.9.7",
               "publishedAt": "2026-09-16T08:23:07.844Z"
