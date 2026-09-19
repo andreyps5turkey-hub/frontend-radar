@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-18T04:47:21.904Z",
+  "generatedAt": "2026-09-19T04:46:10.969Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -15350,15 +15350,15 @@
       "packageNames": [
         "eslint"
       ],
-      "latestVersion": "10.10.0",
-      "latestPublishedAt": "2026-09-04T14:34:21.799Z",
+      "latestVersion": "10.11.0",
+      "latestPublishedAt": "2026-09-18T20:15:36.485Z",
       "npmUrl": "https://www.npmjs.com/package/eslint",
       "repositoryUrl": "https://github.com/eslint/eslint",
       "packages": [
         {
           "name": "eslint",
-          "latestVersion": "10.10.0",
-          "latestPublishedAt": "2026-09-04T14:34:21.799Z",
+          "latestVersion": "10.11.0",
+          "latestPublishedAt": "2026-09-18T20:15:36.485Z",
           "npmUrl": "https://www.npmjs.com/package/eslint",
           "compatibility": [
             {
@@ -15389,9 +15389,9 @@
               "deprecated": "This version is no longer supported. Please see https://eslint.org/version-support for other options."
             },
             {
-              "range": ">=10.0.0 <=10.10.0",
+              "range": ">=10.0.0 <=10.11.0",
               "minVersion": "10.0.0",
-              "maxVersion": "10.10.0",
+              "maxVersion": "10.11.0",
               "peerDependencies": {},
               "optionalPeers": [],
               "nodeRange": "^20.19.0 || ^22.13.0 || >=24",
@@ -15399,6 +15399,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "10.11.0",
+              "publishedAt": "2026-09-18T20:15:36.485Z"
+            },
             {
               "version": "10.10.0",
               "publishedAt": "2026-09-04T14:34:21.799Z"

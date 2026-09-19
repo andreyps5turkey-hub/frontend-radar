@@ -1,7 +1,127 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-18T04:47:15.311Z",
+  "updatedAt": "2026-09-19T04:46:05.446Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-09-19",
+      "generatedAt": "2026-09-19T04:46:05.446Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 32,
+      "sourceHealth": {
+        "attempted": 32,
+        "succeeded": 32,
+        "failed": []
+      },
+      "status": "active",
+      "summary": "В окне дня выпустили Jest v30.5.2 с улучшениями трансформации TypeScript и исправлениями кэширования.",
+      "items": [
+        {
+          "priority": "P2",
+          "title": "Jest v30.5.2 – обновление с улучшениями и исправлениями",
+          "source": "Jest Releases",
+          "publishedAt": "2026-09-18T13:57:03Z",
+          "whyImportant": "Добавлена поддержка удаления типов TypeScript при трансформации, исправлено кэширование версии при сборке, улучшено экранирование ключей таблиц.",
+          "audience": "Frontend‑разработчики, использующие Jest",
+          "nextStep": "Обновите пакет jest до версии 30.5.2 и проверьте, что ваши тесты работают корректно.",
+          "url": "https://github.com/jestjs/jest/releases/tag/v30.5.2",
+          "tags": [
+            "Jest",
+            "testing",
+            "release"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "typescript",
+            "quality"
+          ],
+          "packages": [
+            {
+              "name": "jest",
+              "releasedVersion": "v30.5.2",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "hours",
+          "actionItems": [
+            "Проверьте, что jest --version выводит 30.5.2",
+            "Запустите тесты и убедитесь, что они проходят без ошибок",
+            "Проверьте, что кэширование версии работает корректно"
+          ],
+          "detailsConfidence": "source"
+        }
+      ],
+      "readLater": [
+        {
+          "priority": "P3",
+          "title": "Обновление Jest до v30.5.0",
+          "source": "Jest Releases",
+          "publishedAt": "2026-08-28T08:42:35Z",
+          "whyImportant": "Большой релиз с множеством изменений в jest-runtime, jest-resolve и jest-haste-map, возможны регрессии.",
+          "audience": "Разработчики, использующие Jest",
+          "nextStep": "Проверить тесты после обновления, открыть issue при регрессии.",
+          "url": "https://github.com/jestjs/jest/releases/tag/v30.5.0",
+          "tags": [
+            "Jest"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "quality"
+          ],
+          "packages": [
+            {
+              "name": "jest",
+              "releasedVersion": "30.5.0",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Обновить jest до v30.5.0",
+            "Запустить полный тестовый набор",
+            "Отслеживать ошибки"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P3",
+          "title": "Обновление DOMPurify до 3.4.14",
+          "source": "DOMPurify Releases",
+          "publishedAt": "2026-08-19T10:19:32Z",
+          "whyImportant": "Исправлены потенциальные обходы при allow‑listing, добавлены новые атрибуты SVG, улучшена валидизация.",
+          "audience": "Разработчики, работающие с DOMPurify",
+          "nextStep": "Обновить пакет до 3.4.14 и проверить безопасность рендеринга.",
+          "url": "https://github.com/cure53/DOMPurify/releases/tag/3.4.14",
+          "tags": [
+            "DOMPurify"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "platform"
+          ],
+          "packages": [
+            {
+              "name": "dompurify",
+              "releasedVersion": "3.4.14",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Обновить dompurify до 3.4.14",
+            "Проверить рендеринг опасных тегов"
+          ],
+          "detailsConfidence": "source"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-09-18",
