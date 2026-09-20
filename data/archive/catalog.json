@@ -1,7 +1,93 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-19T04:46:05.446Z",
+  "updatedAt": "2026-09-20T04:46:53.309Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-09-20",
+      "generatedAt": "2026-09-20T04:46:53.309Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 32,
+      "sourceHealth": {
+        "attempted": 32,
+        "succeeded": 32,
+        "failed": []
+      },
+      "status": "quiet",
+      "summary": "В течение дня ничего значимого не произошло.",
+      "items": [],
+      "readLater": [
+        {
+          "priority": "P3",
+          "title": "puppeteer: v25.9.0 – обновление зависимостей",
+          "source": "Puppeteer Releases",
+          "publishedAt": "2026-08-25T07:40:50Z",
+          "whyImportant": "Обновлена версия puppeteer-core до 25.9.0, что может улучшить совместимость с новыми браузерами.",
+          "audience": "frontend‑инженеры, использующие Puppeteer",
+          "nextStep": "Проверьте совместимость вашего проекта с новой версией puppeteer-core и обновите зависимости.",
+          "url": "https://github.com/puppeteer/puppeteer/releases/tag/puppeteer-v25.9.0",
+          "tags": [
+            "puppeteer",
+            "puppeteer-core",
+            "обновление"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "platform"
+          ],
+          "packages": [
+            {
+              "name": "puppeteer",
+              "releasedVersion": "25.9.0",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить совместимость с новой версией",
+            "Обновить зависимость в package.json",
+            "Запустить тесты"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P3",
+          "title": "Обновление Jest до v30.5.0",
+          "source": "Jest Releases",
+          "publishedAt": "2026-08-28T08:42:35Z",
+          "whyImportant": "Большой релиз с множеством изменений в jest-runtime, jest-resolve и jest-haste-map, возможны регрессии.",
+          "audience": "Разработчики, использующие Jest",
+          "nextStep": "Проверить тесты после обновления, открыть issue при регрессии.",
+          "url": "https://github.com/jestjs/jest/releases/tag/v30.5.0",
+          "tags": [
+            "Jest"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "quality"
+          ],
+          "packages": [
+            {
+              "name": "jest",
+              "releasedVersion": "30.5.0",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Обновить jest до v30.5.0",
+            "Запустить полный тестовый набор",
+            "Отслеживать ошибки"
+          ],
+          "detailsConfidence": "source"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-09-19",
