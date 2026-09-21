@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "date": "2026-09-21",
-  "generatedAt": "2026-09-21T06:33:38.710Z",
+  "generatedAt": "2026-09-21T12:28:51.216Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -14,6 +14,32 @@
   "summary": "Значимых новых событий не найдено. Подборка для чтения собрана в резервном режиме.",
   "items": [],
   "readLater": [
+    {
+      "priority": "P3",
+      "title": "Новый материал от Веб-стандарты",
+      "source": "Веб-стандарты",
+      "publishedAt": "Mon, 28 Sep 2026 09:00:00 GMT",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы Веб-стандарты.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://web-standards.ru/podcast/545/",
+      "tags": [
+        "веб-стандарты",
+        "обновление"
+      ],
+      "changeType": "guide",
+      "technologies": [
+        "platform"
+      ],
+      "packages": [],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    },
     {
       "priority": "P3",
       "title": "Node.js Releases: выпуск 26.8.2",
@@ -73,32 +99,6 @@
           "fixedVersion": null
         }
       ],
-      "risk": "low",
-      "effort": "minutes",
-      "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
-      ],
-      "detailsConfidence": "inferred"
-    },
-    {
-      "priority": "P3",
-      "title": "Новый материал от Frontend Focus",
-      "source": "Frontend Focus",
-      "publishedAt": "Wed, 16 Sep 2026 00:00:00 +0000",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы Frontend Focus.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://frontendfoc.us/issues/758",
-      "tags": [
-        "frontend",
-        "обновление"
-      ],
-      "changeType": "guide",
-      "technologies": [
-        "platform"
-      ],
-      "packages": [],
       "risk": "low",
       "effort": "minutes",
       "actionItems": [
