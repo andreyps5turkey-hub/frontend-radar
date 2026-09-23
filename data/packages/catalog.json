@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-22T09:55:38.979Z",
+  "generatedAt": "2026-09-23T09:30:50.147Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -1437,15 +1437,15 @@
       "packageNames": [
         "next"
       ],
-      "latestVersion": "16.3.5",
-      "latestPublishedAt": "2026-09-11T17:26:46.049Z",
+      "latestVersion": "16.3.6",
+      "latestPublishedAt": "2026-09-22T16:19:00.458Z",
       "npmUrl": "https://www.npmjs.com/package/next",
       "repositoryUrl": "https://github.com/vercel/next.js",
       "packages": [
         {
           "name": "next",
-          "latestVersion": "16.3.5",
-          "latestPublishedAt": "2026-09-11T17:26:46.049Z",
+          "latestVersion": "16.3.6",
+          "latestPublishedAt": "2026-09-22T16:19:00.458Z",
           "npmUrl": "https://www.npmjs.com/package/next",
           "compatibility": [
             {
@@ -1809,9 +1809,9 @@
               "deprecated": "This version has a security vulnerability. Please upgrade to a patched version. See https://nextjs.org/blog/security-update-2025-12-11 for more details."
             },
             {
-              "range": ">=15.5.9 <=15.5.25",
+              "range": ">=15.5.9 <=15.5.26",
               "minVersion": "15.5.9",
-              "maxVersion": "15.5.25",
+              "maxVersion": "15.5.26",
               "peerDependencies": {
                 "react": "^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0",
                 "react-dom": "^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0"
@@ -1845,9 +1845,9 @@
               "deprecated": "This version has a security vulnerability. Please upgrade to a patched version. See https://nextjs.org/blog/security-update-2025-12-11 for more details."
             },
             {
-              "range": ">=16.0.10 <=16.3.5",
+              "range": ">=16.0.10 <=16.3.6",
               "minVersion": "16.0.10",
-              "maxVersion": "16.3.5",
+              "maxVersion": "16.3.6",
               "peerDependencies": {
                 "react": "^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0",
                 "react-dom": "^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0"
@@ -1858,6 +1858,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "16.3.6",
+              "publishedAt": "2026-09-22T16:19:00.458Z"
+            },
             {
               "version": "16.3.5",
               "publishedAt": "2026-09-11T17:26:46.049Z"
@@ -2013,6 +2017,10 @@
             {
               "version": "16.0.0",
               "publishedAt": "2025-10-22T00:12:16.323Z"
+            },
+            {
+              "version": "15.5.26",
+              "publishedAt": "2026-09-22T17:03:27.353Z"
             },
             {
               "version": "15.5.25",
@@ -4418,6 +4426,28 @@
       ],
       "events": [
         {
+          "id": "7d355130cb2dff",
+          "kind": "security",
+          "priority": "P1",
+          "version": "15.5.26",
+          "title": "Усиление безопасности в Next.js v15.5.26",
+          "summary": "Обновление добавляет дополнительные меры защиты в next/og, снижая риск эксплуатации уязвимостей.",
+          "publishedAt": "2026-09-22T17:15:57Z",
+          "source": "Next.js Releases",
+          "url": "https://github.com/vercel/next.js/releases/tag/v15.5.26"
+        },
+        {
+          "id": "09069bfee50730",
+          "kind": "security",
+          "priority": "P0",
+          "version": null,
+          "title": "Устранение удалённого выполнения кода в next/og ImageResponse",
+          "summary": "Внедрённый в ImageResponse уязвимость позволяет злоумышленнику выполнить произвольный код, если приложение передаёт пользовательские данные в SVG.",
+          "publishedAt": "2026-09-22T17:03:51Z",
+          "source": "Next.js Security",
+          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-vcvr-r3jv-pc5j"
+        },
+        {
           "id": "77e3de73fcbae5",
           "kind": "minor",
           "priority": "P1",
@@ -4833,17 +4863,6 @@
       ],
       "advisories": [],
       "events": [
-        {
-          "id": "c95650e484b34d",
-          "kind": "major",
-          "priority": "P1",
-          "version": "8.70.1",
-          "title": "typescript-eslint Releases: выпуск v8.70.1",
-          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-          "publishedAt": "2026-09-21T17:06:00Z",
-          "source": "typescript-eslint Releases",
-          "url": "https://github.com/typescript-eslint/typescript-eslint/releases/tag/v8.70.1"
-        },
         {
           "id": "47fcec638d2ad5",
           "kind": "patch",
@@ -10455,6 +10474,17 @@
       ],
       "advisories": [],
       "events": [
+        {
+          "id": "0ef545462440f7",
+          "kind": "minor",
+          "priority": "P2",
+          "version": "5.0.0-rc.0",
+          "title": "Новые версии TanStack Query и сопутствующих пакетов",
+          "summary": "Обновления включают новые релизы и исправления, повышающие стабильность и совместимость.",
+          "publishedAt": "2026-09-22T14:20:44Z",
+          "source": "TanStack Query Releases",
+          "url": "https://github.com/TanStack/query/releases/tag/release-2026-09-22-1420"
+        },
         {
           "id": "4fcddf9a8c943f",
           "kind": "minor",
@@ -16092,17 +16122,6 @@
       "advisories": [],
       "events": [
         {
-          "id": "c95650e484b34d",
-          "kind": "major",
-          "priority": "P1",
-          "version": "8.70.1",
-          "title": "typescript-eslint Releases: выпуск v8.70.1",
-          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-          "publishedAt": "2026-09-21T17:06:00Z",
-          "source": "typescript-eslint Releases",
-          "url": "https://github.com/typescript-eslint/typescript-eslint/releases/tag/v8.70.1"
-        },
-        {
           "id": "aac7b125de5f0b",
           "kind": "minor",
           "priority": "P2",
@@ -16133,15 +16152,15 @@
       "packageNames": [
         "prettier"
       ],
-      "latestVersion": "3.9.8",
-      "latestPublishedAt": "2026-09-17T21:41:05.085Z",
+      "latestVersion": "3.9.9",
+      "latestPublishedAt": "2026-09-23T06:31:34.693Z",
       "npmUrl": "https://www.npmjs.com/package/prettier",
       "repositoryUrl": "https://github.com/prettier/prettier",
       "packages": [
         {
           "name": "prettier",
-          "latestVersion": "3.9.8",
-          "latestPublishedAt": "2026-09-17T21:41:05.085Z",
+          "latestVersion": "3.9.9",
+          "latestPublishedAt": "2026-09-23T06:31:34.693Z",
           "npmUrl": "https://www.npmjs.com/package/prettier",
           "compatibility": [
             {
@@ -16172,9 +16191,9 @@
               "deprecated": null
             },
             {
-              "range": ">=3.0.0 <=3.9.8",
+              "range": ">=3.0.0 <=3.9.9",
               "minVersion": "3.0.0",
-              "maxVersion": "3.9.8",
+              "maxVersion": "3.9.9",
               "peerDependencies": {},
               "optionalPeers": [],
               "nodeRange": ">=14",
@@ -16182,6 +16201,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "3.9.9",
+              "publishedAt": "2026-09-23T06:31:34.693Z"
+            },
             {
               "version": "3.9.8",
               "publishedAt": "2026-09-17T21:41:05.085Z"
