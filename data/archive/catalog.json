@@ -1,7 +1,120 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-23T09:30:43.094Z",
+  "updatedAt": "2026-09-24T09:29:56.241Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-09-24",
+      "generatedAt": "2026-09-24T09:29:56.241Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 32,
+      "sourceHealth": {
+        "attempted": 32,
+        "succeeded": 32,
+        "failed": []
+      },
+      "status": "quiet",
+      "summary": "В течение дня ничего значимого не произошло – все релизы, попавшие в окно, не содержат критических исправлений, крупных обновлений или новых возможностей.",
+      "items": [],
+      "readLater": [
+        {
+          "priority": "P3",
+          "title": "DOMPurify 3.4.16 – исправления и миграция сборки",
+          "source": "DOMPurify Releases",
+          "publishedAt": "2026-09-23T15:24:34Z",
+          "whyImportant": "Обновление устраняет ошибки при удалении узлов и улучшает совместимость с CommonJS, а переход на rolldown повышает скорость сборки.",
+          "audience": "Разработчики, использующие DOMPurify в браузере и Node.js",
+          "nextStep": "Проверьте, что ваша сборка использует последнюю версию, и обновите зависимости.",
+          "url": "https://github.com/cure53/DOMPurify/releases/tag/3.4.16",
+          "tags": [
+            "DOMPurify",
+            "rollup",
+            "rolldown"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "platform"
+          ],
+          "packages": [
+            {
+              "name": "dompurify",
+              "releasedVersion": "3.4.16",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Обновить пакет до 3.4.16",
+            "Проверить сборку на совместимость"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P3",
+          "title": "Node.js 22.23.3 – обновления зависимостей и сертификатов",
+          "source": "Node.js Releases",
+          "publishedAt": "2026-09-23T18:21:37Z",
+          "whyImportant": "Обновлены корневые сертификаты, OpenSSL и npm, что повышает безопасность и совместимость с современными пакетами.",
+          "audience": "Разработчики, использующие Node.js 22.x",
+          "nextStep": "Обновите локальную версию Node.js и проверьте совместимость ваших проектов.",
+          "url": "https://github.com/nodejs/node/releases/tag/v22.23.3",
+          "tags": [
+            "Node.js",
+            "npm",
+            "OpenSSL"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "platform"
+          ],
+          "packages": [],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Обновить Node.js до 22.23.3",
+            "Проверить сборку и тесты"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P3",
+          "title": "puppeteer-core v25.12.0 – обновление браузеров и исправления",
+          "source": "Puppeteer Releases",
+          "publishedAt": "2026-09-23T12:52:05Z",
+          "whyImportant": "Поддержка новых версий Chrome и Firefox, а также исправления в лаунчере повышают стабильность автоматизации.",
+          "audience": "Разработчики, использующие Puppeteer для тестирования и скрапинга",
+          "nextStep": "Обновите puppeteer-core до 25.12.0 и проверьте скрипты на новых браузерах.",
+          "url": "https://github.com/puppeteer/puppeteer/releases/tag/puppeteer-core-v25.12.0",
+          "tags": [
+            "Puppeteer",
+            "Chrome",
+            "Firefox"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "platform"
+          ],
+          "packages": [
+            {
+              "name": "puppeteer",
+              "releasedVersion": "25.12.0",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Обновить пакет до 25.12.0",
+            "Проверить автотесты на новых браузерах"
+          ],
+          "detailsConfidence": "source"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-09-23",
