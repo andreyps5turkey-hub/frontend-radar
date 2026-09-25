@@ -1,7 +1,133 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-24T09:29:56.241Z",
+  "updatedAt": "2026-09-25T09:46:35.092Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-09-25",
+      "generatedAt": "2026-09-25T09:46:35.092Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 32,
+      "sourceHealth": {
+        "attempted": 32,
+        "succeeded": 32,
+        "failed": []
+      },
+      "status": "active",
+      "summary": "Сегодня в окне публикаций только обновление Vite v8.3.1, включающее исправления зависимостей и небольшие улучшения конфигурации. Остальные релизы, хотя и вышли недавно, не попали в дневное окно, но их стоит изучить позже.",
+      "items": [
+        {
+          "priority": "P2",
+          "title": "Vite v8.3.1 – обновление зависимостей и исправления конфигурации",
+          "source": "Vite Releases",
+          "publishedAt": "2026-09-24T12:23:55Z",
+          "url": "https://github.com/vitejs/vite/releases/tag/v8.3.1",
+          "whyImportant": "Обновлены все не‑мажорные зависимости, что повышает стабильность сборки и устраняет потенциальные несовместимости.",
+          "audience": "Разработчики, использующие Vite в проектах",
+          "nextStep": "Проверьте совместимость с текущими плагинами и обновите Vite до версии 8.3.1.",
+          "tags": [
+            "vite",
+            "rollup",
+            "build"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "vite"
+          ],
+          "packages": [
+            {
+              "name": "vite",
+              "releasedVersion": "v8.3.1",
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "@vitejs/plugin-legacy",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "hours",
+          "actionItems": [
+            "Обновить пакет vite до v8.3.1",
+            "Проверить сборку проекта на наличие ошибок"
+          ],
+          "detailsConfidence": "source"
+        }
+      ],
+      "readLater": [
+        {
+          "priority": "P1",
+          "title": "Next.js v16.3.6 – исправление уязвимости RCE в ImageResponse",
+          "source": "Next.js Releases",
+          "publishedAt": "2026-09-22T17:15:10Z",
+          "url": "https://github.com/vercel/next.js/releases/tag/v16.3.6",
+          "whyImportant": "Уязвимость позволяет удалённо выполнить код через обработку изображений, что критично для публичных сайтов.",
+          "audience": "Разработчики Next.js, администраторы сайтов",
+          "nextStep": "Обновить next до версии 16.3.6 и проверить конфигурацию ImageResponse.",
+          "tags": [
+            "nextjs",
+            "security",
+            "rce"
+          ],
+          "changeType": "security",
+          "technologies": [
+            "nextjs"
+          ],
+          "packages": [
+            {
+              "name": "next",
+              "releasedVersion": "v16.3.6",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "high",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить наличие уязвимости в текущем проекте",
+            "Обновить пакет next до v16.3.6"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P2",
+          "title": "TanStack Query v6.2.4 – обновление devtools и клиентских пакетов",
+          "source": "TanStack Query Releases",
+          "publishedAt": "2026-09-22T13:38:05Z",
+          "url": "https://github.com/TanStack/query/releases/tag/release-2026-09-22-1338",
+          "whyImportant": "Обновлены devtools и клиентские пакеты, что улучшает отладку и совместимость с последними версиями React и Vue.",
+          "audience": "Разработчики, использующие TanStack Query",
+          "nextStep": "Обновить @tanstack/react-query и связанные пакеты до версии 6.2.4.",
+          "tags": [
+            "tanstack",
+            "react-query",
+            "vue-query"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "react"
+          ],
+          "packages": [
+            {
+              "name": "@tanstack/react-query",
+              "releasedVersion": "6.2.4",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Обновить пакеты @tanstack/react-query, @tanstack/svelte-query, @tanstack/vue-query-devtools до 6.2.4"
+          ],
+          "detailsConfidence": "source"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-09-24",

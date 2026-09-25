@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-24T09:30:02.977Z",
+  "generatedAt": "2026-09-25T09:46:44.237Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -4437,6 +4437,17 @@
           "url": "https://github.com/vercel/next.js/releases/tag/v15.5.26"
         },
         {
+          "id": "df93dab15cc935",
+          "kind": "security",
+          "priority": "P1",
+          "version": "16.3.6",
+          "title": "Next.js v16.3.6 – исправление уязвимости RCE в ImageResponse",
+          "summary": "Уязвимость позволяет удалённо выполнить код через обработку изображений, что критично для публичных сайтов.",
+          "publishedAt": "2026-09-22T17:15:10Z",
+          "source": "Next.js Releases",
+          "url": "https://github.com/vercel/next.js/releases/tag/v16.3.6"
+        },
+        {
           "id": "09069bfee50730",
           "kind": "security",
           "priority": "P0",
@@ -4883,15 +4894,15 @@
       "packageNames": [
         "vite"
       ],
-      "latestVersion": "8.3.0",
-      "latestPublishedAt": "2026-09-10T11:30:26.283Z",
+      "latestVersion": "8.3.1",
+      "latestPublishedAt": "2026-09-24T12:26:19.940Z",
       "npmUrl": "https://www.npmjs.com/package/vite",
       "repositoryUrl": "https://github.com/vitejs/vite",
       "packages": [
         {
           "name": "vite",
-          "latestVersion": "8.3.0",
-          "latestPublishedAt": "2026-09-10T11:30:26.283Z",
+          "latestVersion": "8.3.1",
+          "latestPublishedAt": "2026-09-24T12:26:19.940Z",
           "npmUrl": "https://www.npmjs.com/package/vite",
           "compatibility": [
             {
@@ -4913,9 +4924,9 @@
               "deprecated": null
             },
             {
-              "range": ">=7.0.0 <=8.3.0",
+              "range": ">=7.0.0 <=8.3.1",
               "minVersion": "7.0.0",
-              "maxVersion": "8.3.0",
+              "maxVersion": "8.3.1",
               "peerDependencies": {},
               "optionalPeers": [],
               "nodeRange": "^20.19.0 || >=22.12.0",
@@ -4923,6 +4934,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "8.3.1",
+              "publishedAt": "2026-09-24T12:26:19.940Z"
+            },
             {
               "version": "8.3.0",
               "publishedAt": "2026-09-10T11:30:26.283Z"
@@ -6358,6 +6373,17 @@
         }
       ],
       "events": [
+        {
+          "id": "54b311940695a8",
+          "kind": "minor",
+          "priority": "P2",
+          "version": "8.3.1",
+          "title": "Vite v8.3.1 – обновление зависимостей и исправления конфигурации",
+          "summary": "Обновлены все не‑мажорные зависимости, что повышает стабильность сборки и устраняет потенциальные несовместимости.",
+          "publishedAt": "2026-09-24T12:23:55Z",
+          "source": "Vite Releases",
+          "url": "https://github.com/vitejs/vite/releases/tag/v8.3.1"
+        },
         {
           "id": "f885e46ff3d751",
           "kind": "major",
@@ -10484,6 +10510,17 @@
           "publishedAt": "2026-09-22T14:20:44Z",
           "source": "TanStack Query Releases",
           "url": "https://github.com/TanStack/query/releases/tag/release-2026-09-22-1420"
+        },
+        {
+          "id": "8a40ee9e19e02f",
+          "kind": "minor",
+          "priority": "P2",
+          "version": "6.2.4",
+          "title": "TanStack Query v6.2.4 – обновление devtools и клиентских пакетов",
+          "summary": "Обновлены devtools и клиентские пакеты, что улучшает отладку и совместимость с последними версиями React и Vue.",
+          "publishedAt": "2026-09-22T13:38:05Z",
+          "source": "TanStack Query Releases",
+          "url": "https://github.com/TanStack/query/releases/tag/release-2026-09-22-1338"
         },
         {
           "id": "4fcddf9a8c943f",
