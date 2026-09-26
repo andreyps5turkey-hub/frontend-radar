@@ -1,7 +1,93 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-25T09:46:35.092Z",
+  "updatedAt": "2026-09-26T09:30:45.260Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-09-26",
+      "generatedAt": "2026-09-26T09:30:45.260Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 32,
+      "sourceHealth": {
+        "attempted": 32,
+        "succeeded": 32,
+        "failed": []
+      },
+      "status": "quiet",
+      "summary": "В окне дня ничего значимого не произошло.",
+      "items": [],
+      "readLater": [
+        {
+          "priority": "P3",
+          "title": "Новый материал от React Status",
+          "source": "React Status",
+          "publishedAt": "Fri, 25 Sep 2026 00:00:00 +0000",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Разработчики и команды, использующие React.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://react.statuscode.com/issues/492",
+          "tags": [
+            "react",
+            "обновление"
+          ],
+          "changeType": "guide",
+          "technologies": [
+            "redux",
+            "react"
+          ],
+          "packages": [
+            {
+              "name": "react",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        },
+        {
+          "priority": "P3",
+          "title": "Next.js v16.3.6 – исправление уязвимости RCE в ImageResponse",
+          "source": "Next.js Releases",
+          "publishedAt": "2026-09-22T17:15:10Z",
+          "url": "https://github.com/vercel/next.js/releases/tag/v16.3.6",
+          "whyImportant": "Уязвимость позволяет удалённо выполнить код через обработку изображений, что критично для публичных сайтов.",
+          "audience": "Разработчики Next.js, администраторы сайтов",
+          "nextStep": "Обновить next до версии 16.3.6 и проверить конфигурацию ImageResponse.",
+          "tags": [
+            "nextjs",
+            "security",
+            "rce"
+          ],
+          "changeType": "security",
+          "technologies": [
+            "nextjs"
+          ],
+          "packages": [
+            {
+              "name": "next",
+              "releasedVersion": "v16.3.6",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "high",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить наличие уязвимости в текущем проекте",
+            "Обновить пакет next до v16.3.6"
+          ],
+          "detailsConfidence": "source"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-09-25",
