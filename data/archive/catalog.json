@@ -1,7 +1,155 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-28T19:40:07.862Z",
+  "updatedAt": "2026-09-29T10:53:03.601Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-09-29",
+      "generatedAt": "2026-09-29T10:53:03.601Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 32,
+      "sourceHealth": {
+        "attempted": 32,
+        "succeeded": 32,
+        "failed": []
+      },
+      "status": "active",
+      "summary": "В окне дня выпустили обновления Next.js и Redux Toolkit, содержащие исправления и модернизацию сборки.",
+      "items": [
+        {
+          "priority": "P2",
+          "title": "Next.js v16.3.7 – исправления и оптимизация turbo‑tasks",
+          "source": "Next.js Releases",
+          "publishedAt": "2026-09-29T08:54:51Z",
+          "whyImportant": "Обновление исправляет зависание чтения при отмене задачи, повышая надёжность сборки.",
+          "audience": "Разработчики, использующие Next.js",
+          "nextStep": "Обновите пакет до v16.3.7 и проверьте, что сборка завершает задачи корректно.",
+          "url": "https://github.com/vercel/next.js/releases/tag/v16.3.7",
+          "tags": [
+            "Next.js",
+            "turbo-tasks",
+            "bugfix"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "nextjs"
+          ],
+          "packages": [
+            {
+              "name": "next",
+              "releasedVersion": "v16.3.7",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "hours",
+          "actionItems": [
+            "Проверить, что сборка завершает задачи без зависаний"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P2",
+          "title": "Redux Toolkit v2.13.0 – обновление сборки и поддержка TypeScript 7",
+          "source": "Redux Toolkit Releases",
+          "publishedAt": "2026-09-29T03:02:22Z",
+          "whyImportant": "Переключение на TSDown и PNPM упрощает сборку и повышает совместимость с современными инструментами.",
+          "audience": "Разработчики, использующие Redux Toolkit",
+          "nextStep": "Обновите пакет до v2.13.0 и убедитесь, что сборка проходит без ошибок.",
+          "url": "https://github.com/reduxjs/redux-toolkit/releases/tag/v2.13.0",
+          "tags": [
+            "Redux Toolkit",
+            "TSDown",
+            "PNPM",
+            "bugfix"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "typescript",
+            "redux",
+            "quality"
+          ],
+          "packages": [
+            {
+              "name": "@reduxjs/toolkit",
+              "releasedVersion": "v2.13.0",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "hours",
+          "actionItems": [
+            "Проверить, что сборка проходит без ошибок"
+          ],
+          "detailsConfidence": "source"
+        }
+      ],
+      "readLater": [
+        {
+          "priority": "P3",
+          "title": "Новый материал от Веб-стандарты",
+          "source": "Веб-стандарты",
+          "publishedAt": "Mon, 28 Sep 2026 09:00:00 GMT",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, использующие инструменты из экосистемы Веб-стандарты.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://web-standards.ru/podcast/546/",
+          "tags": [
+            "веб-стандарты",
+            "обновление"
+          ],
+          "changeType": "guide",
+          "technologies": [
+            "platform"
+          ],
+          "packages": [],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        },
+        {
+          "priority": "P3",
+          "title": "Новый материал от Next.js Security",
+          "source": "Next.js Security",
+          "publishedAt": "2026-09-22T17:03:51Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, которые поддерживают приложения на Next.js.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-vcvr-r3jv-pc5j",
+          "tags": [
+            "next.js",
+            "безопасность"
+          ],
+          "changeType": "tooling",
+          "technologies": [
+            "nextjs",
+            "platform"
+          ],
+          "packages": [
+            {
+              "name": "next",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-09-28",

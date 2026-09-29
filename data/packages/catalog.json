@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-28T19:40:15.350Z",
+  "generatedAt": "2026-09-29T10:53:11.428Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -1448,15 +1448,15 @@
       "packageNames": [
         "next"
       ],
-      "latestVersion": "16.3.6",
-      "latestPublishedAt": "2026-09-22T16:19:00.458Z",
+      "latestVersion": "16.3.7",
+      "latestPublishedAt": "2026-09-29T09:04:19.157Z",
       "npmUrl": "https://www.npmjs.com/package/next",
       "repositoryUrl": "https://github.com/vercel/next.js",
       "packages": [
         {
           "name": "next",
-          "latestVersion": "16.3.6",
-          "latestPublishedAt": "2026-09-22T16:19:00.458Z",
+          "latestVersion": "16.3.7",
+          "latestPublishedAt": "2026-09-29T09:04:19.157Z",
           "npmUrl": "https://www.npmjs.com/package/next",
           "compatibility": [
             {
@@ -1856,9 +1856,9 @@
               "deprecated": "This version has a security vulnerability. Please upgrade to a patched version. See https://nextjs.org/blog/security-update-2025-12-11 for more details."
             },
             {
-              "range": ">=16.0.10 <=16.3.6",
+              "range": ">=16.0.10 <=16.3.7",
               "minVersion": "16.0.10",
-              "maxVersion": "16.3.6",
+              "maxVersion": "16.3.7",
               "peerDependencies": {
                 "react": "^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0",
                 "react-dom": "^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0"
@@ -1869,6 +1869,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "16.3.7",
+              "publishedAt": "2026-09-29T09:04:19.157Z"
+            },
             {
               "version": "16.3.6",
               "publishedAt": "2026-09-22T16:19:00.458Z"
@@ -4436,6 +4440,17 @@
         }
       ],
       "events": [
+        {
+          "id": "5e87648535bb48",
+          "kind": "minor",
+          "priority": "P2",
+          "version": "16.3.7",
+          "title": "Next.js v16.3.7 – исправления и оптимизация turbo‑tasks",
+          "summary": "Обновление исправляет зависание чтения при отмене задачи, повышая надёжность сборки.",
+          "publishedAt": "2026-09-29T08:54:51Z",
+          "source": "Next.js Releases",
+          "url": "https://github.com/vercel/next.js/releases/tag/v16.3.7"
+        },
         {
           "id": "7d355130cb2dff",
           "kind": "security",
@@ -8306,15 +8321,15 @@
       "packageNames": [
         "@reduxjs/toolkit"
       ],
-      "latestVersion": "2.12.0",
-      "latestPublishedAt": "2026-05-15T14:19:58.142Z",
+      "latestVersion": "2.13.0",
+      "latestPublishedAt": "2026-09-29T02:48:23.306Z",
       "npmUrl": "https://www.npmjs.com/package/@reduxjs/toolkit",
       "repositoryUrl": "https://github.com/reduxjs/redux-toolkit",
       "packages": [
         {
           "name": "@reduxjs/toolkit",
-          "latestVersion": "2.12.0",
-          "latestPublishedAt": "2026-05-15T14:19:58.142Z",
+          "latestVersion": "2.13.0",
+          "latestPublishedAt": "2026-09-29T02:48:23.306Z",
           "npmUrl": "https://www.npmjs.com/package/@reduxjs/toolkit",
           "compatibility": [
             {
@@ -8366,9 +8381,9 @@
               "deprecated": null
             },
             {
-              "range": ">=2.5.0 <=2.12.0",
+              "range": ">=2.5.0 <=2.13.0",
               "minVersion": "2.5.0",
-              "maxVersion": "2.12.0",
+              "maxVersion": "2.13.0",
               "peerDependencies": {
                 "react": "^16.9.0 || ^17.0.0 || ^18 || ^19"
               },
@@ -8380,6 +8395,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "2.13.0",
+              "publishedAt": "2026-09-29T02:48:23.306Z"
+            },
             {
               "version": "2.12.0",
               "publishedAt": "2026-05-15T14:19:58.142Z"
@@ -8668,7 +8687,19 @@
         }
       ],
       "advisories": [],
-      "events": []
+      "events": [
+        {
+          "id": "b5980e6e550049",
+          "kind": "minor",
+          "priority": "P2",
+          "version": "2.13.0",
+          "title": "Redux Toolkit v2.13.0 – обновление сборки и поддержка TypeScript 7",
+          "summary": "Переключение на TSDown и PNPM упрощает сборку и повышает совместимость с современными инструментами.",
+          "publishedAt": "2026-09-29T03:02:22Z",
+          "source": "Redux Toolkit Releases",
+          "url": "https://github.com/reduxjs/redux-toolkit/releases/tag/v2.13.0"
+        }
+      ]
     },
     {
       "slug": "tanstack-query",
