@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-29T10:53:11.428Z",
+  "generatedAt": "2026-09-30T10:42:32.184Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -10626,15 +10626,15 @@
         "storybook",
         "@storybook/react"
       ],
-      "latestVersion": "10.6.0",
-      "latestPublishedAt": "2026-09-02T14:07:30.853Z",
+      "latestVersion": "10.6.1",
+      "latestPublishedAt": "2026-09-29T17:20:05.303Z",
       "npmUrl": "https://www.npmjs.com/package/storybook",
       "repositoryUrl": "https://github.com/storybookjs/storybook",
       "packages": [
         {
           "name": "storybook",
-          "latestVersion": "10.6.0",
-          "latestPublishedAt": "2026-09-02T14:07:30.853Z",
+          "latestVersion": "10.6.1",
+          "latestPublishedAt": "2026-09-29T17:20:05.303Z",
           "npmUrl": "https://www.npmjs.com/package/storybook",
           "compatibility": [
             {
@@ -10647,9 +10647,9 @@
               "deprecated": null
             },
             {
-              "range": ">=8.4.0 <=10.6.0",
+              "range": ">=8.4.0 <=10.6.1",
               "minVersion": "8.4.0",
-              "maxVersion": "10.6.0",
+              "maxVersion": "10.6.1",
               "peerDependencies": {
                 "prettier": "^2 || ^3"
               },
@@ -10661,6 +10661,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "10.6.1",
+              "publishedAt": "2026-09-29T17:20:05.303Z"
+            },
             {
               "version": "10.6.0",
               "publishedAt": "2026-09-02T14:07:30.853Z"
@@ -11693,8 +11697,8 @@
         },
         {
           "name": "@storybook/react",
-          "latestVersion": "10.6.0",
-          "latestPublishedAt": "2026-09-02T13:59:27.390Z",
+          "latestVersion": "10.6.1",
+          "latestPublishedAt": "2026-09-29T17:19:18.293Z",
           "npmUrl": "https://www.npmjs.com/package/@storybook/react",
           "compatibility": [
             {
@@ -14331,9 +14335,29 @@
               ],
               "nodeRange": null,
               "deprecated": null
+            },
+            {
+              "range": "10.6.1",
+              "minVersion": "10.6.1",
+              "maxVersion": "10.6.1",
+              "peerDependencies": {
+                "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+                "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+                "storybook": "^10.6.1",
+                "typescript": ">= 4.9.x"
+              },
+              "optionalPeers": [
+                "typescript"
+              ],
+              "nodeRange": null,
+              "deprecated": null
             }
           ],
           "versions": [
+            {
+              "version": "10.6.1",
+              "publishedAt": "2026-09-29T17:19:18.293Z"
+            },
             {
               "version": "10.6.0",
               "publishedAt": "2026-09-02T13:59:27.390Z"
@@ -15429,6 +15453,17 @@
         }
       ],
       "events": [
+        {
+          "id": "50002d630c4b63",
+          "kind": "minor",
+          "priority": "P2",
+          "version": "10.6.1",
+          "title": "Storybook v10.6.1 – исправления и новые возможности",
+          "summary": "Обновление устраняет ошибки в Addon A11y, добавляет поддержку Vitest 5 для браузерных тестов и исправляет проблемы с ERESOLVE в Next.js.",
+          "publishedAt": "2026-09-29T17:16:20Z",
+          "source": "Storybook Releases",
+          "url": "https://github.com/storybookjs/storybook/releases/tag/v10.6.1"
+        },
         {
           "id": "785d7843a62294",
           "kind": "minor",

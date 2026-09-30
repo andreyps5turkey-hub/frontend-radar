@@ -1,7 +1,128 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-29T10:53:03.601Z",
+  "updatedAt": "2026-09-30T10:42:25.233Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-09-30",
+      "generatedAt": "2026-09-30T10:42:25.233Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 32,
+      "sourceHealth": {
+        "attempted": 32,
+        "succeeded": 32,
+        "failed": []
+      },
+      "status": "active",
+      "summary": "Storybook v10.6.1 вышел с несколькими исправлениями, включая поддержку Vitest 5 и исправление ошибок в Addon A11y.",
+      "items": [
+        {
+          "priority": "P2",
+          "title": "Storybook v10.6.1 – исправления и новые возможности",
+          "source": "Storybook Releases",
+          "publishedAt": "2026-09-29T17:16:20Z",
+          "whyImportant": "Обновление устраняет ошибки в Addon A11y, добавляет поддержку Vitest 5 для браузерных тестов и исправляет проблемы с ERESOLVE в Next.js.",
+          "audience": "Frontend‑инженеры, использующие Storybook и Vitest",
+          "nextStep": "Обновите Storybook до версии 10.6.1 и проверьте совместимость ваших тестов и Addon A11y.",
+          "url": "https://github.com/storybookjs/storybook/releases/tag/v10.6.1",
+          "tags": [
+            "Storybook",
+            "Vitest",
+            "A11y"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "nextjs",
+            "storybook"
+          ],
+          "packages": [
+            {
+              "name": "storybook",
+              "releasedVersion": "v10.6.1",
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "@storybook/react",
+              "releasedVersion": "v10.6.1",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "hours",
+          "actionItems": [
+            "Обновить зависимость storybook до v10.6.1",
+            "Проверить работу Addon A11y в Firefox",
+            "Запустить Vitest 5 браузерные тесты"
+          ],
+          "detailsConfidence": "source"
+        }
+      ],
+      "readLater": [
+        {
+          "priority": "P3",
+          "title": "Новый материал от Веб-стандарты",
+          "source": "Веб-стандарты",
+          "publishedAt": "Mon, 28 Sep 2026 09:00:00 GMT",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, использующие инструменты из экосистемы Веб-стандарты.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://web-standards.ru/podcast/546/",
+          "tags": [
+            "веб-стандарты",
+            "обновление"
+          ],
+          "changeType": "guide",
+          "technologies": [
+            "platform"
+          ],
+          "packages": [],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        },
+        {
+          "priority": "P3",
+          "title": "Новый материал от Next.js Security",
+          "source": "Next.js Security",
+          "publishedAt": "2026-09-22T17:03:51Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, которые поддерживают приложения на Next.js.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-vcvr-r3jv-pc5j",
+          "tags": [
+            "next.js",
+            "безопасность"
+          ],
+          "changeType": "tooling",
+          "technologies": [
+            "nextjs",
+            "platform"
+          ],
+          "packages": [
+            {
+              "name": "next",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-09-29",
