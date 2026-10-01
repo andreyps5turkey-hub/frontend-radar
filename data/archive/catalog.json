@@ -1,7 +1,237 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-30T10:42:25.233Z",
+  "updatedAt": "2026-10-01T11:09:29.370Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-01",
+      "generatedAt": "2026-10-01T11:09:29.370Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 32,
+      "sourceHealth": {
+        "attempted": 32,
+        "succeeded": 32,
+        "failed": []
+      },
+      "status": "active",
+      "summary": "Сегодня в окне публикаций появились критические уязвимости в Next.js, а также обновление v16.3.8, исправляющее их. Важно проверить и обновить приложение, чтобы избежать кросс‑пользовательского подмены контента, SSRF и утечки данных.",
+      "items": [
+        {
+          "priority": "P0",
+          "title": "Проблема «Cache poisoning» в Next.js SSG/ISR приводит к подмене контента и отказу в обслуживании",
+          "source": "Next.js Security",
+          "publishedAt": "2026-09-30T16:14:19Z",
+          "whyImportant": "Атаки позволяют подменить контент одного пользователя контентом другого и вызвать DoS.",
+          "audience": "Разработчики Next.js, DevOps",
+          "nextStep": "Проверьте, используете ли вы root‑level catch‑all и SSG/ISR. Обновите до версии 16.3.8 или выше.",
+          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-mcj8-r9mp-w47p",
+          "tags": [
+            "Next.js",
+            "SSG",
+            "ISR",
+            "Cache poisoning"
+          ],
+          "changeType": "security",
+          "technologies": [
+            "nextjs"
+          ],
+          "packages": [
+            {
+              "name": "next",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "hours",
+          "actionItems": [
+            "Проверить конфигурацию catch‑all страниц",
+            "Обновить next до v16.3.8",
+            "Провести тесты на кросс‑пользовательскую подмену"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P0",
+          "title": "Server‑Side Request Forgery в оптимизации изображений Next.js",
+          "source": "Next.js Security",
+          "publishedAt": "2026-09-30T16:15:36Z",
+          "whyImportant": "Атаки могут заставить сервер запрашивать приватные IP‑адреса, открывая внутренние сервисы.",
+          "audience": "Разработчики Next.js, DevOps",
+          "nextStep": "Проверьте и ограничьте `images.remotePatterns` в `next.config.js`.",
+          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-cjq9-62q9-8jv4",
+          "tags": [
+            "Next.js",
+            "SSRF",
+            "Image Optimization"
+          ],
+          "changeType": "security",
+          "technologies": [
+            "nextjs"
+          ],
+          "packages": [
+            {
+              "name": "next",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "hours",
+          "actionItems": [
+            "Добавить whitelist в images.remotePatterns",
+            "Проверить конфигурацию на наличие неразрешенных хостов"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P0",
+          "title": "Утечка информации в маршрутах метаданных изображений Next.js App Router через dynamicParams",
+          "source": "Next.js Security",
+          "publishedAt": "2026-09-30T16:14:44Z",
+          "whyImportant": "Атаки позволяют получить изображения метаданных для динамических сегментов, которые не включены в `generateStaticParams()`.",
+          "audience": "Разработчики Next.js, SEO‑специалисты",
+          "nextStep": "Убедитесь, что все динамические сегменты защищены `generateStaticParams()` и `dynamicParams: false`.",
+          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-f87g-xv8r-7p7x",
+          "tags": [
+            "Next.js",
+            "App Router",
+            "Information Disclosure"
+          ],
+          "changeType": "security",
+          "technologies": [
+            "nextjs"
+          ],
+          "packages": [
+            {
+              "name": "next",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "hours",
+          "actionItems": [
+            "Проверить generateStaticParams() для всех маршрутов",
+            "Установить dynamicParams: false для метаданных"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P1",
+          "title": "Обновление Next.js v16.3.8: исправлены критические уязвимости и баги",
+          "source": "Next.js Releases",
+          "publishedAt": "2026-09-30T16:13:46Z",
+          "whyImportant": "Включает патчи для cache poisoning, SSRF и утечки информации.",
+          "audience": "Разработчики Next.js",
+          "nextStep": "Обновите до версии 16.3.8 и проверьте конфигурацию.",
+          "url": "https://github.com/vercel/next.js/releases/tag/v16.3.8",
+          "tags": [
+            "Next.js",
+            "Release"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "nextjs"
+          ],
+          "packages": [
+            {
+              "name": "next",
+              "releasedVersion": "v16.3.8",
+              "affectedRange": null,
+              "fixedVersion": "v16.3.8"
+            }
+          ],
+          "risk": "unknown",
+          "effort": "days",
+          "actionItems": [
+            "Обновить зависимость next до v16.3.8",
+            "Провести регрессионное тестирование"
+          ],
+          "detailsConfidence": "source"
+        }
+      ],
+      "readLater": [
+        {
+          "priority": "P2",
+          "title": "Vite v8.3.2: исправления багов и обновления зависимостей",
+          "source": "Vite Releases",
+          "publishedAt": "2026-10-01T10:14:36Z",
+          "whyImportant": "Обновляет внутренние зависимости и исправляет проблемы с CSS и sourcemaps.",
+          "audience": "Разработчики Vite",
+          "nextStep": "Обновите до v8.3.2, если используете Vite.",
+          "url": "https://github.com/vitejs/vite/releases/tag/v8.3.2",
+          "tags": [
+            "Vite",
+            "Release"
+          ],
+          "changeType": "major",
+          "technologies": [
+            "vite",
+            "platform"
+          ],
+          "packages": [
+            {
+              "name": "vite",
+              "releasedVersion": "v8.3.2",
+              "affectedRange": null,
+              "fixedVersion": "v8.3.2"
+            },
+            {
+              "name": "@vitejs/plugin-legacy",
+              "releasedVersion": "v8.3.2",
+              "affectedRange": null,
+              "fixedVersion": "v8.3.2"
+            }
+          ],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Обновить vite до v8.3.2",
+            "Проверить сборку на наличие ошибок"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P3",
+          "title": "Pending `use cache` fill может раскрыть Draft Mode контент в обычные ответы",
+          "source": "Next.js Security",
+          "publishedAt": "2026-09-30T16:14:35Z",
+          "whyImportant": "Возможна утечка контента Draft Mode без аутентификации.",
+          "audience": "Разработчики Next.js",
+          "nextStep": "Проверить конфигурацию `use cache` и Draft Mode.",
+          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-3w37-wq28-93x7",
+          "tags": [
+            "Next.js",
+            "Cache",
+            "Draft Mode"
+          ],
+          "changeType": "security",
+          "technologies": [
+            "nextjs"
+          ],
+          "packages": [
+            {
+              "name": "next",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить разделение cache key для Draft Mode",
+            "Тестировать перекрывающиеся запросы"
+          ],
+          "detailsConfidence": "source"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-09-30",
