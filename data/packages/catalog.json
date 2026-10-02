@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-01T11:09:36.918Z",
+  "generatedAt": "2026-10-02T10:43:12.919Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -4500,6 +4500,28 @@
           "url": "https://github.com/vercel/next.js/security/advisories/GHSA-3w37-wq28-93x7"
         },
         {
+          "id": "1038373d4e3a88",
+          "kind": "security",
+          "priority": "P3",
+          "version": null,
+          "title": "Утечка кеша в вложенных функциях 'use cache'",
+          "summary": "Включённый cacheComponents может привести к неверному кешированию и выдаче контента для неверного root‑параметра.",
+          "publishedAt": "2026-09-30T16:14:26Z",
+          "source": "Next.js Security",
+          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-h694-7cp9-m8p3"
+        },
+        {
+          "id": "929d137c27a79b",
+          "kind": "security",
+          "priority": "P3",
+          "version": null,
+          "title": "Потеря кеша SSG и ISR в самохосте Next.js",
+          "summary": "Кеш SSG/ISR может быть перезаписан контентом другого маршрута, приводя к неверному отображению страниц.",
+          "publishedAt": "2026-09-30T16:14:22Z",
+          "source": "Next.js Security",
+          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-4jqv-mc3x-m676"
+        },
+        {
           "id": "cfc7d13e2cab66",
           "kind": "security",
           "priority": "P0",
@@ -4509,6 +4531,17 @@
           "publishedAt": "2026-09-30T16:14:19Z",
           "source": "Next.js Security",
           "url": "https://github.com/vercel/next.js/security/advisories/GHSA-mcj8-r9mp-w47p"
+        },
+        {
+          "id": "0dc0696426bd66",
+          "kind": "security",
+          "priority": "P3",
+          "version": null,
+          "title": "Разглашение информации в dev‑сервере Next.js",
+          "summary": "Dev‑сервер открывает эндпоинт Model Context Protocol без проверки источника, позволяя злоумышленнику читать чувствительные данные проекта.",
+          "publishedAt": "2026-09-30T16:14:15Z",
+          "source": "Next.js Security",
+          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-39w2-rjm5-chcv"
         },
         {
           "id": "71fd0f01ee51e2",
@@ -8804,15 +8837,15 @@
       "packageNames": [
         "@tanstack/react-query"
       ],
-      "latestVersion": "5.104.0",
-      "latestPublishedAt": "2026-09-26T03:56:26.747Z",
+      "latestVersion": "5.104.1",
+      "latestPublishedAt": "2026-10-02T10:04:57.020Z",
       "npmUrl": "https://www.npmjs.com/package/@tanstack/react-query",
       "repositoryUrl": "https://github.com/TanStack/query",
       "packages": [
         {
           "name": "@tanstack/react-query",
-          "latestVersion": "5.104.0",
-          "latestPublishedAt": "2026-09-26T03:56:26.747Z",
+          "latestVersion": "5.104.1",
+          "latestPublishedAt": "2026-10-02T10:04:57.020Z",
           "npmUrl": "https://www.npmjs.com/package/@tanstack/react-query",
           "compatibility": [
             {
@@ -8869,9 +8902,9 @@
               "deprecated": null
             },
             {
-              "range": ">=5.52.1 <=5.104.0",
+              "range": ">=5.52.1 <=5.104.1",
               "minVersion": "5.52.1",
-              "maxVersion": "5.104.0",
+              "maxVersion": "5.104.1",
               "peerDependencies": {
                 "react": "^18 || ^19"
               },
@@ -8881,6 +8914,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "5.104.1",
+              "publishedAt": "2026-10-02T10:04:57.020Z"
+            },
             {
               "version": "5.104.0",
               "publishedAt": "2026-09-26T03:56:26.747Z"

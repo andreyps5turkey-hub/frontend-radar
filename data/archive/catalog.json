@@ -1,7 +1,163 @@
 {
   "version": 2,
-  "updatedAt": "2026-10-01T11:09:29.370Z",
+  "updatedAt": "2026-10-02T10:43:05.371Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-02",
+      "generatedAt": "2026-10-02T10:43:05.371Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 32,
+      "sourceHealth": {
+        "attempted": 32,
+        "succeeded": 32,
+        "failed": []
+      },
+      "status": "active",
+      "summary": "В окне дня обновление Stylelint 17.16.0 исправляет ошибки в правилах layout‑mappings. В read later – три важные уязвимости Next.js.",
+      "items": [
+        {
+          "priority": "P2",
+          "title": "17.16.0 – исправление ошибок в правилах layout‑mappings",
+          "source": "Stylelint Releases",
+          "publishedAt": "2026-10-01T10:26:01Z",
+          "whyImportant": "Обновление устраняет ложные отрицательные и положительные результаты, повышая надёжность стилей.",
+          "audience": "Frontend‑разработчики, использующие Stylelint",
+          "nextStep": "Обновить Stylelint до 17.16.0 и проверить конфигурацию",
+          "url": "https://github.com/stylelint/stylelint/releases/tag/17.16.0",
+          "tags": [
+            "stylelint",
+            "linting",
+            "css"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "quality"
+          ],
+          "packages": [
+            {
+              "name": "stylelint",
+              "releasedVersion": "17.16.0",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "hours",
+          "actionItems": [
+            "Обновить пакет stylelint до 17.16.0",
+            "Запустить linting и проверить предупреждения"
+          ],
+          "detailsConfidence": "source"
+        }
+      ],
+      "readLater": [
+        {
+          "priority": "P3",
+          "title": "Утечка кеша в вложенных функциях 'use cache'",
+          "source": "Next.js Security",
+          "publishedAt": "2026-09-30T16:14:26Z",
+          "whyImportant": "Включённый cacheComponents может привести к неверному кешированию и выдаче контента для неверного root‑параметра.",
+          "audience": "Разработчики Next.js",
+          "nextStep": "Проверить конфигурацию cacheComponents и обновить Next.js",
+          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-h694-7cp9-m8p3",
+          "tags": [
+            "nextjs",
+            "security",
+            "cache"
+          ],
+          "changeType": "security",
+          "technologies": [
+            "nextjs"
+          ],
+          "packages": [
+            {
+              "name": "next",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить, включён ли cacheComponents",
+            "Обновить Next.js до версии, где исправлена уязвимость"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P3",
+          "title": "Потеря кеша SSG и ISR в самохосте Next.js",
+          "source": "Next.js Security",
+          "publishedAt": "2026-09-30T16:14:22Z",
+          "whyImportant": "Кеш SSG/ISR может быть перезаписан контентом другого маршрута, приводя к неверному отображению страниц.",
+          "audience": "Разработчики Next.js",
+          "nextStep": "Обновить Next.js и отключить SSG/ISR для критичных страниц",
+          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-4jqv-mc3x-m676",
+          "tags": [
+            "nextjs",
+            "security",
+            "ssg",
+            "isr"
+          ],
+          "changeType": "security",
+          "technologies": [
+            "nextjs"
+          ],
+          "packages": [
+            {
+              "name": "next",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Обновить Next.js до безопасной версии",
+            "Проверить настройки SSG/ISR"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P3",
+          "title": "Разглашение информации в dev‑сервере Next.js",
+          "source": "Next.js Security",
+          "publishedAt": "2026-09-30T16:14:15Z",
+          "whyImportant": "Dev‑сервер открывает эндпоинт Model Context Protocol без проверки источника, позволяя злоумышленнику читать чувствительные данные проекта.",
+          "audience": "Разработчики Next.js",
+          "nextStep": "Не использовать dev‑сервер в открытых средах",
+          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-39w2-rjm5-chcv",
+          "tags": [
+            "nextjs",
+            "security",
+            "devserver"
+          ],
+          "changeType": "security",
+          "technologies": [
+            "nextjs"
+          ],
+          "packages": [
+            {
+              "name": "next",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Отключить dev‑сервер в продакшене",
+            "Проверить доступ к Model Context Protocol"
+          ],
+          "detailsConfidence": "source"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-10-01",
