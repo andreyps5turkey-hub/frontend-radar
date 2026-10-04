@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-03T10:02:07.223Z",
+  "generatedAt": "2026-10-04T10:44:24.937Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -10694,6 +10694,17 @@
       ],
       "advisories": [],
       "events": [
+        {
+          "id": "a8b2f91ba539d0",
+          "kind": "minor",
+          "priority": "P2",
+          "version": null,
+          "title": "TanStack Query RC: добавлен параметр темы в devtools",
+          "summary": "Позволяет настраивать тему в devtools, улучшая визуализацию при отладке запросов.",
+          "publishedAt": "2026-10-03T20:18:42Z",
+          "source": "TanStack Query Releases",
+          "url": "https://github.com/TanStack/query/releases/tag/release-2026-10-03-2018"
+        },
         {
           "id": "0ef545462440f7",
           "kind": "minor",
