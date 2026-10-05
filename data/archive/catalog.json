@@ -1,7 +1,142 @@
 {
   "version": 2,
-  "updatedAt": "2026-10-04T10:44:19.053Z",
+  "updatedAt": "2026-10-05T11:48:56.424Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-05",
+      "generatedAt": "2026-10-05T11:48:56.424Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 32,
+      "sourceHealth": {
+        "attempted": 32,
+        "succeeded": 32,
+        "failed": []
+      },
+      "status": "active",
+      "summary": "В Vite React Plugins выпущена версия 6.1.2 с исправлениями HMR и логирования.",
+      "items": [
+        {
+          "priority": "P2",
+          "title": "Vite React Plugins: обновление до 6.1.2 – исправления HMR и логирования",
+          "source": "Vite React Plugins",
+          "publishedAt": "2026-10-05T10:06:53Z",
+          "whyImportant": "В версии 6.1.2 исправлены проблемы с горячей перезагрузкой при работе с составными компонентами и восстановлена работа опции compiler.logDiagnostics.",
+          "audience": "frontend‑разработчики, использующие Vite и React",
+          "nextStep": "Обновите пакет @vitejs/plugin-react до версии 6.1.2 и проверьте корректность HMR и логирования в своём проекте.",
+          "url": "https://github.com/vitejs/vite-plugin-react/releases/tag/plugin-react%406.1.2",
+          "tags": [
+            "HMR",
+            "bugfix",
+            "Vite",
+            "React"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "vite",
+            "react"
+          ],
+          "packages": [
+            {
+              "name": "@vitejs/plugin-react",
+              "releasedVersion": "6.1.2",
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "@vitejs/plugin-react-swc",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "@vitejs/plugin-rsc",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "hours",
+          "actionItems": [
+            "Обновить пакет до 6.1.2",
+            "Проверить работу HMR в проекте",
+            "Проверить вывод логов compiler.logDiagnostics"
+          ],
+          "detailsConfidence": "source"
+        }
+      ],
+      "readLater": [
+        {
+          "priority": "P3",
+          "title": "Next.js Releases: выпуск v15.5.27",
+          "source": "Next.js Releases",
+          "publishedAt": "2026-09-30T16:13:42Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, которые поддерживают приложения на Next.js.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/vercel/next.js/releases/tag/v15.5.27",
+          "tags": [
+            "next.js",
+            "обновление"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "nextjs"
+          ],
+          "packages": [
+            {
+              "name": "next",
+              "releasedVersion": "v15.5.27",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        },
+        {
+          "priority": "P3",
+          "title": "Утечка кеша в вложенных функциях 'use cache'",
+          "source": "Next.js Security",
+          "publishedAt": "2026-09-30T16:14:26Z",
+          "whyImportant": "Включённый cacheComponents может привести к неверному кешированию и выдаче контента для неверного root‑параметра.",
+          "audience": "Разработчики Next.js",
+          "nextStep": "Проверить конфигурацию cacheComponents и обновить Next.js",
+          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-h694-7cp9-m8p3",
+          "tags": [
+            "nextjs",
+            "security",
+            "cache"
+          ],
+          "changeType": "security",
+          "technologies": [
+            "nextjs"
+          ],
+          "packages": [
+            {
+              "name": "next",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить, включён ли cacheComponents",
+            "Обновить Next.js до версии, где исправлена уязвимость"
+          ],
+          "detailsConfidence": "source"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-10-04",
