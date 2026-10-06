@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-05T11:49:02.277Z",
+  "generatedAt": "2026-10-06T11:29:11.754Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -5045,15 +5045,15 @@
       "packageNames": [
         "vite"
       ],
-      "latestVersion": "8.3.2",
-      "latestPublishedAt": "2026-10-01T10:17:44.767Z",
+      "latestVersion": "8.3.3",
+      "latestPublishedAt": "2026-10-06T04:10:19.326Z",
       "npmUrl": "https://www.npmjs.com/package/vite",
       "repositoryUrl": "https://github.com/vitejs/vite",
       "packages": [
         {
           "name": "vite",
-          "latestVersion": "8.3.2",
-          "latestPublishedAt": "2026-10-01T10:17:44.767Z",
+          "latestVersion": "8.3.3",
+          "latestPublishedAt": "2026-10-06T04:10:19.326Z",
           "npmUrl": "https://www.npmjs.com/package/vite",
           "compatibility": [
             {
@@ -5066,18 +5066,18 @@
               "deprecated": null
             },
             {
-              "range": ">=6.0.0 <=6.4.3",
+              "range": ">=6.0.0 <=6.4.4",
               "minVersion": "6.0.0",
-              "maxVersion": "6.4.3",
+              "maxVersion": "6.4.4",
               "peerDependencies": {},
               "optionalPeers": [],
               "nodeRange": "^18.0.0 || ^20.0.0 || >=22.0.0",
               "deprecated": null
             },
             {
-              "range": ">=7.0.0 <=8.3.2",
+              "range": ">=7.0.0 <=8.3.3",
               "minVersion": "7.0.0",
-              "maxVersion": "8.3.2",
+              "maxVersion": "8.3.3",
               "peerDependencies": {},
               "optionalPeers": [],
               "nodeRange": "^20.19.0 || >=22.12.0",
@@ -5085,6 +5085,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "8.3.3",
+              "publishedAt": "2026-10-06T04:10:19.326Z"
+            },
             {
               "version": "8.3.2",
               "publishedAt": "2026-10-01T10:17:44.767Z"
@@ -5098,6 +5102,10 @@
               "publishedAt": "2026-09-10T11:30:26.283Z"
             },
             {
+              "version": "8.2.4",
+              "publishedAt": "2026-10-06T04:48:20.112Z"
+            },
+            {
               "version": "8.2.2",
               "publishedAt": "2026-08-20T04:14:39.107Z"
             },
@@ -5108,6 +5116,10 @@
             {
               "version": "8.2.0",
               "publishedAt": "2026-07-30T12:03:25.771Z"
+            },
+            {
+              "version": "8.1.6",
+              "publishedAt": "2026-10-06T04:51:51.393Z"
             },
             {
               "version": "8.1.5",
@@ -5200,6 +5212,10 @@
             {
               "version": "8.0.0",
               "publishedAt": "2026-03-12T13:59:00.561Z"
+            },
+            {
+              "version": "7.3.7",
+              "publishedAt": "2026-10-06T05:11:19.017Z"
             },
             {
               "version": "7.3.6",
@@ -5340,6 +5356,10 @@
             {
               "version": "7.0.0",
               "publishedAt": "2025-06-24T09:18:05.353Z"
+            },
+            {
+              "version": "6.4.4",
+              "publishedAt": "2026-10-06T05:49:07.089Z"
             },
             {
               "version": "6.4.3",
@@ -6528,6 +6548,28 @@
         }
       ],
       "events": [
+        {
+          "id": "57525db430708d",
+          "kind": "minor",
+          "priority": "P2",
+          "version": "8.3.3",
+          "title": "Vite v8.3.3 – обновление зависимостей и исправление багов",
+          "summary": "Обновлены зависимости и исправлены ошибки в работе сервера и трансформации HTML.",
+          "publishedAt": "2026-10-06T08:23:01Z",
+          "source": "Vite Releases",
+          "url": "https://github.com/vitejs/vite/releases/tag/v8.3.3"
+        },
+        {
+          "id": "3118ce70759e49",
+          "kind": "minor",
+          "priority": "P3",
+          "version": "6.4.4",
+          "title": "Vite Releases: выпуск v6.4.4",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-10-06T05:45:15Z",
+          "source": "Vite Releases",
+          "url": "https://github.com/vitejs/vite/releases/tag/v6.4.4"
+        },
         {
           "id": "2ea857e7b3cce0",
           "kind": "major",
