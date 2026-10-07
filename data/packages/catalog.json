@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-06T11:29:11.754Z",
+  "generatedAt": "2026-10-07T11:19:10.176Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -1448,15 +1448,15 @@
       "packageNames": [
         "next"
       ],
-      "latestVersion": "16.3.8",
-      "latestPublishedAt": "2026-09-30T16:07:21.198Z",
+      "latestVersion": "16.4.0",
+      "latestPublishedAt": "2026-10-06T18:35:31.699Z",
       "npmUrl": "https://www.npmjs.com/package/next",
       "repositoryUrl": "https://github.com/vercel/next.js",
       "packages": [
         {
           "name": "next",
-          "latestVersion": "16.3.8",
-          "latestPublishedAt": "2026-09-30T16:07:21.198Z",
+          "latestVersion": "16.4.0",
+          "latestPublishedAt": "2026-10-06T18:35:31.699Z",
           "npmUrl": "https://www.npmjs.com/package/next",
           "compatibility": [
             {
@@ -1856,9 +1856,9 @@
               "deprecated": "This version has a security vulnerability. Please upgrade to a patched version. See https://nextjs.org/blog/security-update-2025-12-11 for more details."
             },
             {
-              "range": ">=16.0.10 <=16.3.8",
+              "range": ">=16.0.10 <=16.4.0",
               "minVersion": "16.0.10",
-              "maxVersion": "16.3.8",
+              "maxVersion": "16.4.0",
               "peerDependencies": {
                 "react": "^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0",
                 "react-dom": "^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0"
@@ -1869,6 +1869,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "16.4.0",
+              "publishedAt": "2026-10-06T18:35:31.699Z"
+            },
             {
               "version": "16.3.8",
               "publishedAt": "2026-09-30T16:07:21.198Z"
@@ -4467,6 +4471,17 @@
       ],
       "events": [
         {
+          "id": "fb176bf94b4aaa",
+          "kind": "minor",
+          "priority": "P1",
+          "version": "16.4.0",
+          "title": "Next.js v16.4.0 – новые возможности и исправления",
+          "summary": "Включены улучшения компилятора, поддержка Pages Router, исправления багов и новые возможности Turbopack.",
+          "publishedAt": "2026-10-07T10:03:29Z",
+          "source": "Next.js Releases",
+          "url": "https://github.com/vercel/next.js/releases/tag/v16.4.0"
+        },
+        {
           "id": "c7cce1dd79d905",
           "kind": "security",
           "priority": "P0",
@@ -6551,7 +6566,7 @@
         {
           "id": "57525db430708d",
           "kind": "minor",
-          "priority": "P2",
+          "priority": "P3",
           "version": "8.3.3",
           "title": "Vite v8.3.3 – обновление зависимостей и исправление багов",
           "summary": "Обновлены зависимости и исправлены ошибки в работе сервера и трансформации HTML.",

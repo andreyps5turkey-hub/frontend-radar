@@ -1,7 +1,190 @@
 {
   "version": 2,
-  "updatedAt": "2026-10-06T11:29:05.342Z",
+  "updatedAt": "2026-10-07T11:19:03.380Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-07",
+      "generatedAt": "2026-10-07T11:19:03.380Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 32,
+      "sourceHealth": {
+        "attempted": 32,
+        "succeeded": 32,
+        "failed": []
+      },
+      "status": "active",
+      "summary": "Сегодня в рамках окна публикаций появились обновления Next.js и Vite React Plugins. Обе версии содержат значимые улучшения и исправления, которые стоит учесть в проектах.",
+      "items": [
+        {
+          "priority": "P1",
+          "title": "Next.js v16.4.0 – новые возможности и исправления",
+          "source": "Next.js Releases",
+          "publishedAt": "2026-10-07T10:03:29Z",
+          "whyImportant": "Включены улучшения компилятора, поддержка Pages Router, исправления багов и новые возможности Turbopack.",
+          "audience": "Разработчики, использующие Next.js",
+          "nextStep": "Обновить до v16.4.0 и проверить совместимость с текущим кодом, особенно в конфигурации Turbopack и Pages Router.",
+          "url": "https://github.com/vercel/next.js/releases/tag/v16.4.0",
+          "tags": [
+            "Next.js",
+            "Turbopack",
+            "Pages Router"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "nextjs"
+          ],
+          "packages": [
+            {
+              "name": "next",
+              "releasedVersion": "v16.4.0",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "days",
+          "actionItems": [
+            "Проверить конфигурацию Turbopack",
+            "Тестировать Pages Router",
+            "Обновить зависимости"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P2",
+          "title": "Vite React Plugins plugin-rsc 0.5.36 – обновление зависимостей и исправления",
+          "source": "Vite React Plugins",
+          "publishedAt": "2026-10-07T02:51:33Z",
+          "whyImportant": "Обновлены зависимости, исправлены баги в работе с CSS и манифестами, улучшена совместимость с ES модулями.",
+          "audience": "Разработчики, использующие Vite и React Plugins",
+          "nextStep": "Обновить до версии 0.5.36 и проверить работу сборки, особенно при использовании CSS и SSR.",
+          "url": "https://github.com/vitejs/vite-plugin-react/releases/tag/plugin-rsc%400.5.36",
+          "tags": [
+            "Vite",
+            "React",
+            "plugin-rsc"
+          ],
+          "changeType": "major",
+          "technologies": [
+            "vite",
+            "platform",
+            "react"
+          ],
+          "packages": [
+            {
+              "name": "@vitejs/plugin-react",
+              "releasedVersion": "0.5.36",
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "@vitejs/plugin-react-swc",
+              "releasedVersion": "0.5.36",
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "@vitejs/plugin-rsc",
+              "releasedVersion": "0.5.36",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "hours",
+          "actionItems": [
+            "Обновить пакет до 0.5.36",
+            "Проверить сборку с CSS",
+            "Тестировать SSR"
+          ],
+          "detailsConfidence": "source"
+        }
+      ],
+      "readLater": [
+        {
+          "priority": "P3",
+          "title": "Vite v8.3.3 – обновление зависимостей и исправление багов",
+          "source": "Vite Releases",
+          "publishedAt": "2026-10-06T08:23:01Z",
+          "whyImportant": "Обновлены зависимости и исправлены ошибки в работе сервера и трансформации HTML.",
+          "audience": "Frontend‑инженеры, использующие Vite",
+          "nextStep": "Проверьте совместимость с текущими плагинами и обновите Vite до версии 8.3.3.",
+          "url": "https://github.com/vitejs/vite/releases/tag/v8.3.3",
+          "tags": [
+            "Vite",
+            "обновление",
+            "патч"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "vite"
+          ],
+          "packages": [
+            {
+              "name": "vite",
+              "releasedVersion": "v8.3.3",
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "@vitejs/plugin-legacy",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить логи сборки после обновления",
+            "Обновить локальный пакет",
+            "Тестировать в staging"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P3",
+          "title": "Vite Releases: выпуск v6.4.4",
+          "source": "Vite Releases",
+          "publishedAt": "2026-10-06T05:45:15Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, использующие инструменты из экосистемы Vite Releases.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/vitejs/vite/releases/tag/v6.4.4",
+          "tags": [
+            "vite",
+            "обновление"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "vite"
+          ],
+          "packages": [
+            {
+              "name": "vite",
+              "releasedVersion": "v6.4.4",
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "@vitejs/plugin-legacy",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-10-06",
