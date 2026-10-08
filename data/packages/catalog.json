@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-07T11:19:10.176Z",
+  "generatedAt": "2026-10-08T11:35:31.777Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -1361,6 +1361,17 @@
           "publishedAt": "Wed, 09 Sep 2026 00:00:00 GMT",
           "source": "React Blog",
           "url": "https://react.dev/blog/2026/09/09/react-19-3"
+        },
+        {
+          "id": "2dd42013696afe",
+          "kind": "major",
+          "priority": "P3",
+          "version": "8.0.0",
+          "title": "React DevTools 8.0.0: новый релиз с улучшениями",
+          "summary": "Мажорный релиз DevTools с новыми возможностями и улучшениями производительности.",
+          "publishedAt": "2026-09-08T23:08:45Z",
+          "source": "React Releases",
+          "url": "https://github.com/react/react/releases/tag/react-devtools%408.0.0"
         },
         {
           "id": "c25152fe5d0384",
@@ -2777,6 +2788,124 @@
         }
       ],
       "advisories": [
+        {
+          "ghsaId": "GHSA-3w37-wq28-93x7",
+          "cveId": "CVE-2026-94544",
+          "severity": "medium",
+          "cvss": 4.2,
+          "title": "Уязвимость GHSA-3w37-wq28-93x7 в next",
+          "summary": "Проверьте установленную версию next и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
+          "publishedAt": "2026-10-07T20:32:13Z",
+          "updatedAt": "2026-10-07T20:32:15Z",
+          "url": "https://github.com/advisories/GHSA-3w37-wq28-93x7",
+          "vulnerabilities": [
+            {
+              "packageName": "next",
+              "vulnerableRange": ">= 16.3.0, < 16.3.8",
+              "fixedVersion": null
+            }
+          ]
+        },
+        {
+          "ghsaId": "GHSA-4jqv-mc3x-m676",
+          "cveId": "CVE-2026-94543",
+          "severity": "medium",
+          "cvss": 5.3,
+          "title": "Уязвимость GHSA-4jqv-mc3x-m676 в next",
+          "summary": "Проверьте установленную версию next и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
+          "publishedAt": "2026-10-07T20:32:06Z",
+          "updatedAt": "2026-10-07T20:32:07Z",
+          "url": "https://github.com/advisories/GHSA-4jqv-mc3x-m676",
+          "vulnerabilities": [
+            {
+              "packageName": "next",
+              "vulnerableRange": ">= 15.0.0, < 15.5.27",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "next",
+              "vulnerableRange": ">= 16.0.0, < 16.3.8",
+              "fixedVersion": null
+            }
+          ]
+        },
+        {
+          "ghsaId": "GHSA-39w2-rjm5-chcv",
+          "cveId": "CVE-2026-94486",
+          "severity": "low",
+          "cvss": 5.4,
+          "title": "Уязвимость GHSA-39w2-rjm5-chcv в next",
+          "summary": "Проверьте установленную версию next и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
+          "publishedAt": "2026-10-07T20:31:51Z",
+          "updatedAt": "2026-10-07T20:31:52Z",
+          "url": "https://github.com/advisories/GHSA-39w2-rjm5-chcv",
+          "vulnerabilities": [
+            {
+              "packageName": "next",
+              "vulnerableRange": ">= 16.0.0, < 16.3.8",
+              "fixedVersion": null
+            }
+          ]
+        },
+        {
+          "ghsaId": "GHSA-f87g-xv8r-7p7x",
+          "cveId": "CVE-2026-94485",
+          "severity": "medium",
+          "cvss": 5.3,
+          "title": "Уязвимость GHSA-f87g-xv8r-7p7x в next",
+          "summary": "Проверьте установленную версию next и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
+          "publishedAt": "2026-10-07T20:31:33Z",
+          "updatedAt": "2026-10-07T20:31:35Z",
+          "url": "https://github.com/advisories/GHSA-f87g-xv8r-7p7x",
+          "vulnerabilities": [
+            {
+              "packageName": "next",
+              "vulnerableRange": ">= 16.0.0, < 16.3.8",
+              "fixedVersion": null
+            }
+          ]
+        },
+        {
+          "ghsaId": "GHSA-mcj8-r9mp-w47p",
+          "cveId": "CVE-2026-94484",
+          "severity": "medium",
+          "cvss": 4.8,
+          "title": "Уязвимость GHSA-mcj8-r9mp-w47p в next",
+          "summary": "Проверьте установленную версию next и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
+          "publishedAt": "2026-10-07T20:31:13Z",
+          "updatedAt": "2026-10-07T20:31:15Z",
+          "url": "https://github.com/advisories/GHSA-mcj8-r9mp-w47p",
+          "vulnerabilities": [
+            {
+              "packageName": "next",
+              "vulnerableRange": ">= 16.0.0, < 16.3.8",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "next",
+              "vulnerableRange": ">= 15.0.0, < 15.5.27",
+              "fixedVersion": null
+            }
+          ]
+        },
+        {
+          "ghsaId": "GHSA-cjq9-62q9-8jv4",
+          "cveId": "CVE-2026-94483",
+          "severity": "high",
+          "cvss": 6.5,
+          "title": "Уязвимость GHSA-cjq9-62q9-8jv4 в next",
+          "summary": "Проверьте установленную версию next и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
+          "publishedAt": "2026-10-07T20:30:55Z",
+          "updatedAt": "2026-10-07T20:30:56Z",
+          "url": "https://github.com/advisories/GHSA-cjq9-62q9-8jv4",
+          "vulnerabilities": [
+            {
+              "packageName": "next",
+              "vulnerableRange": ">= 16.0.0, < 16.3.8",
+              "fixedVersion": null
+            }
+          ]
+        },
         {
           "ghsaId": "GHSA-vcvr-r3jv-pc5j",
           "cveId": null,
