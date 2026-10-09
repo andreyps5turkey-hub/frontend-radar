@@ -1,7 +1,131 @@
 {
   "version": 2,
-  "updatedAt": "2026-10-08T11:35:24.249Z",
+  "updatedAt": "2026-10-09T11:29:41.904Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09",
+      "generatedAt": "2026-10-09T11:29:41.904Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 32,
+      "sourceHealth": {
+        "attempted": 32,
+        "succeeded": 32,
+        "failed": []
+      },
+      "status": "active",
+      "summary": "В течение дня в Vite выпущена версия 8.3.4 с новыми возможностями и исправлениями.",
+      "items": [
+        {
+          "priority": "P1",
+          "title": "Vite 8.3.4: новые возможности HMR и исправления сборки",
+          "source": "Vite Releases",
+          "publishedAt": "2026-10-08T12:03:54Z",
+          "whyImportant": "Обновление добавляет поддержку `import.meta.hot.acceptExports`, улучшает работу HMR и исправляет ряд ошибок сборки, повышая стабильность разработки.",
+          "audience": "Frontend‑инженеры, использующие Vite",
+          "nextStep": "Обновить Vite до версии 8.3.4 и проверить работу HMR и сборки в проекте.",
+          "url": "https://github.com/vitejs/vite/releases/tag/v8.3.4",
+          "tags": [
+            "Vite",
+            "HMR",
+            "build"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "vite",
+            "platform"
+          ],
+          "packages": [
+            {
+              "name": "vite",
+              "releasedVersion": "8.3.4",
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "@vitejs/plugin-legacy",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "days",
+          "actionItems": [
+            "Проверить совместимость с текущими плагинами",
+            "Запустить сборку и убедиться, что HMR работает корректно"
+          ],
+          "detailsConfidence": "source"
+        }
+      ],
+      "readLater": [
+        {
+          "priority": "P3",
+          "title": "React DevTools 8.0.0: новый релиз с улучшениями",
+          "source": "React Releases",
+          "publishedAt": "2026-09-08T23:08:45Z",
+          "whyImportant": "Мажорный релиз DevTools с новыми возможностями и улучшениями производительности.",
+          "audience": "Разработчики, использующие React DevTools",
+          "nextStep": "Обновить пакеты react-devtools, react-devtools-core и react-devtools-inline до версии 8.0.0 и проверить работу расширений.",
+          "url": "https://github.com/react/react/releases/tag/react-devtools%408.0.0",
+          "tags": [
+            "React",
+            "DevTools"
+          ],
+          "changeType": "major",
+          "technologies": [
+            "react"
+          ],
+          "packages": [
+            {
+              "name": "react",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "react-dom",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Обновить пакеты до 8.0.0",
+            "Проверить работу расширений в Chrome/Edge/Firefox"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P3",
+          "title": "Node.js 26.11.1: откат изменений",
+          "source": "Node.js Releases",
+          "publishedAt": "2026-10-07T23:55:23Z",
+          "whyImportant": "Откат некоторых изменений в сборке и документации, что может повлиять на процесс сборки и генерацию документации.",
+          "audience": "Разработчики, работающие с Node.js и его сборкой",
+          "nextStep": "Проверить, что откаты не влияют на ваш билд и документацию.",
+          "url": "https://github.com/nodejs/node/releases/tag/v26.11.1",
+          "tags": [
+            "Node.js"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "platform"
+          ],
+          "packages": [],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить сборку после обновления до 26.11.1",
+            "Сравнить вывод документации с предыдущей версией"
+          ],
+          "detailsConfidence": "source"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-10-08",
