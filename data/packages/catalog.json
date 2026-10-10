@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-09T11:29:48.960Z",
+  "generatedAt": "2026-10-10T10:47:18.865Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -4667,11 +4667,11 @@
         },
         {
           "id": "cfc7d13e2cab66",
-          "kind": "security",
-          "priority": "P0",
+          "kind": "patch",
+          "priority": "P3",
           "version": null,
-          "title": "Проблема «Cache poisoning» в Next.js SSG/ISR приводит к подмене контента и отказу в обслуживании",
-          "summary": "Атаки позволяют подменить контент одного пользователя контентом другого и вызвать DoS.",
+          "title": "Новый материал от Next.js Security",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
           "publishedAt": "2026-09-30T16:14:19Z",
           "source": "Next.js Security",
           "url": "https://github.com/vercel/next.js/security/advisories/GHSA-mcj8-r9mp-w47p"
@@ -16634,15 +16634,15 @@
       "packageNames": [
         "prettier"
       ],
-      "latestVersion": "3.9.9",
-      "latestPublishedAt": "2026-09-23T06:31:34.693Z",
+      "latestVersion": "3.9.10",
+      "latestPublishedAt": "2026-10-10T08:35:28.472Z",
       "npmUrl": "https://www.npmjs.com/package/prettier",
       "repositoryUrl": "https://github.com/prettier/prettier",
       "packages": [
         {
           "name": "prettier",
-          "latestVersion": "3.9.9",
-          "latestPublishedAt": "2026-09-23T06:31:34.693Z",
+          "latestVersion": "3.9.10",
+          "latestPublishedAt": "2026-10-10T08:35:28.472Z",
           "npmUrl": "https://www.npmjs.com/package/prettier",
           "compatibility": [
             {
@@ -16673,9 +16673,9 @@
               "deprecated": null
             },
             {
-              "range": ">=3.0.0 <=3.9.9",
+              "range": ">=3.0.0 <=3.9.10",
               "minVersion": "3.0.0",
-              "maxVersion": "3.9.9",
+              "maxVersion": "3.9.10",
               "peerDependencies": {},
               "optionalPeers": [],
               "nodeRange": ">=14",
@@ -16683,6 +16683,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "3.9.10",
+              "publishedAt": "2026-10-10T08:35:28.472Z"
+            },
             {
               "version": "3.9.9",
               "publishedAt": "2026-09-23T06:31:34.693Z"
@@ -17359,7 +17363,19 @@
         }
       ],
       "advisories": [],
-      "events": []
+      "events": [
+        {
+          "id": "0c9b54a24d9574",
+          "kind": "minor",
+          "priority": "P3",
+          "version": "3.9.10",
+          "title": "Prettier Releases: выпуск 3.9.10",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-10-10T08:36:47Z",
+          "source": "Prettier Releases",
+          "url": "https://github.com/prettier/prettier/releases/tag/3.9.10"
+        }
+      ]
     }
   ]
 }
