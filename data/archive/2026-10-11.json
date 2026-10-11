@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 2,
+  "date": "2026-10-11",
+  "generatedAt": "2026-10-11T10:59:50.105Z",
+  "timezone": "Europe/Moscow",
+  "windowHours": 26,
+  "sourcesChecked": 32,
+  "sourceHealth": {
+    "attempted": 32,
+    "succeeded": 32,
+    "failed": []
+  },
+  "status": "quiet",
+  "summary": "Значимых новых событий не найдено. Подборка для чтения собрана в резервном режиме.",
+  "items": [],
+  "readLater": [
+    {
+      "priority": "P3",
+      "title": "Новый материал от Next.js Security",
+      "source": "Next.js Security",
+      "publishedAt": "2026-09-30T16:14:19Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, которые поддерживают приложения на Next.js.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-mcj8-r9mp-w47p",
+      "tags": [
+        "next.js",
+        "безопасность"
+      ],
+      "changeType": "tooling",
+      "technologies": [
+        "nextjs"
+      ],
+      "packages": [
+        {
+          "name": "next",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    },
+    {
+      "priority": "P3",
+      "title": "Node.js Releases: выпуск 26.8.2",
+      "source": "Node.js Releases",
+      "publishedAt": "2026-09-09T16:07:48Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/nodejs/node/releases/tag/v26.8.2",
+      "tags": [
+        "node.js",
+        "обновление"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "platform"
+      ],
+      "packages": [],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    },
+    {
+      "priority": "P3",
+      "title": "Next.js Releases: выпуск v16.4.0",
+      "source": "Next.js Releases",
+      "publishedAt": "2026-10-07T10:03:29Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, которые поддерживают приложения на Next.js.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.4.0",
+      "tags": [
+        "next.js",
+        "обновление"
+      ],
+      "changeType": "breaking",
+      "technologies": [
+        "nextjs"
+      ],
+      "packages": [
+        {
+          "name": "next",
+          "releasedVersion": "v16.4.0",
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    }
+  ]
+}
