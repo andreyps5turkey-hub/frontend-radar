@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "date": "2026-10-11",
-  "generatedAt": "2026-10-11T17:40:59.536Z",
+  "date": "2026-10-12",
+  "generatedAt": "2026-10-12T12:24:10.248Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -14,6 +14,32 @@
   "summary": "Значимых новых событий не найдено. Подборка для чтения собрана в резервном режиме.",
   "items": [],
   "readLater": [
+    {
+      "priority": "P3",
+      "title": "Новый материал от Веб-стандарты",
+      "source": "Веб-стандарты",
+      "publishedAt": "Mon, 12 Oct 2026 09:00:00 GMT",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы Веб-стандарты.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://web-standards.ru/podcast/548/",
+      "tags": [
+        "веб-стандарты",
+        "обновление"
+      ],
+      "changeType": "guide",
+      "technologies": [
+        "platform"
+      ],
+      "packages": [],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    },
     {
       "priority": "P3",
       "title": "Новый материал от Next.js Security",
@@ -65,39 +91,6 @@
         "platform"
       ],
       "packages": [],
-      "risk": "low",
-      "effort": "minutes",
-      "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
-      ],
-      "detailsConfidence": "inferred"
-    },
-    {
-      "priority": "P3",
-      "title": "Next.js Releases: выпуск v16.4.0",
-      "source": "Next.js Releases",
-      "publishedAt": "2026-10-07T10:03:29Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, которые поддерживают приложения на Next.js.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/vercel/next.js/releases/tag/v16.4.0",
-      "tags": [
-        "next.js",
-        "обновление"
-      ],
-      "changeType": "breaking",
-      "technologies": [
-        "nextjs"
-      ],
-      "packages": [
-        {
-          "name": "next",
-          "releasedVersion": "v16.4.0",
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
       "risk": "low",
       "effort": "minutes",
       "actionItems": [
