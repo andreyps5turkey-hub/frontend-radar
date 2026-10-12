@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "date": "2026-10-12",
-  "generatedAt": "2026-10-12T12:24:10.248Z",
+  "generatedAt": "2026-10-12T13:08:04.928Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -10,9 +10,44 @@
     "succeeded": 32,
     "failed": []
   },
-  "status": "quiet",
-  "summary": "Значимых новых событий не найдено. Подборка для чтения собрана в резервном режиме.",
-  "items": [],
+  "status": "active",
+  "summary": "В окне дня вышло обновление DOMPurify 3.4.17, исправляющее ряд ошибок в обработке узлов и атрибутов.",
+  "items": [
+    {
+      "priority": "P2",
+      "title": "DOMPurify 3.4.17 — обновление",
+      "source": "DOMPurify Releases",
+      "publishedAt": "2026-10-12T12:38:37Z",
+      "whyImportant": "Исправлены ошибки в обработке IN_PLACE, SAFE_FOR_TEMPLATES и shadow‑root, а также улучшена защита от уязвимостей в XHTML‑режиме.",
+      "audience": "Разработчики, использующие DOMPurify для очистки HTML",
+      "nextStep": "Обновите пакет до версии 3.4.17 и проверьте корректность работы в вашем проекте.",
+      "url": "https://github.com/cure53/DOMPurify/releases/tag/3.4.17",
+      "tags": [
+        "DOMPurify",
+        "sanitization"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "platform"
+      ],
+      "packages": [
+        {
+          "name": "dompurify",
+          "releasedVersion": "3.4.17",
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
+      "effort": "hours",
+      "actionItems": [
+        "Проверьте совместимость с текущим кодом",
+        "Обновите зависимость до 3.4.17",
+        "Запустите тесты очистки"
+      ],
+      "detailsConfidence": "source"
+    }
+  ],
   "readLater": [
     {
       "priority": "P3",
@@ -65,32 +100,6 @@
           "fixedVersion": null
         }
       ],
-      "risk": "low",
-      "effort": "minutes",
-      "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
-      ],
-      "detailsConfidence": "inferred"
-    },
-    {
-      "priority": "P3",
-      "title": "Node.js Releases: выпуск 26.8.2",
-      "source": "Node.js Releases",
-      "publishedAt": "2026-09-09T16:07:48Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/nodejs/node/releases/tag/v26.8.2",
-      "tags": [
-        "node.js",
-        "обновление"
-      ],
-      "changeType": "minor",
-      "technologies": [
-        "platform"
-      ],
-      "packages": [],
       "risk": "low",
       "effort": "minutes",
       "actionItems": [
