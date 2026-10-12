@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "date": "2026-10-12",
-  "generatedAt": "2026-10-12T13:08:04.928Z",
+  "date": "2026-10-13",
+  "generatedAt": "2026-10-12T21:15:31.656Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -11,29 +11,37 @@
     "failed": []
   },
   "status": "active",
-  "summary": "В окне дня вышло обновление DOMPurify 3.4.17, исправляющее ряд ошибок в обработке узлов и атрибутов.",
+  "summary": "Сегодня в окне публикаций только один значимый выпуск – патч безопасности Storybook v10.6.2. Остальные обновления – обычные релизы без критических изменений.",
   "items": [
     {
-      "priority": "P2",
-      "title": "DOMPurify 3.4.17 — обновление",
-      "source": "DOMPurify Releases",
-      "publishedAt": "2026-10-12T12:38:37Z",
-      "whyImportant": "Исправлены ошибки в обработке IN_PLACE, SAFE_FOR_TEMPLATES и shadow‑root, а также улучшена защита от уязвимостей в XHTML‑режиме.",
-      "audience": "Разработчики, использующие DOMPurify для очистки HTML",
-      "nextStep": "Обновите пакет до версии 3.4.17 и проверьте корректность работы в вашем проекте.",
-      "url": "https://github.com/cure53/DOMPurify/releases/tag/3.4.17",
+      "priority": "P0",
+      "title": "Storybook v10.6.2 – патч безопасности GHSA-f2ph-cmg5-wxc8 и GHSA-px85-f4q5-jh77",
+      "source": "Storybook Releases",
+      "publishedAt": "2026-10-12T18:19:37Z",
+      "whyImportant": "Исправлены уязвимости, позволяющие удалённо выполнить код через взаимодействие с Storybook.",
+      "audience": "Разработчики, использующие Storybook в продакшене",
+      "nextStep": "Обновить Storybook до версии 10.6.2 и проверить, что все плагины совместимы.",
+      "url": "https://github.com/storybookjs/storybook/releases/tag/v10.6.2",
       "tags": [
-        "DOMPurify",
-        "sanitization"
+        "Storybook",
+        "Безопасность"
       ],
-      "changeType": "minor",
+      "changeType": "security",
       "technologies": [
-        "platform"
+        "typescript",
+        "vite",
+        "storybook"
       ],
       "packages": [
         {
-          "name": "dompurify",
-          "releasedVersion": "3.4.17",
+          "name": "storybook",
+          "releasedVersion": "v10.6.2",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "@storybook/react",
+          "releasedVersion": null,
           "affectedRange": null,
           "fixedVersion": null
         }
@@ -41,72 +49,127 @@
       "risk": "unknown",
       "effort": "hours",
       "actionItems": [
-        "Проверьте совместимость с текущим кодом",
-        "Обновите зависимость до 3.4.17",
-        "Запустите тесты очистки"
+        "Установить npm i storybook@10.6.2",
+        "Проверить работу CI"
       ],
       "detailsConfidence": "source"
     }
   ],
   "readLater": [
     {
-      "priority": "P3",
-      "title": "Новый материал от Веб-стандарты",
-      "source": "Веб-стандарты",
-      "publishedAt": "Mon, 12 Oct 2026 09:00:00 GMT",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы Веб-стандарты.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://web-standards.ru/podcast/548/",
+      "priority": "P2",
+      "title": "Storybook v8.6.19 – улучшения безопасности и стабильности",
+      "source": "Storybook Releases",
+      "publishedAt": "2026-10-12T19:06:45Z",
+      "whyImportant": "Добавлены ограничения на пост‑сообщения и проверка экспортов компонентов, повышая безопасность разработки.",
+      "audience": "Frontend‑инженеры, работающие с Storybook",
+      "nextStep": "Изучить новые фичи и протестировать в локальной среде.",
+      "url": "https://github.com/storybookjs/storybook/releases/tag/v8.6.19",
       "tags": [
-        "веб-стандарты",
-        "обновление"
+        "Storybook",
+        "Безопасность"
       ],
-      "changeType": "guide",
+      "changeType": "minor",
       "technologies": [
-        "platform"
-      ],
-      "packages": [],
-      "risk": "low",
-      "effort": "minutes",
-      "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
-      ],
-      "detailsConfidence": "inferred"
-    },
-    {
-      "priority": "P3",
-      "title": "Новый материал от Next.js Security",
-      "source": "Next.js Security",
-      "publishedAt": "2026-09-30T16:14:19Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, которые поддерживают приложения на Next.js.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-mcj8-r9mp-w47p",
-      "tags": [
-        "next.js",
-        "безопасность"
-      ],
-      "changeType": "tooling",
-      "technologies": [
-        "nextjs"
+        "storybook"
       ],
       "packages": [
         {
-          "name": "next",
+          "name": "storybook",
+          "releasedVersion": "v8.6.19",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "@storybook/react",
           "releasedVersion": null,
           "affectedRange": null,
           "fixedVersion": null
         }
       ],
-      "risk": "low",
+      "risk": "unknown",
       "effort": "minutes",
       "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
+        "Проверить совместимость с текущим проектом"
       ],
-      "detailsConfidence": "inferred"
+      "detailsConfidence": "source"
+    },
+    {
+      "priority": "P2",
+      "title": "Storybook v9.1.21 – обновления безопасности и улучшения UX",
+      "source": "Storybook Releases",
+      "publishedAt": "2026-10-12T18:59:18Z",
+      "whyImportant": "Обновлены механизмы проверки экспортов и ограничений, повышая безопасность и удобство использования.",
+      "audience": "Frontend‑инженеры, использующие Storybook",
+      "nextStep": "Оценить влияние обновления на существующие истории.",
+      "url": "https://github.com/storybookjs/storybook/releases/tag/v9.1.21",
+      "tags": [
+        "Storybook",
+        "UX"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "storybook"
+      ],
+      "packages": [
+        {
+          "name": "storybook",
+          "releasedVersion": "v9.1.21",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "@storybook/react",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить работу существующих историй"
+      ],
+      "detailsConfidence": "source"
+    },
+    {
+      "priority": "P3",
+      "title": "typescript-eslint v8.71.2 – исправления и улучшения правил",
+      "source": "typescript-eslint Releases",
+      "publishedAt": "2026-10-12T17:07:10Z",
+      "whyImportant": "Новые патчи устраняют ложные срабатывания и улучшают работу правил, повышая качество кода.",
+      "audience": "Разработчики, использующие eslint с TypeScript",
+      "nextStep": "Обновить пакет и проверить конфигурацию.",
+      "url": "https://github.com/typescript-eslint/typescript-eslint/releases/tag/v8.71.2",
+      "tags": [
+        "typescript-eslint",
+        "ESLint"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "typescript",
+        "quality"
+      ],
+      "packages": [
+        {
+          "name": "typescript-eslint",
+          "releasedVersion": "v8.71.2",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "@typescript-eslint/parser",
+          "releasedVersion": "v8.71.2",
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
+      "effort": "minutes",
+      "actionItems": [
+        "Обновить npm i typescript-eslint@8.71.2"
+      ],
+      "detailsConfidence": "source"
     }
   ]
 }

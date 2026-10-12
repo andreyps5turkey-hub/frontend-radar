@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-12T13:08:12.008Z",
+  "generatedAt": "2026-10-12T21:15:37.937Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -10986,15 +10986,15 @@
         "storybook",
         "@storybook/react"
       ],
-      "latestVersion": "10.6.1",
-      "latestPublishedAt": "2026-09-29T17:20:05.303Z",
+      "latestVersion": "10.6.2",
+      "latestPublishedAt": "2026-10-12T18:22:29.069Z",
       "npmUrl": "https://www.npmjs.com/package/storybook",
       "repositoryUrl": "https://github.com/storybookjs/storybook",
       "packages": [
         {
           "name": "storybook",
-          "latestVersion": "10.6.1",
-          "latestPublishedAt": "2026-09-29T17:20:05.303Z",
+          "latestVersion": "10.6.2",
+          "latestPublishedAt": "2026-10-12T18:22:29.069Z",
           "npmUrl": "https://www.npmjs.com/package/storybook",
           "compatibility": [
             {
@@ -11007,9 +11007,9 @@
               "deprecated": null
             },
             {
-              "range": ">=8.4.0 <=10.6.1",
+              "range": ">=8.4.0 <=10.6.2",
               "minVersion": "8.4.0",
-              "maxVersion": "10.6.1",
+              "maxVersion": "10.6.2",
               "peerDependencies": {
                 "prettier": "^2 || ^3"
               },
@@ -11021,6 +11021,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "10.6.2",
+              "publishedAt": "2026-10-12T18:22:29.069Z"
+            },
             {
               "version": "10.6.1",
               "publishedAt": "2026-09-29T17:20:05.303Z"
@@ -11294,6 +11298,10 @@
               "publishedAt": "2025-10-28T12:38:50.693Z"
             },
             {
+              "version": "9.1.21",
+              "publishedAt": "2026-10-12T19:05:06.054Z"
+            },
+            {
               "version": "9.1.20",
               "publishedAt": "2026-03-05T21:22:17.791Z"
             },
@@ -11448,6 +11456,10 @@
             {
               "version": "9.0.0",
               "publishedAt": "2025-05-28T12:22:26.477Z"
+            },
+            {
+              "version": "8.6.19",
+              "publishedAt": "2026-10-12T19:08:01.324Z"
             },
             {
               "version": "8.6.18",
@@ -12057,8 +12069,8 @@
         },
         {
           "name": "@storybook/react",
-          "latestVersion": "10.6.1",
-          "latestPublishedAt": "2026-09-29T17:19:18.293Z",
+          "latestVersion": "10.6.2",
+          "latestPublishedAt": "2026-10-12T18:18:24.486Z",
           "npmUrl": "https://www.npmjs.com/package/@storybook/react",
           "compatibility": [
             {
@@ -13001,6 +13013,22 @@
               "deprecated": null
             },
             {
+              "range": "8.6.19",
+              "minVersion": "8.6.19",
+              "maxVersion": "8.6.19",
+              "peerDependencies": {
+                "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta",
+                "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta",
+                "storybook": "^8.6.19",
+                "typescript": ">= 4.2.x"
+              },
+              "optionalPeers": [
+                "typescript"
+              ],
+              "nodeRange": ">=18.0.0",
+              "deprecated": null
+            },
+            {
               "range": "9.0.0",
               "minVersion": "9.0.0",
               "maxVersion": "9.0.0",
@@ -13616,6 +13644,22 @@
                 "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta",
                 "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta",
                 "storybook": "^9.1.20",
+                "typescript": ">= 4.9.x"
+              },
+              "optionalPeers": [
+                "typescript"
+              ],
+              "nodeRange": ">=20.0.0",
+              "deprecated": null
+            },
+            {
+              "range": "9.1.21",
+              "minVersion": "9.1.21",
+              "maxVersion": "9.1.21",
+              "peerDependencies": {
+                "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta",
+                "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta",
+                "storybook": "^9.1.21",
                 "typescript": ">= 4.9.x"
               },
               "optionalPeers": [
@@ -14711,9 +14755,29 @@
               ],
               "nodeRange": null,
               "deprecated": null
+            },
+            {
+              "range": "10.6.2",
+              "minVersion": "10.6.2",
+              "maxVersion": "10.6.2",
+              "peerDependencies": {
+                "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+                "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+                "storybook": "^10.6.2",
+                "typescript": ">= 4.9.x"
+              },
+              "optionalPeers": [
+                "typescript"
+              ],
+              "nodeRange": null,
+              "deprecated": null
             }
           ],
           "versions": [
+            {
+              "version": "10.6.2",
+              "publishedAt": "2026-10-12T18:18:24.486Z"
+            },
             {
               "version": "10.6.1",
               "publishedAt": "2026-09-29T17:19:18.293Z"
@@ -14987,6 +15051,10 @@
               "publishedAt": "2025-10-28T12:39:44.589Z"
             },
             {
+              "version": "9.1.21",
+              "publishedAt": "2026-10-12T19:00:48.770Z"
+            },
+            {
               "version": "9.1.20",
               "publishedAt": "2026-03-05T21:23:19.440Z"
             },
@@ -15141,6 +15209,10 @@
             {
               "version": "9.0.0",
               "publishedAt": "2025-05-28T12:23:32.087Z"
+            },
+            {
+              "version": "8.6.19",
+              "publishedAt": "2026-10-12T19:07:54.490Z"
             },
             {
               "version": "8.6.18",
@@ -15813,6 +15885,39 @@
         }
       ],
       "events": [
+        {
+          "id": "e5e413f2260ecd",
+          "kind": "minor",
+          "priority": "P2",
+          "version": "8.6.19",
+          "title": "Storybook v8.6.19 – улучшения безопасности и стабильности",
+          "summary": "Добавлены ограничения на пост‑сообщения и проверка экспортов компонентов, повышая безопасность разработки.",
+          "publishedAt": "2026-10-12T19:06:45Z",
+          "source": "Storybook Releases",
+          "url": "https://github.com/storybookjs/storybook/releases/tag/v8.6.19"
+        },
+        {
+          "id": "4016b93ef151ab",
+          "kind": "minor",
+          "priority": "P2",
+          "version": "9.1.21",
+          "title": "Storybook v9.1.21 – обновления безопасности и улучшения UX",
+          "summary": "Обновлены механизмы проверки экспортов и ограничений, повышая безопасность и удобство использования.",
+          "publishedAt": "2026-10-12T18:59:18Z",
+          "source": "Storybook Releases",
+          "url": "https://github.com/storybookjs/storybook/releases/tag/v9.1.21"
+        },
+        {
+          "id": "4a6462194d1c75",
+          "kind": "security",
+          "priority": "P0",
+          "version": "10.6.2",
+          "title": "Storybook v10.6.2 – патч безопасности GHSA-f2ph-cmg5-wxc8 и GHSA-px85-f4q5-jh77",
+          "summary": "Исправлены уязвимости, позволяющие удалённо выполнить код через взаимодействие с Storybook.",
+          "publishedAt": "2026-10-12T18:19:37Z",
+          "source": "Storybook Releases",
+          "url": "https://github.com/storybookjs/storybook/releases/tag/v10.6.2"
+        },
         {
           "id": "50002d630c4b63",
           "kind": "minor",
