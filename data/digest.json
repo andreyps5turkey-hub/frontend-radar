@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "date": "2026-10-13",
-  "generatedAt": "2026-10-12T21:15:31.656Z",
+  "date": "2026-10-14",
+  "generatedAt": "2026-10-14T09:42:04.446Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -11,165 +11,161 @@
     "failed": []
   },
   "status": "active",
-  "summary": "Сегодня в окне публикаций только один значимый выпуск – патч безопасности Storybook v10.6.2. Остальные обновления – обычные релизы без критических изменений.",
+  "summary": "Автоматическая подборка собрана в резервном режиме. Проверьте релизы по ссылкам на первоисточники.",
   "items": [
     {
-      "priority": "P0",
-      "title": "Storybook v10.6.2 – патч безопасности GHSA-f2ph-cmg5-wxc8 и GHSA-px85-f4q5-jh77",
-      "source": "Storybook Releases",
-      "publishedAt": "2026-10-12T18:19:37Z",
-      "whyImportant": "Исправлены уязвимости, позволяющие удалённо выполнить код через взаимодействие с Storybook.",
-      "audience": "Разработчики, использующие Storybook в продакшене",
-      "nextStep": "Обновить Storybook до версии 10.6.2 и проверить, что все плагины совместимы.",
-      "url": "https://github.com/storybookjs/storybook/releases/tag/v10.6.2",
+      "priority": "P1",
+      "title": "Новый материал от TanStack Query Releases",
+      "source": "TanStack Query Releases",
+      "publishedAt": "2026-10-13T23:08:28Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы TanStack Query Releases.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/TanStack/query/releases/tag/release-2026-10-13-2308",
       "tags": [
-        "Storybook",
-        "Безопасность"
+        "tanstack",
+        "обновление"
       ],
-      "changeType": "security",
+      "changeType": "breaking",
       "technologies": [
-        "typescript",
-        "vite",
-        "storybook"
+        "query"
       ],
       "packages": [
         {
-          "name": "storybook",
-          "releasedVersion": "v10.6.2",
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "@storybook/react",
+          "name": "@tanstack/react-query",
           "releasedVersion": null,
           "affectedRange": null,
           "fixedVersion": null
         }
       ],
-      "risk": "unknown",
-      "effort": "hours",
+      "risk": "low",
+      "effort": "minutes",
       "actionItems": [
-        "Установить npm i storybook@10.6.2",
-        "Проверить работу CI"
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
       ],
-      "detailsConfidence": "source"
+      "detailsConfidence": "inferred"
     }
   ],
   "readLater": [
     {
-      "priority": "P2",
-      "title": "Storybook v8.6.19 – улучшения безопасности и стабильности",
-      "source": "Storybook Releases",
-      "publishedAt": "2026-10-12T19:06:45Z",
-      "whyImportant": "Добавлены ограничения на пост‑сообщения и проверка экспортов компонентов, повышая безопасность разработки.",
-      "audience": "Frontend‑инженеры, работающие с Storybook",
-      "nextStep": "Изучить новые фичи и протестировать в локальной среде.",
-      "url": "https://github.com/storybookjs/storybook/releases/tag/v8.6.19",
-      "tags": [
-        "Storybook",
-        "Безопасность"
-      ],
-      "changeType": "minor",
-      "technologies": [
-        "storybook"
-      ],
-      "packages": [
-        {
-          "name": "storybook",
-          "releasedVersion": "v8.6.19",
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "@storybook/react",
-          "releasedVersion": null,
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "unknown",
-      "effort": "minutes",
-      "actionItems": [
-        "Проверить совместимость с текущим проектом"
-      ],
-      "detailsConfidence": "source"
-    },
-    {
-      "priority": "P2",
-      "title": "Storybook v9.1.21 – обновления безопасности и улучшения UX",
-      "source": "Storybook Releases",
-      "publishedAt": "2026-10-12T18:59:18Z",
-      "whyImportant": "Обновлены механизмы проверки экспортов и ограничений, повышая безопасность и удобство использования.",
-      "audience": "Frontend‑инженеры, использующие Storybook",
-      "nextStep": "Оценить влияние обновления на существующие истории.",
-      "url": "https://github.com/storybookjs/storybook/releases/tag/v9.1.21",
-      "tags": [
-        "Storybook",
-        "UX"
-      ],
-      "changeType": "minor",
-      "technologies": [
-        "storybook"
-      ],
-      "packages": [
-        {
-          "name": "storybook",
-          "releasedVersion": "v9.1.21",
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "@storybook/react",
-          "releasedVersion": null,
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "unknown",
-      "effort": "minutes",
-      "actionItems": [
-        "Проверить работу существующих историй"
-      ],
-      "detailsConfidence": "source"
-    },
-    {
       "priority": "P3",
-      "title": "typescript-eslint v8.71.2 – исправления и улучшения правил",
-      "source": "typescript-eslint Releases",
-      "publishedAt": "2026-10-12T17:07:10Z",
-      "whyImportant": "Новые патчи устраняют ложные срабатывания и улучшают работу правил, повышая качество кода.",
-      "audience": "Разработчики, использующие eslint с TypeScript",
-      "nextStep": "Обновить пакет и проверить конфигурацию.",
-      "url": "https://github.com/typescript-eslint/typescript-eslint/releases/tag/v8.71.2",
+      "title": "Vite React Plugins: выпуск 0.5.37",
+      "source": "Vite React Plugins",
+      "publishedAt": "2026-10-13T10:31:04Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Разработчики и команды, использующие React.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/vitejs/vite-plugin-react/releases/tag/plugin-rsc%400.5.37",
       "tags": [
-        "typescript-eslint",
-        "ESLint"
+        "vite",
+        "обновление"
       ],
       "changeType": "minor",
       "technologies": [
         "typescript",
-        "quality"
+        "vite",
+        "platform",
+        "react"
       ],
       "packages": [
         {
-          "name": "typescript-eslint",
-          "releasedVersion": "v8.71.2",
+          "name": "@vitejs/plugin-react",
+          "releasedVersion": null,
           "affectedRange": null,
           "fixedVersion": null
         },
         {
-          "name": "@typescript-eslint/parser",
-          "releasedVersion": "v8.71.2",
+          "name": "@vitejs/plugin-react-swc",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "@vitejs/plugin-rsc",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "vite",
+          "releasedVersion": "0.5.37",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "react",
+          "releasedVersion": "0.5.37",
           "affectedRange": null,
           "fixedVersion": null
         }
       ],
-      "risk": "unknown",
+      "risk": "low",
       "effort": "minutes",
       "actionItems": [
-        "Обновить npm i typescript-eslint@8.71.2"
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
       ],
-      "detailsConfidence": "source"
+      "detailsConfidence": "inferred"
+    },
+    {
+      "priority": "P3",
+      "title": "Новый материал от Next.js Security",
+      "source": "Next.js Security",
+      "publishedAt": "2026-09-30T16:14:19Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, которые поддерживают приложения на Next.js.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-mcj8-r9mp-w47p",
+      "tags": [
+        "next.js",
+        "безопасность"
+      ],
+      "changeType": "tooling",
+      "technologies": [
+        "nextjs"
+      ],
+      "packages": [
+        {
+          "name": "next",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    },
+    {
+      "priority": "P3",
+      "title": "Node.js Releases: выпуск 26.8.2",
+      "source": "Node.js Releases",
+      "publishedAt": "2026-09-09T16:07:48Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/nodejs/node/releases/tag/v26.8.2",
+      "tags": [
+        "node.js",
+        "обновление"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "platform"
+      ],
+      "packages": [],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
     }
   ]
 }

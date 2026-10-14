@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-12T21:15:37.937Z",
+  "generatedAt": "2026-10-14T09:42:11.305Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -1329,6 +1329,17 @@
         }
       ],
       "events": [
+        {
+          "id": "ea0ffd7f3d62a1",
+          "kind": "minor",
+          "priority": "P3",
+          "version": "0.5.37",
+          "title": "Vite React Plugins: выпуск 0.5.37",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-10-13T10:31:04Z",
+          "source": "Vite React Plugins",
+          "url": "https://github.com/vitejs/vite-plugin-react/releases/tag/plugin-rsc%400.5.37"
+        },
         {
           "id": "23ee571ff79286",
           "kind": "patch",
@@ -6697,6 +6708,17 @@
       ],
       "events": [
         {
+          "id": "ea0ffd7f3d62a1",
+          "kind": "minor",
+          "priority": "P3",
+          "version": "0.5.37",
+          "title": "Vite React Plugins: выпуск 0.5.37",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-10-13T10:31:04Z",
+          "source": "Vite React Plugins",
+          "url": "https://github.com/vitejs/vite-plugin-react/releases/tag/plugin-rsc%400.5.37"
+        },
+        {
           "id": "b124ed1280c109",
           "kind": "minor",
           "priority": "P1",
@@ -10899,6 +10921,17 @@
       ],
       "advisories": [],
       "events": [
+        {
+          "id": "7feba9dc9659b5",
+          "kind": "major",
+          "priority": 0,
+          "version": null,
+          "title": "Новый материал от TanStack Query Releases",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-10-13T23:08:28Z",
+          "source": "TanStack Query Releases",
+          "url": "https://github.com/TanStack/query/releases/tag/release-2026-10-13-2308"
+        },
         {
           "id": "a8b2f91ba539d0",
           "kind": "minor",
