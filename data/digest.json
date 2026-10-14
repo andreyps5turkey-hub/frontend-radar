@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "date": "2026-10-14",
-  "generatedAt": "2026-10-14T09:42:04.446Z",
+  "generatedAt": "2026-10-14T10:09:48.227Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -11,22 +11,59 @@
     "failed": []
   },
   "status": "active",
-  "summary": "Автоматическая подборка собрана в резервном режиме. Проверьте релизы по ссылкам на первоисточники.",
+  "summary": "В окне дня опубликован новый релиз TanStack Query для Angular – версия 5.0.0‑rc.3, включающая миграцию схемы Angular.",
   "items": [
     {
-      "priority": "P1",
-      "title": "Новый материал от TanStack Query Releases",
+      "priority": "P2",
+      "title": "TanStack Query Angular 5.0.0‑rc.3 – миграция схемы Angular",
       "source": "TanStack Query Releases",
       "publishedAt": "2026-10-13T23:08:28Z",
+      "whyImportant": "Обновление добавляет готовый скелет миграции для Angular, упрощая переход на новую версию библиотеки.",
+      "audience": "Разработчики, использующие @tanstack/angular-query",
+      "nextStep": "Проверьте совместимость вашего проекта с новой схемой и обновите зависимости до 5.0.0‑rc.3.",
+      "url": "https://github.com/TanStack/query/releases/tag/release-2026-10-13-2308",
+      "tags": [
+        "TanStack Query",
+        "Angular",
+        "migration"
+      ],
+      "changeType": "breaking",
+      "technologies": [
+        "query"
+      ],
+      "packages": [
+        {
+          "name": "@tanstack/react-query",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
+      "effort": "hours",
+      "actionItems": [
+        "Обновить зависимости до 5.0.0‑rc.3",
+        "Запустить миграцию схемы Angular",
+        "Проверить работу devtools и persist‑client"
+      ],
+      "detailsConfidence": "source"
+    }
+  ],
+  "readLater": [
+    {
+      "priority": "P3",
+      "title": "Новый материал от TanStack Query Releases",
+      "source": "TanStack Query Releases",
+      "publishedAt": "2026-10-12T21:20:59Z",
       "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
       "audience": "Команды, использующие инструменты из экосистемы TanStack Query Releases.",
       "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/TanStack/query/releases/tag/release-2026-10-13-2308",
+      "url": "https://github.com/TanStack/query/releases/tag/release-2026-10-12-2120",
       "tags": [
         "tanstack",
         "обновление"
       ],
-      "changeType": "breaking",
+      "changeType": "minor",
       "technologies": [
         "query"
       ],
@@ -45,9 +82,7 @@
         "Протестировать обновление в отдельной ветке."
       ],
       "detailsConfidence": "inferred"
-    }
-  ],
-  "readLater": [
+    },
     {
       "priority": "P3",
       "title": "Vite React Plugins: выпуск 0.5.37",
@@ -100,65 +135,6 @@
           "fixedVersion": null
         }
       ],
-      "risk": "low",
-      "effort": "minutes",
-      "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
-      ],
-      "detailsConfidence": "inferred"
-    },
-    {
-      "priority": "P3",
-      "title": "Новый материал от Next.js Security",
-      "source": "Next.js Security",
-      "publishedAt": "2026-09-30T16:14:19Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, которые поддерживают приложения на Next.js.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-mcj8-r9mp-w47p",
-      "tags": [
-        "next.js",
-        "безопасность"
-      ],
-      "changeType": "tooling",
-      "technologies": [
-        "nextjs"
-      ],
-      "packages": [
-        {
-          "name": "next",
-          "releasedVersion": null,
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "low",
-      "effort": "minutes",
-      "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
-      ],
-      "detailsConfidence": "inferred"
-    },
-    {
-      "priority": "P3",
-      "title": "Node.js Releases: выпуск 26.8.2",
-      "source": "Node.js Releases",
-      "publishedAt": "2026-09-09T16:07:48Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/nodejs/node/releases/tag/v26.8.2",
-      "tags": [
-        "node.js",
-        "обновление"
-      ],
-      "changeType": "minor",
-      "technologies": [
-        "platform"
-      ],
-      "packages": [],
       "risk": "low",
       "effort": "minutes",
       "actionItems": [
