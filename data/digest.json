@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "date": "2026-10-14",
-  "generatedAt": "2026-10-14T10:09:48.227Z",
+  "date": "2026-10-15",
+  "generatedAt": "2026-10-15T09:23:20.197Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -11,29 +11,29 @@
     "failed": []
   },
   "status": "active",
-  "summary": "В окне дня опубликован новый релиз TanStack Query для Angular – версия 5.0.0‑rc.3, включающая миграцию схемы Angular.",
+  "summary": "Сегодня в экосистеме Next.js выявлены критические уязвимости, требующие немедленного обновления. В дополнение к патчам в версии 16.4.1, Node.js и Puppeteer также получили обновления, но они не содержат критических исправлений.",
   "items": [
     {
-      "priority": "P2",
-      "title": "TanStack Query Angular 5.0.0‑rc.3 – миграция схемы Angular",
-      "source": "TanStack Query Releases",
-      "publishedAt": "2026-10-13T23:08:28Z",
-      "whyImportant": "Обновление добавляет готовый скелет миграции для Angular, упрощая переход на новую версию библиотеки.",
-      "audience": "Разработчики, использующие @tanstack/angular-query",
-      "nextStep": "Проверьте совместимость вашего проекта с новой схемой и обновите зависимости до 5.0.0‑rc.3.",
-      "url": "https://github.com/TanStack/query/releases/tag/release-2026-10-13-2308",
+      "priority": "P0",
+      "title": "Уязвимость RCE в API оптимизации изображений при использовании SVG",
+      "source": "Next.js Security",
+      "publishedAt": "2026-10-14T17:46:48Z",
+      "whyImportant": "Позволяет удалённому исполнению произвольного кода на серверах, использующих Next.js с glibc.",
+      "audience": "Разработчики, использующие Next.js и библиотеку sharp",
+      "nextStep": "Обновите sharp до версии ≥ 0.35.5 и Next.js до v16.4.1 (или выше).",
+      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-2464-fhr4-w9xw",
       "tags": [
-        "TanStack Query",
-        "Angular",
-        "migration"
+        "Next.js",
+        "sharp",
+        "RCE"
       ],
-      "changeType": "breaking",
+      "changeType": "security",
       "technologies": [
-        "query"
+        "nextjs"
       ],
       "packages": [
         {
-          "name": "@tanstack/react-query",
+          "name": "next",
           "releasedVersion": null,
           "affectedRange": null,
           "fixedVersion": null
@@ -42,9 +42,108 @@
       "risk": "unknown",
       "effort": "hours",
       "actionItems": [
-        "Обновить зависимости до 5.0.0‑rc.3",
-        "Запустить миграцию схемы Angular",
-        "Проверить работу devtools и persist‑client"
+        "Проверить текущую версию sharp",
+        "Обновить sharp до 0.35.5",
+        "Обновить Next.js до 16.4.1"
+      ],
+      "detailsConfidence": "source"
+    },
+    {
+      "priority": "P0",
+      "title": "Уязвимость RCE в функциях use cache, возвращающих typed arrays",
+      "source": "Next.js Security",
+      "publishedAt": "2026-10-14T17:47:07Z",
+      "whyImportant": "Позволяет удалённому исполнению кода в приложениях, использующих App Router и Cache Component.",
+      "audience": "Разработчики, использующие App Router и use cache",
+      "nextStep": "Обновите Next.js до версии 16.4.1 (или выше).",
+      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-673q-mjm6-r5xr",
+      "tags": [
+        "Next.js",
+        "use cache",
+        "RCE"
+      ],
+      "changeType": "security",
+      "technologies": [
+        "nextjs"
+      ],
+      "packages": [
+        {
+          "name": "next",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
+      "effort": "hours",
+      "actionItems": [
+        "Обновить Next.js до 16.4.1"
+      ],
+      "detailsConfidence": "source"
+    },
+    {
+      "priority": "P0",
+      "title": "Отказ в обслуживании в App Router при использовании Server Actions",
+      "source": "Next.js Security",
+      "publishedAt": "2026-10-14T17:47:43Z",
+      "whyImportant": "Позволяет злоумышленнику перегрузить процесс, блокируя дальнейшие запросы.",
+      "audience": "Разработчики, использующие Server Actions в Next.js",
+      "nextStep": "Обновите Next.js до версии 16.4.1 (или выше).",
+      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-p3m5-59mp-jv5r",
+      "tags": [
+        "Next.js",
+        "DoS",
+        "Server Actions"
+      ],
+      "changeType": "security",
+      "technologies": [
+        "nextjs"
+      ],
+      "packages": [
+        {
+          "name": "next",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
+      "effort": "hours",
+      "actionItems": [
+        "Обновить Next.js до 16.4.1"
+      ],
+      "detailsConfidence": "source"
+    },
+    {
+      "priority": "P1",
+      "title": "Next.js v16.4.1 – исправлены критические и высокорисковые уязвимости",
+      "source": "Next.js Releases",
+      "publishedAt": "2026-10-14T17:47:59Z",
+      "whyImportant": "Включает патчи для RCE в API оптимизации изображений и use cache, а также DoS в App Router.",
+      "audience": "Все пользователи Next.js",
+      "nextStep": "Обновите до версии 16.4.1 и проверьте зависимости.",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.4.1",
+      "tags": [
+        "Next.js",
+        "release"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "nextjs"
+      ],
+      "packages": [
+        {
+          "name": "next",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
+      "effort": "days",
+      "actionItems": [
+        "Проверить наличие обновлений в package.json",
+        "Выполнить npm install next@16.4.1"
       ],
       "detailsConfidence": "source"
     }
@@ -52,96 +151,62 @@
   "readLater": [
     {
       "priority": "P3",
-      "title": "Новый материал от TanStack Query Releases",
-      "source": "TanStack Query Releases",
-      "publishedAt": "2026-10-12T21:20:59Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы TanStack Query Releases.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/TanStack/query/releases/tag/release-2026-10-12-2120",
+      "title": "Node.js v26.12.0 – новые возможности WebAssembly и WebSocket",
+      "source": "Node.js Releases",
+      "publishedAt": "2026-10-14T15:22:04Z",
+      "whyImportant": "Добавлены новые API для WebAssembly и WebSocket, а также улучшены бенчмарки.",
+      "audience": "Разработчики, использующие Node.js",
+      "nextStep": "Изучите новые методы и протестируйте в своём проекте.",
+      "url": "https://github.com/nodejs/node/releases/tag/v26.12.0",
       "tags": [
-        "tanstack",
-        "обновление"
+        "Node.js",
+        "release"
       ],
       "changeType": "minor",
       "technologies": [
-        "query"
+        "platform"
       ],
-      "packages": [
-        {
-          "name": "@tanstack/react-query",
-          "releasedVersion": null,
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "low",
+      "packages": [],
+      "risk": "unknown",
       "effort": "minutes",
       "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
+        "Прочитать changelog",
+        "Тестировать новые API"
       ],
-      "detailsConfidence": "inferred"
+      "detailsConfidence": "source"
     },
     {
       "priority": "P3",
-      "title": "Vite React Plugins: выпуск 0.5.37",
-      "source": "Vite React Plugins",
-      "publishedAt": "2026-10-13T10:31:04Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Разработчики и команды, использующие React.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/vitejs/vite-plugin-react/releases/tag/plugin-rsc%400.5.37",
+      "title": "Puppeteer browsers v3.2.5 – исправлены проблемы с безопасностью и путями",
+      "source": "Puppeteer Releases",
+      "publishedAt": "2026-10-14T15:25:26Z",
+      "whyImportant": "Устранены уязвимости, связанные с удалением alias и обходом symlink‑цепочек.",
+      "audience": "Разработчики, использующие Puppeteer",
+      "nextStep": "Обновите Puppeteer до последней версии и проверьте скрипты.",
+      "url": "https://github.com/puppeteer/puppeteer/releases/tag/browsers-v3.2.5",
       "tags": [
-        "vite",
-        "обновление"
+        "Puppeteer",
+        "release"
       ],
       "changeType": "minor",
       "technologies": [
-        "typescript",
-        "vite",
-        "platform",
-        "react"
+        "platform"
       ],
       "packages": [
         {
-          "name": "@vitejs/plugin-react",
+          "name": "puppeteer",
           "releasedVersion": null,
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "@vitejs/plugin-react-swc",
-          "releasedVersion": null,
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "@vitejs/plugin-rsc",
-          "releasedVersion": null,
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "vite",
-          "releasedVersion": "0.5.37",
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "react",
-          "releasedVersion": "0.5.37",
           "affectedRange": null,
           "fixedVersion": null
         }
       ],
-      "risk": "low",
+      "risk": "unknown",
       "effort": "minutes",
       "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
+        "Обновить Puppeteer до 3.2.5",
+        "Проверить скрипты на корректность"
       ],
-      "detailsConfidence": "inferred"
+      "detailsConfidence": "source"
     }
   ]
 }

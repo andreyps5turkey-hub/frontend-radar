@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-14T10:09:55.414Z",
+  "generatedAt": "2026-10-15T09:23:27.159Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -16,15 +16,15 @@
         "react",
         "react-dom"
       ],
-      "latestVersion": "19.3.0",
-      "latestPublishedAt": "2026-09-09T17:21:30.071Z",
+      "latestVersion": "19.3.1",
+      "latestPublishedAt": "2026-10-14T16:47:15.290Z",
       "npmUrl": "https://www.npmjs.com/package/react",
       "repositoryUrl": "https://github.com/facebook/react",
       "packages": [
         {
           "name": "react",
-          "latestVersion": "19.3.0",
-          "latestPublishedAt": "2026-09-09T17:21:30.071Z",
+          "latestVersion": "19.3.1",
+          "latestPublishedAt": "2026-10-14T16:47:15.290Z",
           "npmUrl": "https://www.npmjs.com/package/react",
           "compatibility": [
             {
@@ -46,9 +46,9 @@
               "deprecated": "React 16.6.2 release is broken. Please update React to 16.6.3."
             },
             {
-              "range": ">=16.6.3 <=19.3.0",
+              "range": ">=16.6.3 <=19.3.1",
               "minVersion": "16.6.3",
-              "maxVersion": "19.3.0",
+              "maxVersion": "19.3.1",
               "peerDependencies": {},
               "optionalPeers": [],
               "nodeRange": ">=0.10.0",
@@ -57,8 +57,16 @@
           ],
           "versions": [
             {
+              "version": "19.3.1",
+              "publishedAt": "2026-10-14T16:47:15.290Z"
+            },
+            {
               "version": "19.3.0",
               "publishedAt": "2026-09-09T17:21:30.071Z"
+            },
+            {
+              "version": "19.2.9",
+              "publishedAt": "2026-10-14T16:54:43.794Z"
             },
             {
               "version": "19.2.8",
@@ -95,6 +103,10 @@
             {
               "version": "19.2.0",
               "publishedAt": "2025-10-01T21:38:32.757Z"
+            },
+            {
+              "version": "19.1.10",
+              "publishedAt": "2026-10-14T16:54:54.500Z"
             },
             {
               "version": "19.1.9",
@@ -135,6 +147,10 @@
             {
               "version": "19.1.0",
               "publishedAt": "2025-03-28T19:59:42.053Z"
+            },
+            {
+              "version": "19.0.9",
+              "publishedAt": "2026-10-14T16:48:37.103Z"
             },
             {
               "version": "19.0.8",
@@ -344,8 +360,8 @@
         },
         {
           "name": "react-dom",
-          "latestVersion": "19.3.0",
-          "latestPublishedAt": "2026-09-09T17:17:39.744Z",
+          "latestVersion": "19.3.1",
+          "latestPublishedAt": "2026-10-14T16:49:10.081Z",
           "npmUrl": "https://www.npmjs.com/package/react-dom",
           "compatibility": [
             {
@@ -723,6 +739,17 @@
               "deprecated": null
             },
             {
+              "range": "19.0.9",
+              "minVersion": "19.0.9",
+              "maxVersion": "19.0.9",
+              "peerDependencies": {
+                "react": "^19.0.9"
+              },
+              "optionalPeers": [],
+              "nodeRange": null,
+              "deprecated": null
+            },
+            {
               "range": "19.1.0",
               "minVersion": "19.1.0",
               "maxVersion": "19.1.0",
@@ -833,6 +860,17 @@
               "deprecated": null
             },
             {
+              "range": "19.1.10",
+              "minVersion": "19.1.10",
+              "maxVersion": "19.1.10",
+              "peerDependencies": {
+                "react": "^19.1.10"
+              },
+              "optionalPeers": [],
+              "nodeRange": null,
+              "deprecated": null
+            },
+            {
               "range": "19.2.0",
               "minVersion": "19.2.0",
               "maxVersion": "19.2.0",
@@ -932,6 +970,17 @@
               "deprecated": null
             },
             {
+              "range": "19.2.9",
+              "minVersion": "19.2.9",
+              "maxVersion": "19.2.9",
+              "peerDependencies": {
+                "react": "^19.2.9"
+              },
+              "optionalPeers": [],
+              "nodeRange": null,
+              "deprecated": null
+            },
+            {
               "range": "19.3.0",
               "minVersion": "19.3.0",
               "maxVersion": "19.3.0",
@@ -941,12 +990,31 @@
               "optionalPeers": [],
               "nodeRange": null,
               "deprecated": null
+            },
+            {
+              "range": "19.3.1",
+              "minVersion": "19.3.1",
+              "maxVersion": "19.3.1",
+              "peerDependencies": {
+                "react": "^19.3.1"
+              },
+              "optionalPeers": [],
+              "nodeRange": null,
+              "deprecated": null
             }
           ],
           "versions": [
             {
+              "version": "19.3.1",
+              "publishedAt": "2026-10-14T16:49:10.081Z"
+            },
+            {
               "version": "19.3.0",
               "publishedAt": "2026-09-09T17:17:39.744Z"
+            },
+            {
+              "version": "19.2.9",
+              "publishedAt": "2026-10-14T16:49:51.523Z"
             },
             {
               "version": "19.2.8",
@@ -983,6 +1051,10 @@
             {
               "version": "19.2.0",
               "publishedAt": "2025-10-01T21:38:42.388Z"
+            },
+            {
+              "version": "19.1.10",
+              "publishedAt": "2026-10-14T16:55:28.479Z"
             },
             {
               "version": "19.1.9",
@@ -1023,6 +1095,10 @@
             {
               "version": "19.1.0",
               "publishedAt": "2025-03-28T19:59:53.229Z"
+            },
+            {
+              "version": "19.0.9",
+              "publishedAt": "2026-10-14T16:50:13.912Z"
             },
             {
               "version": "19.0.8",
@@ -1470,15 +1546,15 @@
       "packageNames": [
         "next"
       ],
-      "latestVersion": "16.4.0",
-      "latestPublishedAt": "2026-10-06T18:35:31.699Z",
+      "latestVersion": "16.4.1",
+      "latestPublishedAt": "2026-10-14T17:43:55.246Z",
       "npmUrl": "https://www.npmjs.com/package/next",
       "repositoryUrl": "https://github.com/vercel/next.js",
       "packages": [
         {
           "name": "next",
-          "latestVersion": "16.4.0",
-          "latestPublishedAt": "2026-10-06T18:35:31.699Z",
+          "latestVersion": "16.4.1",
+          "latestPublishedAt": "2026-10-14T17:43:55.246Z",
           "npmUrl": "https://www.npmjs.com/package/next",
           "compatibility": [
             {
@@ -1842,9 +1918,9 @@
               "deprecated": "This version has a security vulnerability. Please upgrade to a patched version. See https://nextjs.org/blog/security-update-2025-12-11 for more details."
             },
             {
-              "range": ">=15.5.9 <=15.5.27",
+              "range": ">=15.5.9 <=15.5.28",
               "minVersion": "15.5.9",
-              "maxVersion": "15.5.27",
+              "maxVersion": "15.5.28",
               "peerDependencies": {
                 "react": "^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0",
                 "react-dom": "^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0"
@@ -1878,9 +1954,9 @@
               "deprecated": "This version has a security vulnerability. Please upgrade to a patched version. See https://nextjs.org/blog/security-update-2025-12-11 for more details."
             },
             {
-              "range": ">=16.0.10 <=16.4.0",
+              "range": ">=16.0.10 <=16.4.1",
               "minVersion": "16.0.10",
-              "maxVersion": "16.4.0",
+              "maxVersion": "16.4.1",
               "peerDependencies": {
                 "react": "^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0",
                 "react-dom": "^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0"
@@ -1891,6 +1967,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "16.4.1",
+              "publishedAt": "2026-10-14T17:43:55.246Z"
+            },
             {
               "version": "16.4.0",
               "publishedAt": "2026-10-06T18:35:31.699Z"
@@ -2062,6 +2142,10 @@
             {
               "version": "16.0.0",
               "publishedAt": "2025-10-22T00:12:16.323Z"
+            },
+            {
+              "version": "15.5.28",
+              "publishedAt": "2026-10-14T17:36:08.917Z"
             },
             {
               "version": "15.5.27",
@@ -4610,6 +4694,50 @@
         }
       ],
       "events": [
+        {
+          "id": "2056cdcc51a54e",
+          "kind": "minor",
+          "priority": "P1",
+          "version": "16.4.1",
+          "title": "Next.js v16.4.1 – исправлены критические и высокорисковые уязвимости",
+          "summary": "Включает патчи для RCE в API оптимизации изображений и use cache, а также DoS в App Router.",
+          "publishedAt": "2026-10-14T17:47:59Z",
+          "source": "Next.js Releases",
+          "url": "https://github.com/vercel/next.js/releases/tag/v16.4.1"
+        },
+        {
+          "id": "6a6c21c31cbdde",
+          "kind": "security",
+          "priority": "P0",
+          "version": null,
+          "title": "Отказ в обслуживании в App Router при использовании Server Actions",
+          "summary": "Позволяет злоумышленнику перегрузить процесс, блокируя дальнейшие запросы.",
+          "publishedAt": "2026-10-14T17:47:43Z",
+          "source": "Next.js Security",
+          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-p3m5-59mp-jv5r"
+        },
+        {
+          "id": "96f8dc86080b8d",
+          "kind": "security",
+          "priority": "P0",
+          "version": null,
+          "title": "Уязвимость RCE в функциях use cache, возвращающих typed arrays",
+          "summary": "Позволяет удалённому исполнению кода в приложениях, использующих App Router и Cache Component.",
+          "publishedAt": "2026-10-14T17:47:07Z",
+          "source": "Next.js Security",
+          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-673q-mjm6-r5xr"
+        },
+        {
+          "id": "49d40317a92e52",
+          "kind": "security",
+          "priority": "P0",
+          "version": null,
+          "title": "Уязвимость RCE в API оптимизации изображений при использовании SVG",
+          "summary": "Позволяет удалённому исполнению произвольного кода на серверах, использующих Next.js с glibc.",
+          "publishedAt": "2026-10-14T17:46:48Z",
+          "source": "Next.js Security",
+          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-2464-fhr4-w9xw"
+        },
         {
           "id": "fb176bf94b4aaa",
           "kind": "major",
@@ -9071,15 +9199,15 @@
       "packageNames": [
         "@tanstack/react-query"
       ],
-      "latestVersion": "5.104.2",
-      "latestPublishedAt": "2026-10-11T19:35:15.506Z",
+      "latestVersion": "5.104.3",
+      "latestPublishedAt": "2026-10-15T07:53:35.788Z",
       "npmUrl": "https://www.npmjs.com/package/@tanstack/react-query",
       "repositoryUrl": "https://github.com/TanStack/query",
       "packages": [
         {
           "name": "@tanstack/react-query",
-          "latestVersion": "5.104.2",
-          "latestPublishedAt": "2026-10-11T19:35:15.506Z",
+          "latestVersion": "5.104.3",
+          "latestPublishedAt": "2026-10-15T07:53:35.788Z",
           "npmUrl": "https://www.npmjs.com/package/@tanstack/react-query",
           "compatibility": [
             {
@@ -9136,9 +9264,9 @@
               "deprecated": null
             },
             {
-              "range": ">=5.52.1 <=5.104.2",
+              "range": ">=5.52.1 <=5.104.3",
               "minVersion": "5.52.1",
-              "maxVersion": "5.104.2",
+              "maxVersion": "5.104.3",
               "peerDependencies": {
                 "react": "^18 || ^19"
               },
@@ -9148,6 +9276,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "5.104.3",
+              "publishedAt": "2026-10-15T07:53:35.788Z"
+            },
             {
               "version": "5.104.2",
               "publishedAt": "2026-10-11T19:35:15.506Z"
