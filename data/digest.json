@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "date": "2026-10-15",
-  "generatedAt": "2026-10-15T09:23:20.197Z",
+  "date": "2026-10-16",
+  "generatedAt": "2026-10-16T09:15:49.302Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -11,121 +11,21 @@
     "failed": []
   },
   "status": "active",
-  "summary": "Сегодня в экосистеме Next.js выявлены критические уязвимости, требующие немедленного обновления. В дополнение к патчам в версии 16.4.1, Node.js и Puppeteer также получили обновления, но они не содержат критических исправлений.",
+  "summary": "В окне дня выпущена новая версия Next.js v16.4.2 с улучшениями Turbopack и исправлениями стабильности.",
   "items": [
     {
-      "priority": "P0",
-      "title": "Уязвимость RCE в API оптимизации изображений при использовании SVG",
-      "source": "Next.js Security",
-      "publishedAt": "2026-10-14T17:46:48Z",
-      "whyImportant": "Позволяет удалённому исполнению произвольного кода на серверах, использующих Next.js с glibc.",
-      "audience": "Разработчики, использующие Next.js и библиотеку sharp",
-      "nextStep": "Обновите sharp до версии ≥ 0.35.5 и Next.js до v16.4.1 (или выше).",
-      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-2464-fhr4-w9xw",
-      "tags": [
-        "Next.js",
-        "sharp",
-        "RCE"
-      ],
-      "changeType": "security",
-      "technologies": [
-        "nextjs"
-      ],
-      "packages": [
-        {
-          "name": "next",
-          "releasedVersion": null,
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "unknown",
-      "effort": "hours",
-      "actionItems": [
-        "Проверить текущую версию sharp",
-        "Обновить sharp до 0.35.5",
-        "Обновить Next.js до 16.4.1"
-      ],
-      "detailsConfidence": "source"
-    },
-    {
-      "priority": "P0",
-      "title": "Уязвимость RCE в функциях use cache, возвращающих typed arrays",
-      "source": "Next.js Security",
-      "publishedAt": "2026-10-14T17:47:07Z",
-      "whyImportant": "Позволяет удалённому исполнению кода в приложениях, использующих App Router и Cache Component.",
-      "audience": "Разработчики, использующие App Router и use cache",
-      "nextStep": "Обновите Next.js до версии 16.4.1 (или выше).",
-      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-673q-mjm6-r5xr",
-      "tags": [
-        "Next.js",
-        "use cache",
-        "RCE"
-      ],
-      "changeType": "security",
-      "technologies": [
-        "nextjs"
-      ],
-      "packages": [
-        {
-          "name": "next",
-          "releasedVersion": null,
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "unknown",
-      "effort": "hours",
-      "actionItems": [
-        "Обновить Next.js до 16.4.1"
-      ],
-      "detailsConfidence": "source"
-    },
-    {
-      "priority": "P0",
-      "title": "Отказ в обслуживании в App Router при использовании Server Actions",
-      "source": "Next.js Security",
-      "publishedAt": "2026-10-14T17:47:43Z",
-      "whyImportant": "Позволяет злоумышленнику перегрузить процесс, блокируя дальнейшие запросы.",
-      "audience": "Разработчики, использующие Server Actions в Next.js",
-      "nextStep": "Обновите Next.js до версии 16.4.1 (или выше).",
-      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-p3m5-59mp-jv5r",
-      "tags": [
-        "Next.js",
-        "DoS",
-        "Server Actions"
-      ],
-      "changeType": "security",
-      "technologies": [
-        "nextjs"
-      ],
-      "packages": [
-        {
-          "name": "next",
-          "releasedVersion": null,
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "unknown",
-      "effort": "hours",
-      "actionItems": [
-        "Обновить Next.js до 16.4.1"
-      ],
-      "detailsConfidence": "source"
-    },
-    {
       "priority": "P1",
-      "title": "Next.js v16.4.1 – исправлены критические и высокорисковые уязвимости",
+      "title": "Next.js v16.4.2 – обновление Turbopack и исправления стабильности",
       "source": "Next.js Releases",
-      "publishedAt": "2026-10-14T17:47:59Z",
-      "whyImportant": "Включает патчи для RCE в API оптимизации изображений и use cache, а также DoS в App Router.",
-      "audience": "Все пользователи Next.js",
-      "nextStep": "Обновите до версии 16.4.1 и проверьте зависимости.",
-      "url": "https://github.com/vercel/next.js/releases/tag/v16.4.1",
+      "publishedAt": "2026-10-15T20:44:37Z",
+      "whyImportant": "Новые патчи Turbopack повышают надёжность сборки и устраняют проблемы с зависимостями, а также улучшают производительность.",
+      "audience": "Разработчики, использующие Next.js",
+      "nextStep": "Обновить проект до версии v16.4.2 и проверить сборку в тестовой среде.",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.4.2",
       "tags": [
         "Next.js",
-        "release"
+        "Turbopack",
+        "LTS"
       ],
       "changeType": "minor",
       "technologies": [
@@ -134,7 +34,7 @@
       "packages": [
         {
           "name": "next",
-          "releasedVersion": null,
+          "releasedVersion": "v16.4.2",
           "affectedRange": null,
           "fixedVersion": null
         }
@@ -142,8 +42,9 @@
       "risk": "unknown",
       "effort": "days",
       "actionItems": [
-        "Проверить наличие обновлений в package.json",
-        "Выполнить npm install next@16.4.1"
+        "Проверить совместимость с текущими зависимостями",
+        "Запустить тесты сборки и развертывания",
+        "Обновить документацию проекта"
       ],
       "detailsConfidence": "source"
     }
@@ -151,16 +52,16 @@
   "readLater": [
     {
       "priority": "P3",
-      "title": "Node.js v26.12.0 – новые возможности WebAssembly и WebSocket",
+      "title": "Node.js v24.22.0 – новые возможности криптографии",
       "source": "Node.js Releases",
-      "publishedAt": "2026-10-14T15:22:04Z",
-      "whyImportant": "Добавлены новые API для WebAssembly и WebSocket, а также улучшены бенчмарки.",
-      "audience": "Разработчики, использующие Node.js",
-      "nextStep": "Изучите новые методы и протестируйте в своём проекте.",
-      "url": "https://github.com/nodejs/node/releases/tag/v26.12.0",
+      "publishedAt": "2026-10-14T15:12:46Z",
+      "whyImportant": "Добавлены новые API для работы с PKCS12, MAC и OpenSSL‑провайдерами, что расширяет возможности безопасной обработки данных.",
+      "audience": "Backend‑разработчики, работающие с Node.js",
+      "nextStep": "Изучить новые API и протестировать их в собственных проектах.",
+      "url": "https://github.com/nodejs/node/releases/tag/v24.22.0",
       "tags": [
         "Node.js",
-        "release"
+        "crypto"
       ],
       "changeType": "minor",
       "technologies": [
@@ -170,43 +71,43 @@
       "risk": "unknown",
       "effort": "minutes",
       "actionItems": [
-        "Прочитать changelog",
-        "Тестировать новые API"
+        "Прочитать официальную документацию по новым API",
+        "Написать тесты для проверки совместимости"
       ],
       "detailsConfidence": "source"
     },
     {
       "priority": "P3",
-      "title": "Puppeteer browsers v3.2.5 – исправлены проблемы с безопасностью и путями",
-      "source": "Puppeteer Releases",
-      "publishedAt": "2026-10-14T15:25:26Z",
-      "whyImportant": "Устранены уязвимости, связанные с удалением alias и обходом symlink‑цепочек.",
-      "audience": "Разработчики, использующие Puppeteer",
-      "nextStep": "Обновите Puppeteer до последней версии и проверьте скрипты.",
-      "url": "https://github.com/puppeteer/puppeteer/releases/tag/browsers-v3.2.5",
+      "title": "Next.js Releases: выпуск v15.5.28",
+      "source": "Next.js Releases",
+      "publishedAt": "2026-10-14T17:47:49Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, которые поддерживают приложения на Next.js.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/vercel/next.js/releases/tag/v15.5.28",
       "tags": [
-        "Puppeteer",
-        "release"
+        "next.js",
+        "обновление"
       ],
       "changeType": "minor",
       "technologies": [
-        "platform"
+        "nextjs"
       ],
       "packages": [
         {
-          "name": "puppeteer",
-          "releasedVersion": null,
+          "name": "next",
+          "releasedVersion": "v15.5.28",
           "affectedRange": null,
           "fixedVersion": null
         }
       ],
-      "risk": "unknown",
+      "risk": "low",
       "effort": "minutes",
       "actionItems": [
-        "Обновить Puppeteer до 3.2.5",
-        "Проверить скрипты на корректность"
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
       ],
-      "detailsConfidence": "source"
+      "detailsConfidence": "inferred"
     }
   ]
 }

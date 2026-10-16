@@ -1,7 +1,120 @@
 {
   "version": 2,
-  "updatedAt": "2026-10-15T09:23:20.197Z",
+  "updatedAt": "2026-10-16T09:15:49.302Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-16",
+      "generatedAt": "2026-10-16T09:15:49.302Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 32,
+      "sourceHealth": {
+        "attempted": 32,
+        "succeeded": 32,
+        "failed": []
+      },
+      "status": "active",
+      "summary": "В окне дня выпущена новая версия Next.js v16.4.2 с улучшениями Turbopack и исправлениями стабильности.",
+      "items": [
+        {
+          "priority": "P1",
+          "title": "Next.js v16.4.2 – обновление Turbopack и исправления стабильности",
+          "source": "Next.js Releases",
+          "publishedAt": "2026-10-15T20:44:37Z",
+          "whyImportant": "Новые патчи Turbopack повышают надёжность сборки и устраняют проблемы с зависимостями, а также улучшают производительность.",
+          "audience": "Разработчики, использующие Next.js",
+          "nextStep": "Обновить проект до версии v16.4.2 и проверить сборку в тестовой среде.",
+          "url": "https://github.com/vercel/next.js/releases/tag/v16.4.2",
+          "tags": [
+            "Next.js",
+            "Turbopack",
+            "LTS"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "nextjs"
+          ],
+          "packages": [
+            {
+              "name": "next",
+              "releasedVersion": "v16.4.2",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "days",
+          "actionItems": [
+            "Проверить совместимость с текущими зависимостями",
+            "Запустить тесты сборки и развертывания",
+            "Обновить документацию проекта"
+          ],
+          "detailsConfidence": "source"
+        }
+      ],
+      "readLater": [
+        {
+          "priority": "P3",
+          "title": "Node.js v24.22.0 – новые возможности криптографии",
+          "source": "Node.js Releases",
+          "publishedAt": "2026-10-14T15:12:46Z",
+          "whyImportant": "Добавлены новые API для работы с PKCS12, MAC и OpenSSL‑провайдерами, что расширяет возможности безопасной обработки данных.",
+          "audience": "Backend‑разработчики, работающие с Node.js",
+          "nextStep": "Изучить новые API и протестировать их в собственных проектах.",
+          "url": "https://github.com/nodejs/node/releases/tag/v24.22.0",
+          "tags": [
+            "Node.js",
+            "crypto"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "platform"
+          ],
+          "packages": [],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Прочитать официальную документацию по новым API",
+            "Написать тесты для проверки совместимости"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P3",
+          "title": "Next.js Releases: выпуск v15.5.28",
+          "source": "Next.js Releases",
+          "publishedAt": "2026-10-14T17:47:49Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, которые поддерживают приложения на Next.js.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/vercel/next.js/releases/tag/v15.5.28",
+          "tags": [
+            "next.js",
+            "обновление"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "nextjs"
+          ],
+          "packages": [
+            {
+              "name": "next",
+              "releasedVersion": "v15.5.28",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-10-15",
