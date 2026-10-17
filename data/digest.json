@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "date": "2026-10-16",
-  "generatedAt": "2026-10-16T09:15:49.302Z",
+  "date": "2026-10-17",
+  "generatedAt": "2026-10-17T08:46:42.951Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -11,40 +11,39 @@
     "failed": []
   },
   "status": "active",
-  "summary": "В окне дня выпущена новая версия Next.js v16.4.2 с улучшениями Turbopack и исправлениями стабильности.",
+  "summary": "В окне дня выпущены обновления rc для пакетов TanStack Query Angular.",
   "items": [
     {
-      "priority": "P1",
-      "title": "Next.js v16.4.2 – обновление Turbopack и исправления стабильности",
-      "source": "Next.js Releases",
-      "publishedAt": "2026-10-15T20:44:37Z",
-      "whyImportant": "Новые патчи Turbopack повышают надёжность сборки и устраняют проблемы с зависимостями, а также улучшают производительность.",
-      "audience": "Разработчики, использующие Next.js",
-      "nextStep": "Обновить проект до версии v16.4.2 и проверить сборку в тестовой среде.",
-      "url": "https://github.com/vercel/next.js/releases/tag/v16.4.2",
+      "priority": "P2",
+      "title": "Обновление rc.4 пакетов TanStack Query для Angular",
+      "source": "TanStack Query Releases",
+      "publishedAt": "2026-10-16T12:11:41Z",
+      "whyImportant": "Обновление включает исправления и улучшения миграции, что повышает стабильность и совместимость с Angular.",
+      "audience": "Разработчики, использующие TanStack Query в Angular",
+      "nextStep": "Обновите пакеты до версии 5.0.0-rc.4 и проверьте миграцию в вашем проекте.",
+      "url": "https://github.com/TanStack/query/releases/tag/release-2026-10-16-1211",
       "tags": [
-        "Next.js",
-        "Turbopack",
-        "LTS"
+        "Angular",
+        "TanStack Query"
       ],
-      "changeType": "minor",
+      "changeType": "breaking",
       "technologies": [
-        "nextjs"
+        "query"
       ],
       "packages": [
         {
-          "name": "next",
-          "releasedVersion": "v16.4.2",
+          "name": "@tanstack/react-query",
+          "releasedVersion": null,
           "affectedRange": null,
           "fixedVersion": null
         }
       ],
       "risk": "unknown",
-      "effort": "days",
+      "effort": "hours",
       "actionItems": [
-        "Проверить совместимость с текущими зависимостями",
-        "Запустить тесты сборки и развертывания",
-        "Обновить документацию проекта"
+        "Проверьте совместимость миграции в проекте",
+        "Обновите зависимости до rc.4",
+        "Запустите тесты"
       ],
       "detailsConfidence": "source"
     }

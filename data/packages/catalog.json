@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-16T09:15:56.393Z",
+  "generatedAt": "2026-10-17T08:46:48.785Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -11080,6 +11080,17 @@
       "advisories": [],
       "events": [
         {
+          "id": "e5179e625bbdd2",
+          "kind": "major",
+          "priority": "P2",
+          "version": null,
+          "title": "Обновление rc.4 пакетов TanStack Query для Angular",
+          "summary": "Обновление включает исправления и улучшения миграции, что повышает стабильность и совместимость с Angular.",
+          "publishedAt": "2026-10-16T12:11:41Z",
+          "source": "TanStack Query Releases",
+          "url": "https://github.com/TanStack/query/releases/tag/release-2026-10-16-1211"
+        },
+        {
           "id": "7feba9dc9659b5",
           "kind": "major",
           "priority": "P2",
@@ -16184,15 +16195,15 @@
       "packageNames": [
         "eslint"
       ],
-      "latestVersion": "10.12.0",
-      "latestPublishedAt": "2026-10-02T20:08:19.213Z",
+      "latestVersion": "10.13.0",
+      "latestPublishedAt": "2026-10-16T14:24:10.765Z",
       "npmUrl": "https://www.npmjs.com/package/eslint",
       "repositoryUrl": "https://github.com/eslint/eslint",
       "packages": [
         {
           "name": "eslint",
-          "latestVersion": "10.12.0",
-          "latestPublishedAt": "2026-10-02T20:08:19.213Z",
+          "latestVersion": "10.13.0",
+          "latestPublishedAt": "2026-10-16T14:24:10.765Z",
           "npmUrl": "https://www.npmjs.com/package/eslint",
           "compatibility": [
             {
@@ -16223,9 +16234,9 @@
               "deprecated": "This version is no longer supported. Please see https://eslint.org/version-support for other options."
             },
             {
-              "range": ">=10.0.0 <=10.12.0",
+              "range": ">=10.0.0 <=10.13.0",
               "minVersion": "10.0.0",
-              "maxVersion": "10.12.0",
+              "maxVersion": "10.13.0",
               "peerDependencies": {},
               "optionalPeers": [],
               "nodeRange": "^20.19.0 || ^22.13.0 || >=24",
@@ -16233,6 +16244,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "10.13.0",
+              "publishedAt": "2026-10-16T14:24:10.765Z"
+            },
             {
               "version": "10.12.0",
               "publishedAt": "2026-10-02T20:08:19.213Z"
