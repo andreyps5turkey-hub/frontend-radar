@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 2,
+  "date": "2026-10-18",
+  "generatedAt": "2026-10-18T09:02:52.261Z",
+  "timezone": "Europe/Moscow",
+  "windowHours": 26,
+  "sourcesChecked": 32,
+  "sourceHealth": {
+    "attempted": 32,
+    "succeeded": 32,
+    "failed": []
+  },
+  "status": "active",
+  "summary": "В окне дня выпущена новая версия TanStack Query с исправлениями багов и улучшениями работы с подписчиками и параметрами бесконечных страниц.",
+  "items": [
+    {
+      "priority": "P2",
+      "title": "TanStack Query: исправления в работе с подписчиками и бесконечными страницами",
+      "source": "TanStack Query Releases",
+      "publishedAt": "2026-10-18T03:13:18Z",
+      "whyImportant": "Обновление устраняет сбои при очистке мутаций и корректно обрабатывает параметры бесконечных страниц, повышая стабильность приложений.",
+      "audience": "Разработчики, использующие TanStack Query в React, Solid, Preact и других фреймворках",
+      "nextStep": "Проверьте совместимость текущих запросов, обновите пакет до версии release-2026-10-17-1753 и протестируйте критические пути.",
+      "url": "https://github.com/TanStack/query/releases/tag/release-2026-10-17-1753",
+      "tags": [
+        "TanStack Query",
+        "React",
+        "Solid",
+        "Preact"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "query",
+        "react"
+      ],
+      "packages": [
+        {
+          "name": "@tanstack/react-query",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
+      "effort": "hours",
+      "actionItems": [
+        "Обновить пакет до версии release-2026-10-17-1753",
+        "Проверить работу подписчиков после обновления",
+        "Тестировать обработку бесконечных страниц"
+      ],
+      "detailsConfidence": "source"
+    }
+  ],
+  "readLater": [
+    {
+      "priority": "P3",
+      "title": "Node.js v24.22.0 – новые возможности криптографии",
+      "source": "Node.js Releases",
+      "publishedAt": "2026-10-14T15:12:46Z",
+      "whyImportant": "Добавлены новые API для работы с PKCS12, MAC и OpenSSL‑провайдерами, что расширяет возможности безопасной обработки данных.",
+      "audience": "Backend‑разработчики, работающие с Node.js",
+      "nextStep": "Изучить новые API и протестировать их в собственных проектах.",
+      "url": "https://github.com/nodejs/node/releases/tag/v24.22.0",
+      "tags": [
+        "Node.js",
+        "crypto"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "platform"
+      ],
+      "packages": [],
+      "risk": "unknown",
+      "effort": "minutes",
+      "actionItems": [
+        "Прочитать официальную документацию по новым API",
+        "Написать тесты для проверки совместимости"
+      ],
+      "detailsConfidence": "source"
+    },
+    {
+      "priority": "P3",
+      "title": "Next.js Releases: выпуск v15.5.28",
+      "source": "Next.js Releases",
+      "publishedAt": "2026-10-14T17:47:49Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, которые поддерживают приложения на Next.js.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/vercel/next.js/releases/tag/v15.5.28",
+      "tags": [
+        "next.js",
+        "обновление"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "nextjs"
+      ],
+      "packages": [
+        {
+          "name": "next",
+          "releasedVersion": "v15.5.28",
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    }
+  ]
+}

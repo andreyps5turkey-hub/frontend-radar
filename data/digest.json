@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "date": "2026-10-17",
-  "generatedAt": "2026-10-17T08:46:42.951Z",
+  "date": "2026-10-18",
+  "generatedAt": "2026-10-18T09:02:52.261Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -11,24 +11,27 @@
     "failed": []
   },
   "status": "active",
-  "summary": "В окне дня выпущены обновления rc для пакетов TanStack Query Angular.",
+  "summary": "В окне дня выпущена новая версия TanStack Query с исправлениями багов и улучшениями работы с подписчиками и параметрами бесконечных страниц.",
   "items": [
     {
       "priority": "P2",
-      "title": "Обновление rc.4 пакетов TanStack Query для Angular",
+      "title": "TanStack Query: исправления в работе с подписчиками и бесконечными страницами",
       "source": "TanStack Query Releases",
-      "publishedAt": "2026-10-16T12:11:41Z",
-      "whyImportant": "Обновление включает исправления и улучшения миграции, что повышает стабильность и совместимость с Angular.",
-      "audience": "Разработчики, использующие TanStack Query в Angular",
-      "nextStep": "Обновите пакеты до версии 5.0.0-rc.4 и проверьте миграцию в вашем проекте.",
-      "url": "https://github.com/TanStack/query/releases/tag/release-2026-10-16-1211",
+      "publishedAt": "2026-10-18T03:13:18Z",
+      "whyImportant": "Обновление устраняет сбои при очистке мутаций и корректно обрабатывает параметры бесконечных страниц, повышая стабильность приложений.",
+      "audience": "Разработчики, использующие TanStack Query в React, Solid, Preact и других фреймворках",
+      "nextStep": "Проверьте совместимость текущих запросов, обновите пакет до версии release-2026-10-17-1753 и протестируйте критические пути.",
+      "url": "https://github.com/TanStack/query/releases/tag/release-2026-10-17-1753",
       "tags": [
-        "Angular",
-        "TanStack Query"
+        "TanStack Query",
+        "React",
+        "Solid",
+        "Preact"
       ],
-      "changeType": "breaking",
+      "changeType": "minor",
       "technologies": [
-        "query"
+        "query",
+        "react"
       ],
       "packages": [
         {
@@ -41,9 +44,9 @@
       "risk": "unknown",
       "effort": "hours",
       "actionItems": [
-        "Проверьте совместимость миграции в проекте",
-        "Обновите зависимости до rc.4",
-        "Запустите тесты"
+        "Обновить пакет до версии release-2026-10-17-1753",
+        "Проверить работу подписчиков после обновления",
+        "Тестировать обработку бесконечных страниц"
       ],
       "detailsConfidence": "source"
     }

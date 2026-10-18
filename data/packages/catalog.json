@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-17T08:46:48.785Z",
+  "generatedAt": "2026-10-18T09:02:58.300Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -9225,15 +9225,15 @@
       "packageNames": [
         "@tanstack/react-query"
       ],
-      "latestVersion": "5.104.3",
-      "latestPublishedAt": "2026-10-15T07:53:35.788Z",
+      "latestVersion": "5.104.4",
+      "latestPublishedAt": "2026-10-17T17:55:14.077Z",
       "npmUrl": "https://www.npmjs.com/package/@tanstack/react-query",
       "repositoryUrl": "https://github.com/TanStack/query",
       "packages": [
         {
           "name": "@tanstack/react-query",
-          "latestVersion": "5.104.3",
-          "latestPublishedAt": "2026-10-15T07:53:35.788Z",
+          "latestVersion": "5.104.4",
+          "latestPublishedAt": "2026-10-17T17:55:14.077Z",
           "npmUrl": "https://www.npmjs.com/package/@tanstack/react-query",
           "compatibility": [
             {
@@ -9290,9 +9290,9 @@
               "deprecated": null
             },
             {
-              "range": ">=5.52.1 <=5.104.3",
+              "range": ">=5.52.1 <=5.104.4",
               "minVersion": "5.52.1",
-              "maxVersion": "5.104.3",
+              "maxVersion": "5.104.4",
               "peerDependencies": {
                 "react": "^18 || ^19"
               },
@@ -9302,6 +9302,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "5.104.4",
+              "publishedAt": "2026-10-17T17:55:14.077Z"
+            },
             {
               "version": "5.104.3",
               "publishedAt": "2026-10-15T07:53:35.788Z"
@@ -11079,6 +11083,17 @@
       ],
       "advisories": [],
       "events": [
+        {
+          "id": "e04cae9338d86d",
+          "kind": "minor",
+          "priority": "P2",
+          "version": null,
+          "title": "TanStack Query: исправления в работе с подписчиками и бесконечными страницами",
+          "summary": "Обновление устраняет сбои при очистке мутаций и корректно обрабатывает параметры бесконечных страниц, повышая стабильность приложений.",
+          "publishedAt": "2026-10-18T03:13:18Z",
+          "source": "TanStack Query Releases",
+          "url": "https://github.com/TanStack/query/releases/tag/release-2026-10-17-1753"
+        },
         {
           "id": "e5179e625bbdd2",
           "kind": "major",
