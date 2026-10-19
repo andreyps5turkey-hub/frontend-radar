@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "date": "2026-10-18",
-  "generatedAt": "2026-10-18T09:02:52.261Z",
+  "date": "2026-10-19",
+  "generatedAt": "2026-10-19T10:14:48.528Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -10,95 +10,79 @@
     "succeeded": 32,
     "failed": []
   },
-  "status": "active",
-  "summary": "В окне дня выпущена новая версия TanStack Query с исправлениями багов и улучшениями работы с подписчиками и параметрами бесконечных страниц.",
-  "items": [
+  "status": "quiet",
+  "summary": "В окне дня ничего значительного не произошло.",
+  "items": [],
+  "readLater": [
     {
       "priority": "P2",
-      "title": "TanStack Query: исправления в работе с подписчиками и бесконечными страницами",
-      "source": "TanStack Query Releases",
-      "publishedAt": "2026-10-18T03:13:18Z",
-      "whyImportant": "Обновление устраняет сбои при очистке мутаций и корректно обрабатывает параметры бесконечных страниц, повышая стабильность приложений.",
-      "audience": "Разработчики, использующие TanStack Query в React, Solid, Preact и других фреймворках",
-      "nextStep": "Проверьте совместимость текущих запросов, обновите пакет до версии release-2026-10-17-1753 и протестируйте критические пути.",
-      "url": "https://github.com/TanStack/query/releases/tag/release-2026-10-17-1753",
+      "title": "create-vite 9.3.0 – новые возможности и исправления",
+      "source": "Vite Releases",
+      "publishedAt": "2026-10-19T08:05:45Z",
+      "whyImportant": "Включены улучшения в выводе версии и поддержка TypeScript 7, а также обновлены зависимости.",
+      "audience": "Разработчики, использующие Vite",
+      "nextStep": "Обновить пакет create-vite до версии 9.3.0 и проверить совместимость с текущим проектом.",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.3.0",
       "tags": [
-        "TanStack Query",
-        "React",
-        "Solid",
-        "Preact"
+        "Vite",
+        "create-vite",
+        "TypeScript"
       ],
-      "changeType": "minor",
+      "changeType": "major",
       "technologies": [
-        "query",
-        "react"
+        "typescript",
+        "vite"
       ],
       "packages": [
         {
-          "name": "@tanstack/react-query",
+          "name": "vite",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "@vitejs/plugin-legacy",
           "releasedVersion": null,
           "affectedRange": null,
           "fixedVersion": null
         }
       ],
       "risk": "unknown",
-      "effort": "hours",
-      "actionItems": [
-        "Обновить пакет до версии release-2026-10-17-1753",
-        "Проверить работу подписчиков после обновления",
-        "Тестировать обработку бесконечных страниц"
-      ],
-      "detailsConfidence": "source"
-    }
-  ],
-  "readLater": [
-    {
-      "priority": "P3",
-      "title": "Node.js v24.22.0 – новые возможности криптографии",
-      "source": "Node.js Releases",
-      "publishedAt": "2026-10-14T15:12:46Z",
-      "whyImportant": "Добавлены новые API для работы с PKCS12, MAC и OpenSSL‑провайдерами, что расширяет возможности безопасной обработки данных.",
-      "audience": "Backend‑разработчики, работающие с Node.js",
-      "nextStep": "Изучить новые API и протестировать их в собственных проектах.",
-      "url": "https://github.com/nodejs/node/releases/tag/v24.22.0",
-      "tags": [
-        "Node.js",
-        "crypto"
-      ],
-      "changeType": "minor",
-      "technologies": [
-        "platform"
-      ],
-      "packages": [],
-      "risk": "unknown",
       "effort": "minutes",
       "actionItems": [
-        "Прочитать официальную документацию по новым API",
-        "Написать тесты для проверки совместимости"
+        "Установить create-vite@9.3.0",
+        "Проверить вывод версии перед скелетированием",
+        "Тестировать совместимость с TypeScript 7"
       ],
       "detailsConfidence": "source"
     },
     {
       "priority": "P3",
-      "title": "Next.js Releases: выпуск v15.5.28",
-      "source": "Next.js Releases",
-      "publishedAt": "2026-10-14T17:47:49Z",
+      "title": "React Releases: выпуск 19.3.1",
+      "source": "React Releases",
+      "publishedAt": "2026-10-14T17:06:15Z",
       "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, которые поддерживают приложения на Next.js.",
+      "audience": "Разработчики и команды, использующие React.",
       "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/vercel/next.js/releases/tag/v15.5.28",
+      "url": "https://github.com/react/react/releases/tag/v19.3.1",
       "tags": [
-        "next.js",
+        "react",
         "обновление"
       ],
       "changeType": "minor",
       "technologies": [
-        "nextjs"
+        "react"
       ],
       "packages": [
         {
-          "name": "next",
-          "releasedVersion": "v15.5.28",
+          "name": "react",
+          "releasedVersion": "19.3.1",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "react-dom",
+          "releasedVersion": null,
           "affectedRange": null,
           "fixedVersion": null
         }

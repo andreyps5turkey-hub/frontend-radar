@@ -1,11 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-18T09:02:58.300Z",
+  "generatedAt": "2026-10-19T10:14:56.583Z",
   "sourceHealth": {
     "attempted": 28,
-    "succeeded": 28,
-    "failed": [],
-    "stale": false
+    "succeeded": 27,
+    "failed": [
+      "npm:@typescript/native-preview"
+    ],
+    "stale": true
   },
   "packages": [
     {
@@ -1405,6 +1407,17 @@
         }
       ],
       "events": [
+        {
+          "id": "425729f66956f3",
+          "kind": "minor",
+          "priority": "P3",
+          "version": "19.3.1",
+          "title": "React Releases: выпуск 19.3.1",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-10-14T17:06:15Z",
+          "source": "React Releases",
+          "url": "https://github.com/react/react/releases/tag/v19.3.1"
+        },
         {
           "id": "ea0ffd7f3d62a1",
           "kind": "minor",
@@ -6861,6 +6874,17 @@
         }
       ],
       "events": [
+        {
+          "id": "d79f0023338dab",
+          "kind": "major",
+          "priority": "P2",
+          "version": "9.3.0",
+          "title": "create-vite 9.3.0 – новые возможности и исправления",
+          "summary": "Включены улучшения в выводе версии и поддержка TypeScript 7, а также обновлены зависимости.",
+          "publishedAt": "2026-10-19T08:05:45Z",
+          "source": "Vite Releases",
+          "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.3.0"
+        },
         {
           "id": "ea0ffd7f3d62a1",
           "kind": "minor",
