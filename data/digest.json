@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "date": "2026-10-20",
-  "generatedAt": "2026-10-20T09:36:30.779Z",
+  "generatedAt": "2026-10-20T10:01:03.947Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -262,6 +262,48 @@
     },
     {
       "priority": "P3",
+      "title": "Storybook Releases: выпуск v10.6.3",
+      "source": "Storybook Releases",
+      "publishedAt": "2026-10-20T09:50:15Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы Storybook Releases.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/storybookjs/storybook/releases/tag/v10.6.3",
+      "tags": [
+        "storybook",
+        "обновление"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "nextjs",
+        "typescript",
+        "vite",
+        "storybook"
+      ],
+      "packages": [
+        {
+          "name": "storybook",
+          "releasedVersion": "v10.6.3",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "@storybook/react",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    },
+    {
+      "priority": "P3",
       "title": "Новый материал от Веб-стандарты",
       "source": "Веб-стандарты",
       "publishedAt": "Mon, 19 Oct 2026 09:00:00 GMT",
@@ -278,39 +320,6 @@
         "platform"
       ],
       "packages": [],
-      "risk": "low",
-      "effort": "minutes",
-      "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
-      ],
-      "detailsConfidence": "inferred"
-    },
-    {
-      "priority": "P3",
-      "title": "Новый материал от Next.js Security",
-      "source": "Next.js Security",
-      "publishedAt": "2026-10-14T17:46:48Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, которые поддерживают приложения на Next.js.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-2464-fhr4-w9xw",
-      "tags": [
-        "next.js",
-        "безопасность"
-      ],
-      "changeType": "minor",
-      "technologies": [
-        "nextjs"
-      ],
-      "packages": [
-        {
-          "name": "next",
-          "releasedVersion": null,
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
       "risk": "low",
       "effort": "minutes",
       "actionItems": [
