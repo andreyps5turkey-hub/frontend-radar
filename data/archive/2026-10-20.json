@@ -1,0 +1,323 @@
+{
+  "schemaVersion": 2,
+  "date": "2026-10-20",
+  "generatedAt": "2026-10-20T09:36:30.779Z",
+  "timezone": "Europe/Moscow",
+  "windowHours": 26,
+  "sourcesChecked": 32,
+  "sourceHealth": {
+    "attempted": 32,
+    "succeeded": 32,
+    "failed": []
+  },
+  "status": "active",
+  "summary": "Автоматическая подборка собрана в резервном режиме. Проверьте релизы по ссылкам на первоисточники.",
+  "items": [
+    {
+      "priority": "P2",
+      "title": "typescript-eslint Releases: выпуск v8.72.0",
+      "source": "typescript-eslint Releases",
+      "publishedAt": "2026-10-19T17:05:43Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды с TypeScript-проектами и авторами библиотек.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/typescript-eslint/typescript-eslint/releases/tag/v8.72.0",
+      "tags": [
+        "typescript-eslint",
+        "обновление"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "typescript",
+        "quality"
+      ],
+      "packages": [
+        {
+          "name": "typescript-eslint",
+          "releasedVersion": "v8.72.0",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "@typescript-eslint/parser",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "typescript",
+          "releasedVersion": "v8.72.0",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "eslint",
+          "releasedVersion": "v8.72.0",
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    },
+    {
+      "priority": "P2",
+      "title": "React Router Releases: выпуск v8.5.0",
+      "source": "React Router Releases",
+      "publishedAt": "2026-10-19T13:48:57Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Разработчики и команды, использующие React.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/remix-run/react-router/releases/tag/react-router%408.5.0",
+      "tags": [
+        "react",
+        "обновление"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "router",
+        "react"
+      ],
+      "packages": [
+        {
+          "name": "react-router",
+          "releasedVersion": "v8.5.0",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "react-router-dom",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    },
+    {
+      "priority": "P2",
+      "title": "React Router Releases: выпуск 8.5.0",
+      "source": "React Router Releases",
+      "publishedAt": "2026-10-19T13:46:24Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Разработчики и команды, использующие React.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/remix-run/react-router/releases/tag/create-react-router%408.5.0",
+      "tags": [
+        "react",
+        "обновление"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "router",
+        "react"
+      ],
+      "packages": [
+        {
+          "name": "react-router",
+          "releasedVersion": "8.5.0",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "react-router-dom",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    },
+    {
+      "priority": "P2",
+      "title": "core-js Releases: выпуск 3.51.0",
+      "source": "core-js Releases",
+      "publishedAt": "2026-10-19T10:48:39Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы core-js Releases.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/zloirock/core-js/releases/tag/v3.51.0",
+      "tags": [
+        "core-js",
+        "обновление"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "platform"
+      ],
+      "packages": [
+        {
+          "name": "core-js",
+          "releasedVersion": "3.51.0",
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    },
+    {
+      "priority": "P2",
+      "title": "Vite Releases: выпуск 9.3.1",
+      "source": "Vite Releases",
+      "publishedAt": "2026-10-20T03:01:54Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы Vite Releases.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.3.1",
+      "tags": [
+        "vite",
+        "обновление"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "typescript",
+        "vite"
+      ],
+      "packages": [
+        {
+          "name": "vite",
+          "releasedVersion": "9.3.1",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "@vitejs/plugin-legacy",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    }
+  ],
+  "readLater": [
+    {
+      "priority": "P3",
+      "title": "Vite Releases: выпуск 9.3.0",
+      "source": "Vite Releases",
+      "publishedAt": "2026-10-19T08:05:45Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы Vite Releases.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.3.0",
+      "tags": [
+        "vite",
+        "обновление"
+      ],
+      "changeType": "major",
+      "technologies": [
+        "typescript",
+        "vite"
+      ],
+      "packages": [
+        {
+          "name": "vite",
+          "releasedVersion": "9.3.0",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "@vitejs/plugin-legacy",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    },
+    {
+      "priority": "P3",
+      "title": "Новый материал от Веб-стандарты",
+      "source": "Веб-стандарты",
+      "publishedAt": "Mon, 19 Oct 2026 09:00:00 GMT",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы Веб-стандарты.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://web-standards.ru/podcast/549/",
+      "tags": [
+        "веб-стандарты",
+        "обновление"
+      ],
+      "changeType": "guide",
+      "technologies": [
+        "platform"
+      ],
+      "packages": [],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    },
+    {
+      "priority": "P3",
+      "title": "Новый материал от Next.js Security",
+      "source": "Next.js Security",
+      "publishedAt": "2026-10-14T17:46:48Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, которые поддерживают приложения на Next.js.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-2464-fhr4-w9xw",
+      "tags": [
+        "next.js",
+        "безопасность"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "nextjs"
+      ],
+      "packages": [
+        {
+          "name": "next",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    }
+  ]
+}

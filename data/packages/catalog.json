@@ -1,13 +1,11 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-19T10:14:56.583Z",
+  "generatedAt": "2026-10-20T09:36:39.431Z",
   "sourceHealth": {
     "attempted": 28,
-    "succeeded": 27,
-    "failed": [
-      "npm:@typescript/native-preview"
-    ],
-    "stale": true
+    "succeeded": 28,
+    "failed": [],
+    "stale": false
   },
   "packages": [
     {
@@ -4768,11 +4766,11 @@
         },
         {
           "id": "49d40317a92e52",
-          "kind": "security",
-          "priority": "P0",
+          "kind": "minor",
+          "priority": "P3",
           "version": null,
-          "title": "Уязвимость RCE в API оптимизации изображений при использовании SVG",
-          "summary": "Позволяет удалённому исполнению произвольного кода на серверах, использующих Next.js с glibc.",
+          "title": "Новый материал от Next.js Security",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
           "publishedAt": "2026-10-14T17:46:48Z",
           "source": "Next.js Security",
           "url": "https://github.com/vercel/next.js/security/advisories/GHSA-2464-fhr4-w9xw"
@@ -5347,6 +5345,17 @@
       ],
       "advisories": [],
       "events": [
+        {
+          "id": "b21a317d70f03a",
+          "kind": "minor",
+          "priority": 0,
+          "version": "8.72.0",
+          "title": "typescript-eslint Releases: выпуск v8.72.0",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-10-19T17:05:43Z",
+          "source": "typescript-eslint Releases",
+          "url": "https://github.com/typescript-eslint/typescript-eslint/releases/tag/v8.72.0"
+        },
         {
           "id": "47fcec638d2ad5",
           "kind": "patch",
@@ -6875,12 +6884,23 @@
       ],
       "events": [
         {
+          "id": "4b19c2fc1e385d",
+          "kind": "minor",
+          "priority": 4,
+          "version": "9.3.1",
+          "title": "Vite Releases: выпуск 9.3.1",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-10-20T03:01:54Z",
+          "source": "Vite Releases",
+          "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.3.1"
+        },
+        {
           "id": "d79f0023338dab",
           "kind": "major",
-          "priority": "P2",
+          "priority": "P3",
           "version": "9.3.0",
-          "title": "create-vite 9.3.0 – новые возможности и исправления",
-          "summary": "Включены улучшения в выводе версии и поддержка TypeScript 7, а также обновлены зависимости.",
+          "title": "Vite Releases: выпуск 9.3.0",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
           "publishedAt": "2026-10-19T08:05:45Z",
           "source": "Vite Releases",
           "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.3.0"
@@ -7093,15 +7113,15 @@
         "react-router",
         "react-router-dom"
       ],
-      "latestVersion": "8.4.0",
-      "latestPublishedAt": "2026-09-15T15:23:42.214Z",
+      "latestVersion": "8.5.0",
+      "latestPublishedAt": "2026-10-19T13:49:03.724Z",
       "npmUrl": "https://www.npmjs.com/package/react-router",
       "repositoryUrl": "https://github.com/remix-run/react-router",
       "packages": [
         {
           "name": "react-router",
-          "latestVersion": "8.4.0",
-          "latestPublishedAt": "2026-09-15T15:23:42.214Z",
+          "latestVersion": "8.5.0",
+          "latestPublishedAt": "2026-10-19T13:49:03.724Z",
           "npmUrl": "https://www.npmjs.com/package/react-router",
           "compatibility": [
             {
@@ -7163,9 +7183,9 @@
               "deprecated": null
             },
             {
-              "range": ">=8.0.0 <=8.4.0",
+              "range": ">=8.0.0 <=8.5.0",
               "minVersion": "8.0.0",
-              "maxVersion": "8.4.0",
+              "maxVersion": "8.5.0",
               "peerDependencies": {
                 "react": ">=19.2.7",
                 "react-dom": ">=19.2.7"
@@ -7178,6 +7198,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "8.5.0",
+              "publishedAt": "2026-10-19T13:49:03.724Z"
+            },
             {
               "version": "8.4.0",
               "publishedAt": "2026-09-15T15:23:42.214Z"
@@ -8777,6 +8801,28 @@
       ],
       "events": [
         {
+          "id": "a5bd2b3d20aaf5",
+          "kind": "minor",
+          "priority": 1,
+          "version": "8.5.0",
+          "title": "React Router Releases: выпуск v8.5.0",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-10-19T13:48:57Z",
+          "source": "React Router Releases",
+          "url": "https://github.com/remix-run/react-router/releases/tag/react-router%408.5.0"
+        },
+        {
+          "id": "6d8ea207b4faa1",
+          "kind": "minor",
+          "priority": 2,
+          "version": "8.5.0",
+          "title": "React Router Releases: выпуск 8.5.0",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-10-19T13:46:24Z",
+          "source": "React Router Releases",
+          "url": "https://github.com/remix-run/react-router/releases/tag/create-react-router%408.5.0"
+        },
+        {
           "id": "8a719d9422e4c2",
           "kind": "minor",
           "priority": "P1",
@@ -9249,15 +9295,15 @@
       "packageNames": [
         "@tanstack/react-query"
       ],
-      "latestVersion": "5.104.4",
-      "latestPublishedAt": "2026-10-17T17:55:14.077Z",
+      "latestVersion": "5.104.5",
+      "latestPublishedAt": "2026-10-19T16:57:50.440Z",
       "npmUrl": "https://www.npmjs.com/package/@tanstack/react-query",
       "repositoryUrl": "https://github.com/TanStack/query",
       "packages": [
         {
           "name": "@tanstack/react-query",
-          "latestVersion": "5.104.4",
-          "latestPublishedAt": "2026-10-17T17:55:14.077Z",
+          "latestVersion": "5.104.5",
+          "latestPublishedAt": "2026-10-19T16:57:50.440Z",
           "npmUrl": "https://www.npmjs.com/package/@tanstack/react-query",
           "compatibility": [
             {
@@ -9314,9 +9360,9 @@
               "deprecated": null
             },
             {
-              "range": ">=5.52.1 <=5.104.4",
+              "range": ">=5.52.1 <=5.104.5",
               "minVersion": "5.52.1",
-              "maxVersion": "5.104.4",
+              "maxVersion": "5.104.5",
               "peerDependencies": {
                 "react": "^18 || ^19"
               },
@@ -9326,6 +9372,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "5.104.5",
+              "publishedAt": "2026-10-19T16:57:50.440Z"
+            },
             {
               "version": "5.104.4",
               "publishedAt": "2026-10-17T17:55:14.077Z"
@@ -16968,6 +17018,17 @@
       ],
       "advisories": [],
       "events": [
+        {
+          "id": "b21a317d70f03a",
+          "kind": "minor",
+          "priority": 0,
+          "version": "8.72.0",
+          "title": "typescript-eslint Releases: выпуск v8.72.0",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-10-19T17:05:43Z",
+          "source": "typescript-eslint Releases",
+          "url": "https://github.com/typescript-eslint/typescript-eslint/releases/tag/v8.72.0"
+        },
         {
           "id": "aac7b125de5f0b",
           "kind": "minor",
