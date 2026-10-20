@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-20T11:34:33.295Z",
+  "generatedAt": "2026-10-20T17:00:43.079Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -5346,6 +5346,17 @@
       "advisories": [],
       "events": [
         {
+          "id": "a75ed007481a52",
+          "kind": "patch",
+          "priority": "P3",
+          "version": null,
+          "title": "Новый материал от JavaScript Weekly",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "Tue, 20 Oct 2026 00:00:00 +0000",
+          "source": "JavaScript Weekly",
+          "url": "https://javascriptweekly.com/issues/807"
+        },
+        {
           "id": "b21a317d70f03a",
           "kind": "minor",
           "priority": 0,
@@ -6886,7 +6897,7 @@
         {
           "id": "4b19c2fc1e385d",
           "kind": "minor",
-          "priority": 4,
+          "priority": 1,
           "version": "9.3.1",
           "title": "Vite Releases: выпуск 9.3.1",
           "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
@@ -6897,10 +6908,10 @@
         {
           "id": "d79f0023338dab",
           "kind": "major",
-          "priority": "P3",
+          "priority": "P2",
           "version": "9.3.0",
-          "title": "Vite Releases: выпуск 9.3.0",
-          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "title": "create-vite 9.3.0 – новые возможности и исправления",
+          "summary": "Включены улучшения в выводе версии и поддержка TypeScript 7, а также обновлены зависимости.",
           "publishedAt": "2026-10-19T08:05:45Z",
           "source": "Vite Releases",
           "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.3.0"
@@ -8803,7 +8814,7 @@
         {
           "id": "a5bd2b3d20aaf5",
           "kind": "minor",
-          "priority": 1,
+          "priority": "P2",
           "version": "8.5.0",
           "title": "React Router Releases: выпуск v8.5.0",
           "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
@@ -8814,7 +8825,7 @@
         {
           "id": "6d8ea207b4faa1",
           "kind": "minor",
-          "priority": 2,
+          "priority": "P2",
           "version": "8.5.0",
           "title": "React Router Releases: выпуск 8.5.0",
           "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
@@ -16214,7 +16225,7 @@
         {
           "id": "c7d33937b91a8c",
           "kind": "minor",
-          "priority": "P3",
+          "priority": 3,
           "version": "10.6.3",
           "title": "Storybook Releases: выпуск v10.6.3",
           "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
