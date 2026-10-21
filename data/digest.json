@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "date": "2026-10-20",
-  "generatedAt": "2026-10-20T17:00:23.695Z",
+  "date": "2026-10-21",
+  "generatedAt": "2026-10-21T09:35:21.922Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -11,82 +11,30 @@
     "failed": []
   },
   "status": "active",
-  "summary": "Автоматическая подборка собрана в резервном режиме. Проверьте релизы по ссылкам на первоисточники.",
+  "summary": "Сегодня в окне публикаций появились обновления Vite 8.3.5 с исправлениями сборки и объявление бета‑версии TypeScript 7.1, открывающей новые возможности для импортов.",
   "items": [
     {
       "priority": "P2",
-      "title": "typescript-eslint Releases: выпуск v8.72.0",
-      "source": "typescript-eslint Releases",
-      "publishedAt": "2026-10-19T17:05:43Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды с TypeScript-проектами и авторами библиотек.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/typescript-eslint/typescript-eslint/releases/tag/v8.72.0",
-      "tags": [
-        "typescript-eslint",
-        "обновление"
-      ],
-      "changeType": "minor",
-      "technologies": [
-        "typescript",
-        "quality"
-      ],
-      "packages": [
-        {
-          "name": "typescript-eslint",
-          "releasedVersion": "v8.72.0",
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "@typescript-eslint/parser",
-          "releasedVersion": null,
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "typescript",
-          "releasedVersion": "v8.72.0",
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "eslint",
-          "releasedVersion": "v8.72.0",
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "low",
-      "effort": "minutes",
-      "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
-      ],
-      "detailsConfidence": "inferred"
-    },
-    {
-      "priority": "P2",
-      "title": "Vite Releases: выпуск 9.3.1",
+      "title": "Версия Vite 8.3.5",
       "source": "Vite Releases",
-      "publishedAt": "2026-10-20T03:01:54Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы Vite Releases.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.3.1",
+      "publishedAt": "2026-10-21T06:35:46Z",
+      "whyImportant": "Включены исправления сборки, которые устраняют ошибки при работе с импорт‑мапами и улучшает генерацию URL‑ов в dev‑сервере.",
+      "audience": "Разработчики, использующие Vite",
+      "nextStep": "Обновите Vite до версии 8.3.5 и проверьте корректность сборки вашего проекта.",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.3.5",
       "tags": [
-        "vite",
-        "обновление"
+        "Vite",
+        "build",
+        "bugfix"
       ],
       "changeType": "minor",
       "technologies": [
-        "typescript",
         "vite"
       ],
       "packages": [
         {
           "name": "vite",
-          "releasedVersion": "9.3.1",
+          "releasedVersion": "8.3.5",
           "affectedRange": null,
           "fixedVersion": null
         },
@@ -97,108 +45,30 @@
           "fixedVersion": null
         }
       ],
-      "risk": "low",
-      "effort": "minutes",
+      "risk": "unknown",
+      "effort": "hours",
       "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
+        "Проверить, что сборка проходит без ошибок"
       ],
-      "detailsConfidence": "inferred"
+      "detailsConfidence": "source"
     },
     {
       "priority": "P2",
-      "title": "Puppeteer Releases: выпуск v25.15.0",
-      "source": "Puppeteer Releases",
-      "publishedAt": "2026-10-20T11:37:32Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы Puppeteer Releases.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/puppeteer/puppeteer/releases/tag/puppeteer-v25.15.0",
+      "title": "Анонс TypeScript 7.1 Beta",
+      "source": "TypeScript Blog",
+      "publishedAt": "Tue, 20 Oct 2026 17:53:06 +0000",
+      "whyImportant": "Бета‑версия вводит поддержку атрибутов импорта в амбиентных модулях, что позволит более гибко управлять зависимостями в проектах.",
+      "audience": "Разработчики, использующие TypeScript",
+      "nextStep": "Установите пакет typescript@beta и протестируйте новые возможности в вашем проекте.",
+      "url": "https://devblogs.microsoft.com/typescript/announcing-typescript-7-1-beta/",
       "tags": [
-        "puppeteer",
-        "обновление"
+        "TypeScript",
+        "beta",
+        "import-attributes"
       ],
       "changeType": "minor",
       "technologies": [
-        "platform"
-      ],
-      "packages": [
-        {
-          "name": "puppeteer",
-          "releasedVersion": "v25.15.0",
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "low",
-      "effort": "minutes",
-      "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
-      ],
-      "detailsConfidence": "inferred"
-    },
-    {
-      "priority": "P2",
-      "title": "Storybook Releases: выпуск v10.6.3",
-      "source": "Storybook Releases",
-      "publishedAt": "2026-10-20T09:50:15Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы Storybook Releases.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/storybookjs/storybook/releases/tag/v10.6.3",
-      "tags": [
-        "storybook",
-        "обновление"
-      ],
-      "changeType": "minor",
-      "technologies": [
-        "nextjs",
-        "typescript",
-        "vite",
-        "storybook"
-      ],
-      "packages": [
-        {
-          "name": "storybook",
-          "releasedVersion": "v10.6.3",
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "@storybook/react",
-          "releasedVersion": null,
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "low",
-      "effort": "minutes",
-      "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
-      ],
-      "detailsConfidence": "inferred"
-    }
-  ],
-  "readLater": [
-    {
-      "priority": "P3",
-      "title": "Новый материал от JavaScript Weekly",
-      "source": "JavaScript Weekly",
-      "publishedAt": "Tue, 20 Oct 2026 00:00:00 +0000",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы JavaScript Weekly.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://javascriptweekly.com/issues/807",
-      "tags": [
-        "javascript",
-        "обновление"
-      ],
-      "changeType": "guide",
-      "technologies": [
-        "typescript",
-        "platform"
+        "typescript"
       ],
       "packages": [
         {
@@ -208,79 +78,86 @@
           "fixedVersion": null
         }
       ],
-      "risk": "low",
-      "effort": "minutes",
+      "risk": "unknown",
+      "effort": "hours",
       "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
+        "Установить typescript@beta",
+        "Проверить работу импорт‑атрибутов в проекте"
       ],
-      "detailsConfidence": "inferred"
-    },
+      "detailsConfidence": "source"
+    }
+  ],
+  "readLater": [
     {
       "priority": "P3",
-      "title": "Новый материал от Next.js Security",
-      "source": "Next.js Security",
-      "publishedAt": "2026-10-14T17:46:48Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, которые поддерживают приложения на Next.js.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-2464-fhr4-w9xw",
+      "title": "Версия Vite 6.4.5",
+      "source": "Vite Releases",
+      "publishedAt": "2026-10-21T05:31:06Z",
+      "whyImportant": "Обновление содержит мелкие исправления и улучшения, которые могут повлиять на стабильность сборки.",
+      "audience": "Разработчики, использующие Vite",
+      "nextStep": "Проверьте совместимость вашего проекта с Vite 6.4.5, если планируете обновление.",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.4.5",
       "tags": [
-        "next.js",
-        "безопасность"
+        "Vite",
+        "minor"
       ],
       "changeType": "minor",
       "technologies": [
-        "nextjs"
+        "vite"
       ],
       "packages": [
         {
-          "name": "next",
+          "name": "vite",
+          "releasedVersion": "6.4.5",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "@vitejs/plugin-legacy",
           "releasedVersion": null,
           "affectedRange": null,
           "fixedVersion": null
         }
       ],
-      "risk": "low",
+      "risk": "unknown",
       "effort": "minutes",
       "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
+        "Проверить совместимость проекта с Vite 6.4.5"
       ],
-      "detailsConfidence": "inferred"
+      "detailsConfidence": "source"
     },
     {
       "priority": "P3",
-      "title": "Новый материал от Next.js Security",
-      "source": "Next.js Security",
-      "publishedAt": "2026-10-14T17:47:43Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, которые поддерживают приложения на Next.js.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-p3m5-59mp-jv5r",
+      "title": "Версия core-js 3.51.0",
+      "source": "core-js Releases",
+      "publishedAt": "2026-10-19T10:48:39Z",
+      "whyImportant": "Включены новые встроенные методы итераторов, которые могут пригодиться в современных проектах.",
+      "audience": "Разработчики, использующие core-js",
+      "nextStep": "Обновите core-js до 3.51.0, если используете новые методы итераторов.",
+      "url": "https://github.com/zloirock/core-js/releases/tag/v3.51.0",
       "tags": [
-        "next.js",
-        "безопасность"
+        "core-js",
+        "iterators",
+        "ES"
       ],
-      "changeType": "tooling",
+      "changeType": "minor",
       "technologies": [
-        "nextjs"
+        "platform"
       ],
       "packages": [
         {
-          "name": "next",
-          "releasedVersion": null,
+          "name": "core-js",
+          "releasedVersion": "3.51.0",
           "affectedRange": null,
           "fixedVersion": null
         }
       ],
-      "risk": "low",
+      "risk": "unknown",
       "effort": "minutes",
       "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
+        "Проверить наличие новых методов итераторов в проекте"
       ],
-      "detailsConfidence": "inferred"
+      "detailsConfidence": "source"
     }
   ]
 }

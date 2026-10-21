@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-20T17:00:43.079Z",
+  "generatedAt": "2026-10-21T09:35:30.072Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -5346,6 +5346,17 @@
       "advisories": [],
       "events": [
         {
+          "id": "21a4308dfea071",
+          "kind": "minor",
+          "priority": "P2",
+          "version": "7.1",
+          "title": "Анонс TypeScript 7.1 Beta",
+          "summary": "Бета‑версия вводит поддержку атрибутов импорта в амбиентных модулях, что позволит более гибко управлять зависимостями в проектах.",
+          "publishedAt": "Tue, 20 Oct 2026 17:53:06 +0000",
+          "source": "TypeScript Blog",
+          "url": "https://devblogs.microsoft.com/typescript/announcing-typescript-7-1-beta/"
+        },
+        {
           "id": "a75ed007481a52",
           "kind": "patch",
           "priority": "P3",
@@ -5359,7 +5370,7 @@
         {
           "id": "b21a317d70f03a",
           "kind": "minor",
-          "priority": 0,
+          "priority": "P2",
           "version": "8.72.0",
           "title": "typescript-eslint Releases: выпуск v8.72.0",
           "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
@@ -5387,15 +5398,15 @@
       "packageNames": [
         "vite"
       ],
-      "latestVersion": "8.3.4",
-      "latestPublishedAt": "2026-10-08T12:07:04.441Z",
+      "latestVersion": "8.3.5",
+      "latestPublishedAt": "2026-10-21T06:38:54.907Z",
       "npmUrl": "https://www.npmjs.com/package/vite",
       "repositoryUrl": "https://github.com/vitejs/vite",
       "packages": [
         {
           "name": "vite",
-          "latestVersion": "8.3.4",
-          "latestPublishedAt": "2026-10-08T12:07:04.441Z",
+          "latestVersion": "8.3.5",
+          "latestPublishedAt": "2026-10-21T06:38:54.907Z",
           "npmUrl": "https://www.npmjs.com/package/vite",
           "compatibility": [
             {
@@ -5408,18 +5419,18 @@
               "deprecated": null
             },
             {
-              "range": ">=6.0.0 <=6.4.4",
+              "range": ">=6.0.0 <=6.4.5",
               "minVersion": "6.0.0",
-              "maxVersion": "6.4.4",
+              "maxVersion": "6.4.5",
               "peerDependencies": {},
               "optionalPeers": [],
               "nodeRange": "^18.0.0 || ^20.0.0 || >=22.0.0",
               "deprecated": null
             },
             {
-              "range": ">=7.0.0 <=8.3.4",
+              "range": ">=7.0.0 <=8.3.5",
               "minVersion": "7.0.0",
-              "maxVersion": "8.3.4",
+              "maxVersion": "8.3.5",
               "peerDependencies": {},
               "optionalPeers": [],
               "nodeRange": "^20.19.0 || >=22.12.0",
@@ -5427,6 +5438,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "8.3.5",
+              "publishedAt": "2026-10-21T06:38:54.907Z"
+            },
             {
               "version": "8.3.4",
               "publishedAt": "2026-10-08T12:07:04.441Z"
@@ -5702,6 +5717,10 @@
             {
               "version": "7.0.0",
               "publishedAt": "2025-06-24T09:18:05.353Z"
+            },
+            {
+              "version": "6.4.5",
+              "publishedAt": "2026-10-21T05:35:48.976Z"
             },
             {
               "version": "6.4.4",
@@ -6151,6 +6170,120 @@
         }
       ],
       "advisories": [
+        {
+          "ghsaId": "GHSA-r825-w8mm-5pxw",
+          "cveId": "CVE-2026-112944",
+          "severity": "medium",
+          "cvss": null,
+          "title": "Уязвимость GHSA-r825-w8mm-5pxw в vite",
+          "summary": "Проверьте установленную версию vite и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
+          "publishedAt": "2026-10-20T19:51:52Z",
+          "updatedAt": "2026-10-20T19:51:54Z",
+          "url": "https://github.com/advisories/GHSA-r825-w8mm-5pxw",
+          "vulnerabilities": [
+            {
+              "packageName": "vite",
+              "vulnerableRange": ">= 8.3.0, <= 8.3.2",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "vite",
+              "vulnerableRange": ">= 8.2.0, <= 8.2.3",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "vite",
+              "vulnerableRange": ">= 8.0.0, <= 8.1.5",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "vite",
+              "vulnerableRange": ">= 7.0.0, <= 7.3.6",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "vite",
+              "vulnerableRange": "<= 6.4.3",
+              "fixedVersion": null
+            }
+          ]
+        },
+        {
+          "ghsaId": "GHSA-587h-7wmj-h5pm",
+          "cveId": "CVE-2026-112942",
+          "severity": "high",
+          "cvss": null,
+          "title": "Уязвимость GHSA-587h-7wmj-h5pm в vite",
+          "summary": "Проверьте установленную версию vite и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
+          "publishedAt": "2026-10-20T19:48:25Z",
+          "updatedAt": "2026-10-20T19:48:26Z",
+          "url": "https://github.com/advisories/GHSA-587h-7wmj-h5pm",
+          "vulnerabilities": [
+            {
+              "packageName": "vite",
+              "vulnerableRange": ">= 8.3.0, <= 8.3.2",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "vite",
+              "vulnerableRange": ">= 8.2.0, <= 8.2.3",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "vite",
+              "vulnerableRange": ">= 8.0.0, <= 8.1.5",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "vite",
+              "vulnerableRange": ">= 7.0.0, <= 7.3.6",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "vite",
+              "vulnerableRange": "<= 6.4.3",
+              "fixedVersion": null
+            }
+          ]
+        },
+        {
+          "ghsaId": "GHSA-698v-4r3x-3vcv",
+          "cveId": "CVE-2026-112943",
+          "severity": "medium",
+          "cvss": null,
+          "title": "Уязвимость GHSA-698v-4r3x-3vcv в vite",
+          "summary": "Проверьте установленную версию vite и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
+          "publishedAt": "2026-10-20T18:30:24Z",
+          "updatedAt": "2026-10-20T18:30:25Z",
+          "url": "https://github.com/advisories/GHSA-698v-4r3x-3vcv",
+          "vulnerabilities": [
+            {
+              "packageName": "vite",
+              "vulnerableRange": ">= 8.3.0, <= 8.3.2",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "vite",
+              "vulnerableRange": ">= 8.2.0, <= 8.2.3",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "vite",
+              "vulnerableRange": ">= 8.0.0, <= 8.1.5",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "vite",
+              "vulnerableRange": ">= 7.0.0, <= 7.3.6",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "vite",
+              "vulnerableRange": "<= 6.4.3",
+              "fixedVersion": null
+            }
+          ]
+        },
         {
           "ghsaId": "GHSA-fx2h-pf6j-xcff",
           "cveId": "CVE-2026-53571",
@@ -6895,9 +7028,31 @@
       ],
       "events": [
         {
+          "id": "594b04d2b55899",
+          "kind": "minor",
+          "priority": "P2",
+          "version": "8.3.5",
+          "title": "Версия Vite 8.3.5",
+          "summary": "Включены исправления сборки, которые устраняют ошибки при работе с импорт‑мапами и улучшает генерацию URL‑ов в dev‑сервере.",
+          "publishedAt": "2026-10-21T06:35:46Z",
+          "source": "Vite Releases",
+          "url": "https://github.com/vitejs/vite/releases/tag/v8.3.5"
+        },
+        {
+          "id": "2aea1bcb99d885",
+          "kind": "minor",
+          "priority": "P3",
+          "version": "6.4.5",
+          "title": "Версия Vite 6.4.5",
+          "summary": "Обновление содержит мелкие исправления и улучшения, которые могут повлиять на стабильность сборки.",
+          "publishedAt": "2026-10-21T05:31:06Z",
+          "source": "Vite Releases",
+          "url": "https://github.com/vitejs/vite/releases/tag/v6.4.5"
+        },
+        {
           "id": "4b19c2fc1e385d",
           "kind": "minor",
-          "priority": 1,
+          "priority": "P2",
           "version": "9.3.1",
           "title": "Vite Releases: выпуск 9.3.1",
           "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
@@ -8811,28 +8966,6 @@
         }
       ],
       "events": [
-        {
-          "id": "a5bd2b3d20aaf5",
-          "kind": "minor",
-          "priority": "P2",
-          "version": "8.5.0",
-          "title": "React Router Releases: выпуск v8.5.0",
-          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-          "publishedAt": "2026-10-19T13:48:57Z",
-          "source": "React Router Releases",
-          "url": "https://github.com/remix-run/react-router/releases/tag/react-router%408.5.0"
-        },
-        {
-          "id": "6d8ea207b4faa1",
-          "kind": "minor",
-          "priority": "P2",
-          "version": "8.5.0",
-          "title": "React Router Releases: выпуск 8.5.0",
-          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-          "publishedAt": "2026-10-19T13:46:24Z",
-          "source": "React Router Releases",
-          "url": "https://github.com/remix-run/react-router/releases/tag/create-react-router%408.5.0"
-        },
         {
           "id": "8a719d9422e4c2",
           "kind": "minor",
@@ -16225,7 +16358,7 @@
         {
           "id": "c7d33937b91a8c",
           "kind": "minor",
-          "priority": 3,
+          "priority": "P2",
           "version": "10.6.3",
           "title": "Storybook Releases: выпуск v10.6.3",
           "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
@@ -17067,7 +17200,7 @@
         {
           "id": "b21a317d70f03a",
           "kind": "minor",
-          "priority": 0,
+          "priority": "P2",
           "version": "8.72.0",
           "title": "typescript-eslint Releases: выпуск v8.72.0",
           "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",

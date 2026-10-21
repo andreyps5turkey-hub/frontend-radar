@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 2,
+  "date": "2026-10-21",
+  "generatedAt": "2026-10-21T09:35:21.922Z",
+  "timezone": "Europe/Moscow",
+  "windowHours": 26,
+  "sourcesChecked": 32,
+  "sourceHealth": {
+    "attempted": 32,
+    "succeeded": 32,
+    "failed": []
+  },
+  "status": "active",
+  "summary": "Сегодня в окне публикаций появились обновления Vite 8.3.5 с исправлениями сборки и объявление бета‑версии TypeScript 7.1, открывающей новые возможности для импортов.",
+  "items": [
+    {
+      "priority": "P2",
+      "title": "Версия Vite 8.3.5",
+      "source": "Vite Releases",
+      "publishedAt": "2026-10-21T06:35:46Z",
+      "whyImportant": "Включены исправления сборки, которые устраняют ошибки при работе с импорт‑мапами и улучшает генерацию URL‑ов в dev‑сервере.",
+      "audience": "Разработчики, использующие Vite",
+      "nextStep": "Обновите Vite до версии 8.3.5 и проверьте корректность сборки вашего проекта.",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.3.5",
+      "tags": [
+        "Vite",
+        "build",
+        "bugfix"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "vite"
+      ],
+      "packages": [
+        {
+          "name": "vite",
+          "releasedVersion": "8.3.5",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "@vitejs/plugin-legacy",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
+      "effort": "hours",
+      "actionItems": [
+        "Проверить, что сборка проходит без ошибок"
+      ],
+      "detailsConfidence": "source"
+    },
+    {
+      "priority": "P2",
+      "title": "Анонс TypeScript 7.1 Beta",
+      "source": "TypeScript Blog",
+      "publishedAt": "Tue, 20 Oct 2026 17:53:06 +0000",
+      "whyImportant": "Бета‑версия вводит поддержку атрибутов импорта в амбиентных модулях, что позволит более гибко управлять зависимостями в проектах.",
+      "audience": "Разработчики, использующие TypeScript",
+      "nextStep": "Установите пакет typescript@beta и протестируйте новые возможности в вашем проекте.",
+      "url": "https://devblogs.microsoft.com/typescript/announcing-typescript-7-1-beta/",
+      "tags": [
+        "TypeScript",
+        "beta",
+        "import-attributes"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "typescript"
+      ],
+      "packages": [
+        {
+          "name": "typescript",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
+      "effort": "hours",
+      "actionItems": [
+        "Установить typescript@beta",
+        "Проверить работу импорт‑атрибутов в проекте"
+      ],
+      "detailsConfidence": "source"
+    }
+  ],
+  "readLater": [
+    {
+      "priority": "P3",
+      "title": "Версия Vite 6.4.5",
+      "source": "Vite Releases",
+      "publishedAt": "2026-10-21T05:31:06Z",
+      "whyImportant": "Обновление содержит мелкие исправления и улучшения, которые могут повлиять на стабильность сборки.",
+      "audience": "Разработчики, использующие Vite",
+      "nextStep": "Проверьте совместимость вашего проекта с Vite 6.4.5, если планируете обновление.",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.4.5",
+      "tags": [
+        "Vite",
+        "minor"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "vite"
+      ],
+      "packages": [
+        {
+          "name": "vite",
+          "releasedVersion": "6.4.5",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "@vitejs/plugin-legacy",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить совместимость проекта с Vite 6.4.5"
+      ],
+      "detailsConfidence": "source"
+    },
+    {
+      "priority": "P3",
+      "title": "Версия core-js 3.51.0",
+      "source": "core-js Releases",
+      "publishedAt": "2026-10-19T10:48:39Z",
+      "whyImportant": "Включены новые встроенные методы итераторов, которые могут пригодиться в современных проектах.",
+      "audience": "Разработчики, использующие core-js",
+      "nextStep": "Обновите core-js до 3.51.0, если используете новые методы итераторов.",
+      "url": "https://github.com/zloirock/core-js/releases/tag/v3.51.0",
+      "tags": [
+        "core-js",
+        "iterators",
+        "ES"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "platform"
+      ],
+      "packages": [
+        {
+          "name": "core-js",
+          "releasedVersion": "3.51.0",
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить наличие новых методов итераторов в проекте"
+      ],
+      "detailsConfidence": "source"
+    }
+  ]
+}
