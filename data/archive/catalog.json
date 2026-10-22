@@ -1,7 +1,183 @@
 {
   "version": 2,
-  "updatedAt": "2026-10-21T09:35:21.922Z",
+  "updatedAt": "2026-10-22T09:35:49.464Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-22",
+      "generatedAt": "2026-10-22T09:35:49.464Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 32,
+      "sourceHealth": {
+        "attempted": 32,
+        "succeeded": 32,
+        "failed": []
+      },
+      "status": "active",
+      "summary": "В окне дня выпустили три версии Node.js с критическими исправлениями безопасности. Удалите устаревшие версии и примените патчи, чтобы избежать уязвимостей.",
+      "items": [
+        {
+          "priority": "P0",
+          "title": "Node.js v26.12.1 – критические исправления безопасности",
+          "source": "Node.js Releases",
+          "publishedAt": "2026-10-21T10:38:29Z",
+          "url": "https://github.com/nodejs/node/releases/tag/v26.12.1",
+          "whyImportant": "Обновление устраняет несколько CVE, включая проблемы с TLS и DNS, которые могут позволить удалённый эксплойт.",
+          "audience": "Разработчики и DevOps, использующие Node.js",
+          "nextStep": "Обновить до версии 26.12.1 и проверить совместимость приложений.",
+          "tags": [
+            "Node.js",
+            "безопасность",
+            "TLS",
+            "DNS"
+          ],
+          "changeType": "security",
+          "technologies": [
+            "platform"
+          ],
+          "packages": [],
+          "risk": "unknown",
+          "effort": "hours",
+          "actionItems": [
+            "Проверить наличие старых зависимостей",
+            "Обновить node до 26.12.1",
+            "Провести тесты интеграции"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P0",
+          "title": "Node.js v24.22.1 LTS – критические исправления безопасности",
+          "source": "Node.js Releases",
+          "publishedAt": "2026-10-21T10:38:25Z",
+          "url": "https://github.com/nodejs/node/releases/tag/v24.22.1",
+          "whyImportant": "Обновление закрывает CVE, связанные с TLS, DNS и проверкой прав доступа, которые могут привести к удалённому выполнению кода.",
+          "audience": "Разработчики и DevOps, использующие LTS‑версии Node.js",
+          "nextStep": "Перейти на v24.22.1 и убедиться, что приложения работают без ошибок.",
+          "tags": [
+            "Node.js",
+            "LTS",
+            "безопасность"
+          ],
+          "changeType": "security",
+          "technologies": [
+            "platform"
+          ],
+          "packages": [],
+          "risk": "unknown",
+          "effort": "hours",
+          "actionItems": [
+            "Проверить совместимость с текущими пакетами",
+            "Обновить node до 24.22.1",
+            "Запустить тесты"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P0",
+          "title": "Node.js v22.23.4 LTS – критические исправления безопасности",
+          "source": "Node.js Releases",
+          "publishedAt": "2026-10-21T10:38:20Z",
+          "url": "https://github.com/nodejs/node/releases/tag/v22.23.4",
+          "whyImportant": "Патчи закрывают уязвимости в TLS, DNS и проверке прав, предотвращая возможные атаки удалённого кода.",
+          "audience": "Разработчики и DevOps, использующие LTS‑версии Node.js",
+          "nextStep": "Обновить до версии 22.23.4 и проверить стабильность приложений.",
+          "tags": [
+            "Node.js",
+            "LTS",
+            "безопасность"
+          ],
+          "changeType": "security",
+          "technologies": [
+            "platform"
+          ],
+          "packages": [],
+          "risk": "unknown",
+          "effort": "hours",
+          "actionItems": [
+            "Проверить зависимости",
+            "Обновить node до 22.23.4",
+            "Запустить тесты"
+          ],
+          "detailsConfidence": "source"
+        }
+      ],
+      "readLater": [
+        {
+          "priority": "P2",
+          "title": "React Router v8.5.0 – новые возможности и исправления",
+          "source": "React Router Releases",
+          "publishedAt": "2026-10-19T13:48:57Z",
+          "url": "https://github.com/remix-run/react-router/releases/tag/react-router%408.5.0",
+          "whyImportant": "Версия добавляет улучшения маршрутизации и исправляет несколько багов, повышая стабильность SPA.",
+          "audience": "Разработчики, использующие React Router",
+          "nextStep": "Обновить до v8.5.0 и проверить маршрутизацию в приложении.",
+          "tags": [
+            "React Router",
+            "SPA",
+            "обновление"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "router",
+            "react"
+          ],
+          "packages": [
+            {
+              "name": "react-router",
+              "releasedVersion": "8.5.0",
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "react-router-dom",
+              "releasedVersion": "8.5.0",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить совместимость маршрутов",
+            "Обновить пакеты до 8.5.0",
+            "Запустить тесты маршрутизации"
+          ],
+          "detailsConfidence": "source"
+        },
+        {
+          "priority": "P3",
+          "title": "This Week In React #302 – обзор новостей и инструментов",
+          "source": "This Week in React",
+          "publishedAt": "Wed, 21 Oct 2026 00:00:00 GMT",
+          "url": "https://thisweekinreact.com/newsletter/302",
+          "whyImportant": "Недельный дайджест с обзором новых релизов, инструментов и практик в экосистеме React.",
+          "audience": "Frontend‑инженеры, интересующиеся React",
+          "nextStep": "Прочитать дайджест для обновления знаний о последних трендах.",
+          "tags": [
+            "React",
+            "новости",
+            "обзор"
+          ],
+          "changeType": "guide",
+          "technologies": [
+            "nextjs",
+            "typescript",
+            "router",
+            "react"
+          ],
+          "packages": [],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Прочитать дайджест",
+            "Отметить интересные темы для дальнейшего изучения"
+          ],
+          "detailsConfidence": "source"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-10-21",

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "date": "2026-10-21",
-  "generatedAt": "2026-10-21T09:35:21.922Z",
+  "date": "2026-10-22",
+  "generatedAt": "2026-10-22T09:35:49.464Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -11,110 +11,124 @@
     "failed": []
   },
   "status": "active",
-  "summary": "Сегодня в окне публикаций появились обновления Vite 8.3.5 с исправлениями сборки и объявление бета‑версии TypeScript 7.1, открывающей новые возможности для импортов.",
+  "summary": "В окне дня выпустили три версии Node.js с критическими исправлениями безопасности. Удалите устаревшие версии и примените патчи, чтобы избежать уязвимостей.",
   "items": [
     {
-      "priority": "P2",
-      "title": "Версия Vite 8.3.5",
-      "source": "Vite Releases",
-      "publishedAt": "2026-10-21T06:35:46Z",
-      "whyImportant": "Включены исправления сборки, которые устраняют ошибки при работе с импорт‑мапами и улучшает генерацию URL‑ов в dev‑сервере.",
-      "audience": "Разработчики, использующие Vite",
-      "nextStep": "Обновите Vite до версии 8.3.5 и проверьте корректность сборки вашего проекта.",
-      "url": "https://github.com/vitejs/vite/releases/tag/v8.3.5",
+      "priority": "P0",
+      "title": "Node.js v26.12.1 – критические исправления безопасности",
+      "source": "Node.js Releases",
+      "publishedAt": "2026-10-21T10:38:29Z",
+      "url": "https://github.com/nodejs/node/releases/tag/v26.12.1",
+      "whyImportant": "Обновление устраняет несколько CVE, включая проблемы с TLS и DNS, которые могут позволить удалённый эксплойт.",
+      "audience": "Разработчики и DevOps, использующие Node.js",
+      "nextStep": "Обновить до версии 26.12.1 и проверить совместимость приложений.",
       "tags": [
-        "Vite",
-        "build",
-        "bugfix"
+        "Node.js",
+        "безопасность",
+        "TLS",
+        "DNS"
       ],
-      "changeType": "minor",
+      "changeType": "security",
       "technologies": [
-        "vite"
+        "platform"
       ],
-      "packages": [
-        {
-          "name": "vite",
-          "releasedVersion": "8.3.5",
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "@vitejs/plugin-legacy",
-          "releasedVersion": null,
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
+      "packages": [],
       "risk": "unknown",
       "effort": "hours",
       "actionItems": [
-        "Проверить, что сборка проходит без ошибок"
+        "Проверить наличие старых зависимостей",
+        "Обновить node до 26.12.1",
+        "Провести тесты интеграции"
       ],
       "detailsConfidence": "source"
     },
     {
-      "priority": "P2",
-      "title": "Анонс TypeScript 7.1 Beta",
-      "source": "TypeScript Blog",
-      "publishedAt": "Tue, 20 Oct 2026 17:53:06 +0000",
-      "whyImportant": "Бета‑версия вводит поддержку атрибутов импорта в амбиентных модулях, что позволит более гибко управлять зависимостями в проектах.",
-      "audience": "Разработчики, использующие TypeScript",
-      "nextStep": "Установите пакет typescript@beta и протестируйте новые возможности в вашем проекте.",
-      "url": "https://devblogs.microsoft.com/typescript/announcing-typescript-7-1-beta/",
+      "priority": "P0",
+      "title": "Node.js v24.22.1 LTS – критические исправления безопасности",
+      "source": "Node.js Releases",
+      "publishedAt": "2026-10-21T10:38:25Z",
+      "url": "https://github.com/nodejs/node/releases/tag/v24.22.1",
+      "whyImportant": "Обновление закрывает CVE, связанные с TLS, DNS и проверкой прав доступа, которые могут привести к удалённому выполнению кода.",
+      "audience": "Разработчики и DevOps, использующие LTS‑версии Node.js",
+      "nextStep": "Перейти на v24.22.1 и убедиться, что приложения работают без ошибок.",
       "tags": [
-        "TypeScript",
-        "beta",
-        "import-attributes"
+        "Node.js",
+        "LTS",
+        "безопасность"
       ],
-      "changeType": "minor",
+      "changeType": "security",
       "technologies": [
-        "typescript"
+        "platform"
       ],
-      "packages": [
-        {
-          "name": "typescript",
-          "releasedVersion": null,
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
+      "packages": [],
       "risk": "unknown",
       "effort": "hours",
       "actionItems": [
-        "Установить typescript@beta",
-        "Проверить работу импорт‑атрибутов в проекте"
+        "Проверить совместимость с текущими пакетами",
+        "Обновить node до 24.22.1",
+        "Запустить тесты"
+      ],
+      "detailsConfidence": "source"
+    },
+    {
+      "priority": "P0",
+      "title": "Node.js v22.23.4 LTS – критические исправления безопасности",
+      "source": "Node.js Releases",
+      "publishedAt": "2026-10-21T10:38:20Z",
+      "url": "https://github.com/nodejs/node/releases/tag/v22.23.4",
+      "whyImportant": "Патчи закрывают уязвимости в TLS, DNS и проверке прав, предотвращая возможные атаки удалённого кода.",
+      "audience": "Разработчики и DevOps, использующие LTS‑версии Node.js",
+      "nextStep": "Обновить до версии 22.23.4 и проверить стабильность приложений.",
+      "tags": [
+        "Node.js",
+        "LTS",
+        "безопасность"
+      ],
+      "changeType": "security",
+      "technologies": [
+        "platform"
+      ],
+      "packages": [],
+      "risk": "unknown",
+      "effort": "hours",
+      "actionItems": [
+        "Проверить зависимости",
+        "Обновить node до 22.23.4",
+        "Запустить тесты"
       ],
       "detailsConfidence": "source"
     }
   ],
   "readLater": [
     {
-      "priority": "P3",
-      "title": "Версия Vite 6.4.5",
-      "source": "Vite Releases",
-      "publishedAt": "2026-10-21T05:31:06Z",
-      "whyImportant": "Обновление содержит мелкие исправления и улучшения, которые могут повлиять на стабильность сборки.",
-      "audience": "Разработчики, использующие Vite",
-      "nextStep": "Проверьте совместимость вашего проекта с Vite 6.4.5, если планируете обновление.",
-      "url": "https://github.com/vitejs/vite/releases/tag/v6.4.5",
+      "priority": "P2",
+      "title": "React Router v8.5.0 – новые возможности и исправления",
+      "source": "React Router Releases",
+      "publishedAt": "2026-10-19T13:48:57Z",
+      "url": "https://github.com/remix-run/react-router/releases/tag/react-router%408.5.0",
+      "whyImportant": "Версия добавляет улучшения маршрутизации и исправляет несколько багов, повышая стабильность SPA.",
+      "audience": "Разработчики, использующие React Router",
+      "nextStep": "Обновить до v8.5.0 и проверить маршрутизацию в приложении.",
       "tags": [
-        "Vite",
-        "minor"
+        "React Router",
+        "SPA",
+        "обновление"
       ],
       "changeType": "minor",
       "technologies": [
-        "vite"
+        "router",
+        "react"
       ],
       "packages": [
         {
-          "name": "vite",
-          "releasedVersion": "6.4.5",
+          "name": "react-router",
+          "releasedVersion": "8.5.0",
           "affectedRange": null,
           "fixedVersion": null
         },
         {
-          "name": "@vitejs/plugin-legacy",
-          "releasedVersion": null,
+          "name": "react-router-dom",
+          "releasedVersion": "8.5.0",
           "affectedRange": null,
           "fixedVersion": null
         }
@@ -122,40 +136,39 @@
       "risk": "unknown",
       "effort": "minutes",
       "actionItems": [
-        "Проверить совместимость проекта с Vite 6.4.5"
+        "Проверить совместимость маршрутов",
+        "Обновить пакеты до 8.5.0",
+        "Запустить тесты маршрутизации"
       ],
       "detailsConfidence": "source"
     },
     {
       "priority": "P3",
-      "title": "Версия core-js 3.51.0",
-      "source": "core-js Releases",
-      "publishedAt": "2026-10-19T10:48:39Z",
-      "whyImportant": "Включены новые встроенные методы итераторов, которые могут пригодиться в современных проектах.",
-      "audience": "Разработчики, использующие core-js",
-      "nextStep": "Обновите core-js до 3.51.0, если используете новые методы итераторов.",
-      "url": "https://github.com/zloirock/core-js/releases/tag/v3.51.0",
+      "title": "This Week In React #302 – обзор новостей и инструментов",
+      "source": "This Week in React",
+      "publishedAt": "Wed, 21 Oct 2026 00:00:00 GMT",
+      "url": "https://thisweekinreact.com/newsletter/302",
+      "whyImportant": "Недельный дайджест с обзором новых релизов, инструментов и практик в экосистеме React.",
+      "audience": "Frontend‑инженеры, интересующиеся React",
+      "nextStep": "Прочитать дайджест для обновления знаний о последних трендах.",
       "tags": [
-        "core-js",
-        "iterators",
-        "ES"
+        "React",
+        "новости",
+        "обзор"
       ],
-      "changeType": "minor",
+      "changeType": "guide",
       "technologies": [
-        "platform"
+        "nextjs",
+        "typescript",
+        "router",
+        "react"
       ],
-      "packages": [
-        {
-          "name": "core-js",
-          "releasedVersion": "3.51.0",
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
+      "packages": [],
       "risk": "unknown",
       "effort": "minutes",
       "actionItems": [
-        "Проверить наличие новых методов итераторов в проекте"
+        "Прочитать дайджест",
+        "Отметить интересные темы для дальнейшего изучения"
       ],
       "detailsConfidence": "source"
     }

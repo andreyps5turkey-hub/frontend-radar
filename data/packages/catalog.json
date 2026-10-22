@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-21T09:35:30.072Z",
+  "generatedAt": "2026-10-22T09:36:03.318Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -6171,6 +6171,105 @@
       ],
       "advisories": [
         {
+          "ghsaId": "GHSA-9jrq-w75r-8gcw",
+          "cveId": "CVE-2026-112945",
+          "severity": "low",
+          "cvss": null,
+          "title": "Уязвимость GHSA-9jrq-w75r-8gcw в vite",
+          "summary": "Проверьте установленную версию vite и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
+          "publishedAt": "2026-10-21T16:48:14Z",
+          "updatedAt": "2026-10-21T16:48:15Z",
+          "url": "https://github.com/advisories/GHSA-9jrq-w75r-8gcw",
+          "vulnerabilities": [
+            {
+              "packageName": "vite",
+              "vulnerableRange": ">= 8.3.0, <= 8.3.2",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "vite",
+              "vulnerableRange": ">= 8.2.0, <= 8.2.3",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "vite",
+              "vulnerableRange": ">= 8.0.0, <= 8.1.5",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "vite",
+              "vulnerableRange": ">= 7.0.0, <= 7.3.6",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "vite",
+              "vulnerableRange": "<= 6.4.3",
+              "fixedVersion": null
+            }
+          ]
+        },
+        {
+          "ghsaId": "GHSA-rq7h-c2jc-7f22",
+          "cveId": "CVE-2026-112946",
+          "severity": "medium",
+          "cvss": null,
+          "title": "Уязвимость GHSA-rq7h-c2jc-7f22 в vite",
+          "summary": "Проверьте установленную версию vite и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
+          "publishedAt": "2026-10-21T16:47:42Z",
+          "updatedAt": "2026-10-21T16:47:43Z",
+          "url": "https://github.com/advisories/GHSA-rq7h-c2jc-7f22",
+          "vulnerabilities": [
+            {
+              "packageName": "vite",
+              "vulnerableRange": ">= 8.3.0, <= 8.3.2",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "vite",
+              "vulnerableRange": ">= 8.2.0, <= 8.2.3",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "vite",
+              "vulnerableRange": ">= 8.0.0, <= 8.1.5",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "vite",
+              "vulnerableRange": ">= 7.0.0, <= 7.3.6",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "vite",
+              "vulnerableRange": "<= 6.4.3",
+              "fixedVersion": null
+            }
+          ]
+        },
+        {
+          "ghsaId": "GHSA-vfpm-58rq-9qcg",
+          "cveId": "CVE-2026-112947",
+          "severity": "medium",
+          "cvss": null,
+          "title": "Уязвимость GHSA-vfpm-58rq-9qcg в vite",
+          "summary": "Проверьте установленную версию vite и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
+          "publishedAt": "2026-10-21T16:47:15Z",
+          "updatedAt": "2026-10-21T16:47:16Z",
+          "url": "https://github.com/advisories/GHSA-vfpm-58rq-9qcg",
+          "vulnerabilities": [
+            {
+              "packageName": "vite",
+              "vulnerableRange": ">= 8.3.0, <= 8.3.2",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "vite",
+              "vulnerableRange": ">= 8.2.0, <= 8.2.3",
+              "fixedVersion": null
+            }
+          ]
+        },
+        {
           "ghsaId": "GHSA-r825-w8mm-5pxw",
           "cveId": "CVE-2026-112944",
           "severity": "medium",
@@ -8966,6 +9065,17 @@
         }
       ],
       "events": [
+        {
+          "id": "a5bd2b3d20aaf5",
+          "kind": "minor",
+          "priority": "P2",
+          "version": "8.5.0",
+          "title": "React Router v8.5.0 – новые возможности и исправления",
+          "summary": "Версия добавляет улучшения маршрутизации и исправляет несколько багов, повышая стабильность SPA.",
+          "publishedAt": "2026-10-19T13:48:57Z",
+          "source": "React Router Releases",
+          "url": "https://github.com/remix-run/react-router/releases/tag/react-router%408.5.0"
+        },
         {
           "id": "8a719d9422e4c2",
           "kind": "minor",
@@ -16292,6 +16402,39 @@
         }
       ],
       "advisories": [
+        {
+          "ghsaId": "GHSA-f2ph-cmg5-wxc8",
+          "cveId": "CVE-2026-114125",
+          "severity": "critical",
+          "cvss": null,
+          "title": "Уязвимость GHSA-f2ph-cmg5-wxc8 в storybook",
+          "summary": "Проверьте установленную версию storybook и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
+          "publishedAt": "2026-10-21T17:23:29Z",
+          "updatedAt": "2026-10-21T17:23:30Z",
+          "url": "https://github.com/advisories/GHSA-f2ph-cmg5-wxc8",
+          "vulnerabilities": [
+            {
+              "packageName": "storybook",
+              "vulnerableRange": ">= 8.0.0, < 8.6.19",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "storybook",
+              "vulnerableRange": ">= 9.0.0, < 9.1.21",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "storybook",
+              "vulnerableRange": ">= 10.0.0, < 10.6.2",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "storybook",
+              "vulnerableRange": ">= 11.0.0-alpha.0, < 11.0.0-alpha.6",
+              "fixedVersion": null
+            }
+          ]
+        },
         {
           "ghsaId": "GHSA-mjf5-7g4m-gx5w",
           "cveId": "CVE-2026-27148",
