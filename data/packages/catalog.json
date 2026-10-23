@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-22T09:36:03.318Z",
+  "generatedAt": "2026-10-23T09:32:19.985Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -2898,6 +2898,88 @@
         }
       ],
       "advisories": [
+        {
+          "ghsaId": "GHSA-673q-mjm6-r5xr",
+          "cveId": null,
+          "severity": "critical",
+          "cvss": null,
+          "title": "Уязвимость GHSA-673q-mjm6-r5xr в next",
+          "summary": "Проверьте установленную версию next и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
+          "publishedAt": "2026-10-22T16:42:31Z",
+          "updatedAt": "2026-10-22T16:42:32Z",
+          "url": "https://github.com/advisories/GHSA-673q-mjm6-r5xr",
+          "vulnerabilities": [
+            {
+              "packageName": "next",
+              "vulnerableRange": ">= 16.0.0, <= 16.4.0",
+              "fixedVersion": null
+            }
+          ]
+        },
+        {
+          "ghsaId": "GHSA-h694-7cp9-m8p3",
+          "cveId": "CVE-2026-103004",
+          "severity": "medium",
+          "cvss": null,
+          "title": "Уязвимость GHSA-h694-7cp9-m8p3 в next",
+          "summary": "Проверьте установленную версию next и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
+          "publishedAt": "2026-10-22T16:08:40Z",
+          "updatedAt": "2026-10-22T16:08:41Z",
+          "url": "https://github.com/advisories/GHSA-h694-7cp9-m8p3",
+          "vulnerabilities": [
+            {
+              "packageName": "next",
+              "vulnerableRange": ">= 16.3.0, < 16.3.8",
+              "fixedVersion": null
+            }
+          ]
+        },
+        {
+          "ghsaId": "GHSA-2464-fhr4-w9xw",
+          "cveId": null,
+          "severity": "critical",
+          "cvss": null,
+          "title": "Уязвимость GHSA-2464-fhr4-w9xw в next",
+          "summary": "Проверьте установленную версию next и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
+          "publishedAt": "2026-10-22T15:52:53Z",
+          "updatedAt": "2026-10-22T15:52:56Z",
+          "url": "https://github.com/advisories/GHSA-2464-fhr4-w9xw",
+          "vulnerabilities": [
+            {
+              "packageName": "next",
+              "vulnerableRange": ">= 10.0.0, <= 15.5.27",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "next",
+              "vulnerableRange": ">= 16.0.0, <= 16.4.0",
+              "fixedVersion": null
+            }
+          ]
+        },
+        {
+          "ghsaId": "GHSA-p3m5-59mp-jv5r",
+          "cveId": "CVE-2026-94482",
+          "severity": "high",
+          "cvss": null,
+          "title": "Уязвимость GHSA-p3m5-59mp-jv5r в next",
+          "summary": "Проверьте установленную версию next и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
+          "publishedAt": "2026-10-22T15:50:34Z",
+          "updatedAt": "2026-10-22T15:50:35Z",
+          "url": "https://github.com/advisories/GHSA-p3m5-59mp-jv5r",
+          "vulnerabilities": [
+            {
+              "packageName": "next",
+              "vulnerableRange": ">= 13.0.0, <= 15.5.27",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "next",
+              "vulnerableRange": ">= 16.0.0, <= 16.4.0",
+              "fixedVersion": null
+            }
+          ]
+        },
         {
           "ghsaId": "GHSA-3w37-wq28-93x7",
           "cveId": "CVE-2026-94544",
@@ -9068,7 +9150,7 @@
         {
           "id": "a5bd2b3d20aaf5",
           "kind": "minor",
-          "priority": "P2",
+          "priority": "P3",
           "version": "8.5.0",
           "title": "React Router v8.5.0 – новые возможности и исправления",
           "summary": "Версия добавляет улучшения маршрутизации и исправляет несколько багов, повышая стабильность SPA.",
@@ -16402,6 +16484,39 @@
         }
       ],
       "advisories": [
+        {
+          "ghsaId": "GHSA-px85-f4q5-jh77",
+          "cveId": "CVE-2026-114126",
+          "severity": "high",
+          "cvss": null,
+          "title": "Уязвимость GHSA-px85-f4q5-jh77 в storybook",
+          "summary": "Проверьте установленную версию storybook и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
+          "publishedAt": "2026-10-22T16:31:40Z",
+          "updatedAt": "2026-10-22T16:31:42Z",
+          "url": "https://github.com/advisories/GHSA-px85-f4q5-jh77",
+          "vulnerabilities": [
+            {
+              "packageName": "storybook",
+              "vulnerableRange": ">= 8.0.0, < 8.6.19",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "storybook",
+              "vulnerableRange": ">= 9.0.0, < 9.1.21",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "storybook",
+              "vulnerableRange": ">= 10.0.0, < 10.6.2",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "storybook",
+              "vulnerableRange": ">= 11.0.0-alpha.0, < 11.0.0-alpha.6",
+              "fixedVersion": null
+            }
+          ]
+        },
         {
           "ghsaId": "GHSA-f2ph-cmg5-wxc8",
           "cveId": "CVE-2026-114125",

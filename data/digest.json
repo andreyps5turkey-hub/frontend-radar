@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "date": "2026-10-22",
-  "generatedAt": "2026-10-22T09:35:49.464Z",
+  "date": "2026-10-23",
+  "generatedAt": "2026-10-23T09:32:13.128Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -11,97 +11,48 @@
     "failed": []
   },
   "status": "active",
-  "summary": "В окне дня выпустили три версии Node.js с критическими исправлениями безопасности. Удалите устаревшие версии и примените патчи, чтобы избежать уязвимостей.",
+  "summary": "В окне дня опубликован предварительный выпуск Stylelint 18.0.0-next.0 с несколькими удалёнными функциями и изменениями, которые могут повлиять на существующие конфигурации.",
   "items": [
     {
-      "priority": "P0",
-      "title": "Node.js v26.12.1 – критические исправления безопасности",
-      "source": "Node.js Releases",
-      "publishedAt": "2026-10-21T10:38:29Z",
-      "url": "https://github.com/nodejs/node/releases/tag/v26.12.1",
-      "whyImportant": "Обновление устраняет несколько CVE, включая проблемы с TLS и DNS, которые могут позволить удалённый эксплойт.",
-      "audience": "Разработчики и DevOps, использующие Node.js",
-      "nextStep": "Обновить до версии 26.12.1 и проверить совместимость приложений.",
+      "priority": "P3",
+      "title": "Stylelint 18.0.0‑next.0 – предварительный выпуск",
+      "source": "Stylelint Releases",
+      "publishedAt": "2026-10-22T13:46:08Z",
+      "whyImportant": "Включены значительные изменения: удалена поддержка устаревших версий Node.js, CommonJS‑стиля путей, глобального node_modules, а также несколько правил и свойств, что может нарушить сборки и линтинг.",
+      "audience": "Разработчики, использующие Stylelint в проектах",
+      "nextStep": "Проверить конфигурацию Stylelint, обновить правила и протестировать линтинг перед переходом на новую версию.",
+      "url": "https://github.com/stylelint/stylelint/releases/tag/18.0.0-next.0",
       "tags": [
-        "Node.js",
-        "безопасность",
-        "TLS",
-        "DNS"
+        "stylelint",
+        "css",
+        "linters"
       ],
-      "changeType": "security",
+      "changeType": "breaking",
       "technologies": [
+        "quality",
         "platform"
       ],
-      "packages": [],
+      "packages": [
+        {
+          "name": "stylelint",
+          "releasedVersion": "18.0.0-next.0",
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
       "risk": "unknown",
-      "effort": "hours",
+      "effort": "minutes",
       "actionItems": [
-        "Проверить наличие старых зависимостей",
-        "Обновить node до 26.12.1",
-        "Провести тесты интеграции"
-      ],
-      "detailsConfidence": "source"
-    },
-    {
-      "priority": "P0",
-      "title": "Node.js v24.22.1 LTS – критические исправления безопасности",
-      "source": "Node.js Releases",
-      "publishedAt": "2026-10-21T10:38:25Z",
-      "url": "https://github.com/nodejs/node/releases/tag/v24.22.1",
-      "whyImportant": "Обновление закрывает CVE, связанные с TLS, DNS и проверкой прав доступа, которые могут привести к удалённому выполнению кода.",
-      "audience": "Разработчики и DevOps, использующие LTS‑версии Node.js",
-      "nextStep": "Перейти на v24.22.1 и убедиться, что приложения работают без ошибок.",
-      "tags": [
-        "Node.js",
-        "LTS",
-        "безопасность"
-      ],
-      "changeType": "security",
-      "technologies": [
-        "platform"
-      ],
-      "packages": [],
-      "risk": "unknown",
-      "effort": "hours",
-      "actionItems": [
-        "Проверить совместимость с текущими пакетами",
-        "Обновить node до 24.22.1",
-        "Запустить тесты"
-      ],
-      "detailsConfidence": "source"
-    },
-    {
-      "priority": "P0",
-      "title": "Node.js v22.23.4 LTS – критические исправления безопасности",
-      "source": "Node.js Releases",
-      "publishedAt": "2026-10-21T10:38:20Z",
-      "url": "https://github.com/nodejs/node/releases/tag/v22.23.4",
-      "whyImportant": "Патчи закрывают уязвимости в TLS, DNS и проверке прав, предотвращая возможные атаки удалённого кода.",
-      "audience": "Разработчики и DevOps, использующие LTS‑версии Node.js",
-      "nextStep": "Обновить до версии 22.23.4 и проверить стабильность приложений.",
-      "tags": [
-        "Node.js",
-        "LTS",
-        "безопасность"
-      ],
-      "changeType": "security",
-      "technologies": [
-        "platform"
-      ],
-      "packages": [],
-      "risk": "unknown",
-      "effort": "hours",
-      "actionItems": [
-        "Проверить зависимости",
-        "Обновить node до 22.23.4",
-        "Запустить тесты"
+        "Проверить совместимость конфигурации с новой версией",
+        "Обновить правила, удалённые в 18.0.0-next.0",
+        "Тестировать линтинг после обновления"
       ],
       "detailsConfidence": "source"
     }
   ],
   "readLater": [
     {
-      "priority": "P2",
+      "priority": "P3",
       "title": "React Router v8.5.0 – новые возможности и исправления",
       "source": "React Router Releases",
       "publishedAt": "2026-10-19T13:48:57Z",

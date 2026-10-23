@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 2,
+  "date": "2026-10-23",
+  "generatedAt": "2026-10-23T09:32:13.128Z",
+  "timezone": "Europe/Moscow",
+  "windowHours": 26,
+  "sourcesChecked": 32,
+  "sourceHealth": {
+    "attempted": 32,
+    "succeeded": 32,
+    "failed": []
+  },
+  "status": "active",
+  "summary": "В окне дня опубликован предварительный выпуск Stylelint 18.0.0-next.0 с несколькими удалёнными функциями и изменениями, которые могут повлиять на существующие конфигурации.",
+  "items": [
+    {
+      "priority": "P3",
+      "title": "Stylelint 18.0.0‑next.0 – предварительный выпуск",
+      "source": "Stylelint Releases",
+      "publishedAt": "2026-10-22T13:46:08Z",
+      "whyImportant": "Включены значительные изменения: удалена поддержка устаревших версий Node.js, CommonJS‑стиля путей, глобального node_modules, а также несколько правил и свойств, что может нарушить сборки и линтинг.",
+      "audience": "Разработчики, использующие Stylelint в проектах",
+      "nextStep": "Проверить конфигурацию Stylelint, обновить правила и протестировать линтинг перед переходом на новую версию.",
+      "url": "https://github.com/stylelint/stylelint/releases/tag/18.0.0-next.0",
+      "tags": [
+        "stylelint",
+        "css",
+        "linters"
+      ],
+      "changeType": "breaking",
+      "technologies": [
+        "quality",
+        "platform"
+      ],
+      "packages": [
+        {
+          "name": "stylelint",
+          "releasedVersion": "18.0.0-next.0",
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить совместимость конфигурации с новой версией",
+        "Обновить правила, удалённые в 18.0.0-next.0",
+        "Тестировать линтинг после обновления"
+      ],
+      "detailsConfidence": "source"
+    }
+  ],
+  "readLater": [
+    {
+      "priority": "P3",
+      "title": "React Router v8.5.0 – новые возможности и исправления",
+      "source": "React Router Releases",
+      "publishedAt": "2026-10-19T13:48:57Z",
+      "url": "https://github.com/remix-run/react-router/releases/tag/react-router%408.5.0",
+      "whyImportant": "Версия добавляет улучшения маршрутизации и исправляет несколько багов, повышая стабильность SPA.",
+      "audience": "Разработчики, использующие React Router",
+      "nextStep": "Обновить до v8.5.0 и проверить маршрутизацию в приложении.",
+      "tags": [
+        "React Router",
+        "SPA",
+        "обновление"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "router",
+        "react"
+      ],
+      "packages": [
+        {
+          "name": "react-router",
+          "releasedVersion": "8.5.0",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "react-router-dom",
+          "releasedVersion": "8.5.0",
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить совместимость маршрутов",
+        "Обновить пакеты до 8.5.0",
+        "Запустить тесты маршрутизации"
+      ],
+      "detailsConfidence": "source"
+    },
+    {
+      "priority": "P3",
+      "title": "This Week In React #302 – обзор новостей и инструментов",
+      "source": "This Week in React",
+      "publishedAt": "Wed, 21 Oct 2026 00:00:00 GMT",
+      "url": "https://thisweekinreact.com/newsletter/302",
+      "whyImportant": "Недельный дайджест с обзором новых релизов, инструментов и практик в экосистеме React.",
+      "audience": "Frontend‑инженеры, интересующиеся React",
+      "nextStep": "Прочитать дайджест для обновления знаний о последних трендах.",
+      "tags": [
+        "React",
+        "новости",
+        "обзор"
+      ],
+      "changeType": "guide",
+      "technologies": [
+        "nextjs",
+        "typescript",
+        "router",
+        "react"
+      ],
+      "packages": [],
+      "risk": "unknown",
+      "effort": "minutes",
+      "actionItems": [
+        "Прочитать дайджест",
+        "Отметить интересные темы для дальнейшего изучения"
+      ],
+      "detailsConfidence": "source"
+    }
+  ]
+}
