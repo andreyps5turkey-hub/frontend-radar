@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "date": "2026-10-24",
-  "generatedAt": "2026-10-24T09:05:23.658Z",
+  "date": "2026-10-25",
+  "generatedAt": "2026-10-25T09:22:26.338Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -10,23 +10,22 @@
     "succeeded": 32,
     "failed": []
   },
-  "status": "active",
-  "summary": "В окне дня выпущена версия Next.js v16.4.3 с исправлениями ошибок, но без новых функций. Остальные заметки находятся вне окна и добавлены в список «read later».",
-  "items": [
+  "status": "quiet",
+  "summary": "Значимых новых событий не найдено. Подборка для чтения собрана в резервном режиме.",
+  "items": [],
+  "readLater": [
     {
-      "priority": "P2",
-      "title": "Next.js v16.4.3 – исправления ошибок",
-      "source": "Next.js Releases",
-      "publishedAt": "2026-10-23T13:32:31Z",
-      "whyImportant": "Обновление содержит исправления критических ошибок в сборке и работе с Google‑шрифтами, а также улучшения в работе Turbopack.",
-      "audience": "Разработчики, использующие Next.js",
-      "nextStep": "Проверьте совместимость текущего проекта с новой версией и обновите зависимость next до v16.4.3.",
-      "url": "https://github.com/vercel/next.js/releases/tag/v16.4.3",
+      "priority": "P3",
+      "title": "React Releases: выпуск 19.1.10",
+      "source": "React Releases",
+      "publishedAt": "2026-10-14T17:06:06Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Разработчики и команды, использующие React.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/react/react/releases/tag/v19.1.10",
       "tags": [
-        "next.js",
-        "bugfix",
-        "turbo",
-        "react"
+        "react",
+        "обновление"
       ],
       "changeType": "minor",
       "technologies": [
@@ -34,23 +33,65 @@
       ],
       "packages": [
         {
-          "name": "next",
-          "releasedVersion": "v16.4.3",
+          "name": "react",
+          "releasedVersion": "19.1.10",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "react-dom",
+          "releasedVersion": null,
           "affectedRange": null,
           "fixedVersion": null
         }
       ],
-      "risk": "unknown",
-      "effort": "hours",
+      "risk": "low",
+      "effort": "minutes",
       "actionItems": [
-        "Проверить логи сборки на наличие ошибок",
-        "Обновить зависимость next в package.json",
-        "Запустить тесты"
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
       ],
-      "detailsConfidence": "source"
-    }
-  ],
-  "readLater": [
+      "detailsConfidence": "inferred"
+    },
+    {
+      "priority": "P3",
+      "title": "React Releases: выпуск 19.0.9",
+      "source": "React Releases",
+      "publishedAt": "2026-10-14T17:05:59Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Разработчики и команды, использующие React.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/react/react/releases/tag/v19.0.9",
+      "tags": [
+        "react",
+        "обновление"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "react"
+      ],
+      "packages": [
+        {
+          "name": "react",
+          "releasedVersion": "19.0.9",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "react-dom",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    },
     {
       "priority": "P3",
       "title": "TanStack Start 1.0 – стабильный релиз",
@@ -76,47 +117,6 @@
         "Прочитать обзор релиза",
         "Создать тестовый проект на TanStack Start",
         "Сравнить производительность с Next.js"
-      ],
-      "detailsConfidence": "source"
-    },
-    {
-      "priority": "P3",
-      "title": "React v19.2.9 – улучшения Server Components",
-      "source": "React Releases",
-      "publishedAt": "2026-10-14T17:06:10Z",
-      "whyImportant": "Обновление включает улучшения протокола транспортировки для Server Components, повышая эффективность передачи данных.",
-      "audience": "Разработчики, использующие Server Components",
-      "nextStep": "Оценить влияние новых протоколов на существующие серверные компоненты и при необходимости обновить код.",
-      "url": "https://github.com/react/react/releases/tag/v19.2.9",
-      "tags": [
-        "react",
-        "server-components",
-        "performance"
-      ],
-      "changeType": "minor",
-      "technologies": [
-        "react"
-      ],
-      "packages": [
-        {
-          "name": "react",
-          "releasedVersion": "v19.2.9",
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "react-dom",
-          "releasedVersion": "v19.2.9",
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "unknown",
-      "effort": "minutes",
-      "actionItems": [
-        "Прочитать changelog по Server Components",
-        "Проверить совместимость с текущим кодом",
-        "Обновить зависимости react и react-dom"
       ],
       "detailsConfidence": "source"
     }

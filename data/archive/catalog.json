@@ -1,7 +1,131 @@
 {
   "version": 2,
-  "updatedAt": "2026-10-24T09:05:23.658Z",
+  "updatedAt": "2026-10-25T09:22:26.338Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-25",
+      "generatedAt": "2026-10-25T09:22:26.338Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 32,
+      "sourceHealth": {
+        "attempted": 32,
+        "succeeded": 32,
+        "failed": []
+      },
+      "status": "quiet",
+      "summary": "Значимых новых событий не найдено. Подборка для чтения собрана в резервном режиме.",
+      "items": [],
+      "readLater": [
+        {
+          "priority": "P3",
+          "title": "React Releases: выпуск 19.1.10",
+          "source": "React Releases",
+          "publishedAt": "2026-10-14T17:06:06Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Разработчики и команды, использующие React.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/react/react/releases/tag/v19.1.10",
+          "tags": [
+            "react",
+            "обновление"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "react"
+          ],
+          "packages": [
+            {
+              "name": "react",
+              "releasedVersion": "19.1.10",
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "react-dom",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        },
+        {
+          "priority": "P3",
+          "title": "React Releases: выпуск 19.0.9",
+          "source": "React Releases",
+          "publishedAt": "2026-10-14T17:05:59Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Разработчики и команды, использующие React.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/react/react/releases/tag/v19.0.9",
+          "tags": [
+            "react",
+            "обновление"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "react"
+          ],
+          "packages": [
+            {
+              "name": "react",
+              "releasedVersion": "19.0.9",
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "react-dom",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        },
+        {
+          "priority": "P3",
+          "title": "TanStack Start 1.0 – стабильный релиз",
+          "source": "React Status",
+          "publishedAt": "Fri, 23 Oct 2026 00:00:00 +0000",
+          "whyImportant": "Платформа TanStack Start теперь официально стабильна, предлагая более быстрый рендеринг и поддержку RSC без необходимости использования tanstack.com.",
+          "audience": "Frontend‑инженеры, интересующиеся альтернативами Next.js",
+          "nextStep": "Изучить документацию и попробовать миграцию небольшого проекта на Start.",
+          "url": "https://react.statuscode.com/issues/494",
+          "tags": [
+            "tanstack",
+            "start",
+            "react"
+          ],
+          "changeType": "guide",
+          "technologies": [
+            "react"
+          ],
+          "packages": [],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Прочитать обзор релиза",
+            "Создать тестовый проект на TanStack Start",
+            "Сравнить производительность с Next.js"
+          ],
+          "detailsConfidence": "source"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-10-24",
