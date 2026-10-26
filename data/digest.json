@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "date": "2026-10-25",
-  "generatedAt": "2026-10-25T09:47:24.003Z",
+  "date": "2026-10-26",
+  "generatedAt": "2026-10-26T10:28:32.151Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -11,35 +11,30 @@
     "failed": []
   },
   "status": "quiet",
-  "summary": "В течение дня ничего значимого не произошло.",
+  "summary": "Значимых новых событий не найдено. Подборка для чтения собрана в резервном режиме.",
   "items": [],
   "readLater": [
     {
       "priority": "P3",
-      "title": "React Releases: выпуск 19.1.10",
-      "source": "React Releases",
-      "publishedAt": "2026-10-14T17:06:06Z",
+      "title": "Новый материал от Веб-стандарты",
+      "source": "Веб-стандарты",
+      "publishedAt": "Mon, 26 Oct 2026 09:00:00 GMT",
       "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Разработчики и команды, использующие React.",
+      "audience": "Команды, использующие инструменты из экосистемы Веб-стандарты.",
       "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/react/react/releases/tag/v19.1.10",
+      "url": "https://web-standards.ru/podcast/550/",
       "tags": [
-        "react",
+        "веб-стандарты",
         "обновление"
       ],
-      "changeType": "minor",
+      "changeType": "guide",
       "technologies": [
-        "react"
+        "typescript",
+        "platform"
       ],
       "packages": [
         {
-          "name": "react",
-          "releasedVersion": "19.1.10",
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "react-dom",
+          "name": "typescript",
           "releasedVersion": null,
           "affectedRange": null,
           "fixedVersion": null
@@ -55,30 +50,57 @@
     },
     {
       "priority": "P3",
-      "title": "React Releases: выпуск 19.0.9",
-      "source": "React Releases",
-      "publishedAt": "2026-10-14T17:05:59Z",
+      "title": "Новый материал от Next.js Security",
+      "source": "Next.js Security",
+      "publishedAt": "2026-10-14T17:46:48Z",
       "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Разработчики и команды, использующие React.",
+      "audience": "Команды, которые поддерживают приложения на Next.js.",
       "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/react/react/releases/tag/v19.0.9",
+      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-2464-fhr4-w9xw",
       "tags": [
-        "react",
-        "обновление"
+        "next.js",
+        "безопасность"
       ],
       "changeType": "minor",
       "technologies": [
-        "react"
+        "nextjs"
       ],
       "packages": [
         {
-          "name": "react",
-          "releasedVersion": "19.0.9",
+          "name": "next",
+          "releasedVersion": null,
           "affectedRange": null,
           "fixedVersion": null
-        },
+        }
+      ],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    },
+    {
+      "priority": "P3",
+      "title": "Новый материал от Next.js Security",
+      "source": "Next.js Security",
+      "publishedAt": "2026-10-14T17:47:43Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, которые поддерживают приложения на Next.js.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-p3m5-59mp-jv5r",
+      "tags": [
+        "next.js",
+        "безопасность"
+      ],
+      "changeType": "tooling",
+      "technologies": [
+        "nextjs"
+      ],
+      "packages": [
         {
-          "name": "react-dom",
+          "name": "next",
           "releasedVersion": null,
           "affectedRange": null,
           "fixedVersion": null
