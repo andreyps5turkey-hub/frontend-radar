@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "date": "2026-10-26",
-  "generatedAt": "2026-10-26T10:28:32.151Z",
+  "generatedAt": "2026-10-26T11:03:35.318Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -10,9 +10,53 @@
     "succeeded": 32,
     "failed": []
   },
-  "status": "quiet",
-  "summary": "Значимых новых событий не найдено. Подборка для чтения собрана в резервном режиме.",
-  "items": [],
+  "status": "active",
+  "summary": "В окне дня обновление Storybook v10.6.4, исправление загрузчика TypeScript в Jest.",
+  "items": [
+    {
+      "priority": "P2",
+      "title": "Storybook v10.6.4 – обновление",
+      "source": "Storybook Releases",
+      "publishedAt": "2026-10-26T10:35:22Z",
+      "whyImportant": "В версии 10.6.4 исправлен конфликт с загрузчиком TypeScript в Jest, что повышает стабильность сборки.",
+      "audience": "frontend‑разработчики, использующие Storybook и Jest",
+      "nextStep": "Обновите пакеты storybook и @storybook/react до версии 10.6.4 и проверьте конфигурацию Jest.",
+      "url": "https://github.com/storybookjs/storybook/releases/tag/v10.6.4",
+      "tags": [
+        "Storybook",
+        "Jest",
+        "TypeScript"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "typescript",
+        "storybook",
+        "quality"
+      ],
+      "packages": [
+        {
+          "name": "storybook",
+          "releasedVersion": "10.6.4",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "@storybook/react",
+          "releasedVersion": "10.6.4",
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
+      "effort": "hours",
+      "actionItems": [
+        "Обновить пакеты storybook и @storybook/react до 10.6.4",
+        "Проверить конфигурацию Jest на совместимость с TypeScript",
+        "Провести тесты сборки"
+      ],
+      "detailsConfidence": "source"
+    }
+  ],
   "readLater": [
     {
       "priority": "P3",
@@ -62,39 +106,6 @@
         "безопасность"
       ],
       "changeType": "minor",
-      "technologies": [
-        "nextjs"
-      ],
-      "packages": [
-        {
-          "name": "next",
-          "releasedVersion": null,
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "low",
-      "effort": "minutes",
-      "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
-      ],
-      "detailsConfidence": "inferred"
-    },
-    {
-      "priority": "P3",
-      "title": "Новый материал от Next.js Security",
-      "source": "Next.js Security",
-      "publishedAt": "2026-10-14T17:47:43Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, которые поддерживают приложения на Next.js.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-p3m5-59mp-jv5r",
-      "tags": [
-        "next.js",
-        "безопасность"
-      ],
-      "changeType": "tooling",
       "technologies": [
         "nextjs"
       ],

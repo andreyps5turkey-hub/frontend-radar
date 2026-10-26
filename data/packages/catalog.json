@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-26T10:28:40.072Z",
+  "generatedAt": "2026-10-26T11:03:43.311Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -11687,15 +11687,15 @@
         "storybook",
         "@storybook/react"
       ],
-      "latestVersion": "10.6.3",
-      "latestPublishedAt": "2026-10-20T09:52:08.416Z",
+      "latestVersion": "10.6.4",
+      "latestPublishedAt": "2026-10-26T10:38:18.550Z",
       "npmUrl": "https://www.npmjs.com/package/storybook",
       "repositoryUrl": "https://github.com/storybookjs/storybook",
       "packages": [
         {
           "name": "storybook",
-          "latestVersion": "10.6.3",
-          "latestPublishedAt": "2026-10-20T09:52:08.416Z",
+          "latestVersion": "10.6.4",
+          "latestPublishedAt": "2026-10-26T10:38:18.550Z",
           "npmUrl": "https://www.npmjs.com/package/storybook",
           "compatibility": [
             {
@@ -11708,9 +11708,9 @@
               "deprecated": null
             },
             {
-              "range": ">=8.4.0 <=10.6.3",
+              "range": ">=8.4.0 <=10.6.4",
               "minVersion": "8.4.0",
-              "maxVersion": "10.6.3",
+              "maxVersion": "10.6.4",
               "peerDependencies": {
                 "prettier": "^2 || ^3"
               },
@@ -11722,6 +11722,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "10.6.4",
+              "publishedAt": "2026-10-26T10:38:18.550Z"
+            },
             {
               "version": "10.6.3",
               "publishedAt": "2026-10-20T09:52:08.416Z"
@@ -12774,8 +12778,8 @@
         },
         {
           "name": "@storybook/react",
-          "latestVersion": "10.6.3",
-          "latestPublishedAt": "2026-10-20T09:54:06.886Z",
+          "latestVersion": "10.6.4",
+          "latestPublishedAt": "2026-10-26T10:34:27.193Z",
           "npmUrl": "https://www.npmjs.com/package/@storybook/react",
           "compatibility": [
             {
@@ -15492,9 +15496,29 @@
               ],
               "nodeRange": null,
               "deprecated": null
+            },
+            {
+              "range": "10.6.4",
+              "minVersion": "10.6.4",
+              "maxVersion": "10.6.4",
+              "peerDependencies": {
+                "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+                "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+                "storybook": "^10.6.4",
+                "typescript": ">= 4.9.x"
+              },
+              "optionalPeers": [
+                "typescript"
+              ],
+              "nodeRange": null,
+              "deprecated": null
             }
           ],
           "versions": [
+            {
+              "version": "10.6.4",
+              "publishedAt": "2026-10-26T10:34:27.193Z"
+            },
             {
               "version": "10.6.3",
               "publishedAt": "2026-10-20T09:54:06.886Z"
@@ -16676,6 +16700,17 @@
         }
       ],
       "events": [
+        {
+          "id": "cc158a37ef557b",
+          "kind": "minor",
+          "priority": "P2",
+          "version": "10.6.4",
+          "title": "Storybook v10.6.4 – обновление",
+          "summary": "В версии 10.6.4 исправлен конфликт с загрузчиком TypeScript в Jest, что повышает стабильность сборки.",
+          "publishedAt": "2026-10-26T10:35:22Z",
+          "source": "Storybook Releases",
+          "url": "https://github.com/storybookjs/storybook/releases/tag/v10.6.4"
+        },
         {
           "id": "c7d33937b91a8c",
           "kind": "minor",
