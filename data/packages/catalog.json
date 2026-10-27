@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-26T11:03:43.311Z",
+  "generatedAt": "2026-10-27T10:01:25.269Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -5476,6 +5476,17 @@
       "advisories": [],
       "events": [
         {
+          "id": "e58bb6f3b28a47",
+          "kind": "minor",
+          "priority": 1,
+          "version": "8.72.1",
+          "title": "typescript-eslint Releases: выпуск v8.72.1",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-10-26T17:06:39Z",
+          "source": "typescript-eslint Releases",
+          "url": "https://github.com/typescript-eslint/typescript-eslint/releases/tag/v8.72.1"
+        },
+        {
           "id": "1e96720982c4db",
           "kind": "patch",
           "priority": "P3",
@@ -7267,6 +7278,28 @@
         }
       ],
       "events": [
+        {
+          "id": "be61c6aa267cc8",
+          "kind": "minor",
+          "priority": 2,
+          "version": "9.3.3",
+          "title": "Vite Releases: выпуск 9.3.3",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-10-27T09:27:16Z",
+          "source": "Vite Releases",
+          "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.3.3"
+        },
+        {
+          "id": "d31d9f938380f2",
+          "kind": "major",
+          "priority": 0,
+          "version": "9.3.2",
+          "title": "Vite Releases: выпуск 9.3.2",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-10-27T06:55:31Z",
+          "source": "Vite Releases",
+          "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.3.2"
+        },
         {
           "id": "594b04d2b55899",
           "kind": "minor",
@@ -16703,10 +16736,10 @@
         {
           "id": "cc158a37ef557b",
           "kind": "minor",
-          "priority": "P2",
+          "priority": "P3",
           "version": "10.6.4",
-          "title": "Storybook v10.6.4 – обновление",
-          "summary": "В версии 10.6.4 исправлен конфликт с загрузчиком TypeScript в Jest, что повышает стабильность сборки.",
+          "title": "Storybook Releases: выпуск v10.6.4",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
           "publishedAt": "2026-10-26T10:35:22Z",
           "source": "Storybook Releases",
           "url": "https://github.com/storybookjs/storybook/releases/tag/v10.6.4"
@@ -17553,6 +17586,17 @@
       ],
       "advisories": [],
       "events": [
+        {
+          "id": "e58bb6f3b28a47",
+          "kind": "minor",
+          "priority": 1,
+          "version": "8.72.1",
+          "title": "typescript-eslint Releases: выпуск v8.72.1",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-10-26T17:06:39Z",
+          "source": "typescript-eslint Releases",
+          "url": "https://github.com/typescript-eslint/typescript-eslint/releases/tag/v8.72.1"
+        },
         {
           "id": "b21a317d70f03a",
           "kind": "minor",
