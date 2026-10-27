@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "date": "2026-10-27",
-  "generatedAt": "2026-10-27T10:01:18.441Z",
+  "generatedAt": "2026-10-27T10:30:50.091Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -11,20 +11,21 @@
     "failed": []
   },
   "status": "active",
-  "summary": "Автоматическая подборка собрана в резервном режиме. Проверьте релизы по ссылкам на первоисточники.",
+  "summary": "В сегодняшнем выпуске Frontend Radar обновления Vite и TypeScript‑ESLint.",
   "items": [
     {
       "priority": "P1",
-      "title": "Vite Releases: выпуск 9.3.2",
+      "title": "Создание проекта Vite 9.3.2 – новые возможности и исправления",
       "source": "Vite Releases",
       "publishedAt": "2026-10-27T06:55:31Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы Vite Releases.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "whyImportant": "Включена поддержка TypeScript 7, обновлены зависимости и исправлены ошибки в шаблонах.",
+      "audience": "Разработчики, использующие Vite",
+      "nextStep": "Обновите пакет create-vite до версии 9.3.2 и проверьте совместимость шаблонов.",
       "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.3.2",
       "tags": [
-        "vite",
-        "обновление"
+        "Vite",
+        "TypeScript",
+        "create-vite"
       ],
       "changeType": "major",
       "technologies": [
@@ -40,83 +41,31 @@
         },
         {
           "name": "@vitejs/plugin-legacy",
-          "releasedVersion": null,
+          "releasedVersion": "9.3.2",
           "affectedRange": null,
           "fixedVersion": null
         }
       ],
-      "risk": "low",
-      "effort": "minutes",
+      "risk": "unknown",
+      "effort": "days",
       "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
+        "Установить create-vite@9.3.2",
+        "Проверить работу шаблонов"
       ],
-      "detailsConfidence": "inferred"
+      "detailsConfidence": "source"
     },
     {
-      "priority": "P2",
-      "title": "typescript-eslint Releases: выпуск v8.72.1",
-      "source": "typescript-eslint Releases",
-      "publishedAt": "2026-10-26T17:06:39Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды с TypeScript-проектами и авторами библиотек.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/typescript-eslint/typescript-eslint/releases/tag/v8.72.1",
-      "tags": [
-        "typescript-eslint",
-        "обновление"
-      ],
-      "changeType": "minor",
-      "technologies": [
-        "typescript",
-        "quality"
-      ],
-      "packages": [
-        {
-          "name": "typescript-eslint",
-          "releasedVersion": "v8.72.1",
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "@typescript-eslint/parser",
-          "releasedVersion": null,
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "typescript",
-          "releasedVersion": "v8.72.1",
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "eslint",
-          "releasedVersion": "v8.72.1",
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "low",
-      "effort": "minutes",
-      "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
-      ],
-      "detailsConfidence": "inferred"
-    },
-    {
-      "priority": "P2",
-      "title": "Vite Releases: выпуск 9.3.3",
+      "priority": "P1",
+      "title": "Создание проекта Vite 9.3.3 – исправление шаблонов",
       "source": "Vite Releases",
       "publishedAt": "2026-10-27T09:27:16Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы Vite Releases.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "whyImportant": "Исправлена ошибка, из-за которой шаблоны не включались в пакет, что могло привести к недостающим файлам при генерации проекта.",
+      "audience": "Разработчики, использующие Vite",
+      "nextStep": "Обновите до версии 9.3.3, если используете create-vite, и убедитесь, что шаблоны присутствуют.",
       "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.3.3",
       "tags": [
-        "vite",
-        "обновление"
+        "Vite",
+        "create-vite"
       ],
       "changeType": "minor",
       "technologies": [
@@ -131,18 +80,59 @@
         },
         {
           "name": "@vitejs/plugin-legacy",
-          "releasedVersion": null,
+          "releasedVersion": "9.3.3",
           "affectedRange": null,
           "fixedVersion": null
         }
       ],
-      "risk": "low",
-      "effort": "minutes",
+      "risk": "unknown",
+      "effort": "days",
       "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
+        "Обновить create-vite@9.3.3",
+        "Проверить наличие шаблонов"
       ],
-      "detailsConfidence": "inferred"
+      "detailsConfidence": "source"
+    },
+    {
+      "priority": "P2",
+      "title": "typescript-eslint 8.72.1 – исправления и улучшения",
+      "source": "typescript-eslint Releases",
+      "publishedAt": "2026-10-26T17:06:39Z",
+      "whyImportant": "Исправлены ложные срабатывания правил и улучшена обработка рекурсивных типов, повышая надёжность линтинга.",
+      "audience": "Разработчики, использующие eslint-plugin‑typescript‑eslint",
+      "nextStep": "Обновите пакеты typescript-eslint до версии 8.72.1 и проверьте конфигурацию.",
+      "url": "https://github.com/typescript-eslint/typescript-eslint/releases/tag/v8.72.1",
+      "tags": [
+        "typescript-eslint",
+        "eslint",
+        "TypeScript"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "typescript",
+        "quality"
+      ],
+      "packages": [
+        {
+          "name": "typescript-eslint",
+          "releasedVersion": "8.72.1",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "@typescript-eslint/parser",
+          "releasedVersion": "8.72.1",
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
+      "effort": "hours",
+      "actionItems": [
+        "Обновить typescript-eslint до 8.72.1",
+        "Проверить правила eslint"
+      ],
+      "detailsConfidence": "source"
     }
   ],
   "readLater": [
@@ -208,39 +198,6 @@
       "packages": [
         {
           "name": "typescript",
-          "releasedVersion": null,
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "low",
-      "effort": "minutes",
-      "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
-      ],
-      "detailsConfidence": "inferred"
-    },
-    {
-      "priority": "P3",
-      "title": "Новый материал от Next.js Security",
-      "source": "Next.js Security",
-      "publishedAt": "2026-10-14T17:46:48Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, которые поддерживают приложения на Next.js.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-2464-fhr4-w9xw",
-      "tags": [
-        "next.js",
-        "безопасность"
-      ],
-      "changeType": "minor",
-      "technologies": [
-        "nextjs"
-      ],
-      "packages": [
-        {
-          "name": "next",
           "releasedVersion": null,
           "affectedRange": null,
           "fixedVersion": null

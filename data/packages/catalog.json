@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-27T10:01:25.269Z",
+  "generatedAt": "2026-10-27T10:30:56.907Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -5478,7 +5478,7 @@
         {
           "id": "e58bb6f3b28a47",
           "kind": "minor",
-          "priority": 1,
+          "priority": "P2",
           "version": "8.72.1",
           "title": "typescript-eslint Releases: выпуск v8.72.1",
           "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
@@ -7281,10 +7281,10 @@
         {
           "id": "be61c6aa267cc8",
           "kind": "minor",
-          "priority": 2,
+          "priority": "P1",
           "version": "9.3.3",
-          "title": "Vite Releases: выпуск 9.3.3",
-          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "title": "Создание проекта Vite 9.3.3 – исправление шаблонов",
+          "summary": "Исправлена ошибка, из-за которой шаблоны не включались в пакет, что могло привести к недостающим файлам при генерации проекта.",
           "publishedAt": "2026-10-27T09:27:16Z",
           "source": "Vite Releases",
           "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.3.3"
@@ -7292,10 +7292,10 @@
         {
           "id": "d31d9f938380f2",
           "kind": "major",
-          "priority": 0,
+          "priority": "P1",
           "version": "9.3.2",
-          "title": "Vite Releases: выпуск 9.3.2",
-          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "title": "Создание проекта Vite 9.3.2 – новые возможности и исправления",
+          "summary": "Включена поддержка TypeScript 7, обновлены зависимости и исправлены ошибки в шаблонах.",
           "publishedAt": "2026-10-27T06:55:31Z",
           "source": "Vite Releases",
           "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.3.2"
@@ -17589,7 +17589,7 @@
         {
           "id": "e58bb6f3b28a47",
           "kind": "minor",
-          "priority": 1,
+          "priority": "P2",
           "version": "8.72.1",
           "title": "typescript-eslint Releases: выпуск v8.72.1",
           "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
