@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "date": "2026-10-27",
-  "generatedAt": "2026-10-27T10:30:50.091Z",
+  "date": "2026-10-28",
+  "generatedAt": "2026-10-28T10:47:35.172Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -11,140 +11,137 @@
     "failed": []
   },
   "status": "active",
-  "summary": "В сегодняшнем выпуске Frontend Radar обновления Vite и TypeScript‑ESLint.",
+  "summary": "Автоматическая подборка собрана в резервном режиме. Проверьте релизы по ссылкам на первоисточники.",
   "items": [
     {
-      "priority": "P1",
-      "title": "Создание проекта Vite 9.3.2 – новые возможности и исправления",
-      "source": "Vite Releases",
-      "publishedAt": "2026-10-27T06:55:31Z",
-      "whyImportant": "Включена поддержка TypeScript 7, обновлены зависимости и исправлены ошибки в шаблонах.",
-      "audience": "Разработчики, использующие Vite",
-      "nextStep": "Обновите пакет create-vite до версии 9.3.2 и проверьте совместимость шаблонов.",
-      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.3.2",
+      "priority": "P2",
+      "title": "React Router Releases: выпуск v8.5.1",
+      "source": "React Router Releases",
+      "publishedAt": "2026-10-27T21:38:43Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Разработчики и команды, использующие React.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/remix-run/react-router/releases/tag/react-router%408.5.1",
       "tags": [
-        "Vite",
-        "TypeScript",
-        "create-vite"
-      ],
-      "changeType": "major",
-      "technologies": [
-        "typescript",
-        "vite"
-      ],
-      "packages": [
-        {
-          "name": "vite",
-          "releasedVersion": "9.3.2",
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "@vitejs/plugin-legacy",
-          "releasedVersion": "9.3.2",
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "unknown",
-      "effort": "days",
-      "actionItems": [
-        "Установить create-vite@9.3.2",
-        "Проверить работу шаблонов"
-      ],
-      "detailsConfidence": "source"
-    },
-    {
-      "priority": "P1",
-      "title": "Создание проекта Vite 9.3.3 – исправление шаблонов",
-      "source": "Vite Releases",
-      "publishedAt": "2026-10-27T09:27:16Z",
-      "whyImportant": "Исправлена ошибка, из-за которой шаблоны не включались в пакет, что могло привести к недостающим файлам при генерации проекта.",
-      "audience": "Разработчики, использующие Vite",
-      "nextStep": "Обновите до версии 9.3.3, если используете create-vite, и убедитесь, что шаблоны присутствуют.",
-      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.3.3",
-      "tags": [
-        "Vite",
-        "create-vite"
+        "react",
+        "обновление"
       ],
       "changeType": "minor",
       "technologies": [
-        "vite"
+        "router",
+        "react"
       ],
       "packages": [
         {
-          "name": "vite",
-          "releasedVersion": "9.3.3",
+          "name": "react-router",
+          "releasedVersion": "v8.5.1",
           "affectedRange": null,
           "fixedVersion": null
         },
         {
-          "name": "@vitejs/plugin-legacy",
-          "releasedVersion": "9.3.3",
+          "name": "react-router-dom",
+          "releasedVersion": null,
           "affectedRange": null,
           "fixedVersion": null
         }
       ],
-      "risk": "unknown",
-      "effort": "days",
+      "risk": "low",
+      "effort": "minutes",
       "actionItems": [
-        "Обновить create-vite@9.3.3",
-        "Проверить наличие шаблонов"
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
       ],
-      "detailsConfidence": "source"
+      "detailsConfidence": "inferred"
     },
     {
       "priority": "P2",
-      "title": "typescript-eslint 8.72.1 – исправления и улучшения",
-      "source": "typescript-eslint Releases",
-      "publishedAt": "2026-10-26T17:06:39Z",
-      "whyImportant": "Исправлены ложные срабатывания правил и улучшена обработка рекурсивных типов, повышая надёжность линтинга.",
-      "audience": "Разработчики, использующие eslint-plugin‑typescript‑eslint",
-      "nextStep": "Обновите пакеты typescript-eslint до версии 8.72.1 и проверьте конфигурацию.",
-      "url": "https://github.com/typescript-eslint/typescript-eslint/releases/tag/v8.72.1",
+      "title": "React Router Releases: выпуск v7.18.5",
+      "source": "React Router Releases",
+      "publishedAt": "2026-10-27T21:13:32Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Разработчики и команды, использующие React.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/remix-run/react-router/releases/tag/react-router%407.18.5",
       "tags": [
-        "typescript-eslint",
-        "eslint",
-        "TypeScript"
+        "react",
+        "обновление"
       ],
       "changeType": "minor",
       "technologies": [
-        "typescript",
-        "quality"
+        "router",
+        "react"
       ],
       "packages": [
         {
-          "name": "typescript-eslint",
-          "releasedVersion": "8.72.1",
+          "name": "react-router",
+          "releasedVersion": "v7.18.5",
           "affectedRange": null,
           "fixedVersion": null
         },
         {
-          "name": "@typescript-eslint/parser",
-          "releasedVersion": "8.72.1",
+          "name": "react-router-dom",
+          "releasedVersion": null,
           "affectedRange": null,
           "fixedVersion": null
         }
       ],
-      "risk": "unknown",
-      "effort": "hours",
+      "risk": "low",
+      "effort": "minutes",
       "actionItems": [
-        "Обновить typescript-eslint до 8.72.1",
-        "Проверить правила eslint"
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
       ],
-      "detailsConfidence": "source"
-    }
-  ],
-  "readLater": [
+      "detailsConfidence": "inferred"
+    },
     {
-      "priority": "P3",
-      "title": "Storybook Releases: выпуск v10.6.4",
+      "priority": "P2",
+      "title": "React Router Releases: выпуск 7.18.5",
+      "source": "React Router Releases",
+      "publishedAt": "2026-10-27T21:04:59Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Разработчики и команды, использующие React.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/remix-run/react-router/releases/tag/react-router-dom%407.18.5",
+      "tags": [
+        "react",
+        "обновление"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "router",
+        "react"
+      ],
+      "packages": [
+        {
+          "name": "react-router",
+          "releasedVersion": "7.18.5",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "react-router-dom",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    },
+    {
+      "priority": "P2",
+      "title": "Storybook Releases: выпуск v10.6.5",
       "source": "Storybook Releases",
-      "publishedAt": "2026-10-26T10:35:22Z",
+      "publishedAt": "2026-10-27T16:27:27Z",
       "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
       "audience": "Команды, использующие инструменты из экосистемы Storybook Releases.",
       "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/storybookjs/storybook/releases/tag/v10.6.4",
+      "url": "https://github.com/storybookjs/storybook/releases/tag/v10.6.5",
       "tags": [
         "storybook",
         "обновление"
@@ -152,13 +149,12 @@
       "changeType": "minor",
       "technologies": [
         "typescript",
-        "storybook",
-        "quality"
+        "storybook"
       ],
       "packages": [
         {
           "name": "storybook",
-          "releasedVersion": "v10.6.4",
+          "releasedVersion": "v10.6.5",
           "affectedRange": null,
           "fixedVersion": null
         },
@@ -176,28 +172,101 @@
         "Протестировать обновление в отдельной ветке."
       ],
       "detailsConfidence": "inferred"
-    },
+    }
+  ],
+  "readLater": [
     {
       "priority": "P3",
-      "title": "Новый материал от Веб-стандарты",
-      "source": "Веб-стандарты",
-      "publishedAt": "Mon, 26 Oct 2026 09:00:00 GMT",
+      "title": "Vite Releases: выпуск 9.3.3",
+      "source": "Vite Releases",
+      "publishedAt": "2026-10-27T09:27:16Z",
       "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы Веб-стандарты.",
+      "audience": "Команды, использующие инструменты из экосистемы Vite Releases.",
       "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://web-standards.ru/podcast/550/",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.3.3",
       "tags": [
-        "веб-стандарты",
+        "vite",
         "обновление"
       ],
-      "changeType": "guide",
+      "changeType": "minor",
       "technologies": [
-        "typescript",
-        "platform"
+        "vite"
       ],
       "packages": [
         {
-          "name": "typescript",
+          "name": "vite",
+          "releasedVersion": "9.3.3",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "@vitejs/plugin-legacy",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    },
+    {
+      "priority": "P3",
+      "title": "Новый материал от Next.js Security",
+      "source": "Next.js Security",
+      "publishedAt": "2026-10-14T17:46:48Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, которые поддерживают приложения на Next.js.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-2464-fhr4-w9xw",
+      "tags": [
+        "next.js",
+        "безопасность"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "nextjs"
+      ],
+      "packages": [
+        {
+          "name": "next",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    },
+    {
+      "priority": "P3",
+      "title": "Новый материал от Next.js Security",
+      "source": "Next.js Security",
+      "publishedAt": "2026-10-14T17:47:43Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, которые поддерживают приложения на Next.js.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-p3m5-59mp-jv5r",
+      "tags": [
+        "next.js",
+        "безопасность"
+      ],
+      "changeType": "tooling",
+      "technologies": [
+        "nextjs"
+      ],
+      "packages": [
+        {
+          "name": "next",
           "releasedVersion": null,
           "affectedRange": null,
           "fixedVersion": null
