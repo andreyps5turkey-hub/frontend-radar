@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-28T10:47:45.918Z",
+  "generatedAt": "2026-10-28T11:18:56.262Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -9243,10 +9243,10 @@
         {
           "id": "26e972e1111b53",
           "kind": "minor",
-          "priority": 0,
+          "priority": "P1",
           "version": "8.5.1",
-          "title": "React Router Releases: выпуск v8.5.1",
-          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "title": "React Router 8.5.1 – новые возможности и исправления",
+          "summary": "Обновление включает улучшения маршрутизации и исправления ошибок, которые могут повлиять на стабильность приложения.",
           "publishedAt": "2026-10-27T21:38:43Z",
           "source": "React Router Releases",
           "url": "https://github.com/remix-run/react-router/releases/tag/react-router%408.5.1"
@@ -9254,10 +9254,10 @@
         {
           "id": "4a9f2da575a17f",
           "kind": "minor",
-          "priority": 1,
+          "priority": "P3",
           "version": "7.18.5",
-          "title": "React Router Releases: выпуск v7.18.5",
-          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "title": "React Router 7.18.5 – патч с исправлениями",
+          "summary": "Обновление содержит исправления багов и небольшие улучшения для версии 7.x.",
           "publishedAt": "2026-10-27T21:13:32Z",
           "source": "React Router Releases",
           "url": "https://github.com/remix-run/react-router/releases/tag/react-router%407.18.5"
@@ -9265,10 +9265,10 @@
         {
           "id": "24742a90fa978d",
           "kind": "minor",
-          "priority": 2,
+          "priority": "P3",
           "version": "7.18.5",
-          "title": "React Router Releases: выпуск 7.18.5",
-          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "title": "React Router DOM 7.18.5 – патч с исправлениями",
+          "summary": "Обновление содержит исправления багов и небольшие улучшения для версии 7.x.",
           "publishedAt": "2026-10-27T21:04:59Z",
           "source": "React Router Releases",
           "url": "https://github.com/remix-run/react-router/releases/tag/react-router-dom%407.18.5"
@@ -16794,10 +16794,10 @@
         {
           "id": "13d17f1ffdb54f",
           "kind": "minor",
-          "priority": 3,
+          "priority": "P2",
           "version": "10.6.5",
-          "title": "Storybook Releases: выпуск v10.6.5",
-          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "title": "Storybook 10.6.5 – улучшения TypeScript и сборки",
+          "summary": "Добавлено исключение папок с префиксом _ из компиляции TypeScript, что ускоряет сборку и устраняет лишние ошибки.",
           "publishedAt": "2026-10-27T16:27:27Z",
           "source": "Storybook Releases",
           "url": "https://github.com/storybookjs/storybook/releases/tag/v10.6.5"
