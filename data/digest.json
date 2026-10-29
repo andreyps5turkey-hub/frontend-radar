@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "date": "2026-10-29",
-  "generatedAt": "2026-10-29T11:04:14.658Z",
+  "generatedAt": "2026-10-29T11:29:49.122Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -10,11 +10,12 @@
     "succeeded": 32,
     "failed": []
   },
-  "status": "active",
-  "summary": "Автоматическая подборка собрана в резервном режиме. Проверьте релизы по ссылкам на первоисточники.",
-  "items": [
+  "status": "quiet",
+  "summary": "Сегодня в окне публикаций не было значимых обновлений, влияющих на безопасность, функциональность или инструменты фронтенд-разработки. Поэтому дайджест остаётся тихим.",
+  "items": [],
+  "readLater": [
     {
-      "priority": "P2",
+      "priority": "P3",
       "title": "Node.js Releases: выпуск 24.22.2",
       "source": "Node.js Releases",
       "publishedAt": "2026-10-28T18:39:09Z",
@@ -40,7 +41,7 @@
       "detailsConfidence": "inferred"
     },
     {
-      "priority": "P2",
+      "priority": "P3",
       "title": "Node.js Releases: выпуск 26.13.0",
       "source": "Node.js Releases",
       "publishedAt": "2026-10-28T16:57:41Z",
@@ -48,94 +49,6 @@
       "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
       "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
       "url": "https://github.com/nodejs/node/releases/tag/v26.13.0",
-      "tags": [
-        "node.js",
-        "обновление"
-      ],
-      "changeType": "minor",
-      "technologies": [
-        "platform"
-      ],
-      "packages": [],
-      "risk": "low",
-      "effort": "minutes",
-      "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
-      ],
-      "detailsConfidence": "inferred"
-    }
-  ],
-  "readLater": [
-    {
-      "priority": "P3",
-      "title": "Next.js Releases: выпуск v16.4.3",
-      "source": "Next.js Releases",
-      "publishedAt": "2026-10-28T11:14:51Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, которые поддерживают приложения на Next.js.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/vercel/next.js/releases/tag/v16.4.3",
-      "tags": [
-        "next.js",
-        "обновление"
-      ],
-      "changeType": "minor",
-      "technologies": [
-        "nextjs",
-        "react"
-      ],
-      "packages": [
-        {
-          "name": "next",
-          "releasedVersion": "v16.4.3",
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "low",
-      "effort": "minutes",
-      "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
-      ],
-      "detailsConfidence": "inferred"
-    },
-    {
-      "priority": "P3",
-      "title": "Node.js Releases: выпуск 26.12.1",
-      "source": "Node.js Releases",
-      "publishedAt": "2026-10-21T10:38:29Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/nodejs/node/releases/tag/v26.12.1",
-      "tags": [
-        "node.js",
-        "обновление"
-      ],
-      "changeType": "minor",
-      "technologies": [
-        "platform"
-      ],
-      "packages": [],
-      "risk": "low",
-      "effort": "minutes",
-      "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
-      ],
-      "detailsConfidence": "inferred"
-    },
-    {
-      "priority": "P3",
-      "title": "Node.js Releases: выпуск 24.22.1",
-      "source": "Node.js Releases",
-      "publishedAt": "2026-10-21T10:38:25Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/nodejs/node/releases/tag/v24.22.1",
       "tags": [
         "node.js",
         "обновление"
