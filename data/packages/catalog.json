@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-28T11:18:56.262Z",
+  "generatedAt": "2026-10-29T11:04:39.992Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -4831,11 +4831,11 @@
         {
           "id": "42c7fc7c6ee379",
           "kind": "minor",
-          "priority": "P2",
+          "priority": "P3",
           "version": "16.4.3",
-          "title": "Next.js v16.4.3 – исправления ошибок",
-          "summary": "Обновление содержит исправления критических ошибок в сборке и работе с Google‑шрифтами, а также улучшения в работе Turbopack.",
-          "publishedAt": "2026-10-23T13:32:31Z",
+          "title": "Next.js Releases: выпуск v16.4.3",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-10-28T11:14:51Z",
           "source": "Next.js Releases",
           "url": "https://github.com/vercel/next.js/releases/tag/v16.4.3"
         },
@@ -7270,10 +7270,10 @@
         {
           "id": "be61c6aa267cc8",
           "kind": "minor",
-          "priority": "P3",
+          "priority": "P1",
           "version": "9.3.3",
-          "title": "Vite Releases: выпуск 9.3.3",
-          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "title": "Создание проекта Vite 9.3.3 – исправление шаблонов",
+          "summary": "Исправлена ошибка, из-за которой шаблоны не включались в пакет, что могло привести к недостающим файлам при генерации проекта.",
           "publishedAt": "2026-10-27T09:27:16Z",
           "source": "Vite Releases",
           "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.3.3"

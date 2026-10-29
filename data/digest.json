@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "date": "2026-10-28",
-  "generatedAt": "2026-10-28T11:18:48.762Z",
+  "date": "2026-10-29",
+  "generatedAt": "2026-10-29T11:04:14.658Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -11,174 +11,147 @@
     "failed": []
   },
   "status": "active",
-  "summary": "Сегодня в репозиториях React Router и Storybook появились новые версии. React Router 8.5.1 добавляет новые возможности и исправления, а Storybook 10.6.5 улучшает работу с TypeScript. Ниже список ключевых обновлений и рекомендации по действию.",
+  "summary": "Автоматическая подборка собрана в резервном режиме. Проверьте релизы по ссылкам на первоисточники.",
   "items": [
     {
-      "priority": "P1",
-      "title": "React Router 8.5.1 – новые возможности и исправления",
-      "source": "React Router Releases",
-      "publishedAt": "2026-10-27T21:38:43Z",
-      "whyImportant": "Обновление включает улучшения маршрутизации и исправления ошибок, которые могут повлиять на стабильность приложения.",
-      "audience": "Разработчики, использующие React Router 8.x",
-      "nextStep": "Проверьте совместимость с текущим кодом, обновите зависимость до 8.5.1 и протестируйте маршрутизацию.",
-      "url": "https://github.com/remix-run/react-router/releases/tag/react-router%408.5.1",
+      "priority": "P2",
+      "title": "Node.js Releases: выпуск 24.22.2",
+      "source": "Node.js Releases",
+      "publishedAt": "2026-10-28T18:39:09Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/nodejs/node/releases/tag/v24.22.2",
       "tags": [
-        "React",
-        "Router",
-        "v8.5.1"
+        "node.js",
+        "обновление"
       ],
       "changeType": "minor",
       "technologies": [
-        "router",
-        "react"
+        "platform"
       ],
-      "packages": [
-        {
-          "name": "react-router",
-          "releasedVersion": "8.5.1",
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "react-router-dom",
-          "releasedVersion": "8.5.1",
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "unknown",
-      "effort": "days",
+      "packages": [],
+      "risk": "low",
+      "effort": "minutes",
       "actionItems": [
-        "Обновить зависимость до 8.5.1",
-        "Проверить работу маршрутов",
-        "Проверить совместимость с кастомными хуками"
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
       ],
-      "detailsConfidence": "source"
+      "detailsConfidence": "inferred"
     },
     {
       "priority": "P2",
-      "title": "Storybook 10.6.5 – улучшения TypeScript и сборки",
-      "source": "Storybook Releases",
-      "publishedAt": "2026-10-27T16:27:27Z",
-      "whyImportant": "Добавлено исключение папок с префиксом _ из компиляции TypeScript, что ускоряет сборку и устраняет лишние ошибки.",
-      "audience": "Разработчики, использующие Storybook с TypeScript",
-      "nextStep": "Обновите Storybook до 10.6.5 и проверьте, что сборка проходит без ошибок.",
-      "url": "https://github.com/storybookjs/storybook/releases/tag/v10.6.5",
+      "title": "Node.js Releases: выпуск 26.13.0",
+      "source": "Node.js Releases",
+      "publishedAt": "2026-10-28T16:57:41Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/nodejs/node/releases/tag/v26.13.0",
       "tags": [
-        "Storybook",
-        "TypeScript",
-        "v10.6.5"
+        "node.js",
+        "обновление"
       ],
       "changeType": "minor",
       "technologies": [
-        "typescript",
-        "storybook"
+        "platform"
       ],
-      "packages": [
-        {
-          "name": "storybook",
-          "releasedVersion": "10.6.5",
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "@storybook/react",
-          "releasedVersion": "10.6.5",
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "unknown",
-      "effort": "hours",
+      "packages": [],
+      "risk": "low",
+      "effort": "minutes",
       "actionItems": [
-        "Обновить зависимость до 10.6.5",
-        "Проверить сборку TypeScript"
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
       ],
-      "detailsConfidence": "source"
+      "detailsConfidence": "inferred"
     }
   ],
   "readLater": [
     {
       "priority": "P3",
-      "title": "React Router 7.18.5 – патч с исправлениями",
-      "source": "React Router Releases",
-      "publishedAt": "2026-10-27T21:13:32Z",
-      "whyImportant": "Обновление содержит исправления багов и небольшие улучшения для версии 7.x.",
-      "audience": "Разработчики, использующие React Router 7.x",
-      "nextStep": "Проверьте совместимость и обновите до 7.18.5, если это актуально.",
-      "url": "https://github.com/remix-run/react-router/releases/tag/react-router%407.18.5",
+      "title": "Next.js Releases: выпуск v16.4.3",
+      "source": "Next.js Releases",
+      "publishedAt": "2026-10-28T11:14:51Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, которые поддерживают приложения на Next.js.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.4.3",
       "tags": [
-        "React",
-        "Router",
-        "v7.18.5"
+        "next.js",
+        "обновление"
       ],
       "changeType": "minor",
       "technologies": [
-        "router",
+        "nextjs",
         "react"
       ],
       "packages": [
         {
-          "name": "react-router",
-          "releasedVersion": "7.18.5",
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "react-router-dom",
-          "releasedVersion": "7.18.5",
+          "name": "next",
+          "releasedVersion": "v16.4.3",
           "affectedRange": null,
           "fixedVersion": null
         }
       ],
-      "risk": "unknown",
+      "risk": "low",
       "effort": "minutes",
       "actionItems": [
-        "Обновить зависимость до 7.18.5",
-        "Проверить работу маршрутов"
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
       ],
-      "detailsConfidence": "source"
+      "detailsConfidence": "inferred"
     },
     {
       "priority": "P3",
-      "title": "React Router DOM 7.18.5 – патч с исправлениями",
-      "source": "React Router Releases",
-      "publishedAt": "2026-10-27T21:04:59Z",
-      "whyImportant": "Обновление содержит исправления багов и небольшие улучшения для версии 7.x.",
-      "audience": "Разработчики, использующие react-router-dom 7.x",
-      "nextStep": "Проверьте совместимость и обновите до 7.18.5, если это актуально.",
-      "url": "https://github.com/remix-run/react-router/releases/tag/react-router-dom%407.18.5",
+      "title": "Node.js Releases: выпуск 26.12.1",
+      "source": "Node.js Releases",
+      "publishedAt": "2026-10-21T10:38:29Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/nodejs/node/releases/tag/v26.12.1",
       "tags": [
-        "React",
-        "Router DOM",
-        "v7.18.5"
+        "node.js",
+        "обновление"
       ],
       "changeType": "minor",
       "technologies": [
-        "router",
-        "react"
+        "platform"
       ],
-      "packages": [
-        {
-          "name": "react-router",
-          "releasedVersion": null,
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "react-router-dom",
-          "releasedVersion": "7.18.5",
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "unknown",
+      "packages": [],
+      "risk": "low",
       "effort": "minutes",
       "actionItems": [
-        "Обновить зависимость до 7.18.5",
-        "Проверить работу маршрутов"
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
       ],
-      "detailsConfidence": "source"
+      "detailsConfidence": "inferred"
+    },
+    {
+      "priority": "P3",
+      "title": "Node.js Releases: выпуск 24.22.1",
+      "source": "Node.js Releases",
+      "publishedAt": "2026-10-21T10:38:25Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/nodejs/node/releases/tag/v24.22.1",
+      "tags": [
+        "node.js",
+        "обновление"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "platform"
+      ],
+      "packages": [],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
     }
   ]
 }
