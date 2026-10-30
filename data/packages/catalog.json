@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-29T11:29:55.018Z",
+  "generatedAt": "2026-10-30T11:00:11.474Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -4831,11 +4831,11 @@
         {
           "id": "42c7fc7c6ee379",
           "kind": "minor",
-          "priority": "P3",
+          "priority": "P2",
           "version": "16.4.3",
-          "title": "Next.js Releases: выпуск v16.4.3",
-          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-          "publishedAt": "2026-10-28T11:14:51Z",
+          "title": "Next.js v16.4.3 – исправления ошибок",
+          "summary": "Обновление содержит исправления критических ошибок в сборке и работе с Google‑шрифтами, а также улучшения в работе Turbopack.",
+          "publishedAt": "2026-10-23T13:32:31Z",
           "source": "Next.js Releases",
           "url": "https://github.com/vercel/next.js/releases/tag/v16.4.3"
         },
@@ -6311,6 +6311,24 @@
         }
       ],
       "advisories": [
+        {
+          "ghsaId": "GHSA-8g5g-mxqh-grgj",
+          "cveId": "CVE-2026-118662",
+          "severity": "medium",
+          "cvss": null,
+          "title": "Уязвимость GHSA-8g5g-mxqh-grgj в vite",
+          "summary": "Проверьте установленную версию vite и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
+          "publishedAt": "2026-10-29T16:39:56Z",
+          "updatedAt": "2026-10-29T16:39:59Z",
+          "url": "https://github.com/advisories/GHSA-8g5g-mxqh-grgj",
+          "vulnerabilities": [
+            {
+              "packageName": "vite",
+              "vulnerableRange": "= 6.4.4",
+              "fixedVersion": null
+            }
+          ]
+        },
         {
           "ghsaId": "GHSA-fx2h-pf6j-xcff",
           "cveId": "CVE-2026-53571",
