@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "date": "2026-10-30",
-  "generatedAt": "2026-10-30T18:03:05.269Z",
+  "date": "2026-10-31",
+  "generatedAt": "2026-10-31T10:34:39.505Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -10,22 +10,22 @@
     "succeeded": 32,
     "failed": []
   },
-  "status": "active",
-  "summary": "ESLint выпустил новую версию v10.14.0 с множеством исправлений, повышающих стабильность и безопасность проекта.",
-  "items": [
+  "status": "quiet",
+  "summary": "Значимых новых событий не найдено. Подборка для чтения собрана в резервном режиме.",
+  "items": [],
+  "readLater": [
     {
-      "priority": "P1",
-      "title": "ESLint v10.14.0 – новый выпуск с исправлениями",
+      "priority": "P3",
+      "title": "ESLint Releases: выпуск v10.14.0",
       "source": "ESLint Releases",
       "publishedAt": "2026-10-30T14:10:27Z",
-      "whyImportant": "Выпуск исправляет критические ошибки, связанные с обработкой дескрипторов свойств, безопасностью зависимостей и стабильностью парсера.",
-      "audience": "Frontend‑разработчики, использующие ESLint",
-      "nextStep": "Обновите ESLint до версии 10.14.0 и проверьте, что ваши правила работают корректно.",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы ESLint Releases.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
       "url": "https://github.com/eslint/eslint/releases/tag/v10.14.0",
       "tags": [
-        "ESLint",
-        "linting",
-        "bugfix"
+        "eslint",
+        "обновление"
       ],
       "changeType": "minor",
       "technologies": [
@@ -34,22 +34,19 @@
       "packages": [
         {
           "name": "eslint",
-          "releasedVersion": "10.14.0",
+          "releasedVersion": "v10.14.0",
           "affectedRange": null,
           "fixedVersion": null
         }
       ],
-      "risk": "unknown",
-      "effort": "days",
+      "risk": "low",
+      "effort": "minutes",
       "actionItems": [
-        "Проверьте совместимость с текущими правилами",
-        "Обновите зависимость в package.json",
-        "Запустите тесты linting"
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
       ],
-      "detailsConfidence": "source"
-    }
-  ],
-  "readLater": [
+      "detailsConfidence": "inferred"
+    },
     {
       "priority": "P3",
       "title": "Node.js Releases: выпуск 26.12.1",

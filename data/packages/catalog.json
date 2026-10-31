@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-30T18:03:11.860Z",
+  "generatedAt": "2026-10-31T10:34:48.225Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -17680,10 +17680,10 @@
         {
           "id": "2c99df1bd25c42",
           "kind": "minor",
-          "priority": "P1",
+          "priority": "P3",
           "version": "10.14.0",
-          "title": "ESLint v10.14.0 – новый выпуск с исправлениями",
-          "summary": "Выпуск исправляет критические ошибки, связанные с обработкой дескрипторов свойств, безопасностью зависимостей и стабильностью парсера.",
+          "title": "ESLint Releases: выпуск v10.14.0",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
           "publishedAt": "2026-10-30T14:10:27Z",
           "source": "ESLint Releases",
           "url": "https://github.com/eslint/eslint/releases/tag/v10.14.0"
