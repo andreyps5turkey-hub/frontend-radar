@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-02T13:28:15.468Z",
+  "generatedAt": "2026-11-02T15:48:14.856Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -9834,15 +9834,15 @@
       "packageNames": [
         "@tanstack/react-query"
       ],
-      "latestVersion": "5.105.1",
-      "latestPublishedAt": "2026-11-01T10:07:48.829Z",
+      "latestVersion": "5.105.2",
+      "latestPublishedAt": "2026-11-02T13:57:22.684Z",
       "npmUrl": "https://www.npmjs.com/package/@tanstack/react-query",
       "repositoryUrl": "https://github.com/TanStack/query",
       "packages": [
         {
           "name": "@tanstack/react-query",
-          "latestVersion": "5.105.1",
-          "latestPublishedAt": "2026-11-01T10:07:48.829Z",
+          "latestVersion": "5.105.2",
+          "latestPublishedAt": "2026-11-02T13:57:22.684Z",
           "npmUrl": "https://www.npmjs.com/package/@tanstack/react-query",
           "compatibility": [
             {
@@ -9899,9 +9899,9 @@
               "deprecated": null
             },
             {
-              "range": ">=5.52.1 <=5.105.1",
+              "range": ">=5.52.1 <=5.105.2",
               "minVersion": "5.52.1",
-              "maxVersion": "5.105.1",
+              "maxVersion": "5.105.2",
               "peerDependencies": {
                 "react": "^18 || ^19"
               },
@@ -9911,6 +9911,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "5.105.2",
+              "publishedAt": "2026-11-02T13:57:22.684Z"
+            },
             {
               "version": "5.105.1",
               "publishedAt": "2026-11-01T10:07:48.829Z"
