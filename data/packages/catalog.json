@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-02T15:48:14.856Z",
+  "generatedAt": "2026-11-02T21:41:42.892Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -1419,7 +1419,7 @@
         {
           "id": "c23fd5f380700d",
           "kind": "minor",
-          "priority": 1,
+          "priority": "P3",
           "version": "6.2.0",
           "title": "Vite React Plugins: выпуск 6.2.0",
           "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
@@ -4857,11 +4857,11 @@
         {
           "id": "3c0fd78ab7cdd7",
           "kind": "minor",
-          "priority": 0,
+          "priority": "P3",
           "version": "16.4.4",
           "title": "Next.js Releases: выпуск v16.4.4",
           "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-          "publishedAt": "2026-11-02T10:14:37Z",
+          "publishedAt": "2026-11-02T16:41:08Z",
           "source": "Next.js Releases",
           "url": "https://github.com/vercel/next.js/releases/tag/v16.4.4"
         },
@@ -7336,7 +7336,7 @@
         {
           "id": "c23fd5f380700d",
           "kind": "minor",
-          "priority": 1,
+          "priority": "P3",
           "version": "6.2.0",
           "title": "Vite React Plugins: выпуск 6.2.0",
           "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
@@ -9834,15 +9834,15 @@
       "packageNames": [
         "@tanstack/react-query"
       ],
-      "latestVersion": "5.105.2",
-      "latestPublishedAt": "2026-11-02T13:57:22.684Z",
+      "latestVersion": "5.105.3",
+      "latestPublishedAt": "2026-11-02T20:39:13.878Z",
       "npmUrl": "https://www.npmjs.com/package/@tanstack/react-query",
       "repositoryUrl": "https://github.com/TanStack/query",
       "packages": [
         {
           "name": "@tanstack/react-query",
-          "latestVersion": "5.105.2",
-          "latestPublishedAt": "2026-11-02T13:57:22.684Z",
+          "latestVersion": "5.105.3",
+          "latestPublishedAt": "2026-11-02T20:39:13.878Z",
           "npmUrl": "https://www.npmjs.com/package/@tanstack/react-query",
           "compatibility": [
             {
@@ -9899,9 +9899,9 @@
               "deprecated": null
             },
             {
-              "range": ">=5.52.1 <=5.105.2",
+              "range": ">=5.52.1 <=5.105.3",
               "minVersion": "5.52.1",
-              "maxVersion": "5.105.2",
+              "maxVersion": "5.105.3",
               "peerDependencies": {
                 "react": "^18 || ^19"
               },
@@ -9911,6 +9911,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "5.105.3",
+              "publishedAt": "2026-11-02T20:39:13.878Z"
+            },
             {
               "version": "5.105.2",
               "publishedAt": "2026-11-02T13:57:22.684Z"

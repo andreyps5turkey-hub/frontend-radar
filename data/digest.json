@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "date": "2026-11-02",
-  "generatedAt": "2026-11-02T15:48:07.002Z",
+  "date": "2026-11-03",
+  "generatedAt": "2026-11-02T21:41:35.171Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -10,14 +10,15 @@
     "succeeded": 32,
     "failed": []
   },
-  "status": "active",
-  "summary": "Автоматическая подборка собрана в резервном режиме. Проверьте релизы по ссылкам на первоисточники.",
-  "items": [
+  "status": "quiet",
+  "summary": "Значимых новых событий не найдено. Подборка для чтения собрана в резервном режиме.",
+  "items": [],
+  "readLater": [
     {
-      "priority": "P2",
+      "priority": "P3",
       "title": "Next.js Releases: выпуск v16.4.4",
       "source": "Next.js Releases",
-      "publishedAt": "2026-11-02T10:14:37Z",
+      "publishedAt": "2026-11-02T16:41:08Z",
       "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
       "audience": "Команды, которые поддерживают приложения на Next.js.",
       "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
@@ -28,7 +29,8 @@
       ],
       "changeType": "minor",
       "technologies": [
-        "nextjs"
+        "nextjs",
+        "platform"
       ],
       "packages": [
         {
@@ -47,7 +49,7 @@
       "detailsConfidence": "inferred"
     },
     {
-      "priority": "P2",
+      "priority": "P3",
       "title": "Vite React Plugins: выпуск 6.2.0",
       "source": "Vite React Plugins",
       "publishedAt": "2026-11-02T07:46:37Z",
@@ -103,9 +105,7 @@
         "Протестировать обновление в отдельной ветке."
       ],
       "detailsConfidence": "inferred"
-    }
-  ],
-  "readLater": [
+    },
     {
       "priority": "P3",
       "title": "Веб-стандарты: выпуск 27.1",
@@ -120,90 +120,6 @@
         "обновление"
       ],
       "changeType": "guide",
-      "technologies": [
-        "platform"
-      ],
-      "packages": [],
-      "risk": "low",
-      "effort": "minutes",
-      "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
-      ],
-      "detailsConfidence": "inferred"
-    },
-    {
-      "priority": "P3",
-      "title": "Vite React Plugins: выпуск 6.2.1",
-      "source": "Vite React Plugins",
-      "publishedAt": "2026-11-02T09:15:09Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Разработчики и команды, использующие React.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/vitejs/vite-plugin-react/releases/tag/plugin-react%406.2.1",
-      "tags": [
-        "vite",
-        "обновление"
-      ],
-      "changeType": "minor",
-      "technologies": [
-        "vite",
-        "react"
-      ],
-      "packages": [
-        {
-          "name": "@vitejs/plugin-react",
-          "releasedVersion": null,
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "@vitejs/plugin-react-swc",
-          "releasedVersion": null,
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "@vitejs/plugin-rsc",
-          "releasedVersion": null,
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "vite",
-          "releasedVersion": "6.2.1",
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "react",
-          "releasedVersion": "6.2.1",
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "low",
-      "effort": "minutes",
-      "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
-      ],
-      "detailsConfidence": "inferred"
-    },
-    {
-      "priority": "P3",
-      "title": "Node.js Releases: выпуск 26.12.1",
-      "source": "Node.js Releases",
-      "publishedAt": "2026-10-21T10:38:29Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/nodejs/node/releases/tag/v26.12.1",
-      "tags": [
-        "node.js",
-        "обновление"
-      ],
-      "changeType": "minor",
       "technologies": [
         "platform"
       ],
