@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "date": "2026-11-03",
-  "generatedAt": "2026-11-03T12:45:43.044Z",
+  "generatedAt": "2026-11-03T14:10:57.554Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -10,9 +10,45 @@
     "succeeded": 32,
     "failed": []
   },
-  "status": "quiet",
-  "summary": "Значимых новых событий не найдено. Подборка для чтения собрана в резервном режиме.",
-  "items": [],
+  "status": "active",
+  "summary": "Автоматическая подборка собрана в резервном режиме. Проверьте релизы по ссылкам на первоисточники.",
+  "items": [
+    {
+      "priority": "P1",
+      "title": "Stylelint Releases: выпуск 18.0.0",
+      "source": "Stylelint Releases",
+      "publishedAt": "2026-11-03T12:48:48Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы Stylelint Releases.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/stylelint/stylelint/releases/tag/18.0.0",
+      "tags": [
+        "stylelint",
+        "обновление"
+      ],
+      "changeType": "breaking",
+      "technologies": [
+        "typescript",
+        "quality",
+        "platform"
+      ],
+      "packages": [
+        {
+          "name": "stylelint",
+          "releasedVersion": "18.0.0",
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    }
+  ],
   "readLater": [
     {
       "priority": "P3",
