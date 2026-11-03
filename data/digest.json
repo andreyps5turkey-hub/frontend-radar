@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "date": "2026-11-03",
-  "generatedAt": "2026-11-03T14:10:57.554Z",
+  "generatedAt": "2026-11-03T19:28:54.386Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -11,24 +11,200 @@
     "failed": []
   },
   "status": "active",
-  "summary": "Автоматическая подборка собрана в резервном режиме. Проверьте релизы по ссылкам на первоисточники.",
+  "summary": "Сегодня в экосистеме Next.js выявлены несколько критических уязвимостей, а также выпущена новая версия с исправлениями безопасности. Важные обновления и рекомендации для разработчиков приведены ниже.",
   "items": [
     {
+      "priority": "P0",
+      "title": "Обход ограничения SVG в оптимизаторе изображений Next.js",
+      "source": "Next.js Security",
+      "publishedAt": "2026-11-03T18:39:51Z",
+      "whyImportant": "Позволяет обрабатывать SVG даже при отключённой поддержке, открывая путь к DoS и уязвимостям парсера.",
+      "audience": "Разработчики Next.js, DevOps",
+      "nextStep": "Обновите Next.js до версии 16.4.5 или выше, где данная проблема исправлена.",
+      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-7qx7-33qx-rqx2",
+      "tags": [
+        "Next.js",
+        "SVG",
+        "безопасность"
+      ],
+      "changeType": "security",
+      "technologies": [
+        "nextjs"
+      ],
+      "packages": [
+        {
+          "name": "next",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
+      "effort": "hours",
+      "actionItems": [
+        "Проверить текущую версию Next.js",
+        "Обновить до 16.4.5",
+        "Проверить конфигурацию dangerouslyAllowSVG"
+      ],
+      "detailsConfidence": "source"
+    },
+    {
+      "priority": "P0",
+      "title": "Проблема с HttpOnly cookie в Edge‑роутерах Next.js",
+      "source": "Next.js Security",
+      "publishedAt": "2026-11-03T18:39:54Z",
+      "whyImportant": "HttpOnly cookie становятся доступными из JavaScript, что раскрывает токены сессий.",
+      "audience": "Разработчики Next.js, DevOps",
+      "nextStep": "Убедитесь, что не используете `NextResponse` для установки HttpOnly cookie в Edge‑роутерах, либо обновитесь до версии 16.4.5.",
+      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-f3mh-rxg3-f5g2",
+      "tags": [
+        "Next.js",
+        "Edge",
+        "Cookie",
+        "безопасность"
+      ],
+      "changeType": "security",
+      "technologies": [
+        "nextjs",
+        "platform"
+      ],
+      "packages": [
+        {
+          "name": "next",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
+      "effort": "hours",
+      "actionItems": [
+        "Проверить все Edge‑роутеры на использование NextResponse",
+        "Обновить Next.js до 16.4.5"
+      ],
+      "detailsConfidence": "source"
+    },
+    {
+      "priority": "P0",
+      "title": "Внедрение и раскрытие ответа в self‑hosted Next.js при пересылке fetch‑ответов",
+      "source": "Next.js Security",
+      "publishedAt": "2026-11-03T18:39:48Z",
+      "whyImportant": "Позволяет злоумышленнику вставлять и раскрывать ответы других клиентов через некорректную обработку фрейминга.",
+      "audience": "Разработчики Next.js, DevOps",
+      "nextStep": "Не возвращайте необработанные upstream‑ответы, а используйте `response.clone()` и корректно обрабатывайте заголовки.",
+      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-pc58-hwjq-p385",
+      "tags": [
+        "Next.js",
+        "fetch",
+        "безопасность"
+      ],
+      "changeType": "security",
+      "technologies": [
+        "nextjs"
+      ],
+      "packages": [
+        {
+          "name": "next",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
+      "effort": "hours",
+      "actionItems": [
+        "Проверить все fetch‑запросы на стороне сервера",
+        "Обновить Next.js до 16.4.5"
+      ],
+      "detailsConfidence": "source"
+    },
+    {
       "priority": "P1",
-      "title": "Stylelint Releases: выпуск 18.0.0",
+      "title": "Next.js v16.4.5 – исправления безопасности и улучшения производительности",
+      "source": "Next.js Releases",
+      "publishedAt": "2026-11-03T18:38:39Z",
+      "whyImportant": "Включает исправления критических уязвимостей, включая обход SVG, HttpOnly cookie и инъекции ответов.",
+      "audience": "Разработчики Next.js",
+      "nextStep": "Обновите до версии 16.4.5 и проверьте совместимость с текущим кодом.",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.4.5",
+      "tags": [
+        "Next.js",
+        "релиз",
+        "безопасность"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "nextjs"
+      ],
+      "packages": [
+        {
+          "name": "next",
+          "releasedVersion": "16.4.5",
+          "affectedRange": null,
+          "fixedVersion": "16.4.5"
+        }
+      ],
+      "risk": "unknown",
+      "effort": "days",
+      "actionItems": [
+        "Проверить совместимость с текущим кодом",
+        "Обновить Next.js до 16.4.5",
+        "Проверить конфигурацию dangerouslyAllowSVG"
+      ],
+      "detailsConfidence": "source"
+    }
+  ],
+  "readLater": [
+    {
+      "priority": "P2",
+      "title": "Redux Toolkit v2.14.0 – ускорение dispatch и улучшения RTK Query",
+      "source": "Redux Toolkit Releases",
+      "publishedAt": "2026-11-03T15:46:31Z",
+      "whyImportant": "Новые возможности и исправления багов, которые могут улучшить производительность и стабильность приложения.",
+      "audience": "Разработчики Redux",
+      "nextStep": "Изучите changelog и протестируйте обновление в staging.",
+      "url": "https://github.com/reduxjs/redux-toolkit/releases/tag/v2.14.0",
+      "tags": [
+        "Redux",
+        "Toolkit",
+        "performance"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "redux"
+      ],
+      "packages": [
+        {
+          "name": "@reduxjs/toolkit",
+          "releasedVersion": "2.14.0",
+          "affectedRange": null,
+          "fixedVersion": "2.14.0"
+        }
+      ],
+      "risk": "unknown",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить совместимость с текущим кодом",
+        "Обновить до 2.14.0"
+      ],
+      "detailsConfidence": "source"
+    },
+    {
+      "priority": "P3",
+      "title": "Stylelint v18.0.0 – 13 breaking changes и новые правила",
       "source": "Stylelint Releases",
       "publishedAt": "2026-11-03T12:48:48Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы Stylelint Releases.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "whyImportant": "Новые правила и удалённые функции требуют миграции, но улучшают поддержку современных версий Node.js.",
+      "audience": "Разработчики CSS/SCSS",
+      "nextStep": "Прочитайте руководство по миграции и обновите конфигурацию.",
       "url": "https://github.com/stylelint/stylelint/releases/tag/18.0.0",
       "tags": [
-        "stylelint",
-        "обновление"
+        "Stylelint",
+        "CSS",
+        "migration"
       ],
       "changeType": "breaking",
       "technologies": [
-        "typescript",
         "quality",
         "platform"
       ],
@@ -37,104 +213,16 @@
           "name": "stylelint",
           "releasedVersion": "18.0.0",
           "affectedRange": null,
-          "fixedVersion": null
+          "fixedVersion": "18.0.0"
         }
       ],
-      "risk": "low",
+      "risk": "unknown",
       "effort": "minutes",
       "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
+        "Прочитать guide to migrating to 18.0.0",
+        "Обновить Stylelint до 18.0.0"
       ],
-      "detailsConfidence": "inferred"
-    }
-  ],
-  "readLater": [
-    {
-      "priority": "P3",
-      "title": "Next.js Releases: выпуск v16.4.4",
-      "source": "Next.js Releases",
-      "publishedAt": "2026-11-02T16:41:08Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, которые поддерживают приложения на Next.js.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/vercel/next.js/releases/tag/v16.4.4",
-      "tags": [
-        "next.js",
-        "обновление"
-      ],
-      "changeType": "minor",
-      "technologies": [
-        "nextjs",
-        "platform"
-      ],
-      "packages": [
-        {
-          "name": "next",
-          "releasedVersion": "v16.4.4",
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "low",
-      "effort": "minutes",
-      "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
-      ],
-      "detailsConfidence": "inferred"
-    },
-    {
-      "priority": "P3",
-      "title": "Node.js Releases: выпуск 26.12.1",
-      "source": "Node.js Releases",
-      "publishedAt": "2026-10-21T10:38:29Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/nodejs/node/releases/tag/v26.12.1",
-      "tags": [
-        "node.js",
-        "обновление"
-      ],
-      "changeType": "minor",
-      "technologies": [
-        "platform"
-      ],
-      "packages": [],
-      "risk": "low",
-      "effort": "minutes",
-      "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
-      ],
-      "detailsConfidence": "inferred"
-    },
-    {
-      "priority": "P3",
-      "title": "Node.js Releases: выпуск 24.22.1",
-      "source": "Node.js Releases",
-      "publishedAt": "2026-10-21T10:38:25Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/nodejs/node/releases/tag/v24.22.1",
-      "tags": [
-        "node.js",
-        "обновление"
-      ],
-      "changeType": "minor",
-      "technologies": [
-        "platform"
-      ],
-      "packages": [],
-      "risk": "low",
-      "effort": "minutes",
-      "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
-      ],
-      "detailsConfidence": "inferred"
+      "detailsConfidence": "source"
     }
   ]
 }

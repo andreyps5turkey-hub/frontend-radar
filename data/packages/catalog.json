@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-03T14:11:18.188Z",
+  "generatedAt": "2026-11-03T19:29:02.696Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -1612,15 +1612,15 @@
       "packageNames": [
         "next"
       ],
-      "latestVersion": "16.4.4",
-      "latestPublishedAt": "2026-11-02T10:49:48.611Z",
+      "latestVersion": "16.4.5",
+      "latestPublishedAt": "2026-11-03T18:01:54.667Z",
       "npmUrl": "https://www.npmjs.com/package/next",
       "repositoryUrl": "https://github.com/vercel/next.js",
       "packages": [
         {
           "name": "next",
-          "latestVersion": "16.4.4",
-          "latestPublishedAt": "2026-11-02T10:49:48.611Z",
+          "latestVersion": "16.4.5",
+          "latestPublishedAt": "2026-11-03T18:01:54.667Z",
           "npmUrl": "https://www.npmjs.com/package/next",
           "compatibility": [
             {
@@ -1984,9 +1984,9 @@
               "deprecated": "This version has a security vulnerability. Please upgrade to a patched version. See https://nextjs.org/blog/security-update-2025-12-11 for more details."
             },
             {
-              "range": ">=15.5.9 <=15.5.28",
+              "range": ">=15.5.9 <=15.5.29",
               "minVersion": "15.5.9",
-              "maxVersion": "15.5.28",
+              "maxVersion": "15.5.29",
               "peerDependencies": {
                 "react": "^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0",
                 "react-dom": "^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0"
@@ -2020,9 +2020,9 @@
               "deprecated": "This version has a security vulnerability. Please upgrade to a patched version. See https://nextjs.org/blog/security-update-2025-12-11 for more details."
             },
             {
-              "range": ">=16.0.10 <=16.4.4",
+              "range": ">=16.0.10 <=16.4.5",
               "minVersion": "16.0.10",
-              "maxVersion": "16.4.4",
+              "maxVersion": "16.4.5",
               "peerDependencies": {
                 "react": "^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0",
                 "react-dom": "^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0"
@@ -2033,6 +2033,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "16.4.5",
+              "publishedAt": "2026-11-03T18:01:54.667Z"
+            },
             {
               "version": "16.4.4",
               "publishedAt": "2026-11-02T10:49:48.611Z"
@@ -2220,6 +2224,10 @@
             {
               "version": "16.0.0",
               "publishedAt": "2025-10-22T00:12:16.323Z"
+            },
+            {
+              "version": "15.5.29",
+              "publishedAt": "2026-11-03T18:36:52.834Z"
             },
             {
               "version": "15.5.28",
@@ -4855,6 +4863,50 @@
       ],
       "events": [
         {
+          "id": "6129be7a1df733",
+          "kind": "security",
+          "priority": "P0",
+          "version": null,
+          "title": "Проблема с HttpOnly cookie в Edge‑роутерах Next.js",
+          "summary": "HttpOnly cookie становятся доступными из JavaScript, что раскрывает токены сессий.",
+          "publishedAt": "2026-11-03T18:39:54Z",
+          "source": "Next.js Security",
+          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-f3mh-rxg3-f5g2"
+        },
+        {
+          "id": "841e918a0c3a6b",
+          "kind": "security",
+          "priority": "P0",
+          "version": null,
+          "title": "Обход ограничения SVG в оптимизаторе изображений Next.js",
+          "summary": "Позволяет обрабатывать SVG даже при отключённой поддержке, открывая путь к DoS и уязвимостям парсера.",
+          "publishedAt": "2026-11-03T18:39:51Z",
+          "source": "Next.js Security",
+          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-7qx7-33qx-rqx2"
+        },
+        {
+          "id": "9357a689aa4612",
+          "kind": "security",
+          "priority": "P0",
+          "version": null,
+          "title": "Внедрение и раскрытие ответа в self‑hosted Next.js при пересылке fetch‑ответов",
+          "summary": "Позволяет злоумышленнику вставлять и раскрывать ответы других клиентов через некорректную обработку фрейминга.",
+          "publishedAt": "2026-11-03T18:39:48Z",
+          "source": "Next.js Security",
+          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-pc58-hwjq-p385"
+        },
+        {
+          "id": "e11543d2135a8a",
+          "kind": "minor",
+          "priority": "P1",
+          "version": "16.4.5",
+          "title": "Next.js v16.4.5 – исправления безопасности и улучшения производительности",
+          "summary": "Включает исправления критических уязвимостей, включая обход SVG, HttpOnly cookie и инъекции ответов.",
+          "publishedAt": "2026-11-03T18:38:39Z",
+          "source": "Next.js Releases",
+          "url": "https://github.com/vercel/next.js/releases/tag/v16.4.5"
+        },
+        {
           "id": "3c0fd78ab7cdd7",
           "kind": "minor",
           "priority": "P3",
@@ -5139,50 +5191,6 @@
           "publishedAt": "2026-08-25T16:17:10Z",
           "source": "Next.js Releases",
           "url": "https://github.com/vercel/next.js/releases/tag/v16.3.3"
-        },
-        {
-          "id": "ac2a40ff8ecb7d",
-          "kind": "minor",
-          "priority": "P3",
-          "version": "15.5.24",
-          "title": "Next.js Releases: выпуск v15.5.24",
-          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-          "publishedAt": "2026-08-25T16:16:55Z",
-          "source": "Next.js Releases",
-          "url": "https://github.com/vercel/next.js/releases/tag/v15.5.24"
-        },
-        {
-          "id": "941e35a9a29ae8",
-          "kind": "patch",
-          "priority": "P3",
-          "version": null,
-          "title": "Новый материал от Next.js Security",
-          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-          "publishedAt": "2026-08-25T16:16:28Z",
-          "source": "Next.js Security",
-          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-2xp9-vwfh-vxw4"
-        },
-        {
-          "id": "d8f1ff07a33703",
-          "kind": "patch",
-          "priority": "P3",
-          "version": null,
-          "title": "Новый материал от Next.js Security",
-          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-          "publishedAt": "2026-08-25T16:15:42Z",
-          "source": "Next.js Security",
-          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-p293-qw3h-jr36"
-        },
-        {
-          "id": "68c0c0f4579f7a",
-          "kind": "patch",
-          "priority": "P2",
-          "version": "16.3.2",
-          "title": "Next.js 16.3.2 исправляет маршрутизацию и загрузку чанков Turbopack",
-          "summary": "Патч исправляет ситуацию, когда catch-all index-страница могла открываться для посторонних адресов, а также проблемы загрузки worker-чанков Turbopack при использовании asset prefix.",
-          "publishedAt": "2026-08-21T09:36:58Z",
-          "source": "Next.js Releases",
-          "url": "https://github.com/vercel/next.js/releases/tag/v16.3.2"
         }
       ]
     },
@@ -9447,15 +9455,15 @@
       "packageNames": [
         "@reduxjs/toolkit"
       ],
-      "latestVersion": "2.13.0",
-      "latestPublishedAt": "2026-09-29T02:48:23.306Z",
+      "latestVersion": "2.14.0",
+      "latestPublishedAt": "2026-11-03T15:51:05.109Z",
       "npmUrl": "https://www.npmjs.com/package/@reduxjs/toolkit",
       "repositoryUrl": "https://github.com/reduxjs/redux-toolkit",
       "packages": [
         {
           "name": "@reduxjs/toolkit",
-          "latestVersion": "2.13.0",
-          "latestPublishedAt": "2026-09-29T02:48:23.306Z",
+          "latestVersion": "2.14.0",
+          "latestPublishedAt": "2026-11-03T15:51:05.109Z",
           "npmUrl": "https://www.npmjs.com/package/@reduxjs/toolkit",
           "compatibility": [
             {
@@ -9507,9 +9515,9 @@
               "deprecated": null
             },
             {
-              "range": ">=2.5.0 <=2.13.0",
+              "range": ">=2.5.0 <=2.14.0",
               "minVersion": "2.5.0",
-              "maxVersion": "2.13.0",
+              "maxVersion": "2.14.0",
               "peerDependencies": {
                 "react": "^16.9.0 || ^17.0.0 || ^18 || ^19"
               },
@@ -9521,6 +9529,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "2.14.0",
+              "publishedAt": "2026-11-03T15:51:05.109Z"
+            },
             {
               "version": "2.13.0",
               "publishedAt": "2026-09-29T02:48:23.306Z"
@@ -9814,6 +9826,17 @@
       ],
       "advisories": [],
       "events": [
+        {
+          "id": "dc61735235353d",
+          "kind": "minor",
+          "priority": "P2",
+          "version": "2.14.0",
+          "title": "Redux Toolkit v2.14.0 – ускорение dispatch и улучшения RTK Query",
+          "summary": "Новые возможности и исправления багов, которые могут улучшить производительность и стабильность приложения.",
+          "publishedAt": "2026-11-03T15:46:31Z",
+          "source": "Redux Toolkit Releases",
+          "url": "https://github.com/reduxjs/redux-toolkit/releases/tag/v2.14.0"
+        },
         {
           "id": "b5980e6e550049",
           "kind": "minor",
