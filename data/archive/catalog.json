@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "updatedAt": "2026-11-02T21:41:35.171Z",
+  "updatedAt": "2026-11-03T12:18:32.910Z",
   "issues": [
     {
       "schemaVersion": 2,
       "date": "2026-11-03",
-      "generatedAt": "2026-11-02T21:41:35.171Z",
+      "generatedAt": "2026-11-03T12:18:32.910Z",
       "timezone": "Europe/Moscow",
       "windowHours": 26,
       "sourcesChecked": 32,
@@ -54,54 +54,22 @@
         },
         {
           "priority": "P3",
-          "title": "Vite React Plugins: выпуск 6.2.0",
-          "source": "Vite React Plugins",
-          "publishedAt": "2026-11-02T07:46:37Z",
+          "title": "Node.js Releases: выпуск 26.12.1",
+          "source": "Node.js Releases",
+          "publishedAt": "2026-10-21T10:38:29Z",
           "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-          "audience": "Разработчики и команды, использующие React.",
+          "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
           "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-          "url": "https://github.com/vitejs/vite-plugin-react/releases/tag/plugin-react%406.2.0",
+          "url": "https://github.com/nodejs/node/releases/tag/v26.12.1",
           "tags": [
-            "vite",
+            "node.js",
             "обновление"
           ],
           "changeType": "minor",
           "technologies": [
-            "vite",
-            "react"
+            "platform"
           ],
-          "packages": [
-            {
-              "name": "@vitejs/plugin-react",
-              "releasedVersion": null,
-              "affectedRange": null,
-              "fixedVersion": null
-            },
-            {
-              "name": "@vitejs/plugin-react-swc",
-              "releasedVersion": null,
-              "affectedRange": null,
-              "fixedVersion": null
-            },
-            {
-              "name": "@vitejs/plugin-rsc",
-              "releasedVersion": null,
-              "affectedRange": null,
-              "fixedVersion": null
-            },
-            {
-              "name": "vite",
-              "releasedVersion": "6.2.0",
-              "affectedRange": null,
-              "fixedVersion": null
-            },
-            {
-              "name": "react",
-              "releasedVersion": "6.2.0",
-              "affectedRange": null,
-              "fixedVersion": null
-            }
-          ],
+          "packages": [],
           "risk": "low",
           "effort": "minutes",
           "actionItems": [
@@ -112,18 +80,18 @@
         },
         {
           "priority": "P3",
-          "title": "Веб-стандарты: выпуск 27.1",
-          "source": "Веб-стандарты",
-          "publishedAt": "Mon, 02 Nov 2026 09:00:00 GMT",
+          "title": "Node.js Releases: выпуск 24.22.1",
+          "source": "Node.js Releases",
+          "publishedAt": "2026-10-21T10:38:25Z",
           "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-          "audience": "Команды, использующие инструменты из экосистемы Веб-стандарты.",
+          "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
           "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-          "url": "https://web-standards.ru/podcast/551/",
+          "url": "https://github.com/nodejs/node/releases/tag/v24.22.1",
           "tags": [
-            "веб-стандарты",
+            "node.js",
             "обновление"
           ],
-          "changeType": "guide",
+          "changeType": "minor",
           "technologies": [
             "platform"
           ],
