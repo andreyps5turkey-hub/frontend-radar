@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-03T12:18:41.618Z",
+  "generatedAt": "2026-11-03T12:45:51.387Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -1419,7 +1419,7 @@
         {
           "id": "c23fd5f380700d",
           "kind": "minor",
-          "priority": "P3",
+          "priority": "P2",
           "version": "6.2.0",
           "title": "Vite React Plugins: выпуск 6.2.0",
           "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
@@ -7336,7 +7336,7 @@
         {
           "id": "c23fd5f380700d",
           "kind": "minor",
-          "priority": "P3",
+          "priority": "P2",
           "version": "6.2.0",
           "title": "Vite React Plugins: выпуск 6.2.0",
           "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
