@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-03T19:29:02.696Z",
+  "generatedAt": "2026-11-04T12:28:51.131Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -2970,6 +2970,29 @@
       ],
       "advisories": [
         {
+          "ghsaId": "GHSA-26hh-7cqf-hhc6",
+          "cveId": "CVE-2026-45109",
+          "severity": "high",
+          "cvss": 7.5,
+          "title": "Уязвимость GHSA-26hh-7cqf-hhc6 в next",
+          "summary": "Проверьте установленную версию next и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
+          "publishedAt": "2026-05-11T16:21:19Z",
+          "updatedAt": "2026-11-04T03:30:52Z",
+          "url": "https://github.com/advisories/GHSA-26hh-7cqf-hhc6",
+          "vulnerabilities": [
+            {
+              "packageName": "next",
+              "vulnerableRange": ">= 15.2.0, < 15.5.18",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "next",
+              "vulnerableRange": ">= 16.0.0, < 16.2.6",
+              "fixedVersion": null
+            }
+          ]
+        },
+        {
           "ghsaId": "GHSA-673q-mjm6-r5xr",
           "cveId": null,
           "severity": "critical",
@@ -3431,29 +3454,6 @@
             {
               "packageName": "next",
               "vulnerableRange": ">= 16.0.0, < 16.2.11",
-              "fixedVersion": null
-            }
-          ]
-        },
-        {
-          "ghsaId": "GHSA-26hh-7cqf-hhc6",
-          "cveId": "CVE-2026-45109",
-          "severity": "high",
-          "cvss": 7.5,
-          "title": "Уязвимость GHSA-26hh-7cqf-hhc6 в next",
-          "summary": "Проверьте установленную версию next и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
-          "publishedAt": "2026-05-11T16:21:19Z",
-          "updatedAt": "2026-05-14T20:39:05Z",
-          "url": "https://github.com/advisories/GHSA-26hh-7cqf-hhc6",
-          "vulnerabilities": [
-            {
-              "packageName": "next",
-              "vulnerableRange": ">= 15.2.0, < 15.5.18",
-              "fixedVersion": null
-            },
-            {
-              "packageName": "next",
-              "vulnerableRange": ">= 16.0.0, < 16.2.6",
               "fixedVersion": null
             }
           ]
@@ -4896,6 +4896,28 @@
           "url": "https://github.com/vercel/next.js/security/advisories/GHSA-pc58-hwjq-p385"
         },
         {
+          "id": "ff306e9b50cda0",
+          "kind": "security",
+          "priority": "P0",
+          "version": null,
+          "title": "Уязвимость раскрытия данных через use cache с бинарными аргументами",
+          "summary": "Кеш может быть разделён между пользователями, что приводит к утечке данных и возможной краже информации.",
+          "publishedAt": "2026-11-03T18:39:45Z",
+          "source": "Next.js Security",
+          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-rhh4-g77r-r9qj"
+        },
+        {
+          "id": "f46a8e1c192c11",
+          "kind": "patch",
+          "priority": "P3",
+          "version": null,
+          "title": "Новый материал от Next.js Security",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-11-03T18:39:36Z",
+          "source": "Next.js Security",
+          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-mfr8-8qww-v76h"
+        },
+        {
           "id": "e11543d2135a8a",
           "kind": "minor",
           "priority": "P1",
@@ -4907,13 +4929,24 @@
           "url": "https://github.com/vercel/next.js/releases/tag/v16.4.5"
         },
         {
+          "id": "7337077ad98279",
+          "kind": "security",
+          "priority": "P0",
+          "version": "15.5.29",
+          "title": "Обновление Next.js до v15.5.29 с исправлениями безопасности",
+          "summary": "Включены патчи для критических уязвимостей, включая инъекции и утечки данных в self‑hosted приложениях.",
+          "publishedAt": "2026-11-03T18:38:27Z",
+          "source": "Next.js Releases",
+          "url": "https://github.com/vercel/next.js/releases/tag/v15.5.29"
+        },
+        {
           "id": "3c0fd78ab7cdd7",
           "kind": "minor",
-          "priority": "P3",
+          "priority": "P2",
           "version": "16.4.4",
           "title": "Next.js Releases: выпуск v16.4.4",
           "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-          "publishedAt": "2026-11-02T16:41:08Z",
+          "publishedAt": "2026-11-02T10:14:37Z",
           "source": "Next.js Releases",
           "url": "https://github.com/vercel/next.js/releases/tag/v16.4.4"
         },
@@ -5158,39 +5191,6 @@
           "publishedAt": "2026-09-11T19:15:50Z",
           "source": "Next.js Releases",
           "url": "https://github.com/vercel/next.js/releases/tag/v16.3.5"
-        },
-        {
-          "id": "55b9b348db0162",
-          "kind": "minor",
-          "priority": "P2",
-          "version": "16.3.4",
-          "title": "Выпущена версия Next.js 16.3.4 – восстановлена поддержка AVIF‑оптимизации и исправлены ошибки тестового режима",
-          "summary": "Восстановление AVIF‑оптимизации и исправления в тестовом режиме повышают стабильность и производительность приложений на Next.js 16.x.",
-          "publishedAt": "2026-08-31T20:02:15Z",
-          "source": "Next.js Releases",
-          "url": "https://github.com/vercel/next.js/releases/tag/v16.3.4"
-        },
-        {
-          "id": "9c4d8b0ac96460",
-          "kind": "minor",
-          "priority": "P2",
-          "version": "15.5.25",
-          "title": "Выпущена версия Next.js 15.5.25 – восстановлена поддержка AVIF‑оптимизации изображений",
-          "summary": "Восстановление AVIF‑оптимизации позволяет использовать более эффективный формат изображений, улучшая производительность сайтов.",
-          "publishedAt": "2026-08-31T20:02:11Z",
-          "source": "Next.js Releases",
-          "url": "https://github.com/vercel/next.js/releases/tag/v15.5.25"
-        },
-        {
-          "id": "34a948d52363cb",
-          "kind": "minor",
-          "priority": "P3",
-          "version": "16.3.3",
-          "title": "Next.js Releases: выпуск v16.3.3",
-          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-          "publishedAt": "2026-08-25T16:17:10Z",
-          "source": "Next.js Releases",
-          "url": "https://github.com/vercel/next.js/releases/tag/v16.3.3"
         }
       ]
     },

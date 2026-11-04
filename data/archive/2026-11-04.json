@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 2,
+  "date": "2026-11-04",
+  "generatedAt": "2026-11-04T12:28:44.072Z",
+  "timezone": "Europe/Moscow",
+  "windowHours": 26,
+  "sourcesChecked": 32,
+  "sourceHealth": {
+    "attempted": 32,
+    "succeeded": 32,
+    "failed": []
+  },
+  "status": "active",
+  "summary": "Сегодня в окне публикаций появились важные обновления и исправления безопасности для Next.js, а также патч для @swc/helpers. Уделите внимание обновлению Next.js до v15.5.29 и изучите детали новых уязвимостей.",
+  "items": [
+    {
+      "priority": "P0",
+      "title": "Обновление Next.js до v15.5.29 с исправлениями безопасности",
+      "source": "Next.js Releases",
+      "publishedAt": "2026-11-03T18:38:27Z",
+      "whyImportant": "Включены патчи для критических уязвимостей, включая инъекции и утечки данных в self‑hosted приложениях.",
+      "audience": "Разработчики Next.js",
+      "nextStep": "Обновите проект до версии 15.5.29 и проверьте конфигурацию маршрутизации и кеширования.",
+      "url": "https://github.com/vercel/next.js/releases/tag/v15.5.29",
+      "tags": [
+        "Next.js",
+        "обновление",
+        "безопасность"
+      ],
+      "changeType": "security",
+      "technologies": [
+        "nextjs"
+      ],
+      "packages": [
+        {
+          "name": "next",
+          "releasedVersion": "v15.5.29",
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
+      "effort": "hours",
+      "actionItems": [
+        "Проверить совместимость с текущим кодом",
+        "Обновить зависимость в package.json",
+        "Запустить тесты"
+      ],
+      "detailsConfidence": "source"
+    },
+    {
+      "priority": "P0",
+      "title": "Уязвимость раскрытия данных через use cache с бинарными аргументами",
+      "source": "Next.js Security",
+      "publishedAt": "2026-11-03T18:39:45Z",
+      "whyImportant": "Кеш может быть разделён между пользователями, что приводит к утечке данных и возможной краже информации.",
+      "audience": "Разработчики Next.js App Router",
+      "nextStep": "Избегайте передачи бинарных аргументов в use cache или применяйте уникальные ключи кеша.",
+      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-rhh4-g77r-r9qj",
+      "tags": [
+        "Next.js",
+        "use cache",
+        "уязвимость"
+      ],
+      "changeType": "security",
+      "technologies": [
+        "nextjs"
+      ],
+      "packages": [
+        {
+          "name": "next",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
+      "effort": "hours",
+      "actionItems": [
+        "Проверить все вызовы use cache с бинарными аргументами",
+        "Добавить уникальный ключ кеша"
+      ],
+      "detailsConfidence": "source"
+    }
+  ],
+  "readLater": [
+    {
+      "priority": "P2",
+      "title": "Патч @swc/helpers v0.5.24",
+      "source": "SWC Releases",
+      "publishedAt": "2026-11-04T01:32:32Z",
+      "whyImportant": "Обновление исправляет баг с Map/Set spread, необходимый для корректной работы сборки.",
+      "audience": "Разработчики, использующие SWC",
+      "nextStep": "Обновите @swc/helpers до версии 0.5.24 и проверьте сборку.",
+      "url": "https://github.com/swc-project/swc/releases/tag/%40swc%2Fhelpers%40v0.5.24",
+      "tags": [
+        "SWC",
+        "пакет",
+        "обновление"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "vite"
+      ],
+      "packages": [
+        {
+          "name": "@swc/core",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
+      "effort": "minutes",
+      "actionItems": [
+        "Обновить зависимость в package.json",
+        "Перезапустить сборку"
+      ],
+      "detailsConfidence": "source"
+    },
+    {
+      "priority": "P3",
+      "title": "Новый материал от Next.js Security",
+      "source": "Next.js Security",
+      "publishedAt": "2026-11-03T18:39:36Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, которые поддерживают приложения на Next.js.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-mfr8-8qww-v76h",
+      "tags": [
+        "next.js",
+        "безопасность"
+      ],
+      "changeType": "tooling",
+      "technologies": [
+        "nextjs"
+      ],
+      "packages": [
+        {
+          "name": "next",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    }
+  ]
+}

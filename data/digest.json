@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "date": "2026-11-03",
-  "generatedAt": "2026-11-03T19:28:54.386Z",
+  "date": "2026-11-04",
+  "generatedAt": "2026-11-04T12:28:44.072Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -11,145 +11,74 @@
     "failed": []
   },
   "status": "active",
-  "summary": "Сегодня в экосистеме Next.js выявлены несколько критических уязвимостей, а также выпущена новая версия с исправлениями безопасности. Важные обновления и рекомендации для разработчиков приведены ниже.",
+  "summary": "Сегодня в окне публикаций появились важные обновления и исправления безопасности для Next.js, а также патч для @swc/helpers. Уделите внимание обновлению Next.js до v15.5.29 и изучите детали новых уязвимостей.",
   "items": [
     {
       "priority": "P0",
-      "title": "Обход ограничения SVG в оптимизаторе изображений Next.js",
-      "source": "Next.js Security",
-      "publishedAt": "2026-11-03T18:39:51Z",
-      "whyImportant": "Позволяет обрабатывать SVG даже при отключённой поддержке, открывая путь к DoS и уязвимостям парсера.",
-      "audience": "Разработчики Next.js, DevOps",
-      "nextStep": "Обновите Next.js до версии 16.4.5 или выше, где данная проблема исправлена.",
-      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-7qx7-33qx-rqx2",
-      "tags": [
-        "Next.js",
-        "SVG",
-        "безопасность"
-      ],
-      "changeType": "security",
-      "technologies": [
-        "nextjs"
-      ],
-      "packages": [
-        {
-          "name": "next",
-          "releasedVersion": null,
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "unknown",
-      "effort": "hours",
-      "actionItems": [
-        "Проверить текущую версию Next.js",
-        "Обновить до 16.4.5",
-        "Проверить конфигурацию dangerouslyAllowSVG"
-      ],
-      "detailsConfidence": "source"
-    },
-    {
-      "priority": "P0",
-      "title": "Проблема с HttpOnly cookie в Edge‑роутерах Next.js",
-      "source": "Next.js Security",
-      "publishedAt": "2026-11-03T18:39:54Z",
-      "whyImportant": "HttpOnly cookie становятся доступными из JavaScript, что раскрывает токены сессий.",
-      "audience": "Разработчики Next.js, DevOps",
-      "nextStep": "Убедитесь, что не используете `NextResponse` для установки HttpOnly cookie в Edge‑роутерах, либо обновитесь до версии 16.4.5.",
-      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-f3mh-rxg3-f5g2",
-      "tags": [
-        "Next.js",
-        "Edge",
-        "Cookie",
-        "безопасность"
-      ],
-      "changeType": "security",
-      "technologies": [
-        "nextjs",
-        "platform"
-      ],
-      "packages": [
-        {
-          "name": "next",
-          "releasedVersion": null,
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "unknown",
-      "effort": "hours",
-      "actionItems": [
-        "Проверить все Edge‑роутеры на использование NextResponse",
-        "Обновить Next.js до 16.4.5"
-      ],
-      "detailsConfidence": "source"
-    },
-    {
-      "priority": "P0",
-      "title": "Внедрение и раскрытие ответа в self‑hosted Next.js при пересылке fetch‑ответов",
-      "source": "Next.js Security",
-      "publishedAt": "2026-11-03T18:39:48Z",
-      "whyImportant": "Позволяет злоумышленнику вставлять и раскрывать ответы других клиентов через некорректную обработку фрейминга.",
-      "audience": "Разработчики Next.js, DevOps",
-      "nextStep": "Не возвращайте необработанные upstream‑ответы, а используйте `response.clone()` и корректно обрабатывайте заголовки.",
-      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-pc58-hwjq-p385",
-      "tags": [
-        "Next.js",
-        "fetch",
-        "безопасность"
-      ],
-      "changeType": "security",
-      "technologies": [
-        "nextjs"
-      ],
-      "packages": [
-        {
-          "name": "next",
-          "releasedVersion": null,
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "unknown",
-      "effort": "hours",
-      "actionItems": [
-        "Проверить все fetch‑запросы на стороне сервера",
-        "Обновить Next.js до 16.4.5"
-      ],
-      "detailsConfidence": "source"
-    },
-    {
-      "priority": "P1",
-      "title": "Next.js v16.4.5 – исправления безопасности и улучшения производительности",
+      "title": "Обновление Next.js до v15.5.29 с исправлениями безопасности",
       "source": "Next.js Releases",
-      "publishedAt": "2026-11-03T18:38:39Z",
-      "whyImportant": "Включает исправления критических уязвимостей, включая обход SVG, HttpOnly cookie и инъекции ответов.",
+      "publishedAt": "2026-11-03T18:38:27Z",
+      "whyImportant": "Включены патчи для критических уязвимостей, включая инъекции и утечки данных в self‑hosted приложениях.",
       "audience": "Разработчики Next.js",
-      "nextStep": "Обновите до версии 16.4.5 и проверьте совместимость с текущим кодом.",
-      "url": "https://github.com/vercel/next.js/releases/tag/v16.4.5",
+      "nextStep": "Обновите проект до версии 15.5.29 и проверьте конфигурацию маршрутизации и кеширования.",
+      "url": "https://github.com/vercel/next.js/releases/tag/v15.5.29",
       "tags": [
         "Next.js",
-        "релиз",
+        "обновление",
         "безопасность"
       ],
-      "changeType": "minor",
+      "changeType": "security",
       "technologies": [
         "nextjs"
       ],
       "packages": [
         {
           "name": "next",
-          "releasedVersion": "16.4.5",
+          "releasedVersion": "v15.5.29",
           "affectedRange": null,
-          "fixedVersion": "16.4.5"
+          "fixedVersion": null
         }
       ],
       "risk": "unknown",
-      "effort": "days",
+      "effort": "hours",
       "actionItems": [
         "Проверить совместимость с текущим кодом",
-        "Обновить Next.js до 16.4.5",
-        "Проверить конфигурацию dangerouslyAllowSVG"
+        "Обновить зависимость в package.json",
+        "Запустить тесты"
+      ],
+      "detailsConfidence": "source"
+    },
+    {
+      "priority": "P0",
+      "title": "Уязвимость раскрытия данных через use cache с бинарными аргументами",
+      "source": "Next.js Security",
+      "publishedAt": "2026-11-03T18:39:45Z",
+      "whyImportant": "Кеш может быть разделён между пользователями, что приводит к утечке данных и возможной краже информации.",
+      "audience": "Разработчики Next.js App Router",
+      "nextStep": "Избегайте передачи бинарных аргументов в use cache или применяйте уникальные ключи кеша.",
+      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-rhh4-g77r-r9qj",
+      "tags": [
+        "Next.js",
+        "use cache",
+        "уязвимость"
+      ],
+      "changeType": "security",
+      "technologies": [
+        "nextjs"
+      ],
+      "packages": [
+        {
+          "name": "next",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
+      "effort": "hours",
+      "actionItems": [
+        "Проверить все вызовы use cache с бинарными аргументами",
+        "Добавить уникальный ключ кеша"
       ],
       "detailsConfidence": "source"
     }
@@ -157,72 +86,70 @@
   "readLater": [
     {
       "priority": "P2",
-      "title": "Redux Toolkit v2.14.0 – ускорение dispatch и улучшения RTK Query",
-      "source": "Redux Toolkit Releases",
-      "publishedAt": "2026-11-03T15:46:31Z",
-      "whyImportant": "Новые возможности и исправления багов, которые могут улучшить производительность и стабильность приложения.",
-      "audience": "Разработчики Redux",
-      "nextStep": "Изучите changelog и протестируйте обновление в staging.",
-      "url": "https://github.com/reduxjs/redux-toolkit/releases/tag/v2.14.0",
+      "title": "Патч @swc/helpers v0.5.24",
+      "source": "SWC Releases",
+      "publishedAt": "2026-11-04T01:32:32Z",
+      "whyImportant": "Обновление исправляет баг с Map/Set spread, необходимый для корректной работы сборки.",
+      "audience": "Разработчики, использующие SWC",
+      "nextStep": "Обновите @swc/helpers до версии 0.5.24 и проверьте сборку.",
+      "url": "https://github.com/swc-project/swc/releases/tag/%40swc%2Fhelpers%40v0.5.24",
       "tags": [
-        "Redux",
-        "Toolkit",
-        "performance"
+        "SWC",
+        "пакет",
+        "обновление"
       ],
       "changeType": "minor",
       "technologies": [
-        "redux"
+        "vite"
       ],
       "packages": [
         {
-          "name": "@reduxjs/toolkit",
-          "releasedVersion": "2.14.0",
+          "name": "@swc/core",
+          "releasedVersion": null,
           "affectedRange": null,
-          "fixedVersion": "2.14.0"
+          "fixedVersion": null
         }
       ],
       "risk": "unknown",
       "effort": "minutes",
       "actionItems": [
-        "Проверить совместимость с текущим кодом",
-        "Обновить до 2.14.0"
+        "Обновить зависимость в package.json",
+        "Перезапустить сборку"
       ],
       "detailsConfidence": "source"
     },
     {
       "priority": "P3",
-      "title": "Stylelint v18.0.0 – 13 breaking changes и новые правила",
-      "source": "Stylelint Releases",
-      "publishedAt": "2026-11-03T12:48:48Z",
-      "whyImportant": "Новые правила и удалённые функции требуют миграции, но улучшают поддержку современных версий Node.js.",
-      "audience": "Разработчики CSS/SCSS",
-      "nextStep": "Прочитайте руководство по миграции и обновите конфигурацию.",
-      "url": "https://github.com/stylelint/stylelint/releases/tag/18.0.0",
+      "title": "Новый материал от Next.js Security",
+      "source": "Next.js Security",
+      "publishedAt": "2026-11-03T18:39:36Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, которые поддерживают приложения на Next.js.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-mfr8-8qww-v76h",
       "tags": [
-        "Stylelint",
-        "CSS",
-        "migration"
+        "next.js",
+        "безопасность"
       ],
-      "changeType": "breaking",
+      "changeType": "tooling",
       "technologies": [
-        "quality",
-        "platform"
+        "nextjs"
       ],
       "packages": [
         {
-          "name": "stylelint",
-          "releasedVersion": "18.0.0",
+          "name": "next",
+          "releasedVersion": null,
           "affectedRange": null,
-          "fixedVersion": "18.0.0"
+          "fixedVersion": null
         }
       ],
-      "risk": "unknown",
+      "risk": "low",
       "effort": "minutes",
       "actionItems": [
-        "Прочитать guide to migrating to 18.0.0",
-        "Обновить Stylelint до 18.0.0"
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
       ],
-      "detailsConfidence": "source"
+      "detailsConfidence": "inferred"
     }
   ]
 }
