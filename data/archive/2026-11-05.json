@@ -1,0 +1,313 @@
+{
+  "schemaVersion": 2,
+  "date": "2026-11-05",
+  "generatedAt": "2026-11-05T12:42:38.986Z",
+  "timezone": "Europe/Moscow",
+  "windowHours": 26,
+  "sourcesChecked": 32,
+  "sourceHealth": {
+    "attempted": 32,
+    "succeeded": 32,
+    "failed": []
+  },
+  "status": "active",
+  "summary": "Автоматическая подборка собрана в резервном режиме. Проверьте релизы по ссылкам на первоисточники.",
+  "items": [
+    {
+      "priority": "P1",
+      "title": "Vite Releases: выпуск v8.3.6",
+      "source": "Vite Releases",
+      "publishedAt": "2026-11-05T05:57:16Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы Vite Releases.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.3.6",
+      "tags": [
+        "vite",
+        "обновление"
+      ],
+      "changeType": "major",
+      "technologies": [
+        "vite",
+        "platform"
+      ],
+      "packages": [
+        {
+          "name": "vite",
+          "releasedVersion": "v8.3.6",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "@vitejs/plugin-legacy",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    },
+    {
+      "priority": "P1",
+      "title": "Vite Releases: выпуск 9.3.4",
+      "source": "Vite Releases",
+      "publishedAt": "2026-11-05T06:02:20Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы Vite Releases.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.3.4",
+      "tags": [
+        "vite",
+        "обновление"
+      ],
+      "changeType": "major",
+      "technologies": [
+        "typescript",
+        "vite",
+        "quality"
+      ],
+      "packages": [
+        {
+          "name": "vite",
+          "releasedVersion": "9.3.4",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "@vitejs/plugin-legacy",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    },
+    {
+      "priority": "P1",
+      "title": "Vite Releases: выпуск 8.2.4",
+      "source": "Vite Releases",
+      "publishedAt": "2026-11-05T05:42:26Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы Vite Releases.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/vitejs/vite/releases/tag/plugin-legacy%408.2.4",
+      "tags": [
+        "vite",
+        "обновление"
+      ],
+      "changeType": "major",
+      "technologies": [
+        "vite"
+      ],
+      "packages": [
+        {
+          "name": "vite",
+          "releasedVersion": "8.2.4",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "@vitejs/plugin-legacy",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    },
+    {
+      "priority": "P1",
+      "title": "Vite React Plugins: выпуск 0.5.39",
+      "source": "Vite React Plugins",
+      "publishedAt": "2026-11-05T05:50:15Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Разработчики и команды, использующие React.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/vitejs/vite-plugin-react/releases/tag/plugin-rsc%400.5.39",
+      "tags": [
+        "vite",
+        "обновление"
+      ],
+      "changeType": "major",
+      "technologies": [
+        "vite",
+        "platform",
+        "react"
+      ],
+      "packages": [
+        {
+          "name": "@vitejs/plugin-react",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "@vitejs/plugin-react-swc",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "@vitejs/plugin-rsc",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "vite",
+          "releasedVersion": "0.5.39",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "react",
+          "releasedVersion": "0.5.39",
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    }
+  ],
+  "readLater": [
+    {
+      "priority": "P3",
+      "title": "This Week in React: выпуск 0.89",
+      "source": "This Week in React",
+      "publishedAt": "Wed, 04 Nov 2026 00:00:00 GMT",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Разработчики и команды, использующие React.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://thisweekinreact.com/newsletter/304",
+      "tags": [
+        "this",
+        "обновление"
+      ],
+      "changeType": "guide",
+      "technologies": [
+        "nextjs",
+        "redux",
+        "platform",
+        "react"
+      ],
+      "packages": [
+        {
+          "name": "next",
+          "releasedVersion": "0.89",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "@reduxjs/toolkit",
+          "releasedVersion": "0.89",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "react",
+          "releasedVersion": "0.89",
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    },
+    {
+      "priority": "P3",
+      "title": "Новый материал от Next.js Security",
+      "source": "Next.js Security",
+      "publishedAt": "2026-11-03T18:39:43Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, которые поддерживают приложения на Next.js.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-vvgp-ww4w-46vf",
+      "tags": [
+        "next.js",
+        "безопасность"
+      ],
+      "changeType": "tooling",
+      "technologies": [
+        "nextjs"
+      ],
+      "packages": [
+        {
+          "name": "next",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    },
+    {
+      "priority": "P3",
+      "title": "Новый материал от Next.js Security",
+      "source": "Next.js Security",
+      "publishedAt": "2026-11-03T18:39:40Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, которые поддерживают приложения на Next.js.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-vc7v-qv4w-wrv8",
+      "tags": [
+        "next.js",
+        "безопасность"
+      ],
+      "changeType": "tooling",
+      "technologies": [
+        "nextjs",
+        "react"
+      ],
+      "packages": [
+        {
+          "name": "next",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    }
+  ]
+}
