@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-05T13:09:59.340Z",
+  "generatedAt": "2026-11-05T14:37:55.499Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -1408,7 +1408,7 @@
         {
           "id": "728c0522daa23d",
           "kind": "major",
-          "priority": 3,
+          "priority": "P1",
           "version": "0.5.39",
           "title": "Vite React Plugins: выпуск 0.5.39",
           "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
@@ -7359,21 +7359,21 @@
         {
           "id": "dad6e966ebbb7b",
           "kind": "major",
-          "priority": 1,
+          "priority": "P2",
           "version": "9.3.4",
-          "title": "Vite Releases: выпуск 9.3.4",
-          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "title": "create‑vite v9.3.4 – поддержка TypeScript 6 и обновления зависимостей",
+          "summary": "Обновление позволяет использовать TypeScript 6 при создании проектов и обновляет внутренние зависимости.",
           "publishedAt": "2026-11-05T06:02:20Z",
           "source": "Vite Releases",
           "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.3.4"
         },
         {
           "id": "7ecbe3e07c2c81",
-          "kind": "major",
-          "priority": 0,
+          "kind": "minor",
+          "priority": "P2",
           "version": "8.3.6",
-          "title": "Vite Releases: выпуск v8.3.6",
-          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "title": "Vite v8.3.6 – исправления и обновления зависимостей",
+          "summary": "Обновление устраняет несколько ошибок сборки и повышает стабильность работы плагинов.",
           "publishedAt": "2026-11-05T05:57:16Z",
           "source": "Vite Releases",
           "url": "https://github.com/vitejs/vite/releases/tag/v8.3.6"
@@ -7381,7 +7381,7 @@
         {
           "id": "728c0522daa23d",
           "kind": "major",
-          "priority": 3,
+          "priority": "P1",
           "version": "0.5.39",
           "title": "Vite React Plugins: выпуск 0.5.39",
           "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
@@ -7392,10 +7392,10 @@
         {
           "id": "3c6f60d78e040c",
           "kind": "major",
-          "priority": 2,
+          "priority": "P2",
           "version": "8.2.4",
-          "title": "Vite Releases: выпуск 8.2.4",
-          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "title": "plugin‑legacy v8.2.4 – обновление зависимостей и исправления",
+          "summary": "Обновление повышает совместимость с последними версиями Vite и исправляет мелкие баги.",
           "publishedAt": "2026-11-05T05:42:26Z",
           "source": "Vite Releases",
           "url": "https://github.com/vitejs/vite/releases/tag/plugin-legacy%408.2.4"
