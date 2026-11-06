@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "date": "2026-11-06",
-  "generatedAt": "2026-11-06T12:25:26.384Z",
+  "generatedAt": "2026-11-06T12:55:04.951Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -11,24 +11,27 @@
     "failed": []
   },
   "status": "active",
-  "summary": "Автоматическая подборка собрана в резервном режиме. Проверьте релизы по ссылкам на первоисточники.",
+  "summary": "Сегодня в окне публикаций появилось обновление Storybook, а также стоит обратить внимание на недавние уязвимости в Next.js – их можно добавить в список «для прочтения».",
   "items": [
     {
-      "priority": "P2",
-      "title": "Storybook Releases: выпуск v10.6.6",
+      "priority": "P1",
+      "title": "Storybook v10.6.6: обновление с улучшениями StackBlitz и VRT",
       "source": "Storybook Releases",
       "publishedAt": "2026-11-05T16:30:11Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы Storybook Releases.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "whyImportant": "В версии 10.6.6 Storybook снова можно встраивать dev‑сервер StackBlitz, а также добавлены пакеты VRT для тестирования визуальных регрессий.",
+      "audience": "frontend‑инженеры, работающие с Storybook и StackBlitz",
+      "nextStep": "Обновить Storybook до v10.6.6, проверить работу StackBlitz‑embed и VRT‑пакетов в своём проекте.",
       "url": "https://github.com/storybookjs/storybook/releases/tag/v10.6.6",
       "tags": [
         "storybook",
-        "обновление"
+        "react",
+        "telemetry",
+        "VRT"
       ],
       "changeType": "minor",
       "technologies": [
-        "storybook"
+        "storybook",
+        "react"
       ],
       "packages": [
         {
@@ -39,35 +42,37 @@
         },
         {
           "name": "@storybook/react",
-          "releasedVersion": null,
+          "releasedVersion": "v10.6.6",
           "affectedRange": null,
           "fixedVersion": null
         }
       ],
-      "risk": "low",
-      "effort": "minutes",
+      "risk": "unknown",
+      "effort": "days",
       "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
+        "Проверить совместимость с текущими компонентами",
+        "Обновить зависимость в package.json",
+        "Запустить тесты Storybook"
       ],
-      "detailsConfidence": "inferred"
+      "detailsConfidence": "source"
     }
   ],
   "readLater": [
     {
       "priority": "P3",
-      "title": "Новый материал от Next.js Security",
+      "title": "Уязвимость: Cache poisoning в Next.js с cacheComponents:true",
       "source": "Next.js Security",
       "publishedAt": "2026-11-03T18:39:43Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, которые поддерживают приложения на Next.js.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "whyImportant": "Незарегистрированный GET‑запрос может испортить кэш fallback‑shell‑ов, что приводит к некорректной отрисовке страниц.",
+      "audience": "разработчики, использующие Next.js с cacheComponents:true",
+      "nextStep": "Проверить, включён ли Partial Prefetching, и при необходимости отключить cacheComponents или обновить до версии с патчем.",
       "url": "https://github.com/vercel/next.js/security/advisories/GHSA-vvgp-ww4w-46vf",
       "tags": [
         "next.js",
-        "безопасность"
+        "security",
+        "cache"
       ],
-      "changeType": "tooling",
+      "changeType": "security",
       "technologies": [
         "nextjs"
       ],
@@ -79,28 +84,29 @@
           "fixedVersion": null
         }
       ],
-      "risk": "low",
+      "risk": "unknown",
       "effort": "minutes",
       "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
+        "Проверить настройки cacheComponents",
+        "Обновить Next.js до версии с исправлением"
       ],
-      "detailsConfidence": "inferred"
+      "detailsConfidence": "source"
     },
     {
       "priority": "P3",
-      "title": "Новый материал от Next.js Security",
+      "title": "Уязвимость: Cache leak в nested 'use cache' функциях Next.js",
       "source": "Next.js Security",
       "publishedAt": "2026-11-03T18:39:40Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, которые поддерживают приложения на Next.js.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "whyImportant": "Неправильное кэширование в вложенных use cache может привести к утечке данных между маршрутами.",
+      "audience": "разработчики, использующие use cache в Next.js",
+      "nextStep": "Проверить, как используются use cache и при необходимости изменить ключи кэша.",
       "url": "https://github.com/vercel/next.js/security/advisories/GHSA-vc7v-qv4w-wrv8",
       "tags": [
         "next.js",
-        "безопасность"
+        "security",
+        "cache"
       ],
-      "changeType": "tooling",
+      "changeType": "security",
       "technologies": [
         "nextjs",
         "react"
@@ -113,59 +119,11 @@
           "fixedVersion": null
         }
       ],
-      "risk": "low",
-      "effort": "minutes",
-      "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
-      ],
-      "detailsConfidence": "inferred"
-    },
-    {
-      "priority": "P3",
-      "title": "plugin‑rsc v0.5.39 – новые возможности и исправления",
-      "source": "Vite React Plugins",
-      "publishedAt": "2026-11-05T05:50:15Z",
-      "whyImportant": "Добавлены функции для работы с серверными ссылками и улучшена интеграция с React 18.",
-      "audience": "Разработчики, использующие Vite с React Server Components",
-      "nextStep": "Изучите новые возможности и обновите plugin‑rsc до версии 0.5.39.",
-      "url": "https://github.com/vitejs/vite-plugin-react/releases/tag/plugin-rsc%400.5.39",
-      "tags": [
-        "React",
-        "Vite",
-        "plugin"
-      ],
-      "changeType": "major",
-      "technologies": [
-        "vite",
-        "platform",
-        "react"
-      ],
-      "packages": [
-        {
-          "name": "@vitejs/plugin-react",
-          "releasedVersion": null,
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "@vitejs/plugin-react-swc",
-          "releasedVersion": null,
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "@vitejs/plugin-rsc",
-          "releasedVersion": "v0.5.39",
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
       "risk": "unknown",
       "effort": "minutes",
       "actionItems": [
-        "Прочитать changelog plugin‑rsc",
-        "Проверить совместимость с текущим проектом"
+        "Анализировать ключи use cache",
+        "Обновить Next.js до версии с патчем"
       ],
       "detailsConfidence": "source"
     }

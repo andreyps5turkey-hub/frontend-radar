@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-06T12:25:35.133Z",
+  "generatedAt": "2026-11-06T12:55:12.115Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -4930,22 +4930,22 @@
         },
         {
           "id": "7aabc41cd8cc50",
-          "kind": "patch",
+          "kind": "security",
           "priority": "P3",
           "version": null,
-          "title": "Новый материал от Next.js Security",
-          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "title": "Уязвимость: Cache poisoning в Next.js с cacheComponents:true",
+          "summary": "Незарегистрированный GET‑запрос может испортить кэш fallback‑shell‑ов, что приводит к некорректной отрисовке страниц.",
           "publishedAt": "2026-11-03T18:39:43Z",
           "source": "Next.js Security",
           "url": "https://github.com/vercel/next.js/security/advisories/GHSA-vvgp-ww4w-46vf"
         },
         {
           "id": "d0f1cd96212f2c",
-          "kind": "patch",
+          "kind": "security",
           "priority": "P3",
           "version": null,
-          "title": "Новый материал от Next.js Security",
-          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "title": "Уязвимость: Cache leak в nested 'use cache' функциях Next.js",
+          "summary": "Неправильное кэширование в вложенных use cache может привести к утечке данных между маршрутами.",
           "publishedAt": "2026-11-03T18:39:40Z",
           "source": "Next.js Security",
           "url": "https://github.com/vercel/next.js/security/advisories/GHSA-vc7v-qv4w-wrv8"
@@ -16997,10 +16997,10 @@
         {
           "id": "e392b1dd4863ca",
           "kind": "minor",
-          "priority": 0,
+          "priority": "P1",
           "version": "10.6.6",
-          "title": "Storybook Releases: выпуск v10.6.6",
-          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "title": "Storybook v10.6.6: обновление с улучшениями StackBlitz и VRT",
+          "summary": "В версии 10.6.6 Storybook снова можно встраивать dev‑сервер StackBlitz, а также добавлены пакеты VRT для тестирования визуальных регрессий.",
           "publishedAt": "2026-11-05T16:30:11Z",
           "source": "Storybook Releases",
           "url": "https://github.com/storybookjs/storybook/releases/tag/v10.6.6"
