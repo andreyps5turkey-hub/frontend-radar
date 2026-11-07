@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-06T12:55:12.115Z",
+  "generatedAt": "2026-11-07T11:17:45.168Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -4897,11 +4897,11 @@
         },
         {
           "id": "841e918a0c3a6b",
-          "kind": "security",
-          "priority": "P0",
+          "kind": "patch",
+          "priority": "P3",
           "version": null,
-          "title": "Обход ограничения SVG в оптимизаторе изображений Next.js",
-          "summary": "Позволяет обрабатывать SVG даже при отключённой поддержке, открывая путь к DoS и уязвимостям парсера.",
+          "title": "Новый материал от Next.js Security",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
           "publishedAt": "2026-11-03T18:39:51Z",
           "source": "Next.js Security",
           "url": "https://github.com/vercel/next.js/security/advisories/GHSA-7qx7-33qx-rqx2"
@@ -4964,21 +4964,21 @@
         {
           "id": "e11543d2135a8a",
           "kind": "minor",
-          "priority": "P1",
+          "priority": "P3",
           "version": "16.4.5",
-          "title": "Next.js v16.4.5 – исправления безопасности и улучшения производительности",
-          "summary": "Включает исправления критических уязвимостей, включая обход SVG, HttpOnly cookie и инъекции ответов.",
+          "title": "Next.js Releases: выпуск v16.4.5",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
           "publishedAt": "2026-11-03T18:38:39Z",
           "source": "Next.js Releases",
           "url": "https://github.com/vercel/next.js/releases/tag/v16.4.5"
         },
         {
           "id": "7337077ad98279",
-          "kind": "security",
-          "priority": "P0",
+          "kind": "minor",
+          "priority": "P3",
           "version": "15.5.29",
-          "title": "Обновление Next.js до v15.5.29 с исправлениями безопасности",
-          "summary": "Включены патчи для критических уязвимостей, включая инъекции и утечки данных в self‑hosted приложениях.",
+          "title": "Next.js Releases: выпуск v15.5.29",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
           "publishedAt": "2026-11-03T18:38:27Z",
           "source": "Next.js Releases",
           "url": "https://github.com/vercel/next.js/releases/tag/v15.5.29"
@@ -9916,15 +9916,15 @@
       "packageNames": [
         "@tanstack/react-query"
       ],
-      "latestVersion": "5.106.1",
-      "latestPublishedAt": "2026-11-05T08:07:42.091Z",
+      "latestVersion": "5.107.1",
+      "latestPublishedAt": "2026-11-06T23:04:47.891Z",
       "npmUrl": "https://www.npmjs.com/package/@tanstack/react-query",
       "repositoryUrl": "https://github.com/TanStack/query",
       "packages": [
         {
           "name": "@tanstack/react-query",
-          "latestVersion": "5.106.1",
-          "latestPublishedAt": "2026-11-05T08:07:42.091Z",
+          "latestVersion": "5.107.1",
+          "latestPublishedAt": "2026-11-06T23:04:47.891Z",
           "npmUrl": "https://www.npmjs.com/package/@tanstack/react-query",
           "compatibility": [
             {
@@ -9981,9 +9981,9 @@
               "deprecated": null
             },
             {
-              "range": ">=5.52.1 <=5.106.1",
+              "range": ">=5.52.1 <=5.107.1",
               "minVersion": "5.52.1",
-              "maxVersion": "5.106.1",
+              "maxVersion": "5.107.1",
               "peerDependencies": {
                 "react": "^18 || ^19"
               },
@@ -9993,6 +9993,14 @@
             }
           ],
           "versions": [
+            {
+              "version": "5.107.1",
+              "publishedAt": "2026-11-06T23:04:47.891Z"
+            },
+            {
+              "version": "5.107.0",
+              "publishedAt": "2026-11-06T21:19:31.404Z"
+            },
             {
               "version": "5.106.1",
               "publishedAt": "2026-11-05T08:07:42.091Z"

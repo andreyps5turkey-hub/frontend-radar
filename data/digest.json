@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "date": "2026-11-06",
-  "generatedAt": "2026-11-06T12:55:04.951Z",
+  "date": "2026-11-07",
+  "generatedAt": "2026-11-07T11:17:36.239Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -10,69 +10,24 @@
     "succeeded": 32,
     "failed": []
   },
-  "status": "active",
-  "summary": "Сегодня в окне публикаций появилось обновление Storybook, а также стоит обратить внимание на недавние уязвимости в Next.js – их можно добавить в список «для прочтения».",
-  "items": [
-    {
-      "priority": "P1",
-      "title": "Storybook v10.6.6: обновление с улучшениями StackBlitz и VRT",
-      "source": "Storybook Releases",
-      "publishedAt": "2026-11-05T16:30:11Z",
-      "whyImportant": "В версии 10.6.6 Storybook снова можно встраивать dev‑сервер StackBlitz, а также добавлены пакеты VRT для тестирования визуальных регрессий.",
-      "audience": "frontend‑инженеры, работающие с Storybook и StackBlitz",
-      "nextStep": "Обновить Storybook до v10.6.6, проверить работу StackBlitz‑embed и VRT‑пакетов в своём проекте.",
-      "url": "https://github.com/storybookjs/storybook/releases/tag/v10.6.6",
-      "tags": [
-        "storybook",
-        "react",
-        "telemetry",
-        "VRT"
-      ],
-      "changeType": "minor",
-      "technologies": [
-        "storybook",
-        "react"
-      ],
-      "packages": [
-        {
-          "name": "storybook",
-          "releasedVersion": "v10.6.6",
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "@storybook/react",
-          "releasedVersion": "v10.6.6",
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "unknown",
-      "effort": "days",
-      "actionItems": [
-        "Проверить совместимость с текущими компонентами",
-        "Обновить зависимость в package.json",
-        "Запустить тесты Storybook"
-      ],
-      "detailsConfidence": "source"
-    }
-  ],
+  "status": "quiet",
+  "summary": "Значимых новых событий не найдено. Подборка для чтения собрана в резервном режиме.",
+  "items": [],
   "readLater": [
     {
       "priority": "P3",
-      "title": "Уязвимость: Cache poisoning в Next.js с cacheComponents:true",
+      "title": "Новый материал от Next.js Security",
       "source": "Next.js Security",
-      "publishedAt": "2026-11-03T18:39:43Z",
-      "whyImportant": "Незарегистрированный GET‑запрос может испортить кэш fallback‑shell‑ов, что приводит к некорректной отрисовке страниц.",
-      "audience": "разработчики, использующие Next.js с cacheComponents:true",
-      "nextStep": "Проверить, включён ли Partial Prefetching, и при необходимости отключить cacheComponents или обновить до версии с патчем.",
-      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-vvgp-ww4w-46vf",
+      "publishedAt": "2026-11-03T18:39:51Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, которые поддерживают приложения на Next.js.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-7qx7-33qx-rqx2",
       "tags": [
         "next.js",
-        "security",
-        "cache"
+        "безопасность"
       ],
-      "changeType": "security",
+      "changeType": "tooling",
       "technologies": [
         "nextjs"
       ],
@@ -84,48 +39,79 @@
           "fixedVersion": null
         }
       ],
-      "risk": "unknown",
+      "risk": "low",
       "effort": "minutes",
       "actionItems": [
-        "Проверить настройки cacheComponents",
-        "Обновить Next.js до версии с исправлением"
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
       ],
-      "detailsConfidence": "source"
+      "detailsConfidence": "inferred"
     },
     {
       "priority": "P3",
-      "title": "Уязвимость: Cache leak в nested 'use cache' функциях Next.js",
-      "source": "Next.js Security",
-      "publishedAt": "2026-11-03T18:39:40Z",
-      "whyImportant": "Неправильное кэширование в вложенных use cache может привести к утечке данных между маршрутами.",
-      "audience": "разработчики, использующие use cache в Next.js",
-      "nextStep": "Проверить, как используются use cache и при необходимости изменить ключи кэша.",
-      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-vc7v-qv4w-wrv8",
+      "title": "Next.js Releases: выпуск v16.4.5",
+      "source": "Next.js Releases",
+      "publishedAt": "2026-11-03T18:38:39Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, которые поддерживают приложения на Next.js.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.4.5",
       "tags": [
         "next.js",
-        "security",
-        "cache"
+        "обновление"
       ],
-      "changeType": "security",
+      "changeType": "minor",
       "technologies": [
-        "nextjs",
-        "react"
+        "nextjs"
       ],
       "packages": [
         {
           "name": "next",
-          "releasedVersion": null,
+          "releasedVersion": "v16.4.5",
           "affectedRange": null,
           "fixedVersion": null
         }
       ],
-      "risk": "unknown",
+      "risk": "low",
       "effort": "minutes",
       "actionItems": [
-        "Анализировать ключи use cache",
-        "Обновить Next.js до версии с патчем"
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
       ],
-      "detailsConfidence": "source"
+      "detailsConfidence": "inferred"
+    },
+    {
+      "priority": "P3",
+      "title": "Next.js Releases: выпуск v15.5.29",
+      "source": "Next.js Releases",
+      "publishedAt": "2026-11-03T18:38:27Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, которые поддерживают приложения на Next.js.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/vercel/next.js/releases/tag/v15.5.29",
+      "tags": [
+        "next.js",
+        "обновление"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "nextjs"
+      ],
+      "packages": [
+        {
+          "name": "next",
+          "releasedVersion": "v15.5.29",
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
     }
   ]
 }
