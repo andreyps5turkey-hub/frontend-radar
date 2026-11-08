@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 2,
+  "date": "2026-11-08",
+  "generatedAt": "2026-11-08T11:29:28.986Z",
+  "timezone": "Europe/Moscow",
+  "windowHours": 26,
+  "sourcesChecked": 26,
+  "sourceHealth": {
+    "attempted": 32,
+    "succeeded": 26,
+    "failed": [
+      "React Releases",
+      "Vite Releases",
+      "core-js Releases",
+      "React Router Releases",
+      "ESLint Releases",
+      "Jest Releases"
+    ]
+  },
+  "status": "quiet",
+  "summary": "Сегодня в окне публикаций не было значимых обновлений для фронтенд-разработчиков.",
+  "items": [],
+  "readLater": [
+    {
+      "priority": "P3",
+      "title": "puppeteer: v25.14.0 – обновление зависимостей",
+      "source": "Puppeteer Releases",
+      "publishedAt": "2026-10-14T15:25:22Z",
+      "whyImportant": "Обновлены внутренние зависимости, но функциональность не меняется.",
+      "audience": "Разработчики, использующие Puppeteer",
+      "nextStep": "Проверьте совместимость с текущими версиями браузеров, если используете кастомные сборки.",
+      "url": "https://github.com/puppeteer/puppeteer/releases/tag/puppeteer-v25.14.0",
+      "tags": [
+        "puppeteer",
+        "automation"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "platform"
+      ],
+      "packages": [
+        {
+          "name": "puppeteer",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить совместимость с текущими браузерами",
+        "Обновить @puppeteer/browsers до 3.2.5",
+        "Обновить puppeteer-core до 25.14.0"
+      ],
+      "detailsConfidence": "source"
+    },
+    {
+      "priority": "P3",
+      "title": "Новый материал от Next.js Security",
+      "source": "Next.js Security",
+      "publishedAt": "2026-11-03T18:39:51Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, которые поддерживают приложения на Next.js.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-7qx7-33qx-rqx2",
+      "tags": [
+        "next.js",
+        "безопасность"
+      ],
+      "changeType": "tooling",
+      "technologies": [
+        "nextjs"
+      ],
+      "packages": [
+        {
+          "name": "next",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    }
+  ]
+}
