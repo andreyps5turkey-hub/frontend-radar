@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-09T13:19:04.478Z",
+  "generatedAt": "2026-11-09T22:18:37.141Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -1634,15 +1634,15 @@
       "packageNames": [
         "next"
       ],
-      "latestVersion": "16.4.5",
-      "latestPublishedAt": "2026-11-03T18:01:54.667Z",
+      "latestVersion": "16.4.6",
+      "latestPublishedAt": "2026-11-09T20:33:38.821Z",
       "npmUrl": "https://www.npmjs.com/package/next",
       "repositoryUrl": "https://github.com/vercel/next.js",
       "packages": [
         {
           "name": "next",
-          "latestVersion": "16.4.5",
-          "latestPublishedAt": "2026-11-03T18:01:54.667Z",
+          "latestVersion": "16.4.6",
+          "latestPublishedAt": "2026-11-09T20:33:38.821Z",
           "npmUrl": "https://www.npmjs.com/package/next",
           "compatibility": [
             {
@@ -2042,9 +2042,9 @@
               "deprecated": "This version has a security vulnerability. Please upgrade to a patched version. See https://nextjs.org/blog/security-update-2025-12-11 for more details."
             },
             {
-              "range": ">=16.0.10 <=16.4.5",
+              "range": ">=16.0.10 <=16.4.6",
               "minVersion": "16.0.10",
-              "maxVersion": "16.4.5",
+              "maxVersion": "16.4.6",
               "peerDependencies": {
                 "react": "^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0",
                 "react-dom": "^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0"
@@ -2055,6 +2055,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "16.4.6",
+              "publishedAt": "2026-11-09T20:33:38.821Z"
+            },
             {
               "version": "16.4.5",
               "publishedAt": "2026-11-03T18:01:54.667Z"
@@ -4885,6 +4889,17 @@
       ],
       "events": [
         {
+          "id": "23e3bda13c4d1b",
+          "kind": "minor",
+          "priority": 1,
+          "version": "16.4.6",
+          "title": "Next.js Releases: выпуск v16.4.6",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-11-09T20:27:17Z",
+          "source": "Next.js Releases",
+          "url": "https://github.com/vercel/next.js/releases/tag/v16.4.6"
+        },
+        {
           "id": "38f57c52203dfb",
           "kind": "patch",
           "priority": "P3",
@@ -5202,17 +5217,6 @@
           "publishedAt": "2026-09-29T08:54:51Z",
           "source": "Next.js Releases",
           "url": "https://github.com/vercel/next.js/releases/tag/v16.3.7"
-        },
-        {
-          "id": "7d355130cb2dff",
-          "kind": "security",
-          "priority": "P1",
-          "version": "15.5.26",
-          "title": "Усиление безопасности в Next.js v15.5.26",
-          "summary": "Обновление добавляет дополнительные меры защиты в next/og, снижая риск эксплуатации уязвимостей.",
-          "publishedAt": "2026-09-22T17:15:57Z",
-          "source": "Next.js Releases",
-          "url": "https://github.com/vercel/next.js/releases/tag/v15.5.26"
         }
       ]
     },
@@ -5542,6 +5546,17 @@
       ],
       "advisories": [],
       "events": [
+        {
+          "id": "8c5e20aca1a76a",
+          "kind": "minor",
+          "priority": 0,
+          "version": "8.72.2",
+          "title": "typescript-eslint Releases: выпуск v8.72.2",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-11-09T17:04:23Z",
+          "source": "typescript-eslint Releases",
+          "url": "https://github.com/typescript-eslint/typescript-eslint/releases/tag/v8.72.2"
+        },
         {
           "id": "1e96720982c4db",
           "kind": "patch",
@@ -7388,6 +7403,50 @@
           "url": "https://github.com/vitejs/vite/releases/tag/v8.3.7"
         },
         {
+          "id": "766a11de17d69c",
+          "kind": "minor",
+          "priority": 2,
+          "version": "6.4.6",
+          "title": "Vite Releases: выпуск v6.4.6",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-11-09T11:03:41Z",
+          "source": "Vite Releases",
+          "url": "https://github.com/vitejs/vite/releases/tag/v6.4.6"
+        },
+        {
+          "id": "7adcf8c02fc0df",
+          "kind": "minor",
+          "priority": 3,
+          "version": "7.3.8",
+          "title": "Vite Releases: выпуск v7.3.8",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-11-09T11:00:57Z",
+          "source": "Vite Releases",
+          "url": "https://github.com/vitejs/vite/releases/tag/v7.3.8"
+        },
+        {
+          "id": "12dcdaa3b71489",
+          "kind": "minor",
+          "priority": 4,
+          "version": "8.1.7",
+          "title": "Vite Releases: выпуск v8.1.7",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-11-09T10:58:49Z",
+          "source": "Vite Releases",
+          "url": "https://github.com/vitejs/vite/releases/tag/v8.1.7"
+        },
+        {
+          "id": "d46c9cb7853378",
+          "kind": "minor",
+          "priority": "P3",
+          "version": "8.2.6",
+          "title": "Vite Releases: выпуск v8.2.6",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-11-09T10:57:55Z",
+          "source": "Vite Releases",
+          "url": "https://github.com/vitejs/vite/releases/tag/v8.2.6"
+        },
+        {
           "id": "6bfb24f66dc27f",
           "kind": "minor",
           "priority": "P3",
@@ -7661,50 +7720,6 @@
           "publishedAt": "2026-07-30T12:03:27Z",
           "source": "Vite Releases",
           "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.1.2"
-        },
-        {
-          "id": "971d767123f5bd",
-          "kind": "patch",
-          "priority": "P2",
-          "version": "8.2",
-          "title": "Vite 8.2: очередное обновление сборщика и экосистемы плагинов",
-          "summary": "Релиз продолжает развитие ветки Vite 8 и связанных инструментов. Для большинства проектов это плановое обновление, но изменения сборщика стоит проверить на реальной конфигурации.",
-          "publishedAt": "2026-07-30T12:00:00Z",
-          "source": "Vite Releases",
-          "url": "https://github.com/vitejs/vite/releases/tag/v8.2.0"
-        },
-        {
-          "id": "c25152fe5d0384",
-          "kind": "major",
-          "priority": "P3",
-          "version": "0.5.31",
-          "title": "Vite React Plugins: выпуск 0.5.31",
-          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-          "publishedAt": "2026-07-28T06:34:17Z",
-          "source": "Vite React Plugins",
-          "url": "https://github.com/vitejs/vite-plugin-react/releases/tag/plugin-rsc%400.5.31"
-        },
-        {
-          "id": "5b455220b36cae",
-          "kind": "minor",
-          "priority": "P3",
-          "version": "8.2.2",
-          "title": "plugin‑legacy@8.2.2 – обновление Vite",
-          "summary": "Новый патч для плагина legacy, который может улучшить совместимость с устаревшими модулями.",
-          "publishedAt": "2026-07-23T04:45:07Z",
-          "source": "Vite Releases",
-          "url": "https://github.com/vitejs/vite/releases/tag/plugin-legacy%408.2.2"
-        },
-        {
-          "id": "085beb7b9c04a7",
-          "kind": "minor",
-          "priority": "P3",
-          "version": "8.1.5",
-          "title": "v8.1.5 – обновление Vite",
-          "summary": "Обновление ядра Vite, возможно, содержит исправления производительности и совместимости.",
-          "publishedAt": "2026-07-16T06:50:05Z",
-          "source": "Vite Releases",
-          "url": "https://github.com/vitejs/vite/releases/tag/v8.1.5"
         }
       ]
     },
@@ -17923,6 +17938,17 @@
       ],
       "advisories": [],
       "events": [
+        {
+          "id": "8c5e20aca1a76a",
+          "kind": "minor",
+          "priority": 0,
+          "version": "8.72.2",
+          "title": "typescript-eslint Releases: выпуск v8.72.2",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-11-09T17:04:23Z",
+          "source": "typescript-eslint Releases",
+          "url": "https://github.com/typescript-eslint/typescript-eslint/releases/tag/v8.72.2"
+        },
         {
           "id": "2c99df1bd25c42",
           "kind": "minor",
