@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-08T11:29:34.267Z",
+  "generatedAt": "2026-11-09T13:19:04.478Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -1405,6 +1405,17 @@
         }
       ],
       "events": [
+        {
+          "id": "6bfb24f66dc27f",
+          "kind": "minor",
+          "priority": "P3",
+          "version": "6.3.0",
+          "title": "Vite React Plugins: выпуск 6.3.0",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-11-09T06:11:17Z",
+          "source": "Vite React Plugins",
+          "url": "https://github.com/vitejs/vite-plugin-react/releases/tag/plugin-react%406.3.0"
+        },
         {
           "id": "38f57c52203dfb",
           "kind": "patch",
@@ -5595,15 +5606,15 @@
       "packageNames": [
         "vite"
       ],
-      "latestVersion": "8.3.6",
-      "latestPublishedAt": "2026-11-05T05:40:52.195Z",
+      "latestVersion": "8.3.7",
+      "latestPublishedAt": "2026-11-09T10:25:29.212Z",
       "npmUrl": "https://www.npmjs.com/package/vite",
       "repositoryUrl": "https://github.com/vitejs/vite",
       "packages": [
         {
           "name": "vite",
-          "latestVersion": "8.3.6",
-          "latestPublishedAt": "2026-11-05T05:40:52.195Z",
+          "latestVersion": "8.3.7",
+          "latestPublishedAt": "2026-11-09T10:25:29.212Z",
           "npmUrl": "https://www.npmjs.com/package/vite",
           "compatibility": [
             {
@@ -5616,18 +5627,18 @@
               "deprecated": null
             },
             {
-              "range": ">=6.0.0 <=6.4.5",
+              "range": ">=6.0.0 <=6.4.6",
               "minVersion": "6.0.0",
-              "maxVersion": "6.4.5",
+              "maxVersion": "6.4.6",
               "peerDependencies": {},
               "optionalPeers": [],
               "nodeRange": "^18.0.0 || ^20.0.0 || >=22.0.0",
               "deprecated": null
             },
             {
-              "range": ">=7.0.0 <=8.3.6",
+              "range": ">=7.0.0 <=8.3.7",
               "minVersion": "7.0.0",
-              "maxVersion": "8.3.6",
+              "maxVersion": "8.3.7",
               "peerDependencies": {},
               "optionalPeers": [],
               "nodeRange": "^20.19.0 || >=22.12.0",
@@ -5635,6 +5646,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "8.3.7",
+              "publishedAt": "2026-11-09T10:25:29.212Z"
+            },
             {
               "version": "8.3.6",
               "publishedAt": "2026-11-05T05:40:52.195Z"
@@ -5664,6 +5679,10 @@
               "publishedAt": "2026-09-10T11:30:26.283Z"
             },
             {
+              "version": "8.2.6",
+              "publishedAt": "2026-11-09T11:00:12.866Z"
+            },
+            {
               "version": "8.2.4",
               "publishedAt": "2026-10-06T04:48:20.112Z"
             },
@@ -5678,6 +5697,10 @@
             {
               "version": "8.2.0",
               "publishedAt": "2026-07-30T12:03:25.771Z"
+            },
+            {
+              "version": "8.1.7",
+              "publishedAt": "2026-11-09T11:02:32.994Z"
             },
             {
               "version": "8.1.6",
@@ -5774,6 +5797,10 @@
             {
               "version": "8.0.0",
               "publishedAt": "2026-03-12T13:59:00.561Z"
+            },
+            {
+              "version": "7.3.8",
+              "publishedAt": "2026-11-09T11:01:58.318Z"
             },
             {
               "version": "7.3.7",
@@ -5918,6 +5945,10 @@
             {
               "version": "7.0.0",
               "publishedAt": "2025-06-24T09:18:05.353Z"
+            },
+            {
+              "version": "6.4.6",
+              "publishedAt": "2026-11-09T11:06:50.618Z"
             },
             {
               "version": "6.4.5",
@@ -7346,6 +7377,28 @@
       ],
       "events": [
         {
+          "id": "36041da0d672bd",
+          "kind": "minor",
+          "priority": "P3",
+          "version": "8.3.7",
+          "title": "Vite Releases: выпуск v8.3.7",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-11-09T11:39:56Z",
+          "source": "Vite Releases",
+          "url": "https://github.com/vitejs/vite/releases/tag/v8.3.7"
+        },
+        {
+          "id": "6bfb24f66dc27f",
+          "kind": "minor",
+          "priority": "P3",
+          "version": "6.3.0",
+          "title": "Vite React Plugins: выпуск 6.3.0",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-11-09T06:11:17Z",
+          "source": "Vite React Plugins",
+          "url": "https://github.com/vitejs/vite-plugin-react/releases/tag/plugin-react%406.3.0"
+        },
+        {
           "id": "dad6e966ebbb7b",
           "kind": "major",
           "priority": "P2",
@@ -7652,17 +7705,6 @@
           "publishedAt": "2026-07-16T06:50:05Z",
           "source": "Vite Releases",
           "url": "https://github.com/vitejs/vite/releases/tag/v8.1.5"
-        },
-        {
-          "id": "501322757da849",
-          "kind": "minor",
-          "priority": "P3",
-          "version": "8.2.1",
-          "title": "plugin-legacy@8.2.1 – обновление Vite",
-          "summary": "Предыдущий патч для legacy‑плагина, который может содержать исправления багов.",
-          "publishedAt": "2026-07-16T06:49:00Z",
-          "source": "Vite Releases",
-          "url": "https://github.com/vitejs/vite/releases/tag/plugin-legacy%408.2.1"
         }
       ]
     },

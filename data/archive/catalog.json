@@ -1,7 +1,123 @@
 {
   "version": 2,
-  "updatedAt": "2026-11-08T11:29:28.986Z",
+  "updatedAt": "2026-11-09T13:18:57.358Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-11-09",
+      "generatedAt": "2026-11-09T13:18:57.358Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 32,
+      "sourceHealth": {
+        "attempted": 32,
+        "succeeded": 32,
+        "failed": []
+      },
+      "status": "quiet",
+      "summary": "В течение дня не произошло значимых обновлений, влияющих на безопасность, архитектуру или функциональность. Все выпущенные версии – это мелкие исправления и обновления зависимостей.",
+      "items": [],
+      "readLater": [
+        {
+          "priority": "P3",
+          "title": "Vite React Plugins: выпуск 6.3.0",
+          "source": "Vite React Plugins",
+          "publishedAt": "2026-11-09T06:11:17Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Разработчики и команды, использующие React.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/vitejs/vite-plugin-react/releases/tag/plugin-react%406.3.0",
+          "tags": [
+            "vite",
+            "обновление"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "vite",
+            "react"
+          ],
+          "packages": [
+            {
+              "name": "@vitejs/plugin-react",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "@vitejs/plugin-react-swc",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "@vitejs/plugin-rsc",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "vite",
+              "releasedVersion": "6.3.0",
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "react",
+              "releasedVersion": "6.3.0",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        },
+        {
+          "priority": "P3",
+          "title": "Vite Releases: выпуск v8.3.7",
+          "source": "Vite Releases",
+          "publishedAt": "2026-11-09T11:39:56Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, использующие инструменты из экосистемы Vite Releases.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/vitejs/vite/releases/tag/v8.3.7",
+          "tags": [
+            "vite",
+            "обновление"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "vite",
+            "quality"
+          ],
+          "packages": [
+            {
+              "name": "vite",
+              "releasedVersion": "v8.3.7",
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "@vitejs/plugin-legacy",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-11-08",
