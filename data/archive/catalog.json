@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "updatedAt": "2026-11-11T12:07:02.178Z",
+  "updatedAt": "2026-11-11T12:41:34.039Z",
   "issues": [
     {
       "schemaVersion": 2,
       "date": "2026-11-11",
-      "generatedAt": "2026-11-11T12:07:02.178Z",
+      "generatedAt": "2026-11-11T12:41:34.039Z",
       "timezone": "Europe/Moscow",
       "windowHours": 26,
       "sourcesChecked": 32,
@@ -134,6 +134,40 @@
       "readLater": [
         {
           "priority": "P3",
+          "title": "Prettier Releases: выпуск 3.10.0",
+          "source": "Prettier Releases",
+          "publishedAt": "2026-11-11T12:40:50Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, использующие инструменты из экосистемы Prettier Releases.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/prettier/prettier/releases/tag/3.10.0",
+          "tags": [
+            "prettier",
+            "обновление"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "quality",
+            "platform"
+          ],
+          "packages": [
+            {
+              "name": "prettier",
+              "releasedVersion": "3.10.0",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        },
+        {
+          "priority": "P3",
           "title": "Новый материал от Next.js Security",
           "source": "Next.js Security",
           "publishedAt": "2026-11-03T18:39:51Z",
@@ -174,32 +208,6 @@
           "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
           "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
           "url": "https://github.com/nodejs/node/releases/tag/v26.12.1",
-          "tags": [
-            "node.js",
-            "обновление"
-          ],
-          "changeType": "minor",
-          "technologies": [
-            "platform"
-          ],
-          "packages": [],
-          "risk": "low",
-          "effort": "minutes",
-          "actionItems": [
-            "Проверить список изменений в первоисточнике.",
-            "Протестировать обновление в отдельной ветке."
-          ],
-          "detailsConfidence": "inferred"
-        },
-        {
-          "priority": "P3",
-          "title": "Node.js Releases: выпуск 24.22.1",
-          "source": "Node.js Releases",
-          "publishedAt": "2026-10-21T10:38:25Z",
-          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-          "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
-          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-          "url": "https://github.com/nodejs/node/releases/tag/v24.22.1",
           "tags": [
             "node.js",
             "обновление"
