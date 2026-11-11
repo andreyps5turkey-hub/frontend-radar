@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "updatedAt": "2026-11-11T12:41:34.039Z",
+  "updatedAt": "2026-11-11T14:20:01.404Z",
   "issues": [
     {
       "schemaVersion": 2,
       "date": "2026-11-11",
-      "generatedAt": "2026-11-11T12:41:34.039Z",
+      "generatedAt": "2026-11-11T14:20:01.404Z",
       "timezone": "Europe/Moscow",
       "windowHours": 26,
       "sourcesChecked": 32,
@@ -15,31 +15,32 @@
         "failed": []
       },
       "status": "active",
-      "summary": "Автоматическая подборка собрана в резервном режиме. Проверьте релизы по ссылкам на первоисточники.",
+      "summary": "В окне дня обновились Vite и Puppeteer.",
       "items": [
         {
           "priority": "P1",
-          "title": "Vite Releases: выпуск v8.3.8",
+          "title": "Vite v8.3.8 – исправления и улучшения сборки",
           "source": "Vite Releases",
           "publishedAt": "2026-11-11T02:46:37Z",
-          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-          "audience": "Команды, использующие инструменты из экосистемы Vite Releases.",
-          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "whyImportant": "Обновление исправляет ошибки сборки, улучшает работу с inline‑workers и повышает производительность CSS.",
+          "audience": "Разработчики, использующие Vite для сборки фронтенда",
+          "nextStep": "Обновите Vite до версии 8.3.8 и проверьте сборку проекта, особенно при использовании inline‑workers и CSS‑entrypoints.",
           "url": "https://github.com/vitejs/vite/releases/tag/v8.3.8",
           "tags": [
-            "vite",
-            "обновление"
+            "Vite",
+            "build",
+            "CSS",
+            "workers"
           ],
           "changeType": "major",
           "technologies": [
             "vite",
-            "quality",
             "platform"
           ],
           "packages": [
             {
               "name": "vite",
-              "releasedVersion": "v8.3.8",
+              "releasedVersion": "8.3.8",
               "affectedRange": null,
               "fixedVersion": null
             },
@@ -50,65 +51,28 @@
               "fixedVersion": null
             }
           ],
-          "risk": "low",
-          "effort": "minutes",
+          "risk": "unknown",
+          "effort": "days",
           "actionItems": [
-            "Проверить список изменений в первоисточнике.",
-            "Протестировать обновление в отдельной ветке."
+            "Обновить зависимость vite до 8.3.8",
+            "Проверить сборку проекта с inline‑workers",
+            "Проверить работу CSS‑entrypoints при build.cssCodeSplit:false"
           ],
-          "detailsConfidence": "inferred"
+          "detailsConfidence": "source"
         },
         {
-          "priority": "P2",
-          "title": "Storybook Releases: выпуск v10.6.7",
-          "source": "Storybook Releases",
-          "publishedAt": "2026-11-10T11:48:02Z",
-          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-          "audience": "Команды, использующие инструменты из экосистемы Storybook Releases.",
-          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-          "url": "https://github.com/storybookjs/storybook/releases/tag/v10.6.7",
-          "tags": [
-            "storybook",
-            "обновление"
-          ],
-          "changeType": "minor",
-          "technologies": [
-            "storybook"
-          ],
-          "packages": [
-            {
-              "name": "storybook",
-              "releasedVersion": "v10.6.7",
-              "affectedRange": null,
-              "fixedVersion": null
-            },
-            {
-              "name": "@storybook/react",
-              "releasedVersion": null,
-              "affectedRange": null,
-              "fixedVersion": null
-            }
-          ],
-          "risk": "low",
-          "effort": "minutes",
-          "actionItems": [
-            "Проверить список изменений в первоисточнике.",
-            "Протестировать обновление в отдельной ветке."
-          ],
-          "detailsConfidence": "inferred"
-        },
-        {
-          "priority": "P2",
-          "title": "Puppeteer Releases: выпуск v3.2.7",
+          "priority": "P1",
+          "title": "Puppeteer browsers v3.2.7 – исправления браузеров",
           "source": "Puppeteer Releases",
           "publishedAt": "2026-11-10T14:02:50Z",
-          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-          "audience": "Команды, использующие инструменты из экосистемы Puppeteer Releases.",
-          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "whyImportant": "Обновление исправляет ошибки сравнения версий Firefox, обработку ошибок перенаправлений и запись алиасов при уже установленном билде.",
+          "audience": "Разработчики, использующие Puppeteer для тестирования браузеров",
+          "nextStep": "Обновите Puppeteer до версии 3.2.7 и проверьте сценарии, использующие Firefox и перенаправления.",
           "url": "https://github.com/puppeteer/puppeteer/releases/tag/browsers-v3.2.7",
           "tags": [
-            "puppeteer",
-            "обновление"
+            "Puppeteer",
+            "testing",
+            "browsers"
           ],
           "changeType": "minor",
           "technologies": [
@@ -117,18 +81,19 @@
           "packages": [
             {
               "name": "puppeteer",
-              "releasedVersion": "v3.2.7",
+              "releasedVersion": "3.2.7",
               "affectedRange": null,
               "fixedVersion": null
             }
           ],
-          "risk": "low",
-          "effort": "minutes",
+          "risk": "unknown",
+          "effort": "days",
           "actionItems": [
-            "Проверить список изменений в первоисточнике.",
-            "Протестировать обновление в отдельной ветке."
+            "Обновить зависимость puppeteer до 3.2.7",
+            "Проверить тесты, использующие Firefox версии",
+            "Проверить обработку ошибок перенаправлений"
           ],
-          "detailsConfidence": "inferred"
+          "detailsConfidence": "source"
         }
       ],
       "readLater": [
@@ -191,32 +156,6 @@
               "fixedVersion": null
             }
           ],
-          "risk": "low",
-          "effort": "minutes",
-          "actionItems": [
-            "Проверить список изменений в первоисточнике.",
-            "Протестировать обновление в отдельной ветке."
-          ],
-          "detailsConfidence": "inferred"
-        },
-        {
-          "priority": "P3",
-          "title": "Node.js Releases: выпуск 26.12.1",
-          "source": "Node.js Releases",
-          "publishedAt": "2026-10-21T10:38:29Z",
-          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-          "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
-          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-          "url": "https://github.com/nodejs/node/releases/tag/v26.12.1",
-          "tags": [
-            "node.js",
-            "обновление"
-          ],
-          "changeType": "minor",
-          "technologies": [
-            "platform"
-          ],
-          "packages": [],
           "risk": "low",
           "effort": "minutes",
           "actionItems": [
