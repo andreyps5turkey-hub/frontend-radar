@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "date": "2026-11-11",
-  "generatedAt": "2026-11-11T14:20:01.404Z",
+  "date": "2026-11-12",
+  "generatedAt": "2026-11-12T13:12:19.051Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -11,83 +11,33 @@
     "failed": []
   },
   "status": "active",
-  "summary": "В окне дня обновились Vite и Puppeteer.",
+  "summary": "В окне дня выпущены обновления LTS Node.js с критическими исправлениями безопасности.",
   "items": [
     {
-      "priority": "P1",
-      "title": "Vite v8.3.8 – исправления и улучшения сборки",
-      "source": "Vite Releases",
-      "publishedAt": "2026-11-11T02:46:37Z",
-      "whyImportant": "Обновление исправляет ошибки сборки, улучшает работу с inline‑workers и повышает производительность CSS.",
-      "audience": "Разработчики, использующие Vite для сборки фронтенда",
-      "nextStep": "Обновите Vite до версии 8.3.8 и проверьте сборку проекта, особенно при использовании inline‑workers и CSS‑entrypoints.",
-      "url": "https://github.com/vitejs/vite/releases/tag/v8.3.8",
+      "priority": "P0",
+      "title": "Node.js v26.13.1 «Lithium» – критические исправления безопасности",
+      "source": "Node.js Releases",
+      "publishedAt": "2026-11-11T16:44:25Z",
+      "whyImportant": "Обновление устраняет несколько уязвимостей, включая CVE‑2026‑123863‑123872, которые могут позволить удалённому исполнению кода.",
+      "audience": "Разработчики, использующие Node.js 26.x",
+      "nextStep": "Обновить до версии 26.13.1 как можно скорее, проверить совместимость приложений.",
+      "url": "https://github.com/nodejs/node/releases/tag/v26.13.1",
       "tags": [
-        "Vite",
-        "build",
-        "CSS",
-        "workers"
+        "Node.js",
+        "LTS",
+        "безопасность"
       ],
-      "changeType": "major",
-      "technologies": [
-        "vite",
-        "platform"
-      ],
-      "packages": [
-        {
-          "name": "vite",
-          "releasedVersion": "8.3.8",
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "@vitejs/plugin-legacy",
-          "releasedVersion": null,
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "unknown",
-      "effort": "days",
-      "actionItems": [
-        "Обновить зависимость vite до 8.3.8",
-        "Проверить сборку проекта с inline‑workers",
-        "Проверить работу CSS‑entrypoints при build.cssCodeSplit:false"
-      ],
-      "detailsConfidence": "source"
-    },
-    {
-      "priority": "P1",
-      "title": "Puppeteer browsers v3.2.7 – исправления браузеров",
-      "source": "Puppeteer Releases",
-      "publishedAt": "2026-11-10T14:02:50Z",
-      "whyImportant": "Обновление исправляет ошибки сравнения версий Firefox, обработку ошибок перенаправлений и запись алиасов при уже установленном билде.",
-      "audience": "Разработчики, использующие Puppeteer для тестирования браузеров",
-      "nextStep": "Обновите Puppeteer до версии 3.2.7 и проверьте сценарии, использующие Firefox и перенаправления.",
-      "url": "https://github.com/puppeteer/puppeteer/releases/tag/browsers-v3.2.7",
-      "tags": [
-        "Puppeteer",
-        "testing",
-        "browsers"
-      ],
-      "changeType": "minor",
+      "changeType": "security",
       "technologies": [
         "platform"
       ],
-      "packages": [
-        {
-          "name": "puppeteer",
-          "releasedVersion": "3.2.7",
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
+      "packages": [],
       "risk": "unknown",
-      "effort": "days",
+      "effort": "hours",
       "actionItems": [
-        "Обновить зависимость puppeteer до 3.2.7",
-        "Проверить тесты, использующие Firefox версии",
-        "Проверить обработку ошибок перенаправлений"
+        "Проверить наличие зависимостей, требующих обновления",
+        "Запустить тесты интеграции",
+        "Обновить Dockerfile и CI‑конфигурацию"
       ],
       "detailsConfidence": "source"
     }
@@ -95,30 +45,22 @@
   "readLater": [
     {
       "priority": "P3",
-      "title": "Prettier Releases: выпуск 3.10.0",
-      "source": "Prettier Releases",
-      "publishedAt": "2026-11-11T12:40:50Z",
+      "title": "Node.js Releases: выпуск 24.22.3",
+      "source": "Node.js Releases",
+      "publishedAt": "2026-11-11T16:44:08Z",
       "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы Prettier Releases.",
+      "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
       "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/prettier/prettier/releases/tag/3.10.0",
+      "url": "https://github.com/nodejs/node/releases/tag/v24.22.3",
       "tags": [
-        "prettier",
+        "node.js",
         "обновление"
       ],
       "changeType": "minor",
       "technologies": [
-        "quality",
         "platform"
       ],
-      "packages": [
-        {
-          "name": "prettier",
-          "releasedVersion": "3.10.0",
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
+      "packages": [],
       "risk": "low",
       "effort": "minutes",
       "actionItems": [
@@ -129,29 +71,22 @@
     },
     {
       "priority": "P3",
-      "title": "Новый материал от Next.js Security",
-      "source": "Next.js Security",
-      "publishedAt": "2026-11-03T18:39:51Z",
+      "title": "Node.js Releases: выпуск 22.23.5",
+      "source": "Node.js Releases",
+      "publishedAt": "2026-11-11T16:44:03Z",
       "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, которые поддерживают приложения на Next.js.",
+      "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
       "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-7qx7-33qx-rqx2",
+      "url": "https://github.com/nodejs/node/releases/tag/v22.23.5",
       "tags": [
-        "next.js",
-        "безопасность"
+        "node.js",
+        "обновление"
       ],
-      "changeType": "tooling",
+      "changeType": "minor",
       "technologies": [
-        "nextjs"
+        "platform"
       ],
-      "packages": [
-        {
-          "name": "next",
-          "releasedVersion": null,
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
+      "packages": [],
       "risk": "low",
       "effort": "minutes",
       "actionItems": [

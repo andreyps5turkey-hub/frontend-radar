@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-11T14:20:10.159Z",
+  "generatedAt": "2026-11-12T13:12:25.762Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -17077,17 +17077,6 @@
       ],
       "events": [
         {
-          "id": "65e193fc0833e0",
-          "kind": "minor",
-          "priority": "P2",
-          "version": "10.6.7",
-          "title": "Storybook Releases: выпуск v10.6.7",
-          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-          "publishedAt": "2026-11-10T11:48:02Z",
-          "source": "Storybook Releases",
-          "url": "https://github.com/storybookjs/storybook/releases/tag/v10.6.7"
-        },
-        {
           "id": "e392b1dd4863ca",
           "kind": "minor",
           "priority": "P1",
@@ -18019,15 +18008,15 @@
       "packageNames": [
         "prettier"
       ],
-      "latestVersion": "3.10.0",
-      "latestPublishedAt": "2026-11-11T12:30:48.716Z",
+      "latestVersion": "3.10.1",
+      "latestPublishedAt": "2026-11-12T07:06:22.298Z",
       "npmUrl": "https://www.npmjs.com/package/prettier",
       "repositoryUrl": "https://github.com/prettier/prettier",
       "packages": [
         {
           "name": "prettier",
-          "latestVersion": "3.10.0",
-          "latestPublishedAt": "2026-11-11T12:30:48.716Z",
+          "latestVersion": "3.10.1",
+          "latestPublishedAt": "2026-11-12T07:06:22.298Z",
           "npmUrl": "https://www.npmjs.com/package/prettier",
           "compatibility": [
             {
@@ -18058,9 +18047,9 @@
               "deprecated": null
             },
             {
-              "range": ">=3.0.0 <=3.10.0",
+              "range": ">=3.0.0 <=3.10.1",
               "minVersion": "3.0.0",
-              "maxVersion": "3.10.0",
+              "maxVersion": "3.10.1",
               "peerDependencies": {},
               "optionalPeers": [],
               "nodeRange": ">=14",
@@ -18068,6 +18057,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "3.10.1",
+              "publishedAt": "2026-11-12T07:06:22.298Z"
+            },
             {
               "version": "3.10.0",
               "publishedAt": "2026-11-11T12:30:48.716Z"
