@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "date": "2026-11-12",
-  "generatedAt": "2026-11-12T13:12:19.051Z",
+  "date": "2026-11-13",
+  "generatedAt": "2026-11-13T12:34:43.115Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -10,48 +10,52 @@
     "succeeded": 32,
     "failed": []
   },
-  "status": "active",
-  "summary": "В окне дня выпущены обновления LTS Node.js с критическими исправлениями безопасности.",
-  "items": [
-    {
-      "priority": "P0",
-      "title": "Node.js v26.13.1 «Lithium» – критические исправления безопасности",
-      "source": "Node.js Releases",
-      "publishedAt": "2026-11-11T16:44:25Z",
-      "whyImportant": "Обновление устраняет несколько уязвимостей, включая CVE‑2026‑123863‑123872, которые могут позволить удалённому исполнению кода.",
-      "audience": "Разработчики, использующие Node.js 26.x",
-      "nextStep": "Обновить до версии 26.13.1 как можно скорее, проверить совместимость приложений.",
-      "url": "https://github.com/nodejs/node/releases/tag/v26.13.1",
-      "tags": [
-        "Node.js",
-        "LTS",
-        "безопасность"
-      ],
-      "changeType": "security",
-      "technologies": [
-        "platform"
-      ],
-      "packages": [],
-      "risk": "unknown",
-      "effort": "hours",
-      "actionItems": [
-        "Проверить наличие зависимостей, требующих обновления",
-        "Запустить тесты интеграции",
-        "Обновить Dockerfile и CI‑конфигурацию"
-      ],
-      "detailsConfidence": "source"
-    }
-  ],
+  "status": "quiet",
+  "summary": "Значимых новых событий не найдено. Подборка для чтения собрана в резервном режиме.",
+  "items": [],
   "readLater": [
     {
       "priority": "P3",
-      "title": "Node.js Releases: выпуск 24.22.3",
+      "title": "Новый материал от Next.js Security",
+      "source": "Next.js Security",
+      "publishedAt": "2026-11-03T18:39:51Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, которые поддерживают приложения на Next.js.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-7qx7-33qx-rqx2",
+      "tags": [
+        "next.js",
+        "безопасность"
+      ],
+      "changeType": "tooling",
+      "technologies": [
+        "nextjs"
+      ],
+      "packages": [
+        {
+          "name": "next",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    },
+    {
+      "priority": "P3",
+      "title": "Node.js Releases: выпуск 26.13.1",
       "source": "Node.js Releases",
-      "publishedAt": "2026-11-11T16:44:08Z",
+      "publishedAt": "2026-11-11T16:44:25Z",
       "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
       "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
       "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/nodejs/node/releases/tag/v24.22.3",
+      "url": "https://github.com/nodejs/node/releases/tag/v26.13.1",
       "tags": [
         "node.js",
         "обновление"
@@ -71,13 +75,13 @@
     },
     {
       "priority": "P3",
-      "title": "Node.js Releases: выпуск 22.23.5",
+      "title": "Node.js Releases: выпуск 24.22.3",
       "source": "Node.js Releases",
-      "publishedAt": "2026-11-11T16:44:03Z",
+      "publishedAt": "2026-11-11T16:44:08Z",
       "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
       "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
       "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/nodejs/node/releases/tag/v22.23.5",
+      "url": "https://github.com/nodejs/node/releases/tag/v24.22.3",
       "tags": [
         "node.js",
         "обновление"
