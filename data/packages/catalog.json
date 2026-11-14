@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-13T19:38:52.107Z",
+  "generatedAt": "2026-11-14T11:43:37.337Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -17217,15 +17217,15 @@
       "packageNames": [
         "eslint"
       ],
-      "latestVersion": "10.14.0",
-      "latestPublishedAt": "2026-10-30T14:12:27.179Z",
+      "latestVersion": "10.15.0",
+      "latestPublishedAt": "2026-11-13T21:33:34.115Z",
       "npmUrl": "https://www.npmjs.com/package/eslint",
       "repositoryUrl": "https://github.com/eslint/eslint",
       "packages": [
         {
           "name": "eslint",
-          "latestVersion": "10.14.0",
-          "latestPublishedAt": "2026-10-30T14:12:27.179Z",
+          "latestVersion": "10.15.0",
+          "latestPublishedAt": "2026-11-13T21:33:34.115Z",
           "npmUrl": "https://www.npmjs.com/package/eslint",
           "compatibility": [
             {
@@ -17256,9 +17256,9 @@
               "deprecated": "This version is no longer supported. Please see https://eslint.org/version-support for other options."
             },
             {
-              "range": ">=10.0.0 <=10.14.0",
+              "range": ">=10.0.0 <=10.15.0",
               "minVersion": "10.0.0",
-              "maxVersion": "10.14.0",
+              "maxVersion": "10.15.0",
               "peerDependencies": {},
               "optionalPeers": [],
               "nodeRange": "^20.19.0 || ^22.13.0 || >=24",
@@ -17266,6 +17266,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "10.15.0",
+              "publishedAt": "2026-11-13T21:33:34.115Z"
+            },
             {
               "version": "10.14.0",
               "publishedAt": "2026-10-30T14:12:27.179Z"
@@ -17955,6 +17959,17 @@
       ],
       "advisories": [],
       "events": [
+        {
+          "id": "d19b406d4925ad",
+          "kind": "minor",
+          "priority": "P3",
+          "version": "10.15.0",
+          "title": "ESLint Releases: выпуск v10.15.0",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-11-13T21:29:31Z",
+          "source": "ESLint Releases",
+          "url": "https://github.com/eslint/eslint/releases/tag/v10.15.0"
+        },
         {
           "id": "2c99df1bd25c42",
           "kind": "minor",
