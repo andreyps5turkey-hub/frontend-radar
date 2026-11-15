@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "date": "2026-11-14",
-  "generatedAt": "2026-11-14T17:58:21.356Z",
+  "date": "2026-11-15",
+  "generatedAt": "2026-11-15T12:13:48.195Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -10,24 +10,24 @@
     "succeeded": 32,
     "failed": []
   },
-  "status": "active",
-  "summary": "В окне дня обновление DOMPurify 3.4.18 устраняет уязвимость, позволяющую внедрить шаблонные выражения. Рекомендуется обновить пакет.",
-  "items": [
+  "status": "quiet",
+  "summary": "Значимых новых событий не найдено. Подборка для чтения собрана в резервном режиме.",
+  "items": [],
+  "readLater": [
     {
-      "priority": "P0",
-      "title": "DOMPurify 3.4.18: исправление обхода SAFE_FOR_TEMPLATES",
+      "priority": "P3",
+      "title": "DOMPurify Releases: выпуск 3.4.18",
       "source": "DOMPurify Releases",
       "publishedAt": "2026-11-14T14:15:29Z",
-      "whyImportant": "Обновление устраняет уязвимость, позволяющую внедрить шаблонные выражения при очистке HTML.",
-      "audience": "frontend-разработчики, использующие DOMPurify",
-      "nextStep": "Обновите пакет до версии 3.4.18 и проверьте корректность очистки контента.",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы DOMPurify Releases.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
       "url": "https://github.com/cure53/DOMPurify/releases/tag/3.4.18",
       "tags": [
-        "DOMPurify",
-        "безопасность",
-        "XSS"
+        "dompurify",
+        "обновление"
       ],
-      "changeType": "security",
+      "changeType": "minor",
       "technologies": [
         "platform"
       ],
@@ -39,42 +39,34 @@
           "fixedVersion": null
         }
       ],
-      "risk": "unknown",
-      "effort": "hours",
+      "risk": "low",
+      "effort": "minutes",
       "actionItems": [
-        "Обновить пакет до 3.4.18",
-        "Проверить, что очистка работает как ожидается"
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
       ],
-      "detailsConfidence": "source"
-    }
-  ],
-  "readLater": [
+      "detailsConfidence": "inferred"
+    },
     {
       "priority": "P3",
-      "title": "Storybook Releases: выпуск v10.6.7",
-      "source": "Storybook Releases",
-      "publishedAt": "2026-11-10T11:48:02Z",
+      "title": "Новый материал от Next.js Security",
+      "source": "Next.js Security",
+      "publishedAt": "2026-11-03T18:39:51Z",
       "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы Storybook Releases.",
+      "audience": "Команды, которые поддерживают приложения на Next.js.",
       "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/storybookjs/storybook/releases/tag/v10.6.7",
+      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-7qx7-33qx-rqx2",
       "tags": [
-        "storybook",
-        "обновление"
+        "next.js",
+        "безопасность"
       ],
-      "changeType": "minor",
+      "changeType": "tooling",
       "technologies": [
-        "storybook"
+        "nextjs"
       ],
       "packages": [
         {
-          "name": "storybook",
-          "releasedVersion": "v10.6.7",
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "@storybook/react",
+          "name": "next",
           "releasedVersion": null,
           "affectedRange": null,
           "fixedVersion": null
@@ -90,30 +82,22 @@
     },
     {
       "priority": "P3",
-      "title": "ESLint Releases: выпуск v10.15.0",
-      "source": "ESLint Releases",
-      "publishedAt": "2026-11-13T21:29:31Z",
+      "title": "Node.js Releases: выпуск 26.13.1",
+      "source": "Node.js Releases",
+      "publishedAt": "2026-11-11T16:44:25Z",
       "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы ESLint Releases.",
+      "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
       "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/eslint/eslint/releases/tag/v10.15.0",
+      "url": "https://github.com/nodejs/node/releases/tag/v26.13.1",
       "tags": [
-        "eslint",
+        "node.js",
         "обновление"
       ],
       "changeType": "minor",
       "technologies": [
-        "typescript",
-        "quality"
+        "platform"
       ],
-      "packages": [
-        {
-          "name": "eslint",
-          "releasedVersion": "v10.15.0",
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
+      "packages": [],
       "risk": "low",
       "effort": "minutes",
       "actionItems": [
