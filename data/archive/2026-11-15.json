@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "date": "2026-11-15",
-  "generatedAt": "2026-11-15T13:54:50.167Z",
+  "generatedAt": "2026-11-15T18:48:52.605Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -14,39 +14,6 @@
   "summary": "Значимых новых событий не найдено. Подборка для чтения собрана в резервном режиме.",
   "items": [],
   "readLater": [
-    {
-      "priority": "P3",
-      "title": "DOMPurify Releases: выпуск 3.4.18",
-      "source": "DOMPurify Releases",
-      "publishedAt": "2026-11-14T14:15:29Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы DOMPurify Releases.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/cure53/DOMPurify/releases/tag/3.4.18",
-      "tags": [
-        "dompurify",
-        "обновление"
-      ],
-      "changeType": "minor",
-      "technologies": [
-        "platform"
-      ],
-      "packages": [
-        {
-          "name": "dompurify",
-          "releasedVersion": "3.4.18",
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "low",
-      "effort": "minutes",
-      "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
-      ],
-      "detailsConfidence": "inferred"
-    },
     {
       "priority": "P3",
       "title": "Новый материал от Next.js Security",
@@ -89,6 +56,32 @@
       "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
       "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
       "url": "https://github.com/nodejs/node/releases/tag/v26.13.1",
+      "tags": [
+        "node.js",
+        "обновление"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "platform"
+      ],
+      "packages": [],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    },
+    {
+      "priority": "P3",
+      "title": "Node.js Releases: выпуск 24.22.3",
+      "source": "Node.js Releases",
+      "publishedAt": "2026-11-11T16:44:08Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/nodejs/node/releases/tag/v24.22.3",
       "tags": [
         "node.js",
         "обновление"
