@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "date": "2026-11-16",
-  "generatedAt": "2026-11-16T15:43:21.993Z",
+  "date": "2026-11-17",
+  "generatedAt": "2026-11-16T21:58:59.890Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -10,9 +10,51 @@
     "succeeded": 32,
     "failed": []
   },
-  "status": "quiet",
-  "summary": "Значимых новых событий не найдено. Подборка для чтения собрана в резервном режиме.",
-  "items": [],
+  "status": "active",
+  "summary": "Выпущена новая версия typescript-eslint с новыми правилами и улучшениями.",
+  "items": [
+    {
+      "priority": "P1",
+      "title": "Версия 8.73.0",
+      "source": "typescript-eslint Releases",
+      "publishedAt": "2026-11-16T17:04:16Z",
+      "whyImportant": "Добавлены новые правила eslint-plugin и улучшена поддержка TypeScript 7.1 через IPC, что повышает гибкость и производительность линтинга.",
+      "audience": "Frontend‑инженеры, использующие TypeScript и ESLint",
+      "nextStep": "Обновите пакеты typescript-eslint и @typescript-eslint/parser до версии 8.73.0, проверьте конфигурацию правил и запустите тесты линтинга.",
+      "url": "https://github.com/typescript-eslint/typescript-eslint/releases/tag/v8.73.0",
+      "tags": [
+        "typescript-eslint",
+        "eslint",
+        "typescript"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "typescript"
+      ],
+      "packages": [
+        {
+          "name": "typescript-eslint",
+          "releasedVersion": "8.73.0",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "@typescript-eslint/parser",
+          "releasedVersion": "8.73.0",
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
+      "effort": "days",
+      "actionItems": [
+        "Обновить пакеты до 8.73.0",
+        "Проверить конфигурацию правил",
+        "Запустить линтер и тесты"
+      ],
+      "detailsConfidence": "source"
+    }
+  ],
   "readLater": [
     {
       "priority": "P3",
@@ -65,32 +107,6 @@
           "fixedVersion": null
         }
       ],
-      "risk": "low",
-      "effort": "minutes",
-      "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
-      ],
-      "detailsConfidence": "inferred"
-    },
-    {
-      "priority": "P3",
-      "title": "Node.js Releases: выпуск 26.13.1",
-      "source": "Node.js Releases",
-      "publishedAt": "2026-11-11T16:44:25Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/nodejs/node/releases/tag/v26.13.1",
-      "tags": [
-        "node.js",
-        "обновление"
-      ],
-      "changeType": "minor",
-      "technologies": [
-        "platform"
-      ],
-      "packages": [],
       "risk": "low",
       "effort": "minutes",
       "actionItems": [

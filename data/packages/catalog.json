@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-16T15:43:30.787Z",
+  "generatedAt": "2026-11-16T21:59:06.234Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -2995,6 +2995,24 @@
         }
       ],
       "advisories": [
+        {
+          "ghsaId": "GHSA-mfr8-8qww-v76h",
+          "cveId": "CVE-2026-119790",
+          "severity": "medium",
+          "cvss": null,
+          "title": "Уязвимость GHSA-mfr8-8qww-v76h в next",
+          "summary": "Проверьте установленную версию next и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
+          "publishedAt": "2026-11-16T18:51:22Z",
+          "updatedAt": "2026-11-16T18:51:23Z",
+          "url": "https://github.com/advisories/GHSA-mfr8-8qww-v76h",
+          "vulnerabilities": [
+            {
+              "packageName": "next",
+              "vulnerableRange": ">= 16.3.0, <= 16.4.4",
+              "fixedVersion": null
+            }
+          ]
+        },
         {
           "ghsaId": "GHSA-26hh-7cqf-hhc6",
           "cveId": "CVE-2026-45109",
