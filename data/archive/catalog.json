@@ -1,7 +1,91 @@
 {
   "version": 2,
-  "updatedAt": "2026-11-16T21:58:59.890Z",
+  "updatedAt": "2026-11-18T13:23:46.285Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-11-18",
+      "generatedAt": "2026-11-18T13:23:46.285Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 32,
+      "sourceHealth": {
+        "attempted": 32,
+        "succeeded": 32,
+        "failed": []
+      },
+      "status": "quiet",
+      "summary": "В течение дня не было критических обновлений, но есть несколько релизов, которые стоит изучить позже.",
+      "items": [],
+      "readLater": [
+        {
+          "priority": "P3",
+          "title": "Релиз solid-query 2026‑11‑18 01:34 – новые возможности single‑flight и адаптер для Solid 2.0",
+          "source": "TanStack Query Releases",
+          "publishedAt": "2026-11-18T01:34:38Z",
+          "whyImportant": "Добавлены улучшения производительности и совместимости с последней версией Solid, что упрощает работу с кэшом и асинхронными запросами.",
+          "audience": "Разработчики, использующие solid‑query",
+          "nextStep": "Изучить новые фичи и обновить зависимости до версии release‑2026‑11‑18‑0134.",
+          "url": "https://github.com/TanStack/query/releases/tag/release-2026-11-18-0134",
+          "tags": [
+            "solid-query",
+            "Solid 2.0",
+            "single‑flight"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "query"
+          ],
+          "packages": [
+            {
+              "name": "@tanstack/react-query",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить совместимость текущих запросов с новой версией"
+          ],
+          "detailsConfidence": "unknown"
+        },
+        {
+          "priority": "P3",
+          "title": "Puppeteer‑core v25.18.1 – исправление Bidi и CI‑проверок",
+          "source": "Puppeteer Releases",
+          "publishedAt": "2026-11-17T16:21:20Z",
+          "whyImportant": "Исправлены проблемы с bidirectional API и обновлены CI‑тесты, что повышает надёжность автоматизации браузера.",
+          "audience": "Разработчики, использующие Puppeteer",
+          "nextStep": "Обновить puppeteer-core до v25.18.1 и проверить скрипты на наличие regressions.",
+          "url": "https://github.com/puppeteer/puppeteer/releases/tag/puppeteer-core-v25.18.1",
+          "tags": [
+            "puppeteer",
+            "bidi",
+            "CI"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "platform"
+          ],
+          "packages": [
+            {
+              "name": "puppeteer",
+              "releasedVersion": "25.18.1",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "unknown",
+          "effort": "minutes",
+          "actionItems": [
+            "Обновить зависимость puppeteer-core до 25.18.1"
+          ],
+          "detailsConfidence": "source"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-11-17",

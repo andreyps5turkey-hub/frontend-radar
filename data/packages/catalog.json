@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-16T21:59:06.234Z",
+  "generatedAt": "2026-11-18T13:23:52.933Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -2995,6 +2995,24 @@
         }
       ],
       "advisories": [
+        {
+          "ghsaId": "GHSA-vc7v-qv4w-wrv8",
+          "cveId": "CVE-2026-119351",
+          "severity": "medium",
+          "cvss": null,
+          "title": "Уязвимость GHSA-vc7v-qv4w-wrv8 в next",
+          "summary": "Проверьте установленную версию next и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
+          "publishedAt": "2026-11-17T16:13:26Z",
+          "updatedAt": "2026-11-17T16:13:27Z",
+          "url": "https://github.com/advisories/GHSA-vc7v-qv4w-wrv8",
+          "vulnerabilities": [
+            {
+              "packageName": "next",
+              "vulnerableRange": ">= 16.2.0, <= 16.4.4",
+              "fixedVersion": null
+            }
+          ]
+        },
         {
           "ghsaId": "GHSA-mfr8-8qww-v76h",
           "cveId": "CVE-2026-119790",
@@ -9984,15 +10002,15 @@
       "packageNames": [
         "@tanstack/react-query"
       ],
-      "latestVersion": "5.107.1",
-      "latestPublishedAt": "2026-11-06T23:04:47.891Z",
+      "latestVersion": "5.108.0",
+      "latestPublishedAt": "2026-11-17T13:45:33.768Z",
       "npmUrl": "https://www.npmjs.com/package/@tanstack/react-query",
       "repositoryUrl": "https://github.com/TanStack/query",
       "packages": [
         {
           "name": "@tanstack/react-query",
-          "latestVersion": "5.107.1",
-          "latestPublishedAt": "2026-11-06T23:04:47.891Z",
+          "latestVersion": "5.108.0",
+          "latestPublishedAt": "2026-11-17T13:45:33.768Z",
           "npmUrl": "https://www.npmjs.com/package/@tanstack/react-query",
           "compatibility": [
             {
@@ -10049,9 +10067,9 @@
               "deprecated": null
             },
             {
-              "range": ">=5.52.1 <=5.107.1",
+              "range": ">=5.52.1 <=5.108.0",
               "minVersion": "5.52.1",
-              "maxVersion": "5.107.1",
+              "maxVersion": "5.108.0",
               "peerDependencies": {
                 "react": "^18 || ^19"
               },
@@ -10061,6 +10079,14 @@
             }
           ],
           "versions": [
+            {
+              "version": "5.108.0",
+              "publishedAt": "2026-11-17T13:45:33.768Z"
+            },
+            {
+              "version": "5.107.2",
+              "publishedAt": "2026-11-17T10:34:48.442Z"
+            },
             {
               "version": "5.107.1",
               "publishedAt": "2026-11-06T23:04:47.891Z"
@@ -11878,6 +11904,17 @@
       ],
       "advisories": [],
       "events": [
+        {
+          "id": "bdb924a79d06c3",
+          "kind": "minor",
+          "priority": "P3",
+          "version": "2.0",
+          "title": "Релиз solid-query 2026‑11‑18 01:34 – новые возможности single‑flight и адаптер для Solid 2.0",
+          "summary": "Добавлены улучшения производительности и совместимости с последней версией Solid, что упрощает работу с кэшом и асинхронными запросами.",
+          "publishedAt": "2026-11-18T01:34:38Z",
+          "source": "TanStack Query Releases",
+          "url": "https://github.com/TanStack/query/releases/tag/release-2026-11-18-0134"
+        },
         {
           "id": "e04cae9338d86d",
           "kind": "minor",

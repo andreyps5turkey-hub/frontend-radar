@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "date": "2026-11-17",
-  "generatedAt": "2026-11-16T21:58:59.890Z",
+  "date": "2026-11-18",
+  "generatedAt": "2026-11-18T13:23:46.285Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -10,110 +10,75 @@
     "succeeded": 32,
     "failed": []
   },
-  "status": "active",
-  "summary": "Выпущена новая версия typescript-eslint с новыми правилами и улучшениями.",
-  "items": [
-    {
-      "priority": "P1",
-      "title": "Версия 8.73.0",
-      "source": "typescript-eslint Releases",
-      "publishedAt": "2026-11-16T17:04:16Z",
-      "whyImportant": "Добавлены новые правила eslint-plugin и улучшена поддержка TypeScript 7.1 через IPC, что повышает гибкость и производительность линтинга.",
-      "audience": "Frontend‑инженеры, использующие TypeScript и ESLint",
-      "nextStep": "Обновите пакеты typescript-eslint и @typescript-eslint/parser до версии 8.73.0, проверьте конфигурацию правил и запустите тесты линтинга.",
-      "url": "https://github.com/typescript-eslint/typescript-eslint/releases/tag/v8.73.0",
-      "tags": [
-        "typescript-eslint",
-        "eslint",
-        "typescript"
-      ],
-      "changeType": "minor",
-      "technologies": [
-        "typescript"
-      ],
-      "packages": [
-        {
-          "name": "typescript-eslint",
-          "releasedVersion": "8.73.0",
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "@typescript-eslint/parser",
-          "releasedVersion": "8.73.0",
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "unknown",
-      "effort": "days",
-      "actionItems": [
-        "Обновить пакеты до 8.73.0",
-        "Проверить конфигурацию правил",
-        "Запустить линтер и тесты"
-      ],
-      "detailsConfidence": "source"
-    }
-  ],
+  "status": "quiet",
+  "summary": "В течение дня не было критических обновлений, но есть несколько релизов, которые стоит изучить позже.",
+  "items": [],
   "readLater": [
     {
       "priority": "P3",
-      "title": "Новый материал от Веб-стандарты",
-      "source": "Веб-стандарты",
-      "publishedAt": "Mon, 16 Nov 2026 09:00:00 GMT",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы Веб-стандарты.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://web-standards.ru/podcast/553/",
+      "title": "Релиз solid-query 2026‑11‑18 01:34 – новые возможности single‑flight и адаптер для Solid 2.0",
+      "source": "TanStack Query Releases",
+      "publishedAt": "2026-11-18T01:34:38Z",
+      "whyImportant": "Добавлены улучшения производительности и совместимости с последней версией Solid, что упрощает работу с кэшом и асинхронными запросами.",
+      "audience": "Разработчики, использующие solid‑query",
+      "nextStep": "Изучить новые фичи и обновить зависимости до версии release‑2026‑11‑18‑0134.",
+      "url": "https://github.com/TanStack/query/releases/tag/release-2026-11-18-0134",
       "tags": [
-        "веб-стандарты",
-        "обновление"
+        "solid-query",
+        "Solid 2.0",
+        "single‑flight"
       ],
-      "changeType": "guide",
+      "changeType": "minor",
       "technologies": [
-        "platform"
-      ],
-      "packages": [],
-      "risk": "low",
-      "effort": "minutes",
-      "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
-      ],
-      "detailsConfidence": "inferred"
-    },
-    {
-      "priority": "P3",
-      "title": "Новый материал от Next.js Security",
-      "source": "Next.js Security",
-      "publishedAt": "2026-11-03T18:39:51Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, которые поддерживают приложения на Next.js.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-7qx7-33qx-rqx2",
-      "tags": [
-        "next.js",
-        "безопасность"
-      ],
-      "changeType": "tooling",
-      "technologies": [
-        "nextjs"
+        "query"
       ],
       "packages": [
         {
-          "name": "next",
+          "name": "@tanstack/react-query",
           "releasedVersion": null,
           "affectedRange": null,
           "fixedVersion": null
         }
       ],
-      "risk": "low",
+      "risk": "unknown",
       "effort": "minutes",
       "actionItems": [
-        "Проверить список изменений в первоисточнике.",
-        "Протестировать обновление в отдельной ветке."
+        "Проверить совместимость текущих запросов с новой версией"
       ],
-      "detailsConfidence": "inferred"
+      "detailsConfidence": "unknown"
+    },
+    {
+      "priority": "P3",
+      "title": "Puppeteer‑core v25.18.1 – исправление Bidi и CI‑проверок",
+      "source": "Puppeteer Releases",
+      "publishedAt": "2026-11-17T16:21:20Z",
+      "whyImportant": "Исправлены проблемы с bidirectional API и обновлены CI‑тесты, что повышает надёжность автоматизации браузера.",
+      "audience": "Разработчики, использующие Puppeteer",
+      "nextStep": "Обновить puppeteer-core до v25.18.1 и проверить скрипты на наличие regressions.",
+      "url": "https://github.com/puppeteer/puppeteer/releases/tag/puppeteer-core-v25.18.1",
+      "tags": [
+        "puppeteer",
+        "bidi",
+        "CI"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "platform"
+      ],
+      "packages": [
+        {
+          "name": "puppeteer",
+          "releasedVersion": "25.18.1",
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
+      "effort": "minutes",
+      "actionItems": [
+        "Обновить зависимость puppeteer-core до 25.18.1"
+      ],
+      "detailsConfidence": "source"
     }
   ]
 }
