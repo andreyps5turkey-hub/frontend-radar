@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "date": "2026-11-18",
-  "generatedAt": "2026-11-18T13:23:46.285Z",
+  "date": "2026-11-19",
+  "generatedAt": "2026-11-19T13:50:53.899Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -10,75 +10,189 @@
     "succeeded": 32,
     "failed": []
   },
-  "status": "quiet",
-  "summary": "В течение дня не было критических обновлений, но есть несколько релизов, которые стоит изучить позже.",
-  "items": [],
-  "readLater": [
+  "status": "active",
+  "summary": "В окне дня обновления React Router и Redux Toolkit",
+  "items": [
     {
-      "priority": "P3",
-      "title": "Релиз solid-query 2026‑11‑18 01:34 – новые возможности single‑flight и адаптер для Solid 2.0",
-      "source": "TanStack Query Releases",
-      "publishedAt": "2026-11-18T01:34:38Z",
-      "whyImportant": "Добавлены улучшения производительности и совместимости с последней версией Solid, что упрощает работу с кэшом и асинхронными запросами.",
-      "audience": "Разработчики, использующие solid‑query",
-      "nextStep": "Изучить новые фичи и обновить зависимости до версии release‑2026‑11‑18‑0134.",
-      "url": "https://github.com/TanStack/query/releases/tag/release-2026-11-18-0134",
+      "priority": "P1",
+      "title": "Обновление Redux Toolkit v2.15.0",
+      "source": "Redux Toolkit Releases",
+      "publishedAt": "2026-11-18T19:47:01Z",
+      "whyImportant": "Новый релиз добавляет отдельный RTK Query‑middleware для каждого store и исправляет ряд багов, влияющих на поведение запросов.",
+      "audience": "Разработчики, использующие Redux Toolkit и RTK Query",
+      "nextStep": "Проверьте совместимость вашего кода с новыми опциями и обновите зависимости до v2.15.0.",
+      "url": "https://github.com/reduxjs/redux-toolkit/releases/tag/v2.15.0",
       "tags": [
-        "solid-query",
-        "Solid 2.0",
-        "single‑flight"
+        "Redux Toolkit",
+        "RTK Query"
       ],
       "changeType": "minor",
       "technologies": [
-        "query"
+        "redux"
       ],
       "packages": [
         {
-          "name": "@tanstack/react-query",
+          "name": "@reduxjs/toolkit",
+          "releasedVersion": "v2.15.0",
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
+      "effort": "days",
+      "actionItems": [
+        "Обновить пакет @reduxjs/toolkit до v2.15.0",
+        "Проверить работу RTK Query после обновления",
+        "Изучить новые опции в документации"
+      ],
+      "detailsConfidence": "inferred"
+    },
+    {
+      "priority": "P2",
+      "title": "Обновление React Router v8.5.2",
+      "source": "React Router Releases",
+      "publishedAt": "2026-11-18T16:11:15Z",
+      "whyImportant": "Новый патч включает исправления и улучшения, повышающие стабильность маршрутизации в React 8.",
+      "audience": "Разработчики, использующие React Router v8",
+      "nextStep": "Обновите зависимости до v8.5.2 и проверьте маршруты на наличие ошибок.",
+      "url": "https://github.com/remix-run/react-router/releases/tag/react-router%408.5.2",
+      "tags": [
+        "React Router",
+        "React"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "router",
+        "react"
+      ],
+      "packages": [
+        {
+          "name": "react-router",
+          "releasedVersion": "v8.5.2",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "react-router-dom",
+          "releasedVersion": "v8.5.2",
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
+      "effort": "hours",
+      "actionItems": [
+        "Обновить пакеты react-router и react-router-dom до v8.5.2",
+        "Проверить работу маршрутов после обновления"
+      ],
+      "detailsConfidence": "inferred"
+    },
+    {
+      "priority": "P2",
+      "title": "Обновление React Router v7.18.6",
+      "source": "React Router Releases",
+      "publishedAt": "2026-11-18T17:31:58Z",
+      "whyImportant": "Патч исправляет ошибки и повышает совместимость в версии 7.",
+      "audience": "Разработчики, использующие React Router v7",
+      "nextStep": "Обновите зависимости до v7.18.6 и проверьте корректность навигации.",
+      "url": "https://github.com/remix-run/react-router/releases/tag/react-router%407.18.6",
+      "tags": [
+        "React Router",
+        "React"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "router",
+        "react"
+      ],
+      "packages": [
+        {
+          "name": "react-router",
+          "releasedVersion": "v7.18.6",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "react-router-dom",
+          "releasedVersion": "v7.18.6",
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
+      "effort": "hours",
+      "actionItems": [
+        "Обновить пакеты react-router и react-router-dom до v7.18.6",
+        "Проверить работу навигации после обновления"
+      ],
+      "detailsConfidence": "inferred"
+    }
+  ],
+  "readLater": [
+    {
+      "priority": "P3",
+      "title": "Что думают разработчики о HTML сейчас",
+      "source": "Frontend Focus",
+      "publishedAt": "Wed, 18 Nov 2026 00:00:00 +0000",
+      "whyImportant": "Обзор текущих тенденций использования HTML и новых возможностей браузеров.",
+      "audience": "Frontend‑разработчики",
+      "nextStep": "Прочитать статью для понимания актуальных практик.",
+      "url": "https://frontendfoc.us/issues/767",
+      "tags": [
+        "HTML",
+        "Тенденции"
+      ],
+      "changeType": "major",
+      "technologies": [
+        "platform"
+      ],
+      "packages": [],
+      "risk": "unknown",
+      "effort": "minutes",
+      "actionItems": [
+        "Прочитать статью о состоянии HTML 2026"
+      ],
+      "detailsConfidence": "source"
+    },
+    {
+      "priority": "P3",
+      "title": "React Router Releases: выпуск 7.18.6",
+      "source": "React Router Releases",
+      "publishedAt": "2026-11-18T17:28:47Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Разработчики и команды, использующие React.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/remix-run/react-router/releases/tag/react-router-dom%407.18.6",
+      "tags": [
+        "react",
+        "обновление"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "router",
+        "react"
+      ],
+      "packages": [
+        {
+          "name": "react-router",
+          "releasedVersion": "7.18.6",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "react-router-dom",
           "releasedVersion": null,
           "affectedRange": null,
           "fixedVersion": null
         }
       ],
-      "risk": "unknown",
+      "risk": "low",
       "effort": "minutes",
       "actionItems": [
-        "Проверить совместимость текущих запросов с новой версией"
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
       ],
-      "detailsConfidence": "unknown"
-    },
-    {
-      "priority": "P3",
-      "title": "Puppeteer‑core v25.18.1 – исправление Bidi и CI‑проверок",
-      "source": "Puppeteer Releases",
-      "publishedAt": "2026-11-17T16:21:20Z",
-      "whyImportant": "Исправлены проблемы с bidirectional API и обновлены CI‑тесты, что повышает надёжность автоматизации браузера.",
-      "audience": "Разработчики, использующие Puppeteer",
-      "nextStep": "Обновить puppeteer-core до v25.18.1 и проверить скрипты на наличие regressions.",
-      "url": "https://github.com/puppeteer/puppeteer/releases/tag/puppeteer-core-v25.18.1",
-      "tags": [
-        "puppeteer",
-        "bidi",
-        "CI"
-      ],
-      "changeType": "minor",
-      "technologies": [
-        "platform"
-      ],
-      "packages": [
-        {
-          "name": "puppeteer",
-          "releasedVersion": "25.18.1",
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "unknown",
-      "effort": "minutes",
-      "actionItems": [
-        "Обновить зависимость puppeteer-core до 25.18.1"
-      ],
-      "detailsConfidence": "source"
+      "detailsConfidence": "inferred"
     }
   ]
 }
