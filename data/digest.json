@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "date": "2026-11-19",
-  "generatedAt": "2026-11-19T13:50:53.899Z",
+  "date": "2026-11-20",
+  "generatedAt": "2026-11-20T13:33:11.387Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -11,119 +11,79 @@
     "failed": []
   },
   "status": "active",
-  "summary": "В окне дня обновления React Router и Redux Toolkit",
+  "summary": "Автоматическая подборка собрана в резервном режиме. Проверьте релизы по ссылкам на первоисточники.",
   "items": [
     {
       "priority": "P1",
-      "title": "Обновление Redux Toolkit v2.15.0",
-      "source": "Redux Toolkit Releases",
-      "publishedAt": "2026-11-18T19:47:01Z",
-      "whyImportant": "Новый релиз добавляет отдельный RTK Query‑middleware для каждого store и исправляет ряд багов, влияющих на поведение запросов.",
-      "audience": "Разработчики, использующие Redux Toolkit и RTK Query",
-      "nextStep": "Проверьте совместимость вашего кода с новыми опциями и обновите зависимости до v2.15.0.",
-      "url": "https://github.com/reduxjs/redux-toolkit/releases/tag/v2.15.0",
+      "title": "Stylelint Releases: выпуск 18.1.0",
+      "source": "Stylelint Releases",
+      "publishedAt": "2026-11-20T09:34:12Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы Stylelint Releases.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/stylelint/stylelint/releases/tag/18.1.0",
       "tags": [
-        "Redux Toolkit",
-        "RTK Query"
+        "stylelint",
+        "обновление"
       ],
-      "changeType": "minor",
+      "changeType": "breaking",
       "technologies": [
-        "redux"
+        "quality",
+        "platform"
       ],
       "packages": [
         {
-          "name": "@reduxjs/toolkit",
-          "releasedVersion": "v2.15.0",
+          "name": "stylelint",
+          "releasedVersion": "18.1.0",
           "affectedRange": null,
           "fixedVersion": null
         }
       ],
-      "risk": "unknown",
-      "effort": "days",
+      "risk": "low",
+      "effort": "minutes",
       "actionItems": [
-        "Обновить пакет @reduxjs/toolkit до v2.15.0",
-        "Проверить работу RTK Query после обновления",
-        "Изучить новые опции в документации"
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
       ],
       "detailsConfidence": "inferred"
     },
     {
       "priority": "P2",
-      "title": "Обновление React Router v8.5.2",
-      "source": "React Router Releases",
-      "publishedAt": "2026-11-18T16:11:15Z",
-      "whyImportant": "Новый патч включает исправления и улучшения, повышающие стабильность маршрутизации в React 8.",
-      "audience": "Разработчики, использующие React Router v8",
-      "nextStep": "Обновите зависимости до v8.5.2 и проверьте маршруты на наличие ошибок.",
-      "url": "https://github.com/remix-run/react-router/releases/tag/react-router%408.5.2",
+      "title": "Storybook Releases: выпуск v10.6.8",
+      "source": "Storybook Releases",
+      "publishedAt": "2026-11-20T08:15:54Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы Storybook Releases.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/storybookjs/storybook/releases/tag/v10.6.8",
       "tags": [
-        "React Router",
-        "React"
+        "storybook",
+        "обновление"
       ],
       "changeType": "minor",
       "technologies": [
-        "router",
-        "react"
+        "vite",
+        "storybook"
       ],
       "packages": [
         {
-          "name": "react-router",
-          "releasedVersion": "v8.5.2",
+          "name": "storybook",
+          "releasedVersion": "v10.6.8",
           "affectedRange": null,
           "fixedVersion": null
         },
         {
-          "name": "react-router-dom",
-          "releasedVersion": "v8.5.2",
+          "name": "@storybook/react",
+          "releasedVersion": null,
           "affectedRange": null,
           "fixedVersion": null
         }
       ],
-      "risk": "unknown",
-      "effort": "hours",
+      "risk": "low",
+      "effort": "minutes",
       "actionItems": [
-        "Обновить пакеты react-router и react-router-dom до v8.5.2",
-        "Проверить работу маршрутов после обновления"
-      ],
-      "detailsConfidence": "inferred"
-    },
-    {
-      "priority": "P2",
-      "title": "Обновление React Router v7.18.6",
-      "source": "React Router Releases",
-      "publishedAt": "2026-11-18T17:31:58Z",
-      "whyImportant": "Патч исправляет ошибки и повышает совместимость в версии 7.",
-      "audience": "Разработчики, использующие React Router v7",
-      "nextStep": "Обновите зависимости до v7.18.6 и проверьте корректность навигации.",
-      "url": "https://github.com/remix-run/react-router/releases/tag/react-router%407.18.6",
-      "tags": [
-        "React Router",
-        "React"
-      ],
-      "changeType": "minor",
-      "technologies": [
-        "router",
-        "react"
-      ],
-      "packages": [
-        {
-          "name": "react-router",
-          "releasedVersion": "v7.18.6",
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "react-router-dom",
-          "releasedVersion": "v7.18.6",
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "unknown",
-      "effort": "hours",
-      "actionItems": [
-        "Обновить пакеты react-router и react-router-dom до v7.18.6",
-        "Проверить работу навигации после обновления"
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
       ],
       "detailsConfidence": "inferred"
     }
@@ -131,61 +91,74 @@
   "readLater": [
     {
       "priority": "P3",
-      "title": "Что думают разработчики о HTML сейчас",
-      "source": "Frontend Focus",
-      "publishedAt": "Wed, 18 Nov 2026 00:00:00 +0000",
-      "whyImportant": "Обзор текущих тенденций использования HTML и новых возможностей браузеров.",
-      "audience": "Frontend‑разработчики",
-      "nextStep": "Прочитать статью для понимания актуальных практик.",
-      "url": "https://frontendfoc.us/issues/767",
-      "tags": [
-        "HTML",
-        "Тенденции"
-      ],
-      "changeType": "major",
-      "technologies": [
-        "platform"
-      ],
-      "packages": [],
-      "risk": "unknown",
-      "effort": "minutes",
-      "actionItems": [
-        "Прочитать статью о состоянии HTML 2026"
-      ],
-      "detailsConfidence": "source"
-    },
-    {
-      "priority": "P3",
-      "title": "React Router Releases: выпуск 7.18.6",
-      "source": "React Router Releases",
-      "publishedAt": "2026-11-18T17:28:47Z",
+      "title": "Node.js Releases: выпуск 26.13.1",
+      "source": "Node.js Releases",
+      "publishedAt": "2026-11-11T16:44:25Z",
       "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Разработчики и команды, использующие React.",
+      "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
       "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/remix-run/react-router/releases/tag/react-router-dom%407.18.6",
+      "url": "https://github.com/nodejs/node/releases/tag/v26.13.1",
       "tags": [
-        "react",
+        "node.js",
         "обновление"
       ],
       "changeType": "minor",
       "technologies": [
-        "router",
-        "react"
+        "platform"
       ],
-      "packages": [
-        {
-          "name": "react-router",
-          "releasedVersion": "7.18.6",
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "react-router-dom",
-          "releasedVersion": null,
-          "affectedRange": null,
-          "fixedVersion": null
-        }
+      "packages": [],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
       ],
+      "detailsConfidence": "inferred"
+    },
+    {
+      "priority": "P3",
+      "title": "Node.js Releases: выпуск 24.22.3",
+      "source": "Node.js Releases",
+      "publishedAt": "2026-11-11T16:44:08Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/nodejs/node/releases/tag/v24.22.3",
+      "tags": [
+        "node.js",
+        "обновление"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "platform"
+      ],
+      "packages": [],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    },
+    {
+      "priority": "P3",
+      "title": "Node.js Releases: выпуск 22.23.5",
+      "source": "Node.js Releases",
+      "publishedAt": "2026-11-11T16:44:03Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/nodejs/node/releases/tag/v22.23.5",
+      "tags": [
+        "node.js",
+        "обновление"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "platform"
+      ],
+      "packages": [],
       "risk": "low",
       "effort": "minutes",
       "actionItems": [

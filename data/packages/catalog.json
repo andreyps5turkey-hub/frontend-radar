@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-19T13:51:00.642Z",
+  "generatedAt": "2026-11-20T13:33:24.365Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -2995,6 +2995,111 @@
         }
       ],
       "advisories": [
+        {
+          "ghsaId": "GHSA-f3mh-rxg3-f5g2",
+          "cveId": "CVE-2026-119346",
+          "severity": "medium",
+          "cvss": null,
+          "title": "Уязвимость GHSA-f3mh-rxg3-f5g2 в next",
+          "summary": "Проверьте установленную версию next и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
+          "publishedAt": "2026-11-19T22:23:21Z",
+          "updatedAt": "2026-11-19T22:23:37Z",
+          "url": "https://github.com/advisories/GHSA-f3mh-rxg3-f5g2",
+          "vulnerabilities": [
+            {
+              "packageName": "next",
+              "vulnerableRange": ">= 15.0.0, <= 15.5.28",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "next",
+              "vulnerableRange": ">= 16.0.0, <= 16.4.4",
+              "fixedVersion": null
+            }
+          ]
+        },
+        {
+          "ghsaId": "GHSA-7qx7-33qx-rqx2",
+          "cveId": "CVE-2026-119347",
+          "severity": "medium",
+          "cvss": null,
+          "title": "Уязвимость GHSA-7qx7-33qx-rqx2 в next",
+          "summary": "Проверьте установленную версию next и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
+          "publishedAt": "2026-11-19T22:23:06Z",
+          "updatedAt": "2026-11-19T22:23:37Z",
+          "url": "https://github.com/advisories/GHSA-7qx7-33qx-rqx2",
+          "vulnerabilities": [
+            {
+              "packageName": "next",
+              "vulnerableRange": ">= 15.0.0, <= 15.5.28",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "next",
+              "vulnerableRange": ">= 16.0.0, <= 16.4.4",
+              "fixedVersion": null
+            }
+          ]
+        },
+        {
+          "ghsaId": "GHSA-pc58-hwjq-p385",
+          "cveId": "CVE-2026-119348",
+          "severity": "medium",
+          "cvss": null,
+          "title": "Уязвимость GHSA-pc58-hwjq-p385 в next",
+          "summary": "Проверьте установленную версию next и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
+          "publishedAt": "2026-11-19T22:20:34Z",
+          "updatedAt": "2026-11-19T22:20:35Z",
+          "url": "https://github.com/advisories/GHSA-pc58-hwjq-p385",
+          "vulnerabilities": [
+            {
+              "packageName": "next",
+              "vulnerableRange": ">= 16.0.0, <= 16.4.4",
+              "fixedVersion": null
+            },
+            {
+              "packageName": "next",
+              "vulnerableRange": "<= 15.5.28",
+              "fixedVersion": null
+            }
+          ]
+        },
+        {
+          "ghsaId": "GHSA-rhh4-g77r-r9qj",
+          "cveId": "CVE-2026-119349",
+          "severity": "medium",
+          "cvss": null,
+          "title": "Уязвимость GHSA-rhh4-g77r-r9qj в next",
+          "summary": "Проверьте установленную версию next и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
+          "publishedAt": "2026-11-19T22:20:11Z",
+          "updatedAt": "2026-11-19T22:20:14Z",
+          "url": "https://github.com/advisories/GHSA-rhh4-g77r-r9qj",
+          "vulnerabilities": [
+            {
+              "packageName": "next",
+              "vulnerableRange": ">= 16.0.0, <= 16.4.4",
+              "fixedVersion": null
+            }
+          ]
+        },
+        {
+          "ghsaId": "GHSA-vvgp-ww4w-46vf",
+          "cveId": "CVE-2026-119350",
+          "severity": "medium",
+          "cvss": null,
+          "title": "Уязвимость GHSA-vvgp-ww4w-46vf в next",
+          "summary": "Проверьте установленную версию next и обновитесь до исправленного релиза, если она входит в затронутый диапазон.",
+          "publishedAt": "2026-11-19T22:18:08Z",
+          "updatedAt": "2026-11-19T22:18:08Z",
+          "url": "https://github.com/advisories/GHSA-vvgp-ww4w-46vf",
+          "vulnerabilities": [
+            {
+              "packageName": "next",
+              "vulnerableRange": ">= 16.4.0, <= 16.4.4",
+              "fixedVersion": null
+            }
+          ]
+        },
         {
           "ghsaId": "GHSA-vc7v-qv4w-wrv8",
           "cveId": "CVE-2026-119351",
@@ -10062,15 +10167,15 @@
       "packageNames": [
         "@tanstack/react-query"
       ],
-      "latestVersion": "5.108.0",
-      "latestPublishedAt": "2026-11-17T13:45:33.768Z",
+      "latestVersion": "5.108.1",
+      "latestPublishedAt": "2026-11-19T14:03:03.906Z",
       "npmUrl": "https://www.npmjs.com/package/@tanstack/react-query",
       "repositoryUrl": "https://github.com/TanStack/query",
       "packages": [
         {
           "name": "@tanstack/react-query",
-          "latestVersion": "5.108.0",
-          "latestPublishedAt": "2026-11-17T13:45:33.768Z",
+          "latestVersion": "5.108.1",
+          "latestPublishedAt": "2026-11-19T14:03:03.906Z",
           "npmUrl": "https://www.npmjs.com/package/@tanstack/react-query",
           "compatibility": [
             {
@@ -10127,9 +10232,9 @@
               "deprecated": null
             },
             {
-              "range": ">=5.52.1 <=5.108.0",
+              "range": ">=5.52.1 <=5.108.1",
               "minVersion": "5.52.1",
-              "maxVersion": "5.108.0",
+              "maxVersion": "5.108.1",
               "peerDependencies": {
                 "react": "^18 || ^19"
               },
@@ -10139,6 +10244,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "5.108.1",
+              "publishedAt": "2026-11-19T14:03:03.906Z"
+            },
             {
               "version": "5.108.0",
               "publishedAt": "2026-11-17T13:45:33.768Z"
@@ -12106,15 +12215,15 @@
         "storybook",
         "@storybook/react"
       ],
-      "latestVersion": "10.6.7",
-      "latestPublishedAt": "2026-11-10T11:36:21.119Z",
+      "latestVersion": "10.6.8",
+      "latestPublishedAt": "2026-11-20T08:21:41.941Z",
       "npmUrl": "https://www.npmjs.com/package/storybook",
       "repositoryUrl": "https://github.com/storybookjs/storybook",
       "packages": [
         {
           "name": "storybook",
-          "latestVersion": "10.6.7",
-          "latestPublishedAt": "2026-11-10T11:36:21.119Z",
+          "latestVersion": "10.6.8",
+          "latestPublishedAt": "2026-11-20T08:21:41.941Z",
           "npmUrl": "https://www.npmjs.com/package/storybook",
           "compatibility": [
             {
@@ -12127,9 +12236,9 @@
               "deprecated": null
             },
             {
-              "range": ">=8.4.0 <=10.6.7",
+              "range": ">=8.4.0 <=10.6.8",
               "minVersion": "8.4.0",
-              "maxVersion": "10.6.7",
+              "maxVersion": "10.6.8",
               "peerDependencies": {
                 "prettier": "^2 || ^3"
               },
@@ -12141,6 +12250,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "10.6.8",
+              "publishedAt": "2026-11-20T08:21:41.941Z"
+            },
             {
               "version": "10.6.7",
               "publishedAt": "2026-11-10T11:36:21.119Z"
@@ -13209,8 +13322,8 @@
         },
         {
           "name": "@storybook/react",
-          "latestVersion": "10.6.7",
-          "latestPublishedAt": "2026-11-10T11:31:18.378Z",
+          "latestVersion": "10.6.8",
+          "latestPublishedAt": "2026-11-20T08:17:42.514Z",
           "npmUrl": "https://www.npmjs.com/package/@storybook/react",
           "compatibility": [
             {
@@ -15991,9 +16104,29 @@
               ],
               "nodeRange": null,
               "deprecated": null
+            },
+            {
+              "range": "10.6.8",
+              "minVersion": "10.6.8",
+              "maxVersion": "10.6.8",
+              "peerDependencies": {
+                "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+                "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+                "storybook": "^10.6.8",
+                "typescript": ">= 4.9.x"
+              },
+              "optionalPeers": [
+                "typescript"
+              ],
+              "nodeRange": null,
+              "deprecated": null
             }
           ],
           "versions": [
+            {
+              "version": "10.6.8",
+              "publishedAt": "2026-11-20T08:17:42.514Z"
+            },
             {
               "version": "10.6.7",
               "publishedAt": "2026-11-10T11:31:18.378Z"
@@ -17191,6 +17324,17 @@
         }
       ],
       "events": [
+        {
+          "id": "0682ef7ecf7127",
+          "kind": "minor",
+          "priority": 1,
+          "version": "10.6.8",
+          "title": "Storybook Releases: выпуск v10.6.8",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-11-20T08:15:54Z",
+          "source": "Storybook Releases",
+          "url": "https://github.com/storybookjs/storybook/releases/tag/v10.6.8"
+        },
         {
           "id": "65e193fc0833e0",
           "kind": "minor",

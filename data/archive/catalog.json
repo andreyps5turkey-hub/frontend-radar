@@ -1,7 +1,178 @@
 {
   "version": 2,
-  "updatedAt": "2026-11-19T13:50:53.899Z",
+  "updatedAt": "2026-11-20T13:33:11.387Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-11-20",
+      "generatedAt": "2026-11-20T13:33:11.387Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 32,
+      "sourceHealth": {
+        "attempted": 32,
+        "succeeded": 32,
+        "failed": []
+      },
+      "status": "active",
+      "summary": "Автоматическая подборка собрана в резервном режиме. Проверьте релизы по ссылкам на первоисточники.",
+      "items": [
+        {
+          "priority": "P1",
+          "title": "Stylelint Releases: выпуск 18.1.0",
+          "source": "Stylelint Releases",
+          "publishedAt": "2026-11-20T09:34:12Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, использующие инструменты из экосистемы Stylelint Releases.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/stylelint/stylelint/releases/tag/18.1.0",
+          "tags": [
+            "stylelint",
+            "обновление"
+          ],
+          "changeType": "breaking",
+          "technologies": [
+            "quality",
+            "platform"
+          ],
+          "packages": [
+            {
+              "name": "stylelint",
+              "releasedVersion": "18.1.0",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        },
+        {
+          "priority": "P2",
+          "title": "Storybook Releases: выпуск v10.6.8",
+          "source": "Storybook Releases",
+          "publishedAt": "2026-11-20T08:15:54Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, использующие инструменты из экосистемы Storybook Releases.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/storybookjs/storybook/releases/tag/v10.6.8",
+          "tags": [
+            "storybook",
+            "обновление"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "vite",
+            "storybook"
+          ],
+          "packages": [
+            {
+              "name": "storybook",
+              "releasedVersion": "v10.6.8",
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "@storybook/react",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        }
+      ],
+      "readLater": [
+        {
+          "priority": "P3",
+          "title": "Node.js Releases: выпуск 26.13.1",
+          "source": "Node.js Releases",
+          "publishedAt": "2026-11-11T16:44:25Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/nodejs/node/releases/tag/v26.13.1",
+          "tags": [
+            "node.js",
+            "обновление"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "platform"
+          ],
+          "packages": [],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        },
+        {
+          "priority": "P3",
+          "title": "Node.js Releases: выпуск 24.22.3",
+          "source": "Node.js Releases",
+          "publishedAt": "2026-11-11T16:44:08Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/nodejs/node/releases/tag/v24.22.3",
+          "tags": [
+            "node.js",
+            "обновление"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "platform"
+          ],
+          "packages": [],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        },
+        {
+          "priority": "P3",
+          "title": "Node.js Releases: выпуск 22.23.5",
+          "source": "Node.js Releases",
+          "publishedAt": "2026-11-11T16:44:03Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/nodejs/node/releases/tag/v22.23.5",
+          "tags": [
+            "node.js",
+            "обновление"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "platform"
+          ],
+          "packages": [],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-11-19",
