@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-20T13:59:05.632Z",
+  "generatedAt": "2026-11-21T12:58:37.109Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -17331,7 +17331,7 @@
         {
           "id": "0682ef7ecf7127",
           "kind": "minor",
-          "priority": "P2",
+          "priority": "P3",
           "version": "10.6.8",
           "title": "Версия v10.6.8 Storybook",
           "summary": "Обновление улучшает сборку Vite и ускоряет предварительный просмотр, что повышает производительность разработки UI.",

@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 2,
+  "date": "2026-11-21",
+  "generatedAt": "2026-11-21T12:58:31.752Z",
+  "timezone": "Europe/Moscow",
+  "windowHours": 26,
+  "sourcesChecked": 32,
+  "sourceHealth": {
+    "attempted": 32,
+    "succeeded": 32,
+    "failed": []
+  },
+  "status": "quiet",
+  "summary": "В течение дня ничего значимого не произошло.",
+  "items": [],
+  "readLater": [
+    {
+      "priority": "P3",
+      "title": "Почему Next.js получил столько уязвимостей",
+      "source": "React Status",
+      "publishedAt": "Fri, 20 Nov 2026 00:00:00 +0000",
+      "whyImportant": "Обзор причин частых уязвимостей в Next.js, полезный для оценки рисков.",
+      "audience": "Frontend‑инженеры, DevOps",
+      "nextStep": "Изучить рекомендации по безопасной настройке Next.js.",
+      "url": "https://react.statuscode.com/issues/498",
+      "tags": [
+        "Next.js",
+        "безопасность",
+        "обзор"
+      ],
+      "changeType": "breaking",
+      "technologies": [
+        "nextjs",
+        "react"
+      ],
+      "packages": [],
+      "risk": "unknown",
+      "effort": "minutes",
+      "actionItems": [
+        "Прочитать статью",
+        "Сравнить версии Next.js",
+        "Обсудить с командой"
+      ],
+      "detailsConfidence": "source"
+    },
+    {
+      "priority": "P3",
+      "title": "Версия v10.6.8 Storybook",
+      "source": "Storybook Releases",
+      "publishedAt": "2026-11-20T08:15:54Z",
+      "whyImportant": "Обновление улучшает сборку Vite и ускоряет предварительный просмотр, что повышает производительность разработки UI.",
+      "audience": "Разработчики, использующие Storybook для UI‑компонентов",
+      "nextStep": "Обновите пакеты storybook и @storybook/react до 10.6.8 и проверьте, что сборка работает быстрее.",
+      "url": "https://github.com/storybookjs/storybook/releases/tag/v10.6.8",
+      "tags": [
+        "storybook",
+        "ui",
+        "vite",
+        "preview"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "storybook",
+        "vite"
+      ],
+      "packages": [
+        {
+          "name": "storybook",
+          "releasedVersion": "v10.6.8",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "@storybook/react",
+          "releasedVersion": "v10.6.8",
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "unknown",
+      "effort": "minutes",
+      "actionItems": [
+        "Обновить пакеты в package.json",
+        "Проверить время сборки в dev‑сервере",
+        "Сравнить производительность с предыдущей версией"
+      ],
+      "detailsConfidence": "source"
+    }
+  ]
+}
