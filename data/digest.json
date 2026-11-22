@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "date": "2026-11-21",
-  "generatedAt": "2026-11-21T12:58:31.752Z",
+  "date": "2026-11-22",
+  "generatedAt": "2026-11-22T12:50:09.519Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -11,80 +11,86 @@
     "failed": []
   },
   "status": "quiet",
-  "summary": "В течение дня ничего значимого не произошло.",
+  "summary": "Значимых новых событий не найдено. Подборка для чтения собрана в резервном режиме.",
   "items": [],
   "readLater": [
     {
       "priority": "P3",
-      "title": "Почему Next.js получил столько уязвимостей",
-      "source": "React Status",
-      "publishedAt": "Fri, 20 Nov 2026 00:00:00 +0000",
-      "whyImportant": "Обзор причин частых уязвимостей в Next.js, полезный для оценки рисков.",
-      "audience": "Frontend‑инженеры, DevOps",
-      "nextStep": "Изучить рекомендации по безопасной настройке Next.js.",
-      "url": "https://react.statuscode.com/issues/498",
+      "title": "Новый материал от Yarn Berry Releases",
+      "source": "Yarn Berry Releases",
+      "publishedAt": "2026-11-21T17:35:22Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы Yarn Berry Releases.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/yarnpkg/berry/releases/tag/2026-11-21",
       "tags": [
-        "Next.js",
-        "безопасность",
-        "обзор"
+        "yarn",
+        "обновление"
       ],
-      "changeType": "breaking",
+      "changeType": "tooling",
       "technologies": [
-        "nextjs",
-        "react"
+        "platform"
       ],
       "packages": [],
-      "risk": "unknown",
+      "risk": "low",
       "effort": "minutes",
       "actionItems": [
-        "Прочитать статью",
-        "Сравнить версии Next.js",
-        "Обсудить с командой"
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
       ],
-      "detailsConfidence": "source"
+      "detailsConfidence": "inferred"
     },
     {
       "priority": "P3",
-      "title": "Версия v10.6.8 Storybook",
-      "source": "Storybook Releases",
-      "publishedAt": "2026-11-20T08:15:54Z",
-      "whyImportant": "Обновление улучшает сборку Vite и ускоряет предварительный просмотр, что повышает производительность разработки UI.",
-      "audience": "Разработчики, использующие Storybook для UI‑компонентов",
-      "nextStep": "Обновите пакеты storybook и @storybook/react до 10.6.8 и проверьте, что сборка работает быстрее.",
-      "url": "https://github.com/storybookjs/storybook/releases/tag/v10.6.8",
+      "title": "Yarn Berry Releases: выпуск 4.1.4",
+      "source": "Yarn Berry Releases",
+      "publishedAt": "2026-11-21T17:35:22Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы Yarn Berry Releases.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/yarnpkg/berry/releases/tag/%40yarnpkg%2Fshell%2F4.1.4",
       "tags": [
-        "storybook",
-        "ui",
-        "vite",
-        "preview"
+        "yarn",
+        "обновление"
       ],
       "changeType": "minor",
       "technologies": [
-        "storybook",
-        "vite"
+        "platform"
       ],
-      "packages": [
-        {
-          "name": "storybook",
-          "releasedVersion": "v10.6.8",
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "@storybook/react",
-          "releasedVersion": "v10.6.8",
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "unknown",
+      "packages": [],
+      "risk": "low",
       "effort": "minutes",
       "actionItems": [
-        "Обновить пакеты в package.json",
-        "Проверить время сборки в dev‑сервере",
-        "Сравнить производительность с предыдущей версией"
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
       ],
-      "detailsConfidence": "source"
+      "detailsConfidence": "inferred"
+    },
+    {
+      "priority": "P3",
+      "title": "Yarn Berry Releases: выпуск 3.3.2",
+      "source": "Yarn Berry Releases",
+      "publishedAt": "2026-11-21T17:35:21Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы Yarn Berry Releases.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/yarnpkg/berry/releases/tag/%40yarnpkg%2Fsdks%2F3.3.2",
+      "tags": [
+        "yarn",
+        "обновление"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "platform"
+      ],
+      "packages": [],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
     }
   ]
 }
