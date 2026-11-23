@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-22T14:32:39.192Z",
+  "generatedAt": "2026-11-23T15:18:07.710Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -1405,6 +1405,17 @@
         }
       ],
       "events": [
+        {
+          "id": "06878de0dc043f",
+          "kind": "major",
+          "priority": "P3",
+          "version": null,
+          "title": "Новый материал от React Status",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "Fri, 20 Nov 2026 00:00:00 +0000",
+          "source": "React Status",
+          "url": "https://react.statuscode.com/issues/498"
+        },
         {
           "id": "6bfb24f66dc27f",
           "kind": "minor",
@@ -5030,6 +5041,17 @@
       ],
       "events": [
         {
+          "id": "06878de0dc043f",
+          "kind": "major",
+          "priority": "P3",
+          "version": null,
+          "title": "Новый материал от React Status",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "Fri, 20 Nov 2026 00:00:00 +0000",
+          "source": "React Status",
+          "url": "https://react.statuscode.com/issues/498"
+        },
+        {
           "id": "23e3bda13c4d1b",
           "kind": "major",
           "priority": "P1",
@@ -5347,17 +5369,6 @@
           "publishedAt": "2026-09-30T16:13:42Z",
           "source": "Next.js Releases",
           "url": "https://github.com/vercel/next.js/releases/tag/v15.5.27"
-        },
-        {
-          "id": "5e87648535bb48",
-          "kind": "minor",
-          "priority": "P2",
-          "version": "16.3.7",
-          "title": "Next.js v16.3.7 – исправления и оптимизация turbo‑tasks",
-          "summary": "Обновление исправляет зависание чтения при отмене задачи, повышая надёжность сборки.",
-          "publishedAt": "2026-09-29T08:54:51Z",
-          "source": "Next.js Releases",
-          "url": "https://github.com/vercel/next.js/releases/tag/v16.3.7"
         }
       ]
     },
@@ -10167,15 +10178,15 @@
       "packageNames": [
         "@tanstack/react-query"
       ],
-      "latestVersion": "5.108.2",
-      "latestPublishedAt": "2026-11-20T13:37:18.547Z",
+      "latestVersion": "5.108.4",
+      "latestPublishedAt": "2026-11-23T13:20:10.775Z",
       "npmUrl": "https://www.npmjs.com/package/@tanstack/react-query",
       "repositoryUrl": "https://github.com/TanStack/query",
       "packages": [
         {
           "name": "@tanstack/react-query",
-          "latestVersion": "5.108.2",
-          "latestPublishedAt": "2026-11-20T13:37:18.547Z",
+          "latestVersion": "5.108.4",
+          "latestPublishedAt": "2026-11-23T13:20:10.775Z",
           "npmUrl": "https://www.npmjs.com/package/@tanstack/react-query",
           "compatibility": [
             {
@@ -10232,9 +10243,9 @@
               "deprecated": null
             },
             {
-              "range": ">=5.52.1 <=5.108.2",
+              "range": ">=5.52.1 <=5.108.4",
               "minVersion": "5.52.1",
-              "maxVersion": "5.108.2",
+              "maxVersion": "5.108.4",
               "peerDependencies": {
                 "react": "^18 || ^19"
               },
@@ -10244,6 +10255,14 @@
             }
           ],
           "versions": [
+            {
+              "version": "5.108.4",
+              "publishedAt": "2026-11-23T13:20:10.775Z"
+            },
+            {
+              "version": "5.108.3",
+              "publishedAt": "2026-11-22T20:09:32.864Z"
+            },
             {
               "version": "5.108.2",
               "publishedAt": "2026-11-20T13:37:18.547Z"

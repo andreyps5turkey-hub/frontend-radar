@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "date": "2026-11-22",
-  "generatedAt": "2026-11-22T14:32:33.137Z",
+  "date": "2026-11-23",
+  "generatedAt": "2026-11-23T15:17:58.507Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -10,24 +10,24 @@
     "succeeded": 32,
     "failed": []
   },
-  "status": "active",
-  "summary": "DOMPurify выпустил 3.5.0 с критическими исправлениями безопасности, включая устранение обхода SAFE_FOR_TEMPLATES.",
-  "items": [
+  "status": "quiet",
+  "summary": "Значимых новых событий не найдено. Подборка для чтения собрана в резервном режиме.",
+  "items": [],
+  "readLater": [
     {
-      "priority": "P0",
-      "title": "DOMPurify 3.5.0 – критические исправления безопасности",
+      "priority": "P3",
+      "title": "DOMPurify Releases: выпуск 3.5.0",
       "source": "DOMPurify Releases",
       "publishedAt": "2026-11-22T13:34:56Z",
-      "whyImportant": "Выпуск устраняет несколько обходов защиты SAFE_FOR_TEMPLATES, которые позволяли внедрять шаблонные выражения через вложенные теги, сущности и скрытый текст.",
-      "audience": "Разработчики, использующие DOMPurify для очистки пользовательского ввода",
-      "nextStep": "Обновить до версии 3.5.0 и проверить, что все шаблоны очищаются корректно.",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы DOMPurify Releases.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
       "url": "https://github.com/cure53/DOMPurify/releases/tag/3.5.0",
       "tags": [
-        "DOMPurify",
-        "безопасность",
+        "dompurify",
         "обновление"
       ],
-      "changeType": "security",
+      "changeType": "minor",
       "technologies": [
         "platform"
       ],
@@ -39,30 +39,28 @@
           "fixedVersion": null
         }
       ],
-      "risk": "unknown",
-      "effort": "hours",
+      "risk": "low",
+      "effort": "minutes",
       "actionItems": [
-        "Обновить пакет до 3.5.0",
-        "Проверить работу очистки шаблонов в тестах"
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
       ],
-      "detailsConfidence": "source"
-    }
-  ],
-  "readLater": [
+      "detailsConfidence": "inferred"
+    },
     {
       "priority": "P3",
-      "title": "Новый материал от Yarn Berry Releases",
-      "source": "Yarn Berry Releases",
-      "publishedAt": "2026-11-21T17:35:22Z",
+      "title": "Новый материал от Веб-стандарты",
+      "source": "Веб-стандарты",
+      "publishedAt": "Mon, 23 Nov 2026 09:00:00 GMT",
       "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы Yarn Berry Releases.",
+      "audience": "Команды, использующие инструменты из экосистемы Веб-стандарты.",
       "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/yarnpkg/berry/releases/tag/2026-11-21",
+      "url": "https://web-standards.ru/podcast/554/",
       "tags": [
-        "yarn",
+        "веб-стандарты",
         "обновление"
       ],
-      "changeType": "tooling",
+      "changeType": "guide",
       "technologies": [
         "platform"
       ],
@@ -77,22 +75,36 @@
     },
     {
       "priority": "P3",
-      "title": "Yarn Berry Releases: выпуск 4.1.4",
-      "source": "Yarn Berry Releases",
-      "publishedAt": "2026-11-21T17:35:22Z",
+      "title": "Новый материал от React Status",
+      "source": "React Status",
+      "publishedAt": "Fri, 20 Nov 2026 00:00:00 +0000",
       "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы Yarn Berry Releases.",
+      "audience": "Разработчики и команды, использующие React.",
       "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/yarnpkg/berry/releases/tag/%40yarnpkg%2Fshell%2F4.1.4",
+      "url": "https://react.statuscode.com/issues/498",
       "tags": [
-        "yarn",
+        "react",
         "обновление"
       ],
-      "changeType": "minor",
+      "changeType": "breaking",
       "technologies": [
-        "platform"
+        "nextjs",
+        "react"
       ],
-      "packages": [],
+      "packages": [
+        {
+          "name": "next",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "react",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
       "risk": "low",
       "effort": "minutes",
       "actionItems": [
