@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "date": "2026-11-23",
-  "generatedAt": "2026-11-23T18:04:28.286Z",
+  "date": "2026-11-24",
+  "generatedAt": "2026-11-24T15:13:54.381Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -10,22 +10,22 @@
     "succeeded": 32,
     "failed": []
   },
-  "status": "active",
-  "summary": "В окне дня опубликована новая версия typescript-eslint 8.74.0 с улучшениями типов и исправлениями.",
-  "items": [
+  "status": "quiet",
+  "summary": "Значимых новых событий не найдено. Подборка для чтения собрана в резервном режиме.",
+  "items": [],
+  "readLater": [
     {
-      "priority": "P2",
-      "title": "Версия 8.74.0",
+      "priority": "P3",
+      "title": "typescript-eslint Releases: выпуск v8.74.0",
       "source": "typescript-eslint Releases",
       "publishedAt": "2026-11-23T17:04:20Z",
-      "whyImportant": "Обновление улучшает типизацию AST и исправляет несколько ошибок, повышая надёжность статического анализа.",
-      "audience": "Разработчики, использующие typescript-eslint",
-      "nextStep": "Обновить пакет до версии 8.74.0 и проверить работу линтера в проекте.",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды с TypeScript-проектами и авторами библиотек.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
       "url": "https://github.com/typescript-eslint/typescript-eslint/releases/tag/v8.74.0",
       "tags": [
         "typescript-eslint",
-        "обновление",
-        "типизация"
+        "обновление"
       ],
       "changeType": "minor",
       "technologies": [
@@ -35,7 +35,7 @@
       "packages": [
         {
           "name": "typescript-eslint",
-          "releasedVersion": "8.74.0",
+          "releasedVersion": "v8.74.0",
           "affectedRange": null,
           "fixedVersion": null
         },
@@ -44,40 +44,16 @@
           "releasedVersion": null,
           "affectedRange": null,
           "fixedVersion": null
-        }
-      ],
-      "risk": "unknown",
-      "effort": "hours",
-      "actionItems": [
-        "Обновить пакет до 8.74.0",
-        "Запустить линтер и убедиться, что все правила работают",
-        "Проверить совместимость с текущей конфигурацией"
-      ],
-      "detailsConfidence": "source"
-    }
-  ],
-  "readLater": [
-    {
-      "priority": "P3",
-      "title": "DOMPurify Releases: выпуск 3.5.0",
-      "source": "DOMPurify Releases",
-      "publishedAt": "2026-11-22T13:34:56Z",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы DOMPurify Releases.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/cure53/DOMPurify/releases/tag/3.5.0",
-      "tags": [
-        "dompurify",
-        "обновление"
-      ],
-      "changeType": "minor",
-      "technologies": [
-        "platform"
-      ],
-      "packages": [
+        },
         {
-          "name": "dompurify",
-          "releasedVersion": "3.5.0",
+          "name": "typescript",
+          "releasedVersion": "v8.74.0",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "eslint",
+          "releasedVersion": "v8.74.0",
           "affectedRange": null,
           "fixedVersion": null
         }
@@ -92,22 +68,62 @@
     },
     {
       "priority": "P3",
-      "title": "Новый материал от Веб-стандарты",
-      "source": "Веб-стандарты",
-      "publishedAt": "Mon, 23 Nov 2026 09:00:00 GMT",
+      "title": "Новый материал от JavaScript Weekly",
+      "source": "JavaScript Weekly",
+      "publishedAt": "Tue, 24 Nov 2026 00:00:00 +0000",
       "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды, использующие инструменты из экосистемы Веб-стандарты.",
+      "audience": "Команды, использующие инструменты из экосистемы JavaScript Weekly.",
       "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://web-standards.ru/podcast/554/",
+      "url": "https://javascriptweekly.com/issues/812",
       "tags": [
-        "веб-стандарты",
+        "javascript",
         "обновление"
       ],
-      "changeType": "guide",
+      "changeType": "breaking",
       "technologies": [
         "platform"
       ],
       "packages": [],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
+    },
+    {
+      "priority": "P3",
+      "title": "Новый материал от React Status",
+      "source": "React Status",
+      "publishedAt": "Fri, 20 Nov 2026 00:00:00 +0000",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Разработчики и команды, использующие React.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://react.statuscode.com/issues/498",
+      "tags": [
+        "react",
+        "обновление"
+      ],
+      "changeType": "breaking",
+      "technologies": [
+        "nextjs",
+        "react"
+      ],
+      "packages": [
+        {
+          "name": "next",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "react",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
       "risk": "low",
       "effort": "minutes",
       "actionItems": [

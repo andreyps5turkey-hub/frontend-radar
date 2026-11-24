@@ -1,7 +1,143 @@
 {
   "version": 2,
-  "updatedAt": "2026-11-23T18:04:28.286Z",
+  "updatedAt": "2026-11-24T15:13:54.381Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-11-24",
+      "generatedAt": "2026-11-24T15:13:54.381Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 32,
+      "sourceHealth": {
+        "attempted": 32,
+        "succeeded": 32,
+        "failed": []
+      },
+      "status": "quiet",
+      "summary": "Значимых новых событий не найдено. Подборка для чтения собрана в резервном режиме.",
+      "items": [],
+      "readLater": [
+        {
+          "priority": "P3",
+          "title": "typescript-eslint Releases: выпуск v8.74.0",
+          "source": "typescript-eslint Releases",
+          "publishedAt": "2026-11-23T17:04:20Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды с TypeScript-проектами и авторами библиотек.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/typescript-eslint/typescript-eslint/releases/tag/v8.74.0",
+          "tags": [
+            "typescript-eslint",
+            "обновление"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "typescript",
+            "quality"
+          ],
+          "packages": [
+            {
+              "name": "typescript-eslint",
+              "releasedVersion": "v8.74.0",
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "@typescript-eslint/parser",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "typescript",
+              "releasedVersion": "v8.74.0",
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "eslint",
+              "releasedVersion": "v8.74.0",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        },
+        {
+          "priority": "P3",
+          "title": "Новый материал от JavaScript Weekly",
+          "source": "JavaScript Weekly",
+          "publishedAt": "Tue, 24 Nov 2026 00:00:00 +0000",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, использующие инструменты из экосистемы JavaScript Weekly.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://javascriptweekly.com/issues/812",
+          "tags": [
+            "javascript",
+            "обновление"
+          ],
+          "changeType": "breaking",
+          "technologies": [
+            "platform"
+          ],
+          "packages": [],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        },
+        {
+          "priority": "P3",
+          "title": "Новый материал от React Status",
+          "source": "React Status",
+          "publishedAt": "Fri, 20 Nov 2026 00:00:00 +0000",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Разработчики и команды, использующие React.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://react.statuscode.com/issues/498",
+          "tags": [
+            "react",
+            "обновление"
+          ],
+          "changeType": "breaking",
+          "technologies": [
+            "nextjs",
+            "react"
+          ],
+          "packages": [
+            {
+              "name": "next",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "react",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-11-23",
