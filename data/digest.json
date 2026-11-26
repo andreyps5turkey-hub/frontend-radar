@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "date": "2026-11-26",
-  "generatedAt": "2026-11-26T15:08:51.684Z",
+  "date": "2026-11-27",
+  "generatedAt": "2026-11-26T21:28:06.846Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -10,26 +10,27 @@
     "succeeded": 32,
     "failed": []
   },
-  "status": "active",
-  "summary": "В течение дня в экосистеме фронтенда произошло несколько релизов: обновление инструмента create‑vite, предварительная версия Next.js 16.5.0 и стабильный выпуск Vite 8.4.0. Все они содержат новые возможности и исправления, которые стоит проверить и применить в проектах.",
-  "items": [
+  "status": "quiet",
+  "summary": "Значимых новых событий не найдено. Подборка для чтения собрана в резервном режиме.",
+  "items": [],
+  "readLater": [
     {
-      "priority": "P2",
-      "title": "Обновление create‑vite до версии 9.4.0",
+      "priority": "P3",
+      "title": "Vite Releases: выпуск 9.4.0",
       "source": "Vite Releases",
       "publishedAt": "2026-11-26T10:59:41Z",
-      "whyImportant": "Новый инструмент создаёт проекты с поддержкой devtools, Vite+ и Solid 2, а также обновлённые зависимости.",
-      "audience": "Разработчики, использующие create‑vite",
-      "nextStep": "Проверьте совместимость с текущими шаблонами и обновите зависимости проекта.",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы Vite Releases.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
       "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.4.0",
       "tags": [
-        "create‑vite",
-        "Vite",
-        "Solid 2"
+        "vite",
+        "обновление"
       ],
       "changeType": "major",
       "technologies": [
-        "vite"
+        "vite",
+        "quality"
       ],
       "packages": [
         {
@@ -45,27 +46,26 @@
           "fixedVersion": null
         }
       ],
-      "risk": "unknown",
-      "effort": "hours",
+      "risk": "low",
+      "effort": "minutes",
       "actionItems": [
-        "Проверить совместимость шаблонов",
-        "Обновить зависимости проекта",
-        "Тестировать devtools"
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
       ],
-      "detailsConfidence": "source"
+      "detailsConfidence": "inferred"
     },
     {
-      "priority": "P2",
-      "title": "Предварительная версия Next.js 16.5.0‑preview.0",
+      "priority": "P3",
+      "title": "Next.js Releases: выпуск v16.5.0-preview.0",
       "source": "Next.js Releases",
       "publishedAt": "2026-11-26T10:36:43Z",
-      "whyImportant": "Предварительная версия содержит новые фичи и исправления, которые могут повлиять на сборку и работу приложений.",
-      "audience": "Разработчики, использующие Next.js",
-      "nextStep": "Тестировать приложение на preview‑версии и подготовить миграцию.",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, которые поддерживают приложения на Next.js.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
       "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-preview.0",
       "tags": [
-        "Next.js",
-        "preview"
+        "next.js",
+        "обновление"
       ],
       "changeType": "minor",
       "technologies": [
@@ -74,115 +74,46 @@
       "packages": [
         {
           "name": "next",
-          "releasedVersion": "16.5.0-preview.0",
+          "releasedVersion": "v16.5.0-preview.0",
           "affectedRange": null,
           "fixedVersion": null
         }
       ],
-      "risk": "unknown",
-      "effort": "hours",
+      "risk": "low",
+      "effort": "minutes",
       "actionItems": [
-        "Запустить приложение на preview‑версии",
-        "Проверить совместимость API",
-        "Подготовить план миграции"
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
       ],
-      "detailsConfidence": "source"
+      "detailsConfidence": "inferred"
     },
     {
-      "priority": "P2",
-      "title": "Vite 8.4.0 – новый стабильный выпуск",
+      "priority": "P3",
+      "title": "Vite Releases: выпуск v8.4.0",
       "source": "Vite Releases",
       "publishedAt": "2026-11-26T11:05:04Z",
-      "whyImportant": "Включены улучшения ошибок плагинов, новые опции сборки и исправления CSS.",
-      "audience": "Разработчики, использующие Vite",
-      "nextStep": "Обновить Vite до 8.4.0 и проверить сборку проекта.",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы Vite Releases.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
       "url": "https://github.com/vitejs/vite/releases/tag/v8.4.0",
       "tags": [
-        "Vite",
-        "build"
+        "vite",
+        "обновление"
       ],
       "changeType": "minor",
       "technologies": [
-        "vite"
+        "vite",
+        "platform"
       ],
       "packages": [
         {
           "name": "vite",
-          "releasedVersion": "8.4.0",
+          "releasedVersion": "v8.4.0",
           "affectedRange": null,
           "fixedVersion": null
         },
         {
           "name": "@vitejs/plugin-legacy",
-          "releasedVersion": null,
-          "affectedRange": null,
-          "fixedVersion": null
-        }
-      ],
-      "risk": "unknown",
-      "effort": "hours",
-      "actionItems": [
-        "Обновить Vite до 8.4.0",
-        "Проверить сборку проекта",
-        "Тестировать новые опции сборки"
-      ],
-      "detailsConfidence": "source"
-    }
-  ],
-  "readLater": [
-    {
-      "priority": "P3",
-      "title": "This Week In React #307 – обзор недели",
-      "source": "This Week in React",
-      "publishedAt": "Wed, 25 Nov 2026 00:00:00 GMT",
-      "whyImportant": "Обзор ключевых событий в React‑экосистеме, включая безопасность и новые библиотеки.",
-      "audience": "Разработчики, интересующиеся React",
-      "nextStep": "Прочитать обзор и выделить релевантные темы для проекта.",
-      "url": "https://thisweekinreact.com/newsletter/307",
-      "tags": [
-        "React",
-        "newsletter"
-      ],
-      "changeType": "guide",
-      "technologies": [
-        "react"
-      ],
-      "packages": [],
-      "risk": "unknown",
-      "effort": "minutes",
-      "actionItems": [
-        "Прочитать обзор",
-        "Отметить интересные темы"
-      ],
-      "detailsConfidence": "source"
-    },
-    {
-      "priority": "P3",
-      "title": "Новый материал от React Status",
-      "source": "React Status",
-      "publishedAt": "Fri, 20 Nov 2026 00:00:00 +0000",
-      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Разработчики и команды, использующие React.",
-      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://react.statuscode.com/issues/498",
-      "tags": [
-        "react",
-        "обновление"
-      ],
-      "changeType": "breaking",
-      "technologies": [
-        "nextjs",
-        "react"
-      ],
-      "packages": [
-        {
-          "name": "next",
-          "releasedVersion": null,
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "react",
           "releasedVersion": null,
           "affectedRange": null,
           "fixedVersion": null

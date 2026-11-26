@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-26T15:08:59.204Z",
+  "generatedAt": "2026-11-26T21:28:14.566Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -5043,10 +5043,10 @@
         {
           "id": "574294773d5b80",
           "kind": "minor",
-          "priority": "P2",
+          "priority": "P3",
           "version": "16.5.0-preview.0",
-          "title": "Предварительная версия Next.js 16.5.0‑preview.0",
-          "summary": "Предварительная версия содержит новые фичи и исправления, которые могут повлиять на сборку и работу приложений.",
+          "title": "Next.js Releases: выпуск v16.5.0-preview.0",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
           "publishedAt": "2026-11-26T10:36:43Z",
           "source": "Next.js Releases",
           "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-preview.0"
@@ -7554,10 +7554,10 @@
         {
           "id": "b8e6d58ec1d240",
           "kind": "minor",
-          "priority": "P2",
+          "priority": "P3",
           "version": "8.4.0",
-          "title": "Vite 8.4.0 – новый стабильный выпуск",
-          "summary": "Включены улучшения ошибок плагинов, новые опции сборки и исправления CSS.",
+          "title": "Vite Releases: выпуск v8.4.0",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
           "publishedAt": "2026-11-26T11:05:04Z",
           "source": "Vite Releases",
           "url": "https://github.com/vitejs/vite/releases/tag/v8.4.0"
@@ -7565,10 +7565,10 @@
         {
           "id": "a81a83fd058060",
           "kind": "major",
-          "priority": "P2",
+          "priority": "P3",
           "version": "9.4.0",
-          "title": "Обновление create‑vite до версии 9.4.0",
-          "summary": "Новый инструмент создаёт проекты с поддержкой devtools, Vite+ и Solid 2, а также обновлённые зависимости.",
+          "title": "Vite Releases: выпуск 9.4.0",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
           "publishedAt": "2026-11-26T10:59:41Z",
           "source": "Vite Releases",
           "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.4.0"

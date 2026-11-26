@@ -1,7 +1,138 @@
 {
   "version": 2,
-  "updatedAt": "2026-11-26T15:08:51.684Z",
+  "updatedAt": "2026-11-26T21:28:06.846Z",
   "issues": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-11-27",
+      "generatedAt": "2026-11-26T21:28:06.846Z",
+      "timezone": "Europe/Moscow",
+      "windowHours": 26,
+      "sourcesChecked": 32,
+      "sourceHealth": {
+        "attempted": 32,
+        "succeeded": 32,
+        "failed": []
+      },
+      "status": "quiet",
+      "summary": "Значимых новых событий не найдено. Подборка для чтения собрана в резервном режиме.",
+      "items": [],
+      "readLater": [
+        {
+          "priority": "P3",
+          "title": "Vite Releases: выпуск 9.4.0",
+          "source": "Vite Releases",
+          "publishedAt": "2026-11-26T10:59:41Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, использующие инструменты из экосистемы Vite Releases.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.4.0",
+          "tags": [
+            "vite",
+            "обновление"
+          ],
+          "changeType": "major",
+          "technologies": [
+            "vite",
+            "quality"
+          ],
+          "packages": [
+            {
+              "name": "vite",
+              "releasedVersion": "9.4.0",
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "@vitejs/plugin-legacy",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        },
+        {
+          "priority": "P3",
+          "title": "Next.js Releases: выпуск v16.5.0-preview.0",
+          "source": "Next.js Releases",
+          "publishedAt": "2026-11-26T10:36:43Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, которые поддерживают приложения на Next.js.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-preview.0",
+          "tags": [
+            "next.js",
+            "обновление"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "nextjs"
+          ],
+          "packages": [
+            {
+              "name": "next",
+              "releasedVersion": "v16.5.0-preview.0",
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        },
+        {
+          "priority": "P3",
+          "title": "Vite Releases: выпуск v8.4.0",
+          "source": "Vite Releases",
+          "publishedAt": "2026-11-26T11:05:04Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, использующие инструменты из экосистемы Vite Releases.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/vitejs/vite/releases/tag/v8.4.0",
+          "tags": [
+            "vite",
+            "обновление"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "vite",
+            "platform"
+          ],
+          "packages": [
+            {
+              "name": "vite",
+              "releasedVersion": "v8.4.0",
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "@vitejs/plugin-legacy",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            }
+          ],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
+          ],
+          "detailsConfidence": "inferred"
+        }
+      ]
+    },
     {
       "schemaVersion": 2,
       "date": "2026-11-26",
