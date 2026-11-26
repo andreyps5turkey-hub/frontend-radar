@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "date": "2026-11-25",
-  "generatedAt": "2026-11-24T22:23:23.135Z",
+  "date": "2026-11-26",
+  "generatedAt": "2026-11-26T14:22:54.236Z",
   "timezone": "Europe/Moscow",
   "windowHours": 26,
   "sourcesChecked": 32,
@@ -11,120 +11,150 @@
     "failed": []
   },
   "status": "active",
-  "summary": "В окне дня выпустили обновления React Router: новая версия 8.5.3 с новыми возможностями и исправлениями, а также патч 7.18.7 для стабильной ветки.",
+  "summary": "Автоматическая подборка собрана в резервном режиме. Проверьте релизы по ссылкам на первоисточники.",
   "items": [
     {
       "priority": "P1",
-      "title": "React Router v8.5.3 – новые возможности и исправления",
-      "source": "React Router Releases",
-      "publishedAt": "2026-11-24T18:38:25Z",
-      "whyImportant": "Включает новые маршрутизаторы и улучшения производительности, которые могут потребовать обновления конфигурации.",
-      "audience": "Разработчики, использующие React Router 8",
-      "nextStep": "Проверьте совместимость ваших маршрутов и обновите зависимости до v8.5.3.",
-      "url": "https://github.com/remix-run/react-router/releases/tag/react-router%408.5.3",
+      "title": "Vite Releases: выпуск 9.4.0",
+      "source": "Vite Releases",
+      "publishedAt": "2026-11-26T10:59:41Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы Vite Releases.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.4.0",
       "tags": [
-        "React",
-        "Router",
-        "v8"
+        "vite",
+        "обновление"
       ],
-      "changeType": "minor",
+      "changeType": "major",
       "technologies": [
-        "router",
-        "react"
+        "vite",
+        "quality"
       ],
       "packages": [
         {
-          "name": "react-router",
-          "releasedVersion": "v8.5.3",
+          "name": "vite",
+          "releasedVersion": "9.4.0",
           "affectedRange": null,
           "fixedVersion": null
         },
         {
-          "name": "react-router-dom",
-          "releasedVersion": "v8.5.3",
+          "name": "@vitejs/plugin-legacy",
+          "releasedVersion": null,
           "affectedRange": null,
           "fixedVersion": null
         }
       ],
-      "risk": "unknown",
-      "effort": "days",
+      "risk": "low",
+      "effort": "minutes",
       "actionItems": [
-        "Проверить конфигурацию маршрутов",
-        "Обновить зависимости",
-        "Тестировать приложение"
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
       ],
-      "detailsConfidence": "source"
+      "detailsConfidence": "inferred"
     },
     {
       "priority": "P2",
-      "title": "React Router v7.18.7 – патч с исправлениями",
-      "source": "React Router Releases",
-      "publishedAt": "2026-11-24T18:01:03Z",
-      "whyImportant": "Исправляет мелкие баги и повышает стабильность в стабильной ветке.",
-      "audience": "Разработчики, использующие React Router 7",
-      "nextStep": "Обновить зависимости до v7.18.7 и проверить работоспособность маршрутизации.",
-      "url": "https://github.com/remix-run/react-router/releases/tag/react-router%407.18.7",
+      "title": "Next.js Releases: выпуск v16.5.0-preview.0",
+      "source": "Next.js Releases",
+      "publishedAt": "2026-11-26T10:36:43Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, которые поддерживают приложения на Next.js.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-preview.0",
       "tags": [
-        "React",
-        "Router",
-        "v7"
+        "next.js",
+        "обновление"
       ],
       "changeType": "minor",
       "technologies": [
-        "router",
-        "react"
+        "nextjs"
       ],
       "packages": [
         {
-          "name": "react-router",
-          "releasedVersion": "v7.18.7",
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "react-router-dom",
-          "releasedVersion": "v7.18.7",
+          "name": "next",
+          "releasedVersion": "v16.5.0-preview.0",
           "affectedRange": null,
           "fixedVersion": null
         }
       ],
-      "risk": "unknown",
-      "effort": "hours",
+      "risk": "low",
+      "effort": "minutes",
       "actionItems": [
-        "Обновить зависимости",
-        "Проверить маршруты"
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
       ],
-      "detailsConfidence": "source"
+      "detailsConfidence": "inferred"
+    },
+    {
+      "priority": "P2",
+      "title": "Vite Releases: выпуск v8.4.0",
+      "source": "Vite Releases",
+      "publishedAt": "2026-11-26T11:05:04Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы Vite Releases.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.4.0",
+      "tags": [
+        "vite",
+        "обновление"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "vite",
+        "platform"
+      ],
+      "packages": [
+        {
+          "name": "vite",
+          "releasedVersion": "v8.4.0",
+          "affectedRange": null,
+          "fixedVersion": null
+        },
+        {
+          "name": "@vitejs/plugin-legacy",
+          "releasedVersion": null,
+          "affectedRange": null,
+          "fixedVersion": null
+        }
+      ],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
+      ],
+      "detailsConfidence": "inferred"
     }
   ],
   "readLater": [
     {
       "priority": "P3",
-      "title": "React Router Releases: выпуск 7.18.7",
-      "source": "React Router Releases",
-      "publishedAt": "2026-11-24T17:57:52Z",
+      "title": "Новый материал от React Status",
+      "source": "React Status",
+      "publishedAt": "Fri, 20 Nov 2026 00:00:00 +0000",
       "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
       "audience": "Разработчики и команды, использующие React.",
       "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/remix-run/react-router/releases/tag/react-router-dom%407.18.7",
+      "url": "https://react.statuscode.com/issues/498",
       "tags": [
         "react",
         "обновление"
       ],
-      "changeType": "minor",
+      "changeType": "breaking",
       "technologies": [
-        "router",
+        "nextjs",
         "react"
       ],
       "packages": [
         {
-          "name": "react-router",
-          "releasedVersion": "7.18.7",
+          "name": "next",
+          "releasedVersion": null,
           "affectedRange": null,
           "fixedVersion": null
         },
         {
-          "name": "react-router-dom",
+          "name": "react",
           "releasedVersion": null,
           "affectedRange": null,
           "fixedVersion": null
@@ -140,48 +170,48 @@
     },
     {
       "priority": "P3",
-      "title": "typescript-eslint Releases: выпуск v8.74.0",
-      "source": "typescript-eslint Releases",
-      "publishedAt": "2026-11-23T17:04:20Z",
+      "title": "Node.js Releases: выпуск 26.13.1",
+      "source": "Node.js Releases",
+      "publishedAt": "2026-11-11T16:44:25Z",
       "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-      "audience": "Команды с TypeScript-проектами и авторами библиотек.",
+      "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
       "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-      "url": "https://github.com/typescript-eslint/typescript-eslint/releases/tag/v8.74.0",
+      "url": "https://github.com/nodejs/node/releases/tag/v26.13.1",
       "tags": [
-        "typescript-eslint",
+        "node.js",
         "обновление"
       ],
       "changeType": "minor",
       "technologies": [
-        "typescript",
-        "quality"
+        "platform"
       ],
-      "packages": [
-        {
-          "name": "typescript-eslint",
-          "releasedVersion": "v8.74.0",
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "@typescript-eslint/parser",
-          "releasedVersion": null,
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "typescript",
-          "releasedVersion": "v8.74.0",
-          "affectedRange": null,
-          "fixedVersion": null
-        },
-        {
-          "name": "eslint",
-          "releasedVersion": "v8.74.0",
-          "affectedRange": null,
-          "fixedVersion": null
-        }
+      "packages": [],
+      "risk": "low",
+      "effort": "minutes",
+      "actionItems": [
+        "Проверить список изменений в первоисточнике.",
+        "Протестировать обновление в отдельной ветке."
       ],
+      "detailsConfidence": "inferred"
+    },
+    {
+      "priority": "P3",
+      "title": "Node.js Releases: выпуск 24.22.3",
+      "source": "Node.js Releases",
+      "publishedAt": "2026-11-11T16:44:08Z",
+      "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+      "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
+      "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+      "url": "https://github.com/nodejs/node/releases/tag/v24.22.3",
+      "tags": [
+        "node.js",
+        "обновление"
+      ],
+      "changeType": "minor",
+      "technologies": [
+        "platform"
+      ],
+      "packages": [],
       "risk": "low",
       "effort": "minutes",
       "actionItems": [

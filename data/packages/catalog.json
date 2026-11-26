@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-24T22:23:30.033Z",
+  "generatedAt": "2026-11-26T14:23:05.756Z",
   "sourceHealth": {
     "attempted": 28,
     "succeeded": 28,
@@ -5041,6 +5041,17 @@
       ],
       "events": [
         {
+          "id": "574294773d5b80",
+          "kind": "minor",
+          "priority": 1,
+          "version": "16.5.0-preview.0",
+          "title": "Next.js Releases: выпуск v16.5.0-preview.0",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-11-26T10:36:43Z",
+          "source": "Next.js Releases",
+          "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-preview.0"
+        },
+        {
           "id": "06878de0dc043f",
           "kind": "major",
           "priority": "P3",
@@ -5358,17 +5369,6 @@
           "publishedAt": "2026-09-30T16:13:46Z",
           "source": "Next.js Releases",
           "url": "https://github.com/vercel/next.js/releases/tag/v16.3.8"
-        },
-        {
-          "id": "5dafa5f97a5c76",
-          "kind": "minor",
-          "priority": "P3",
-          "version": "15.5.27",
-          "title": "Next.js Releases: выпуск v15.5.27",
-          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-          "publishedAt": "2026-09-30T16:13:42Z",
-          "source": "Next.js Releases",
-          "url": "https://github.com/vercel/next.js/releases/tag/v15.5.27"
         }
       ]
     },
@@ -5773,15 +5773,15 @@
       "packageNames": [
         "vite"
       ],
-      "latestVersion": "8.3.8",
-      "latestPublishedAt": "2026-11-11T02:49:46.387Z",
+      "latestVersion": "8.4.0",
+      "latestPublishedAt": "2026-11-26T10:59:36.131Z",
       "npmUrl": "https://www.npmjs.com/package/vite",
       "repositoryUrl": "https://github.com/vitejs/vite",
       "packages": [
         {
           "name": "vite",
-          "latestVersion": "8.3.8",
-          "latestPublishedAt": "2026-11-11T02:49:46.387Z",
+          "latestVersion": "8.4.0",
+          "latestPublishedAt": "2026-11-26T10:59:36.131Z",
           "npmUrl": "https://www.npmjs.com/package/vite",
           "compatibility": [
             {
@@ -5803,9 +5803,9 @@
               "deprecated": null
             },
             {
-              "range": ">=7.0.0 <=8.3.8",
+              "range": ">=7.0.0 <=8.4.0",
               "minVersion": "7.0.0",
-              "maxVersion": "8.3.8",
+              "maxVersion": "8.4.0",
               "peerDependencies": {},
               "optionalPeers": [],
               "nodeRange": "^20.19.0 || >=22.12.0",
@@ -5813,6 +5813,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "8.4.0",
+              "publishedAt": "2026-11-26T10:59:36.131Z"
+            },
             {
               "version": "8.3.8",
               "publishedAt": "2026-11-11T02:49:46.387Z"
@@ -7548,6 +7552,28 @@
       ],
       "events": [
         {
+          "id": "b8e6d58ec1d240",
+          "kind": "minor",
+          "priority": 2,
+          "version": "8.4.0",
+          "title": "Vite Releases: выпуск v8.4.0",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-11-26T11:05:04Z",
+          "source": "Vite Releases",
+          "url": "https://github.com/vitejs/vite/releases/tag/v8.4.0"
+        },
+        {
+          "id": "a81a83fd058060",
+          "kind": "major",
+          "priority": 0,
+          "version": "9.4.0",
+          "title": "Vite Releases: выпуск 9.4.0",
+          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "publishedAt": "2026-11-26T10:59:41Z",
+          "source": "Vite Releases",
+          "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.4.0"
+        },
+        {
           "id": "8fdfafd3629271",
           "kind": "major",
           "priority": "P1",
@@ -7854,28 +7880,6 @@
           "publishedAt": "2026-07-30T12:03:27Z",
           "source": "Vite Releases",
           "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.1.2"
-        },
-        {
-          "id": "971d767123f5bd",
-          "kind": "patch",
-          "priority": "P2",
-          "version": "8.2",
-          "title": "Vite 8.2: очередное обновление сборщика и экосистемы плагинов",
-          "summary": "Релиз продолжает развитие ветки Vite 8 и связанных инструментов. Для большинства проектов это плановое обновление, но изменения сборщика стоит проверить на реальной конфигурации.",
-          "publishedAt": "2026-07-30T12:00:00Z",
-          "source": "Vite Releases",
-          "url": "https://github.com/vitejs/vite/releases/tag/v8.2.0"
-        },
-        {
-          "id": "c25152fe5d0384",
-          "kind": "major",
-          "priority": "P3",
-          "version": "0.5.31",
-          "title": "Vite React Plugins: выпуск 0.5.31",
-          "summary": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-          "publishedAt": "2026-07-28T06:34:17Z",
-          "source": "Vite React Plugins",
-          "url": "https://github.com/vitejs/vite-plugin-react/releases/tag/plugin-rsc%400.5.31"
         }
       ]
     },
@@ -12294,15 +12298,15 @@
         "storybook",
         "@storybook/react"
       ],
-      "latestVersion": "10.6.8",
-      "latestPublishedAt": "2026-11-20T08:21:41.941Z",
+      "latestVersion": "10.6.9",
+      "latestPublishedAt": "2026-11-25T07:53:34.663Z",
       "npmUrl": "https://www.npmjs.com/package/storybook",
       "repositoryUrl": "https://github.com/storybookjs/storybook",
       "packages": [
         {
           "name": "storybook",
-          "latestVersion": "10.6.8",
-          "latestPublishedAt": "2026-11-20T08:21:41.941Z",
+          "latestVersion": "10.6.9",
+          "latestPublishedAt": "2026-11-25T07:53:34.663Z",
           "npmUrl": "https://www.npmjs.com/package/storybook",
           "compatibility": [
             {
@@ -12315,9 +12319,9 @@
               "deprecated": null
             },
             {
-              "range": ">=8.4.0 <=10.6.8",
+              "range": ">=8.4.0 <=10.6.9",
               "minVersion": "8.4.0",
-              "maxVersion": "10.6.8",
+              "maxVersion": "10.6.9",
               "peerDependencies": {
                 "prettier": "^2 || ^3"
               },
@@ -12329,6 +12333,10 @@
             }
           ],
           "versions": [
+            {
+              "version": "10.6.9",
+              "publishedAt": "2026-11-25T07:53:34.663Z"
+            },
             {
               "version": "10.6.8",
               "publishedAt": "2026-11-20T08:21:41.941Z"
@@ -13401,8 +13409,8 @@
         },
         {
           "name": "@storybook/react",
-          "latestVersion": "10.6.8",
-          "latestPublishedAt": "2026-11-20T08:17:42.514Z",
+          "latestVersion": "10.6.9",
+          "latestPublishedAt": "2026-11-25T07:43:06.440Z",
           "npmUrl": "https://www.npmjs.com/package/@storybook/react",
           "compatibility": [
             {
@@ -16199,9 +16207,29 @@
               ],
               "nodeRange": null,
               "deprecated": null
+            },
+            {
+              "range": "10.6.9",
+              "minVersion": "10.6.9",
+              "maxVersion": "10.6.9",
+              "peerDependencies": {
+                "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+                "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+                "storybook": "^10.6.9",
+                "typescript": ">= 4.9.x"
+              },
+              "optionalPeers": [
+                "typescript"
+              ],
+              "nodeRange": null,
+              "deprecated": null
             }
           ],
           "versions": [
+            {
+              "version": "10.6.9",
+              "publishedAt": "2026-11-25T07:43:06.440Z"
+            },
             {
               "version": "10.6.8",
               "publishedAt": "2026-11-20T08:17:42.514Z"
