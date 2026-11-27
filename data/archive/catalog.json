@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "updatedAt": "2026-11-26T21:28:06.846Z",
+  "updatedAt": "2026-11-27T14:17:10.282Z",
   "issues": [
     {
       "schemaVersion": 2,
       "date": "2026-11-27",
-      "generatedAt": "2026-11-26T21:28:06.846Z",
+      "generatedAt": "2026-11-27T14:17:10.282Z",
       "timezone": "Europe/Moscow",
       "windowHours": 26,
       "sourcesChecked": 32,
@@ -20,65 +20,32 @@
       "readLater": [
         {
           "priority": "P3",
-          "title": "Vite Releases: выпуск 9.4.0",
-          "source": "Vite Releases",
-          "publishedAt": "2026-11-26T10:59:41Z",
+          "title": "Новый материал от React Status",
+          "source": "React Status",
+          "publishedAt": "Fri, 20 Nov 2026 00:00:00 +0000",
           "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-          "audience": "Команды, использующие инструменты из экосистемы Vite Releases.",
+          "audience": "Разработчики и команды, использующие React.",
           "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-          "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.4.0",
+          "url": "https://react.statuscode.com/issues/498",
           "tags": [
-            "vite",
+            "react",
             "обновление"
           ],
-          "changeType": "major",
+          "changeType": "breaking",
           "technologies": [
-            "vite",
-            "quality"
-          ],
-          "packages": [
-            {
-              "name": "vite",
-              "releasedVersion": "9.4.0",
-              "affectedRange": null,
-              "fixedVersion": null
-            },
-            {
-              "name": "@vitejs/plugin-legacy",
-              "releasedVersion": null,
-              "affectedRange": null,
-              "fixedVersion": null
-            }
-          ],
-          "risk": "low",
-          "effort": "minutes",
-          "actionItems": [
-            "Проверить список изменений в первоисточнике.",
-            "Протестировать обновление в отдельной ветке."
-          ],
-          "detailsConfidence": "inferred"
-        },
-        {
-          "priority": "P3",
-          "title": "Next.js Releases: выпуск v16.5.0-preview.0",
-          "source": "Next.js Releases",
-          "publishedAt": "2026-11-26T10:36:43Z",
-          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-          "audience": "Команды, которые поддерживают приложения на Next.js.",
-          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-          "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-preview.0",
-          "tags": [
-            "next.js",
-            "обновление"
-          ],
-          "changeType": "minor",
-          "technologies": [
-            "nextjs"
+            "nextjs",
+            "react"
           ],
           "packages": [
             {
               "name": "next",
-              "releasedVersion": "v16.5.0-preview.0",
+              "releasedVersion": null,
+              "affectedRange": null,
+              "fixedVersion": null
+            },
+            {
+              "name": "react",
+              "releasedVersion": null,
               "affectedRange": null,
               "fixedVersion": null
             }
@@ -93,36 +60,48 @@
         },
         {
           "priority": "P3",
-          "title": "Vite Releases: выпуск v8.4.0",
-          "source": "Vite Releases",
-          "publishedAt": "2026-11-26T11:05:04Z",
+          "title": "Node.js Releases: выпуск 26.13.1",
+          "source": "Node.js Releases",
+          "publishedAt": "2026-11-11T16:44:25Z",
           "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
-          "audience": "Команды, использующие инструменты из экосистемы Vite Releases.",
+          "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
           "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
-          "url": "https://github.com/vitejs/vite/releases/tag/v8.4.0",
+          "url": "https://github.com/nodejs/node/releases/tag/v26.13.1",
           "tags": [
-            "vite",
+            "node.js",
             "обновление"
           ],
           "changeType": "minor",
           "technologies": [
-            "vite",
             "platform"
           ],
-          "packages": [
-            {
-              "name": "vite",
-              "releasedVersion": "v8.4.0",
-              "affectedRange": null,
-              "fixedVersion": null
-            },
-            {
-              "name": "@vitejs/plugin-legacy",
-              "releasedVersion": null,
-              "affectedRange": null,
-              "fixedVersion": null
-            }
+          "packages": [],
+          "risk": "low",
+          "effort": "minutes",
+          "actionItems": [
+            "Проверить список изменений в первоисточнике.",
+            "Протестировать обновление в отдельной ветке."
           ],
+          "detailsConfidence": "inferred"
+        },
+        {
+          "priority": "P3",
+          "title": "Node.js Releases: выпуск 24.22.3",
+          "source": "Node.js Releases",
+          "publishedAt": "2026-11-11T16:44:08Z",
+          "whyImportant": "Источник опубликовал обновление, которое может затронуть рабочую сборку или инструменты команды.",
+          "audience": "Команды, использующие инструменты из экосистемы Node.js Releases.",
+          "nextStep": "Просмотреть changelog и проверить обновление в отдельной ветке перед внедрением.",
+          "url": "https://github.com/nodejs/node/releases/tag/v24.22.3",
+          "tags": [
+            "node.js",
+            "обновление"
+          ],
+          "changeType": "minor",
+          "technologies": [
+            "platform"
+          ],
+          "packages": [],
           "risk": "low",
           "effort": "minutes",
           "actionItems": [
